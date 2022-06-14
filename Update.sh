@@ -1,1 +1,1 @@
-git pull https://github.com/MCmoderSD/MCmoderSD.net.git
+git pull https://github.com/MCmoderSD/MCmoderSD.live.git
