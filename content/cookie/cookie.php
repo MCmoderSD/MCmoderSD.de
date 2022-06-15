@@ -1,3 +1,7 @@
+<?php
+header('content-type: text/style; charset=utf-8');
+?>
+
 p {
     margin: 0;
 }
