@@ -1,3 +1,2 @@
-# MCmoderSD.live
-
-My own Website visit [MCmoderSD.live](http://mcmodersd.live/)
+# [MCmoderSD.live](http://mcmodersd.live/)
+My own website visit [MCmoderSD.live](http://mcmodersd.live/)
