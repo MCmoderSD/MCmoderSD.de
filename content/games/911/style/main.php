@@ -115,7 +115,7 @@ body
    font-family: monospace;
    font-size: 12px;
    color: #fff;
-   background:#111;
+   background: #36393f;
 }
 
 
