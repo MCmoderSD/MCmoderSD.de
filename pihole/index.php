@@ -1,5 +1,4 @@
-<?php?>
-<html>
+<html lang="german">
         <head>
             <title>Error - 404</title>
             <link rel="stylesheet" href="/content/style/error_style.css">
@@ -11,4 +10,4 @@
             <div id="description">this site doesn't exist!</div>
             <div id="back"><a href="/index.html">back</a></div>
 	</body>
-</htlm>
+</html>
