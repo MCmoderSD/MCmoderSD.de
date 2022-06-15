@@ -1,5 +1,5 @@
 <?php
-    header('content-type: text/css; charset=utf-8');
+    header('content-type: text/style; charset=utf-8');
     ?>
 
 body {
