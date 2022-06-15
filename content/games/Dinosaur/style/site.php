@@ -277,7 +277,7 @@ a {
   font-size: 32px;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 40px;
 }
 
 .back a {
@@ -285,5 +285,5 @@ a {
   font-size: 32px;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 40px;
 }
