@@ -18,7 +18,7 @@
 
 	
 		<div class="back">
-            <a href="/content/games/games.html">back</a>
+            <a href="/content/games/games.php">back</a>
         </div>
 
 

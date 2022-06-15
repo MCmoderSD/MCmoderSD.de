@@ -1,4 +1,6 @@
-<html>
+<?php ?>
+
+<html lang="de">
 
 <head>
 <title>Dinosaur Game</title>
@@ -60,7 +62,6 @@
   </div>
 
   <script type="text/javascript" src="/content/games/Dinosaur/scripts/wrapper.js"></script>
-  </script>
   </div>
   <script type="text/javascript" src="/content/games/Dinosaur/scripts/chrome.js"></script>
 </body>
