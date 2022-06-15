@@ -1,3 +1,7 @@
+<?php
+header('content-type: text/css; charset=utf-8');
+?>
+
 #t{
   background-color: #36393f;
 }
@@ -267,3 +271,17 @@ a {
       font-size: 1em;
     }
   }
+
+.back {
+  color: rgb(88, 101, 242);
+  font-size: 32px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.back a {
+  color: rgb(88, 101, 242);
+  font-size: 32px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}

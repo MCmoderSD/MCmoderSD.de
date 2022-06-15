@@ -9,8 +9,8 @@
 
 	<!--script type="text/javascript" src="a.js"></script-->
 	<script type="text/javascript" src="/content/games/Dinosaur/scripts/javascript.js"></script>
-  <link rel="stylesheet" href="/content/games/Dinosaur/style/site.css">
-<link rel="stylesheet" href="/content/games/Dinosaur/style/game.css">
+  <link rel="stylesheet" href="/content/games/Dinosaur/style/site.php">
+<link rel="stylesheet" href="/content/games/Dinosaur/style/game.php">
 </head>
 
 <body id="t">
@@ -64,5 +64,6 @@
   <script type="text/javascript" src="/content/games/Dinosaur/scripts/wrapper.js"></script>
   </div>
   <script type="text/javascript" src="/content/games/Dinosaur/scripts/chrome.js"></script>
+<div class="back"><a href="/index.php">back</a></div>
 </body>
 </html>

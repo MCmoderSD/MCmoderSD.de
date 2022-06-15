@@ -1,3 +1,8 @@
+<?php
+header('content-type: text/css; charset=utf-8');
+?>
+
+
 html[subframe] #main-frame-error {
  display: none;
 }
