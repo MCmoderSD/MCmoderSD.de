@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-
-
-<html>
+<?php ?>
+<html lang="de">
 
 	<head>
 		<title>Admin-Center</title>
 		<link rel="stylesheet" href="/content/style/admin_style.css">
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 	</head>
 
 	<body>
@@ -15,8 +12,8 @@
 				<a href="/admin/">Pi-Hole</a> <a href="http://178.254.18.170:9000">Portainer</a></div>  
                 <br/>
                 <div id="back">
-                    <a href="/index.html">back</a>
+					<a href="/1.php">back</a>
                 </div>
         
 	</body>
-</htlm>
+</html>
