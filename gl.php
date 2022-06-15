@@ -7,7 +7,7 @@
 	</head>
 
 	<body>
-   <div id="back">
+   <div class="back">
       <a href="/index.php">back</a>
     </div> 
         <table class="center">
