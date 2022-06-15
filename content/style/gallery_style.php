@@ -15,6 +15,8 @@ body {
   margin-right: auto;
   margin-top: auto;
   margin-bottom: auto;
+  text-align: center;
+  align-items: center;
 }
 
 .back a {

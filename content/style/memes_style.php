@@ -17,6 +17,7 @@ margin-right: auto;
 margin-top: auto;
 margin-bottom: auto;
 align-items: center;
+text-align: center;
 }
 
 .back a {
