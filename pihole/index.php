@@ -7,8 +7,8 @@
     
         <body>
             <div id="error">Error - 404</div>
-            <div id="gif"><img src="/content/memes/404-meme.gif"></div>
+            <div id="gif"><img src="/content/memes/404-meme.gif" alt="meme"></div>
             <div id="description">this site doesn't exist!</div>
-            <div id="back"><a href="/1.php">back</a></div>
+            <div id="back"><a href="/index.php">back</a></div>
 	</body>
 </html>
