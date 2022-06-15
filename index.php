@@ -1,13 +1,11 @@
-<?php
-
-include 'content/style/index_style.css';
-
-?>
+<?php ?>
 <html lang="de">
 
 	<head>
 		<title>MCmoderSD.live</title>
-		<link rel="stylesheet" href="/content/style/index_style.css">
+        <style>
+            <?php include 'content/style/index_style.css'; ?>
+        </style>
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 	</head>
 

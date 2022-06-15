@@ -1,9 +1,12 @@
 <?php ?>
+
 <html lang="de">
 
 	<head>
 		<title>Admin-Center</title>
-		<link rel="stylesheet" href="/content/style/admin_style.css">
+        <style>
+            <?php include 'content/style/admin_style.css'; ?>
+        </style>
 	</head>
 
 	<body>
@@ -12,7 +15,7 @@
 				<a href="/admin/">Pi-Hole</a> <a href="http://178.254.18.170:9000">Portainer</a></div>  
                 <br/>
                 <div id="back">
-					<a href="/1.php">back</a>
+					<a href="/index.php">back</a>
                 </div>
         
 	</body>
