@@ -1,6 +1,13 @@
-<?php ?>
+<?php
+    header('content-type: text/css; charset=utf-8');
+    readfile("content/img/Agnus.png");
+    readfile("content/img/Attila.png");
+    readfile("content/img/Attila-blurr.png");
+    readfile("content/img/Bauchredner.png");
+    readfile("content/img/BenAreYouGood.png");
+    readfile("content/img/BenPixelArt.png");
+?>
 <html lang="de">
-
 	<head>
 		<title>Gallerie</title>
     <link rel="stylesheet" href="/content/style/gallery_style.php">
