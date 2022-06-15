@@ -1,9 +1,15 @@
+<?php
+header('content-type: text/css; charset=utf-8');
+?>
+
 body {
 	background-color: #36393f;
+    padding: 80px;
     color: rgb(88, 101, 242);
     font-size: 36px;
     font-family: Arial, Helvetica, sans-serif;
-    
+    text-align: center;
+    margin: 4px;
 }
 
 .center {
@@ -11,19 +17,13 @@ body {
   margin-right: auto;
 }
 
-.headline {
-    padding-left: 360px;
-    padding-top: 36px;
-    font-size: 42px;
-}
-
 .links a {
+	background-color: #36393f;
     color: #20aef0;
-    margin: 5px;
-}
-
-.links {
+    font-size: 36px;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    margin: 4px;
 }
 
 .back {

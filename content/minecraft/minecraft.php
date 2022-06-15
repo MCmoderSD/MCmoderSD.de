@@ -3,7 +3,7 @@
 
 	<head>
 		<title>Minecraft</title>
-    <link rel="stylesheet" href="/content/style/minecraft_style.css">
+    <link rel="stylesheet" href="/content/style/minecraft_style.php">
 	</head>
 
 	<body>

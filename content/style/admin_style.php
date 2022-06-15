@@ -1,6 +1,13 @@
+<?php
+header('content-type: text/css; charset=utf-8');
+?>
+
 body {
+	background-color: #36393f;
+    padding: 80px;
+    color: rgb(88, 101, 242);
+    font-size: 42px;
     text-align: center;
-    background-color: #36393f;
     margin: 0;
     position: absolute;
     top: 50%;
@@ -8,16 +15,16 @@ body {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     font-family: Arial, Helvetica, sans-serif;
+}
+
+#link  {
     color: rgb(88, 101, 242);
+    margin: 4px;
 }
 
-#error {
-    font-size: 84;
-    
-}
-
-#description {
-    font-size: 48px;
+#link a {
+  color: rgb(88, 101, 242);
+  margin: 4px;
 }
 
 .back {

@@ -5,7 +5,7 @@
 	<head>
 		<title>Admin-Center</title>
         <style>
-            <?php include 'content/style/admin_style.css'; ?>
+            <?php include 'content/style/admin_style.php'; ?>
         </style>
 	</head>
 

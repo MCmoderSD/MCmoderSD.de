@@ -1,15 +1,20 @@
+<?php
+header('content-type: text/css; charset=utf-8');
+?>
+
 body {
 	background-color: #36393f;
-    padding: 80px;
-    color: rgb(88, 101, 242);
-    font-size: 42px;
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px;
+    align-items: center;
     text-align: center;
 }
 
 .center {
   margin-left: auto;
   margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  align-items: center;
 }
 
 .back {
@@ -24,16 +29,4 @@ body {
     font-size: 32px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-}
-
-.links a {
-  color: #20aef0;
-  font-size: 42px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-}
-
-.topic a {
-  color: rgb(88, 101, 242);
-  margin: 4px;
 }

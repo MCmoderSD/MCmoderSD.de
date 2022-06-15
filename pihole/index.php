@@ -2,7 +2,7 @@
 <html lang="german">
         <head>
             <title>Error - 404</title>
-            <link rel="stylesheet" href="/content/style/error_style.css">
+            <link rel="stylesheet" href="/content/style/error_style.php">
         </head>
     
         <body>

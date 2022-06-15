@@ -1,3 +1,7 @@
+<?php
+header('content-type: text/css; charset=utf-8');
+?>
+
 .flat-progressbar{
 	height: 10px;
 }

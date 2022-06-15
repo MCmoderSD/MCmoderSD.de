@@ -4,7 +4,7 @@
 
 	<head>
 		<title>Operation Throwback</title>
-		<link rel="stylesheet" href="/content/style/Operation-Throwback_style.css">
+		<link rel="stylesheet" href="/content/style/Operation-Throwback_style.php">
 	</head>
 
 	<body>

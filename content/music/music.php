@@ -4,7 +4,7 @@
 
 	<head>
 		<title>Musik</title>
-        <link rel="stylesheet" href="/content/style/music_style.css">
+        <link rel="stylesheet" href="/content/style/music_style.php">
 	</head>
 
 	<body>

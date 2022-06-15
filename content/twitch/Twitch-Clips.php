@@ -2,7 +2,7 @@
 <html lang="de">
 	<head>
 		<title>Twitch Clips</title>
-    <link rel="stylesheet" href="/content/style/Twitch-Clips_style.css">
+    <link rel="stylesheet" href="/content/style/Twitch-Clips_style.php">
 	</head>
 
 	<body>

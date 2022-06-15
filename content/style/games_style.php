@@ -1,3 +1,7 @@
+<?php
+header('content-type: text/css; charset=utf-8');
+?>
+
 body {
 	background-color: #36393f;
 	font-family: Arial, Helvetica, sans-serif;

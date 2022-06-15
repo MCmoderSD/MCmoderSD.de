@@ -3,7 +3,7 @@
 
 	<head>
 		<title>Gallerie</title>
-    <link rel="stylesheet" href="/content/style/gallery_style.css">
+    <link rel="stylesheet" href="/content/style/gallery_style.php">
 	</head>
 
 	<body>

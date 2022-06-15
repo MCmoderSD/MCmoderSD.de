@@ -4,7 +4,7 @@
 
 	<head>
 		<title>Memes</title>
-    <link rel="stylesheet" href="/content/style/memes_style.css">
+    <link rel="stylesheet" href="/content/style/memes_style.php">
 	</head>
 
 <body>

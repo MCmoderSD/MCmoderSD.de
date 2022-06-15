@@ -3,7 +3,7 @@
 
 	<head>
 		<title>Twitch Clips</title>
-    <link rel="stylesheet" href="/content/style/clips_style.css">
+    <link rel="stylesheet" href="/content/style/clips_style.php">
 	</head>
 
 	<body>
