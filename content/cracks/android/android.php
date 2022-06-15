@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+<?php ?>
 
-<html>
+<html lang="de">
 
-	<head>
+<head>
 		<title>Cracks</title>
     <link rel="stylesheet" href="/content/style/cracks_style.php">
   </head>
@@ -11,9 +11,9 @@
         
         <div class="links"><a href="https://z9iswj91nn31eabm.myfritz.net:47201/nas/filelink.lua?id=a85cb2edee0b0bc5">Spotify Premium APK</a></div>
         <br/>
-        <div id="back">
-            <a href="/1.php>back</a>
+        <div class="back">
+            <a href="/index.php">back</a>
         </div>
 
 	</body>
-</htlm>
+</html>

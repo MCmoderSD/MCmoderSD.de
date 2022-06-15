@@ -1,6 +1,6 @@
-<!DOCTYPE html>
+<?php ?>
 
-<html>
+<html lang="de">
 
 	<head>
 		<title>Games</title>
@@ -30,8 +30,8 @@
         <div class="links"><a href="https://z9iswj91nn31eabm.myfritz.net:47201/nas/filelink.lua?id=d2607d10ca161cf7">The Stanley Parable Ultimate Deluxe</a></div>
         <br/>
         
-        <div id="back">
-            <a href="/content/cracks/cracks.html">back</a>
+        <div class="back">
+            <a href="/content/cracks/cracks.php">back</a>
         </div>
 	</body>
-</htlm>
+</html>

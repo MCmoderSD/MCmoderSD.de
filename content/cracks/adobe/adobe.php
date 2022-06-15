@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+<?php ?>
 
-<html>
+<html lang="de">
 
-	<head>
+
+<head>
 		<title>Adobe</title>
     <link rel="stylesheet" href="/content/style/cracks_style.php">
 	</head>
@@ -27,8 +28,8 @@
         <br/>
         <div class="links"><a href="https://z9iswj91nn31eabm.myfritz.net:47201/nas/filelink.lua?id=38ff55f12b161749">Adobe Dreamweaver 2020</a></div>
         <br/>
-        <div id="back">
-            <a href="/content/cracks/cracks.html">back</a>
+        <div class="back">
+            <a href="/content/cracks/cracks.php">back</a>
         </div>
 	</body>
-</htlm>
+</html>

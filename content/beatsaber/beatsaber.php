@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+<?php ?>
 
-
-<html>
+<html lang="de">
 
 	<head>
 		<title>Beat Saber</title>
@@ -18,9 +17,9 @@
 		<br/>
 		<div class="links"><h1>Full Backups</h1><a href="https://z9iswj91nn31eabm.myfritz.net:47201/nas/filelink.lua?id=c41a71e0f57eff64">Beat Saber - 1.16.1</a> <a href="https://z9iswj91nn31eabm.myfritz.net:47201/nas/filelink.lua?id=643bfbca38e9a919">Beat Saber 1.18.3</a> <a href="https://z9iswj91nn31eabm.myfritz.net:47201/nas/filelink.lua?id=fb0afe7ca2b428d0">Beat Saber 1.20.0</a> </div>
 		<br/>
-        <div id="back">
+        <div class="back">
             <a href="/content/games/games.php">back</a>
         </div>
 
 	</body>
-</htlm>
+</html>
