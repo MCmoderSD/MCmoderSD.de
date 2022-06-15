@@ -35,7 +35,7 @@ body {
     font-size: 32px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    padding-top 8px;
+    padding-top 16px;
 }
 
 .back a {
@@ -43,5 +43,5 @@ body {
     font-size: 32px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    padding-top 8px;
+    padding-top 16px;
 }
