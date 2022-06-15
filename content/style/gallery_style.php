@@ -3,8 +3,11 @@ header('content-type: text/style; charset=utf-8');
 ?>
 
 body {
-	background-color: #36393f;
-    padding: 20px;
+  background-color: #36393f;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .center {
