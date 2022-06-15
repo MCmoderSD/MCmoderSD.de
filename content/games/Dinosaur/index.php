@@ -64,6 +64,6 @@
   <script type="text/javascript" src="/content/games/Dinosaur/scripts/wrapper.js"></script>
   </div>
   <script type="text/javascript" src="/content/games/Dinosaur/scripts/chrome.js"></script>
-<div class="back"><a href="/index.php">back</a></div>
+    <div class="back"><a href="/index.php">back</a></div>
 </body>
 </html>
