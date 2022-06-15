@@ -4,7 +4,7 @@ header('content-type: text/style; charset=utf-8');
 
 body {
 background-color: #36393f;
-align-items: center;
+text-align: center;
 }
 
 .links a {
