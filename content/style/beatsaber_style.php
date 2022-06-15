@@ -27,15 +27,19 @@ body {
 }
 
 .back {
-    color: rgb(88, 101, 242);
-    font-size: 32px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+color: rgb(88, 101, 242);
+font-size: 32px;
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+padding-top 16px;
+padding: 16px;
 }
 
 .back a {
-    color: rgb(88, 101, 242);
-    font-size: 32px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+color: rgb(88, 101, 242);
+font-size: 32px;
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+padding-top 16px;
+padding: 16px;
 }
