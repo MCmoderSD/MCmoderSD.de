@@ -1,3 +1,5 @@
+<?php ?>
+
 <html lang="de">
 
 <head>
