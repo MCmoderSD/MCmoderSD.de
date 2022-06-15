@@ -1,4 +1,5 @@
-<?php ?>
+<?php
+?>
 <html lang="german">
         <head>
             <title>Error - 404</title>
