@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+<?php ?>
 
-
-<html>
+<html lang="de">
 
 	<head>
 		<title>Operation Throwback</title>
@@ -18,10 +17,10 @@
 		<!--<div class="headline"><p>Modded Versions:</p></div>-->
 
 	
-		<div id="back">
+		<div class="back">
             <a href="/content/games/games.html">back</a>
         </div>
 
 
 	</body>
-</htlm>
+</html>

@@ -1,6 +1,5 @@
-<!DOCTYPE html>
-
-<html>
+<?php ?>
+<html lang="de">
 	<head>
 		<title>Twitch Clips</title>
     <link rel="stylesheet" href="/content/style/Twitch-Clips_style.css">
@@ -12,7 +11,7 @@
    </div> 
    <br/>
       <div id="back">
-          <a href="/1.php">back</a>
+          <a href="/index.php">back</a>
       </div> 
 	</body>
-</htlm>
+</html>

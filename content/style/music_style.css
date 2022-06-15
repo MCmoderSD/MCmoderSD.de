@@ -9,16 +9,23 @@ body {
   margin-right: auto;
 }
 
-.back a {
-  color: rgb(88, 101, 242);
-  font-size: 32px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-}
-
 .audio{
     padding: 20px;
     color: rgb(88, 101, 242);
     font-family: Arial, Helvetica, sans-serif;
      text-align: center;
+}
+
+.back {
+    color: rgb(88, 101, 242);
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.back a {
+    color: rgb(88, 101, 242);
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }

@@ -1,7 +1,6 @@
-<!DOCTYPE html>
+<?php ?>
 
-
-<html>
+<html lang="de">
 
 	<head>
 		<title>Memes</title>
@@ -10,7 +9,7 @@
 
 <body>
   <div id="back">
-    <a href="/1.php">back</a>
+    <a href="/index.php">back</a>
   </div> 
     <table class="center">
         <tr>
@@ -39,8 +38,8 @@
       </td>
   </tr>
     </table>
-    <div id="back">
-      <a href="/1.php">back</a>
+    <div class="back">
+      <a href="/index.php">back</a>
   </div>  
 </body>
 </html>

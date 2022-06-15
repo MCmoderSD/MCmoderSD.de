@@ -116,12 +116,12 @@
           </tr>
           <tr>
             <td>
-              <img src="/content/img/SimonSucking.png" width="80%">
+              <img src="/content/img/SimonSucking.png" width="80%" alt="SimonSucking">
             </td>
           </tr>
           <tr>
             <td>
-               <img src="/content/img/spidermike.png" width="80%">  
+               <img src="/content/img/spidermike.png" width="80%" alt="spidermike">
           </td>
         </tr>
            <tr>

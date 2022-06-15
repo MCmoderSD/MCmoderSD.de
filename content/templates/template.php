@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php ?>
 
 <style>
 body {
@@ -11,15 +11,23 @@ body {
   margin-right: auto;
 }
 
-#back{
+.back{
   color: rgb(88, 101, 242);
   font-size: 32px;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
+
+.back a {
+    color: rgb(88, 101, 242);
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
 </style>
 
-<html>
+<html lang="de">
 
 	<head>
 		<title>###</title>
@@ -50,8 +58,8 @@ body {
         </table>
         
         
-        <div id="back">
-            <a href="/1.php">back</a>
+        <div class="back">
+            <a href="/index.php">back</a>
         </div>
 	</body>
-</htlm>
+</html>

@@ -13,13 +13,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#back a {
-  color: rgb(88, 101, 242);
-  font-size: 32px;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-}
-
 #link  {
     color: rgb(88, 101, 242);
     margin: 4px;
@@ -28,4 +21,18 @@ body {
 #link a {
   color: rgb(88, 101, 242);
   margin: 4px;
+}
+
+.back {
+    color: rgb(88, 101, 242);
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.back a {
+    color: rgb(88, 101, 242);
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
