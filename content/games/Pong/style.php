@@ -1,4 +1,8 @@
-html, body {
+<?php
+header('content-type: text/style; charset=utf-8');
+?>
+
+ html, body {
     height: 100%;
     margin: 0;
   }

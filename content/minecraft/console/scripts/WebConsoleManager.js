@@ -39,7 +39,7 @@ class WebConsoleManager {
 	
 	/**
 	* Deletes connection (for example, if a connection was closed by server).
-	* Called by WebConsole.js
+	* Called by WebConsole.scripts
 	*/
 	deleteConnection(serverName, deleteFromArrayOnly){
 		//Delete from active connection (if it is the active one)
