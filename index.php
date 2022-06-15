@@ -1,4 +1,8 @@
-<?php ?>
+<?php
+
+include 'content/style/index_style.css';
+
+?>
 <html lang="de">
 
 	<head>
