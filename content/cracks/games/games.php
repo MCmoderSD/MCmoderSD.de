@@ -5,7 +5,7 @@
 	<head>
 		<title>Games</title>
     <link rel="stylesheet" href="/content/style/cracks_style.php">
-	</head>
+	</head>d
 
 	<body>
 
@@ -24,6 +24,8 @@
         <div class="links"><a href="https://z9iswj91nn31eabm.myfritz.net:47201/nas/filelink.lua?id=651397879b13c196">Sims 4</a></div>
         <br/>
         <div class="links"><a href="https://z9iswj91nn31eabm.myfritz.net:47201/nas/filelink.lua?id=9f53eb67eeb7736d">Superliminal</a></div>
+        <br/>
+        <div class="links"><a href="https://z9iswj91nn31eabm.myfritz.net:47201/nas/filelink.lua?id=a6d16f0b88fdfc5e">Teardown</a></div>
         <br/>
         <div class="links"><a href="https://z9iswj91nn31eabm.myfritz.net:47201/nas/filelink.lua?id=0383e55130751aea">The Dark Pictures Anthology Man of Medan</a></div>
         <br/>
