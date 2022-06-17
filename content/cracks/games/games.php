@@ -5,7 +5,7 @@
 	<head>
 		<title>Games</title>
     <link rel="stylesheet" href="/content/style/cracks_style.php">
-	</head>d
+	</head>
 
 	<body>
 
