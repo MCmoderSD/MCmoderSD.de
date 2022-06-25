@@ -19,6 +19,8 @@
         <br/>
         <div class="links"><a href="https://z9iswj91nn31eabm.myfritz.net:47201/nas/filelink.lua?id=2c130c78dea42f01">Horizon Zero Dawn</a></div>
         <br/>
+        <div class="links"><a href="https://z9iswj91nn31eabm.myfritz.net:47201/nas/filelink.lua?id=e5c7011f8eeec76e">Kanojo VR</a></div>
+        <br/>
         <div class="links"><a href="https://z9iswj91nn31eabm.myfritz.net:47201/nas/filelink.lua?id=6c323bb58bddf689">Narcosis</a></div>
         <br/>
         <div class="links"><a href="https://z9iswj91nn31eabm.myfritz.net:47201/nas/filelink.lua?id=651397879b13c196">Sims 4</a></div>
