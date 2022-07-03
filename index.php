@@ -13,7 +13,7 @@
 <div id="welcome">MCmoderSD.live</div>
 <br><br/>
 
-<div id="links"><a href="content/games/games.php">Games</a> <a href="/content/cookie/index.php">Cookies</a> <a href="/content/cracks/cracks.php">Cracks</a> <a href="/discord/index.php">DiscordBot</a> <a href="/content/memes/memes.php">Memes</a> <a href="content/music/music.php">Musik</a> <a href="/content/twitch/Twitch-Clips.php">Twitch Clips</a></div>
+<div id="links"><a href="content/games/games.php">Games</a> <a href="/content/cookie/index.php">Cookies</a> <a href="/content/cracks/cracks.php">Cracks</a> <a href="/discord/index.html">DiscordBot</a> <a href="/content/memes/memes.php">Memes</a> <a href="content/music/music.php">Musik</a> <a href="/content/twitch/Twitch-Clips.php">Twitch Clips</a></div>
 <div id="proxy"><a href="/admin/admincontrol.php">Admin-Center</a> | Proxy: IP 178.254.18.170 | Port 3128</div>
 
 <!--<a href="/content/login/login.html">Log in</a><a href="signup">Sign up</a>-->
