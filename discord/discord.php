@@ -3,7 +3,7 @@
 
 <head>
     <title>Discord Bot</title>
-    <link rel="stylesheet" href="/content/style/discordbot_style.php">
+    <link rel="stylesheet" href="/content/style/discord_style.php">
 </head>
 
 <body>
