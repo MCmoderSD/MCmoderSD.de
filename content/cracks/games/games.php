@@ -21,15 +21,15 @@
         <br/>
         <div class="links"><a href="https://z9iswj91nn31eabm.myfritz.net:47201/nas/filelink.lua?id=e5c7011f8eeec76e">Kanojo VR</a></div>
         <br/>
-        <div class="links"><a href="https://z9iswj91nn31eabm.myfritz.net:47201/nas/filelink.lua?id=b03bbc4e87cf1042"></a>LEGO Builders Journey</div>
+        <div class="links"><a href="https://z9iswj91nn31eabm.myfritz.net:47201/nas/filelink.lua?id=b03bbc4e87cf1042">LEGO Builders Journey</a></div>
         <br/>
-        <div class="links"><a href="https://z9iswj91nn31eabm.myfritz.net:47201/nas/filelink.lua?id=0cf0c61a583c8739"></a>Leisure Suit Larry Wet Dreams Dry Twice</div>
+        <div class="links"><a href="https://z9iswj91nn31eabm.myfritz.net:47201/nas/filelink.lua?id=0cf0c61a583c8739">Leisure Suit Larry Wet Dreams Dry Twice</a></div>
         <br/>
         <div class="links"><a href="https://z9iswj91nn31eabm.myfritz.net:47201/nas/filelink.lua?id=6c323bb58bddf689">Narcosis</a></div>
         <br/>
         <div class="links"><a href="https://z9iswj91nn31eabm.myfritz.net:47201/nas/filelink.lua?id=651397879b13c196">Sims 4</a></div>
         <br/>
-        <div class="links"><a href="https://z9iswj91nn31eabm.myfritz.net:47201/nas/filelink.lua?id=a7fb387c30a10813"></a>Stray</div>
+        <div class="links"><a href="https://z9iswj91nn31eabm.myfritz.net:47201/nas/filelink.lua?id=a7fb387c30a10813">Stray</a></div>
         <br/>
         <div class="links"><a href="https://z9iswj91nn31eabm.myfritz.net:47201/nas/filelink.lua?id=9f53eb67eeb7736d">Superliminal</a></div>
         <br/>
