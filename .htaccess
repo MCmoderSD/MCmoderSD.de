@@ -1,5 +1,7 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewritreBase /startseite
-RewriteRule ^(.*)$ index.php$1 [L]
+RewritreBase /start
+RewriteRule ^(.*)$ index.php$1
+RewriteBase /cracks
+RewriteRule ^(.*)$ /content/cracks/cracks.php$1
