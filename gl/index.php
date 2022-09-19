@@ -2,7 +2,7 @@
 
 <html lang="de">
 	<head>
-		<title>Gallerie</title>
+		<title>Galerie</title>
     <link rel="stylesheet" href="/content/style/gallery_style.php">
 	</head>
 

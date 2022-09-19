@@ -30,6 +30,13 @@ body {
     text-align: center;
 }
 
+.links {
+color: #20aef0;
+font-size: 42px;
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+}
+
 .links a {
   color: #20aef0;
   font-size: 42px;
