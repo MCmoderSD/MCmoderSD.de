@@ -14,7 +14,7 @@
             <a href="/content/beatsaber/beatsaber.php">Beat Saber</a>
             <a href="/content/games/browsergames.php">Browser Games</a>
             <a href="/content/minecraft/minecraft.php">Minecraft</a>
-            <a href="/content/R6/Operation-Throwback.php">Operation Throwback</a>
+            <a href="/content/rainbowsix/Operation-Throwback.php">Operation Throwback</a>
         </div>
 
 		<div class="back"><a href="/index.php">back</a></div>

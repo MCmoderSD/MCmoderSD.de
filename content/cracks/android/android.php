@@ -13,7 +13,7 @@
         <br>
 
         <div class="back">
-            <a href="/index.php">back</a>
+            <a href="/content/cracks/cracks.php">back</a>
         </div>
 
 	</body>
