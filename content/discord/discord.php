@@ -7,7 +7,7 @@
 
     <body>
         <div class="links">
-            <a href="https://discord.com/api/oauth2/authorize?client_id=954136734482989096&permissions=271591424&scope=bot%20applications.commands">Hochverdiener</a>
+            <a href="https://discord.com/api/oauth2/authorize?client_id=954136734482989096&permissions=378765600768&scope=bot%20applications.commands">Hochverdiener</a>
             <a href="https://github.com/MCmoderSD/Hochverdiener-2.0">Source Code</a>
         </div>
         <br>
