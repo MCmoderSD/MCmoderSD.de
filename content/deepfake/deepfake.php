@@ -23,9 +23,9 @@
 <div class="models">
     <video autoplay loop width="80%" src="media/Markus-Ruehl_v1_gen105k.mp4"></video>
 </div>
-
+<br>
 <div class="links">
-    <a href="">Download</a>
+    <a href="/models/Markus-Ruehl_v1_gen105k.dfm">Download</a>
 </div>
 <br>
 <div class=" back">
