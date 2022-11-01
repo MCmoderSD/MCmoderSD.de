@@ -21,7 +21,7 @@
 </div>
 
 <div class="models">
-    <video src="media/Markus-Ruehl_v1_gen105k.mp4"></video>
+    <video src="media/Markus-Ruehl_v1_gen105k.mp4" autoplay width="80%"></video>
 </div>
 
 <div class="links">
