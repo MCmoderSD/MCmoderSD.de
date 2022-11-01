@@ -12,8 +12,8 @@
 <body>
 
 <div class="links">
-    <a href="https://github.com/iperov/DeepFaceLab">DeepFaceLab (Training)</a>
-    <a href="https://github.com/iperov/DeepFaceLive">DeepFaceLive (Live Filter)</a>
+    <a href="https://github.com/iperov/DeepFaceLab#releases">DeepFaceLab (Training)</a>
+    <a href="https://github.com/iperov/DeepFaceLive#releases">DeepFaceLive (Live Filter)</a>
 </div>
 
 <div class="center">
