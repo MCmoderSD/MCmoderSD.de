@@ -50,6 +50,7 @@ margin: 4px;
 }
 
 .models {
+font-size: 36px;
 size: 80%;
 align: center;
 align-items: center;

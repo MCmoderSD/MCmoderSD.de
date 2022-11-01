@@ -19,8 +19,9 @@
 <div class="center">
     <p>Trainierte Models</p>
 </div>
-
+<br>
 <div class="models">
+    <p>Markus Rühl</p>
     <video controls autoplay loop width="80%" src="media/Markus-Ruehl_v1_gen105k.mp4"></video>
 </div>
 <br>
