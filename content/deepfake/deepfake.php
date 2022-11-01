@@ -25,7 +25,7 @@
 </div>
 <br>
 <div class="links">
-    <a href="content/deepfake/models/Markus-Ruehl_v1_gen105k.dfm">Download</a>
+    <a href="/content/deepfake/models/Markus-Ruehl_v1_gen105k.dfm">Download</a>
 </div>
 <br>
 <div class=" back">
