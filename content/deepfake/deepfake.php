@@ -25,7 +25,7 @@
 </div>
 <br>
 <div class="links">
-    <a href="/content/deepfake/models/Markus-Ruehl_v1_gen105k.dfm">Download</a>
+    <a href="https://z9iswj91nn31eabm.myfritz.net:47201/nas/filelink.lua?id=51a54df09e2e88b3">Download</a>
 </div>
 <br>
 <div class=" back">
