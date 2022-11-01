@@ -21,18 +21,16 @@
 </div>
 
 <div class="models">
-
-    <video src="media/Markus-R%C3%BChl_v1_gen105k.mp4"></video>
+    <video src="media/Markus-Ruehl_v1_gen105k.mp4"></video>
 </div>
 
 <div class="links">
     <a href="">Download</a>
 </div>
-
+<br>
 <div class=" back">
     <a href="/index.php">Back</a>
 </div>
-
 </body>
 
 

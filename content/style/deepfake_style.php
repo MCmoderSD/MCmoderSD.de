@@ -31,14 +31,14 @@ text-align: center;
 }
 
 .links {
-color: #20aef0;
+color: rgb(88, 101, 242);
 font-size: 42px;
 font-family: Arial, Helvetica, sans-serif;
 text-align: center;
 }
 
 .links a {
-color: #20aef0;
+color: rgb(88, 101, 242);
 font-size: 42px;
 font-family: Arial, Helvetica, sans-serif;
 text-align: center;
@@ -47,4 +47,10 @@ text-align: center;
 .topic a {
 color: rgb(88, 101, 242);
 margin: 4px;
+}
+
+.models {
+size: 80%;
+align: center;
+align-items: center;
 }
