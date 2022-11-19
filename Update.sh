@@ -1,1 +1,0 @@
-git pull https://github.com/MCmoderSD/MCmoderSD.live.git
