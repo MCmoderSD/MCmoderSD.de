@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="Upadtes">
-      <change afterPath="$PROJECT_DIR$/skischullandheim/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="Skischullandheim">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/cracks/games/games.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/cracks/games/games.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +25,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/index.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -73,6 +78,11 @@
       <workItem from="1670781668762" duration="561000" />
       <workItem from="1670782248741" duration="473000" />
       <workItem from="1670782738789" duration="93000" />
+      <workItem from="1670782857431" duration="83000" />
+      <workItem from="1671462026431" duration="1170000" />
+      <workItem from="1672165803506" duration="22000" />
+      <workItem from="1672165836226" duration="34000" />
+      <workItem from="1672288749027" duration="113000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1668897371120</created>
@@ -95,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669062554355</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Skischullandheim">
+      <created>1670782868412</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670782868412</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +133,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Update" />
     <MESSAGE value="Upadtes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Upadtes" />
+    <MESSAGE value="Skischullandheim" />
+    <option name="LAST_COMMIT_MESSAGE" value="Skischullandheim" />
   </component>
 </project>
