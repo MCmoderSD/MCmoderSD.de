@@ -4,9 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="Skischullandheim">
+    <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="High on Life">
+      <change afterPath="$PROJECT_DIR$/content/minecraft/UploadImages.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/870.a95566a4a33ba393.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/assets/i18n/en.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/assets/i18n/es.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/assets/i18n/pl.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/assets/i18n/zh.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/assets/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/assets/iconwhite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/main.2253790b6d8e55a9.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/polyfills.ac2e04af817af8fd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/runtime.0110676fde0d41fc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/styles.369e7d748290244c.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/cracks/games/games.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/cracks/games/games.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/minecraft/minecraft.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/minecraft/minecraft.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpscripts/uploader.php" beforeDir="false" afterPath="$PROJECT_DIR$/phpscripts/uploader.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +47,7 @@
     <option name="projectConfigVersion" value="5" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/content/minecraft/minecraft.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/index.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -62,6 +80,11 @@
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;PHP&quot;
+    ]
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -82,7 +105,10 @@
       <workItem from="1671462026431" duration="1170000" />
       <workItem from="1672165803506" duration="22000" />
       <workItem from="1672165836226" duration="34000" />
-      <workItem from="1672288749027" duration="113000" />
+      <workItem from="1672288749027" duration="172000" />
+      <workItem from="1672408488130" duration="1556000" />
+      <workItem from="1672410506242" duration="46000" />
+      <workItem from="1672467470605" duration="294000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1668897371120</created>
@@ -112,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670782868412</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="High on Life">
+      <created>1672288898500</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672288898500</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +167,7 @@
     <MESSAGE value="Update" />
     <MESSAGE value="Upadtes" />
     <MESSAGE value="Skischullandheim" />
-    <option name="LAST_COMMIT_MESSAGE" value="Skischullandheim" />
+    <MESSAGE value="High on Life" />
+    <option name="LAST_COMMIT_MESSAGE" value="High on Life" />
   </component>
 </project>
