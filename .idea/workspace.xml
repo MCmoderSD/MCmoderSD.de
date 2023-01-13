@@ -4,26 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="High on Life">
-      <change afterPath="$PROJECT_DIR$/content/minecraft/UploadImages.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/870.a95566a4a33ba393.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/assets/i18n/en.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/assets/i18n/es.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/assets/i18n/pl.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/assets/i18n/zh.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/assets/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/assets/iconwhite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/main.2253790b6d8e55a9.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/polyfills.ac2e04af817af8fd.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/runtime.0110676fde0d41fc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/minecraft/console 2.0/styles.369e7d748290244c.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
+    <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="WebConsole2.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/minecraft/minecraft.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/minecraft/minecraft.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpscripts/uploader.php" beforeDir="false" afterPath="$PROJECT_DIR$/phpscripts/uploader.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/cracks/games/games.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/cracks/games/games.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/minecraft/console 2.0/.htaccess" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/minecraft/console 2.0/870.a95566a4a33ba393.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/minecraft/console 2.0/assets/i18n/en.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/minecraft/console 2.0/assets/i18n/es.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/minecraft/console 2.0/assets/i18n/pl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/minecraft/console 2.0/assets/i18n/zh.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/minecraft/console 2.0/assets/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/minecraft/console 2.0/assets/iconwhite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/minecraft/console 2.0/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/minecraft/console 2.0/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/minecraft/console 2.0/main.2253790b6d8e55a9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/minecraft/console 2.0/polyfills.ac2e04af817af8fd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/minecraft/console 2.0/runtime.0110676fde0d41fc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/minecraft/console 2.0/styles.369e7d748290244c.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,6 +106,13 @@
       <workItem from="1672408488130" duration="1556000" />
       <workItem from="1672410506242" duration="46000" />
       <workItem from="1672467470605" duration="294000" />
+      <workItem from="1672467782435" duration="43000" />
+      <workItem from="1672468026605" duration="58000" />
+      <workItem from="1672468458017" duration="979000" />
+      <workItem from="1673109262022" duration="69000" />
+      <workItem from="1673363349849" duration="38000" />
+      <workItem from="1673363398451" duration="324000" />
+      <workItem from="1673645938076" duration="93000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1668897371120</created>
@@ -145,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672288898500</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="WebConsole2.0">
+      <created>1672467816124</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1672467816124</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +179,7 @@
     <MESSAGE value="Upadtes" />
     <MESSAGE value="Skischullandheim" />
     <MESSAGE value="High on Life" />
-    <option name="LAST_COMMIT_MESSAGE" value="High on Life" />
+    <MESSAGE value="WebConsole2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="WebConsole2.0" />
   </component>
 </project>
