@@ -1,30 +1,28 @@
-<?php ?>
-
 <html lang="de">
 
 <head>
     <title>MCmoderSD.live</title>
-    <link rel="stylesheet" type="text/css" href="/content/style/index_style.php"/>
+    <meta charset="utf-8">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2858567818610194"
-            crossorigin="anonymous"></script>
+    <style><?php include "style/indexStyle.css"?></style>
 </head>
 
 <body>
+<header>
+    <div CLASS="headline"><p class="headline">MCmoderSD.live</p></div>
 
-<div id="welcome">
-    <p>MCmoderSD.live</p>
+<div class="links">
+    <ul>
+        <li><a href="/content/games/games.php">Games</a></li>
+        <li><a href="/content/cookie/index.php">Cookies</a></li>
+        <!--<li><a href="/content/cracks/cracks.php">Cracks</a></li>-->
+        <!--<li><a href="/content/deepfake/deepfake.php">DeepFake</a></li>-->
+        <li><a href="/content/discord/discord.php">DiscordBot</a></li>
+        <li><a href="/content/memes/memes.php">Memes</a</li>
+        <li><a href="/content/music/music.php">Musik</a></li>
+        <li><a href="/content/twitch/Twitch-Clips.php">Twitch Clips</a></li>
+    </ul>
 </div>
-<br>
-<div id="links">
-    <a href="/content/games/games.php">Games</a>
-    <a href="/content/cookie/index.php">Cookies</a>
-    <!--<a href="/content/cracks/cracks.php">Cracks</a>-->
-    <!--<a href="/content/deepfake/deepfake.php">DeepFake</a>-->
-    <a href="/content/discord/discord.php">DiscordBot</a>
-    <a href="/content/memes/memes.php">Memes</a>
-    <a href="/content/music/music.php">Musik</a>
-    <a href="/content/twitch/Twitch-Clips.php">Twitch Clips</a>
-</div>
+</header>
 </body>
 </html>

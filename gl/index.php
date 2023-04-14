@@ -13,7 +13,7 @@
         <table class="center">
            <tr>
             <td>
-                <img src="/content/img/AgnusCreep.png" width="80%" alt="AgnusCreep">
+                <img src="/images/AgnusCreep.png" width="80%" alt="AgnusCreep">
             </td>
          </tr>
            <!--<tr>
@@ -23,105 +23,105 @@
           </tr>-->
          <tr>
           <td>
-              <img src="/content/img/Attila-blurr.png" width="80%" alt="Attila">
+              <img src="/images/Attila-blurr.png" width="80%" alt="Attila">
         </td>
        </tr>
           <tr>
             <td>
-               <img src="/content/img/Bauchredner.png" width="80%" alt="Bauchredner">
+               <img src="/images/Bauchredner.png" width="80%" alt="Bauchredner">
           </td>
         </tr>
            <tr>
             <tr>
               <td>
-                 <img src="/content/img/BenAreYouGood.png" width="80%" alt="BenAreYouGood">
+                 <img src="/images/BenAreYouGood.png" width="80%" alt="BenAreYouGood">
             </td>
           </tr>
              <tr>
               <tr>
                 <td>
-                   <img src="/content/img/BenPixelArt.png" width="80%" alt="BenPixelArt">
+                   <img src="/images/BenPixelArt.png" width="80%" alt="BenPixelArt">
               </td>
             </tr>
             <tr>
               <td>
-                 <img src="/content/img/BenStare.png" width="80%" alt="BenStare">
+                 <img src="/images/BenStare.png" width="80%" alt="BenStare">
             </td>
           </tr>
              <tr>
                <tr>
                 <td>
-                    <img src="/content/img/Dog.png" width="80%" alt="Dog">
+                    <img src="/images/Dog.png" width="80%" alt="Dog">
               </td>
           </tr>
           <tr>
               <td>
-                <img src="/content/img/LeoGamer.png" width="80%" alt="LeoGamer">
+                <img src="/images/LeoGamer.png" width="80%" alt="LeoGamer">
                
               </td>
           </tr>
           <tr>
             <td>
-              <img src="/content/img/LeoGaming.png" width="80%" alt="LeoGaming">
+              <img src="/images/LeoGaming.png" width="80%" alt="LeoGaming">
             </td>
           </tr>
           <tr>
             <td>
-              <img src="/content/img/LeoHitler.png" width="80%" alt="LeoHitler">
+              <img src="/images/LeoHitler.png" width="80%" alt="LeoHitler">
             </td>
             <tr>
               <td>
-                  <img src="/content/img/LeoHoelenmensch.jpeg" width="80%" alt="LeoHoelenmensch">
+                  <img src="/images/LeoHoelenmensch.jpeg" width="80%" alt="LeoHoelenmensch">
             </td>
         </tr>
           <tr>
             <td>
-              <img src="/content/img/LeoNaughty.png" width="80%" alt="LeoNaughty">
+              <img src="/images/LeoNaughty.png" width="80%" alt="LeoNaughty">
             </td>
           </tr>
           <tr>
             <td>
-              <img src="/content/img/LeoOhhJaa.png" width="80%" alt="LeoOhhJaa">
+              <img src="/images/LeoOhhJaa.png" width="80%" alt="LeoOhhJaa">
             </td>
           </tr>
           <tr>
             <td>
-              <img src="/content/img/LeoStare.png" width="80%" alt="LeoStare">
+              <img src="/images/LeoStare.png" width="80%" alt="LeoStare">
             </td>
           </tr>
           <tr>
             <td>
-              <img src="/content/img/LeoVampire.png" width="80%" alt="LeoVampire">
+              <img src="/images/LeoVampire.png" width="80%" alt="LeoVampire">
             </td>
           </tr>
           <tr>
             <td>
-              <img src="/content/img/LeoVampireOriginal.png" width="80%" alt="LeoVampireOriginal">
+              <img src="/images/LeoVampireOriginal.png" width="80%" alt="LeoVampireOriginal">
             </td>
           </tr>
           <tr>
             <td>
-                <img src="/content/img/ModerPsycho.png" width="80%" alt="ModerPsycho">  
+                <img src="/images/ModerPsycho.png" width="80%" alt="ModerPsycho">
           </td>
       </tr>
           <tr>
             <td>
-              <img src="/content/img/ModerQuerdenker.png" width="80%" alt="ModerQuerdenker">
+              <img src="/images/ModerQuerdenker.png" width="80%" alt="ModerQuerdenker">
             </td>
           </tr>
           <tr>
             <td>
-              <img src="/content/img/ModerToilet.png" width="80%" alt="ModerToilet">
+              <img src="/images/ModerToilet.png" width="80%" alt="ModerToilet">
             </td>
           </tr>
           <tr>
             <td>
-              <img src="/content/img/SimonSucking.png" width="80%" alt="SimonSucking">
+              <img src="/images/SimonSucking.png" width="80%" alt="SimonSucking">
             </td>
           </tr>
           <tr>
             <td>
-               <img src="/content/img/spidermike.png" width="80%" alt="spidermike">
+               <img src="/images/spidermike.png" width="80%" alt="spidermike">
           </td>
         </tr>
            <tr>
