@@ -1,1 +1,1 @@
-sudo git pull ; sudo rm -r /etc/apache2/sites-enabled/mcmodersd.live.conf ; ln /var/www/mcmodersd.live/mcmodersd.live.conf /etc/apache2/sites-enabled/mcmodersd.live.conf ; sudo systemctl reload apache2 ; sudo ./root/Update.sh ;
+sudo git pull ; sudo rm -r /etc/apache2/sites-enabled/mcmodersd.live.conf ; ln /var/www/mcmodersd.live/mcmodersd.live.conf /etc/apache2/sites-enabled/mcmodersd.live.conf ; sudo systemctl reload apache2
