@@ -4,59 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="Choo Choo Charles">
-      <change afterPath="$PROJECT_DIR$/content/cola-webpage" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/style/cookie.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mcmodersd.live.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/style/gamesStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/style/indexStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Update.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Update.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/at/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/cookie/cookie.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cookie/cookie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/cookie/cookie.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cookie/cookie.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/cookie/cookie.php" beforeDir="false" afterPath="$PROJECT_DIR$/style/cookieStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/cookie/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cookie/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/cracks/games/games.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/cracks/games/games.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/AgnusCreep.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/AgnusCreep.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/Attila-blurr.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Attila-blurr.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/Attila.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Attila.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/Bauchredner.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Bauchredner.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/BenAreYouGood.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/BenAreYouGood.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/BenPixelArt.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/BenPixelArt.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/BenStare.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/BenStare.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/Dog.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/Dog.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/LeoGamer.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/LeoGamer.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/LeoGaming.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/LeoGaming.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/LeoHitler.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/LeoHitler.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/LeoHoelenmensch.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/images/LeoHoelenmensch.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/LeoNaughty.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/LeoNaughty.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/LeoOhhJaa.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/LeoOhhJaa.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/LeoStare.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/LeoStare.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/LeoVampire.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/LeoVampire.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/LeoVampireOriginal.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/LeoVampireOriginal.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/ModerPsycho.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ModerPsycho.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/ModerQuerdenker.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ModerQuerdenker.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/ModerToilet.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ModerToilet.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/SimonSucking.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/SimonSucking.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/img/spidermike.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/spidermike.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/style/index_style.php" beforeDir="false" afterPath="$PROJECT_DIR$/content/style/index_style.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cracks/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dc/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/df/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gl/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/gl/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpscripts/uploader.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skischullandheim/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dbh.inc.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/login.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/games/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/signup.inc.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/upload.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/games/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/games/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +26,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
@@ -170,7 +122,12 @@
       <workItem from="1681325645614" duration="13000" />
       <workItem from="1681328355534" duration="37000" />
       <workItem from="1681433263284" duration="5636000" />
-      <workItem from="1681438947708" duration="183000" />
+      <workItem from="1681438947708" duration="306000" />
+      <workItem from="1681440348634" duration="20000" />
+      <workItem from="1681627002950" duration="34000" />
+      <workItem from="1681627047273" duration="523000" />
+      <workItem from="1681724583540" duration="1119000" />
+      <workItem from="1681726262316" duration="3000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1668897371120</created>
@@ -221,7 +178,35 @@
       <option name="project" value="LOCAL" />
       <updated>1673646144344</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update">
+      <created>1681439244648</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681439244648</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update">
+      <created>1681725498920</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1681725498920</updated>
+    </task>
+    <task id="LOCAL-00010" summary="update">
+      <created>1681725599061</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1681725599061</updated>
+    </task>
+    <task id="LOCAL-00011" summary="update">
+      <created>1681725693645</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1681725693645</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +231,7 @@
     <MESSAGE value="High on Life" />
     <MESSAGE value="WebConsole2.0" />
     <MESSAGE value="Choo Choo Charles" />
-    <option name="LAST_COMMIT_MESSAGE" value="Choo Choo Charles" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>

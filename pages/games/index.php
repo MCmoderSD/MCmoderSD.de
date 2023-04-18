@@ -3,11 +3,9 @@
 <head>
     <title>Games</title>
     <meta charset="utf-8">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
-    <style>
-        <?php include "./style/indexStyle.css"?>
-        <?php include "./style/gamesStyle.css"?>
-    </style>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="/style/indexStyle.css">
+    <link rel="stylesheet" type="text/css" href="/style/gamesStyle.css">
 </head>
 
 <body>
@@ -16,7 +14,7 @@
 
     <div class="links">
         <ul>
-            <li><a href="/content/games/games.php">Games</a></li>
+            <li><a href="/pages/games/index.php">Games</a></li>
             <li><a href="/pages/cookie/index.php">Cookies</a></li>
             <!--<li><a href="/content/cracks/cracks.php">Cracks</a></li>-->
             <!--<li><a href="/content/deepfake/deepfake.php">DeepFake</a></li>-->

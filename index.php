@@ -4,7 +4,7 @@
     <title>MCmoderSD.live</title>
     <meta charset="utf-8">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
-    <style><?php include "style/indexStyle.css"?></style>
+    <link rel="stylesheet" type="text/css" href="style/indexStyle.css">
 </head>
 
 <body>
@@ -13,7 +13,7 @@
 
 <div class="links">
     <ul>
-        <li><a href="/content/games/games.php">Games</a></li>
+        <li><a href="/pages/games/index.php">Games</a></li>
         <li><a href="/content/cookie/index.php">Cookies</a></li>
         <!--<li><a href="/content/cracks/cracks.php">Cracks</a></li>-->
         <!--<li><a href="/content/deepfake/deepfake.php">DeepFake</a></li>-->
