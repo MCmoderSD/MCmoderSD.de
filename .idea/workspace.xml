@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/games/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/games/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mcmodersd.live.conf" beforeDir="false" afterPath="$PROJECT_DIR$/mcmodersd.live.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +126,7 @@
       <workItem from="1681627047273" duration="523000" />
       <workItem from="1681724583540" duration="1119000" />
       <workItem from="1681726262316" duration="3000" />
+      <workItem from="1681831744138" duration="327000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1668897371120</created>
@@ -206,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681725693645</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="update">
+      <created>1681831895338</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681831895338</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
