@@ -1,7 +1,7 @@
 <html lang="de">
 
 <head>
-    <title>MCmoderSD.live</title>
+    <title>MCmoderSD.de</title>
     <meta charset="utf-8">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="style/indexStyle.css">
@@ -9,7 +9,7 @@
 
 <body>
 <header>
-    <div CLASS="headline"><p class="headline">MCmoderSD.live</p></div>
+    <div CLASS="headline"><p class="headline">MCmoderSD.de</p></div>
 
 <div class="links">
     <ul>
