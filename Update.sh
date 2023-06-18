@@ -15,7 +15,9 @@ if [ "$1" = "-auto" ]; then
   done
 else
   sudo git pull https://www.github.com/MCmoderSD/MCmoderSD.de.git
+  sudo a2dissite MCmoderSD.de.conf
   sudo rm -r /etc/apache2/sites-available/MCmoderSD.de.conf
   ln -sf /var/www/MCmoderSD.de/MCmoderSD.de.conf /etc/apache2/sites-available/MCmoderSD.de.conf
+  sudo a2ensite MCmoderSD.de.conf
   sudo systemctl reload apache2
 fi
