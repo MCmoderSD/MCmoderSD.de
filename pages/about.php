@@ -27,7 +27,8 @@
             <li><a href="https://www.MCmoderSD.de/twitter" target="_blank">Twitter</a></li>
             <li><a href="https://www.MCmoderSD.de/insta" target="_blank">Instagram</a></li>
             <li><a href="https://www.MCmoderSD.de/spotify" target="_blank">Spotify</a></li>
-        </ul> <br>
+        </ul>
+        <br>
         <ul>
             <li><a href="https://www.MCmoderSD.de/steam" target="_blank">Steam</a></li>
             <li><a href="https://www.MCmoderSD.de/dc" target="_blank">Discord</a></li>
