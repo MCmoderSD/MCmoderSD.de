@@ -30,9 +30,8 @@
     <option name="projectConfigVersion" value="5" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/content/games/games.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/content/minecraft/minecraft.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/index.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/mcmodersd.de.conf" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -136,7 +135,7 @@
       <workItem from="1686932933741" duration="826000" />
       <workItem from="1686938858607" duration="18000" />
       <workItem from="1686939150264" duration="754000" />
-      <workItem from="1687082937462" duration="384000" />
+      <workItem from="1687082937462" duration="529000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1668897371120</created>
@@ -278,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686939867409</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Update Conf">
+      <created>1687083448023</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1687083448024</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
