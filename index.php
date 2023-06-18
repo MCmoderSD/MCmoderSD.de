@@ -4,25 +4,22 @@
     <title>MCmoderSD.de</title>
     <meta charset="utf-8">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
-    <link rel="stylesheet" type="text/css" href="style/indexStyle.css">
+    <link rel="stylesheet" href="style/main.css">
 </head>
 
 <body>
 <header>
-    <div CLASS="headline"><p class="headline">MCmoderSD.de</p></div>
+    <div class="headline"><p class="headline">MCmoderSD.de</p></div>
 
-<div class="links">
-    <ul>
-        <li><a href="/pages/games/index.php">Games</a></li>
-        <li><a href="/content/cookie/index.php">Cookies</a></li>
-        <!--<li><a href="/content/cracks/cracks.php">Cracks</a></li>-->
-        <!--<li><a href="/content/deepfake/deepfake.php">DeepFake</a></li>-->
-        <li><a href="/content/discord/discord.php">DiscordBot</a></li>
-        <li><a href="/content/memes/memes.php">Memes</a</li>
-        <li><a href="/content/music/music.php">Musik</a></li>
-        <li><a href="/content/twitch/Twitch-Clips.php">Twitch Clips</a></li>
-    </ul>
-</div>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="pages/about.php">About</a></li>
+            <li><a href="pages/projects.php">Projects</a></li>
+        </ul>
+    </nav>
+
 </header>
+
 </body>
 </html>

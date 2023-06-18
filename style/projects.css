@@ -1,0 +1,32 @@
+.projectHeadline {
+    font-size: 2rem;
+    margin-top: 7rem;
+    color: white;
+    text-align: center;
+}
+
+.projects ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    color: #72b1f4;
+    font-size: 2rem;
+}
+
+.projects ul li {
+    list-style: none;
+    margin: 0 1rem;
+}
+
+.projects ul li a {
+    text-decoration: none;
+    color: #72b1f4;
+    font-size: 2rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.projects ul li a:hover {
+    text-decoration: underline;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
