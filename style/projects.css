@@ -35,21 +35,22 @@
     margin: 0 auto;
 }
 
-.projects table {
+.projects table tbody{
     margin: 0 auto;
+
 }
 
-.projects table tr {
+.projects table tbody tr {
     color: #72b1f4;
     font-size: 2rem;
 }
 
-.projects table tr td {
+.projects table tbody tr td {
     text-align: center;
     padding-bottom: 2rem;
 }
 
-.projects table tr td a {
+.projects table tbody tr td a {
     text-decoration: none;
     color: #72b1f4;
     font-size: 2rem;
@@ -57,7 +58,7 @@
     transition: all 0.2s ease-in-out;
 }
 
-.projects table tr td a:hover {
+.projects table tbody tr td a:hover {
     text-decoration: underline;
     font-size: 2.5rem;
     font-weight: bold;
