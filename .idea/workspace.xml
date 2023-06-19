@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="Updates" />
+    <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="Updates">
+      <change afterPath="$PROJECT_DIR$/pages/FlappyBirdLeaderboard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/TypeScript/FlappyBirdLeaderboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PHP/fetch_leaderboard.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TypeScript/FlappyBirdLeaderboard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/TypeScript/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MCmoderSD.live.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MCmoderSD.live.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCmoderSD.de.conf" beforeDir="false" afterPath="$PROJECT_DIR$/MCmoderSD.de.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/projects.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/projects.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/projects.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/projects.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +28,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -45,33 +57,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;MCmoderSD.de&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/php-8.2.4/php.exe&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "MCmoderSD.de",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/php-8.2.4/php.exe",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "ts.external.directory.path": "C:\\Users\\MCmoderSD\\AppData\\Local\\JetBrains\\Toolbox\\apps\\PhpStorm\\ch-0\\231.9011.38\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;PHP&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ],
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "PHP"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\MCmoderSD\PhpstormProjects\MCmoderSD.live\content" />
@@ -137,6 +153,12 @@
       <workItem from="1686939150264" duration="754000" />
       <workItem from="1687082937462" duration="529000" />
       <workItem from="1687085604940" duration="1568000" />
+      <workItem from="1687089379015" duration="420000" />
+      <workItem from="1687089933320" duration="6000" />
+      <workItem from="1687107890852" duration="12000" />
+      <workItem from="1687109746995" duration="1512000" />
+      <workItem from="1687181312147" duration="95000" />
+      <workItem from="1687181423863" duration="3209000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1668897371120</created>

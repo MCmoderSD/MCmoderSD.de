@@ -1,0 +1,35 @@
+.shortcuts {
+    font-size: 2.5rem;
+    margin-top: 5rem;
+    color: white;
+    text-align: center;
+}
+
+.shortcuts ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    color: #72b1f4;
+    font-size: 2rem;
+}
+
+.shortcuts ul li {
+    list-style: none;
+    margin: 2rem;
+    border-radius: 20px; /* Adjust border-radius to control the roundness */
+    border: 2px solid #72b1f4;
+    padding: 1rem;
+}
+
+.shortcuts ul li a {
+    text-decoration: none;
+    color: #72b1f4;
+    font-size: 2rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.shortcuts ul li a:hover {
+    text-decoration: underline;
+    font-size: 2.5rem;
+    font-weight: bold;
+}

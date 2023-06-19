@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
     <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/home.css">
 </head>
 
 <body>
@@ -21,6 +22,16 @@
         </ul>
     </nav>
 
+    <article class="shortcuts">
+
+        <p>Shortcuts</p>
+
+        <ul>
+            <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+            <li><a href="https://chat.openai.com/" target="_blank">ChatGPT</a></li>
+            <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+        </ul>
+    </article>
 </header>
 
 </body>
