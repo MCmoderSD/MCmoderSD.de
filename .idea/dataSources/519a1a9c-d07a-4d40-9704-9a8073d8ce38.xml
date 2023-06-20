@@ -918,19 +918,5 @@
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="291" parent="1" name="FlappyRead"/>
-    <table id="292" parent="290" name="leaderboard">
-      <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </table>
-    <column id="293" parent="292" name="users">
-      <DasType>tinytext|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="294" parent="292" name="scores">
-      <DasType>int|0s</DasType>
-      <DefaultExpression>0</DefaultExpression>
-      <Position>2</Position>
-    </column>
   </database-model>
 </dataSource>

@@ -24,11 +24,16 @@
 
     <article class="shortcuts">
 
-        <p>Shortcuts</p>
+        <form action="https://www.google.com/search" method="get" target="">
+            <label>
+                <input type="text" name="q" placeholder="">
+            </label>
+        </form>
 
         <ul>
             <li><a href="https://github.com/" target="_blank">GitHub</a></li>
             <li><a href="https://chat.openai.com/" target="_blank">ChatGPT</a></li>
+            <li><a href="https://phind.com/" target="_blank">Phind</a></li>
             <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
         </ul>
     </article>

@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="Home Shortcuts">
+    <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="Update Conf">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/519a1a9c-d07a-4d40-9704-9a8073d8ce38.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/519a1a9c-d07a-4d40-9704-9a8073d8ce38.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/projects.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/projects.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/home.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,23 +23,50 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="TypeScript File" />
-        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="MCmoderSD.live" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="MCmoderSD.de" />
+                    <option name="lastUsedInstant" value="1687283375" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="MCmoderSD.live" />
+                    <option name="lastUsedInstant" value="1687283374" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/content/games/games.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/content/minecraft/minecraft.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/index.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/mcmodersd.de.conf" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -50,38 +80,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;MCmoderSD.de&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/php-8.2.4/php.exe&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\MCmoderSD\\AppData\\Local\\JetBrains\\Toolbox\\apps\\PhpStorm\\ch-0\\231.9011.38\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "MCmoderSD.de",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/php-8.2.4/php.exe",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
-    ],
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;PHP&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "PHP"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\MCmoderSD\PhpstormProjects\MCmoderSD.live\content" />
@@ -145,16 +170,6 @@
       <workItem from="1686932933741" duration="826000" />
       <workItem from="1686938858607" duration="18000" />
       <workItem from="1686939150264" duration="754000" />
-      <workItem from="1687082937462" duration="529000" />
-      <workItem from="1687085604940" duration="1568000" />
-      <workItem from="1687089379015" duration="420000" />
-      <workItem from="1687089933320" duration="6000" />
-      <workItem from="1687107890852" duration="12000" />
-      <workItem from="1687109746995" duration="1512000" />
-      <workItem from="1687181312147" duration="95000" />
-      <workItem from="1687181423863" duration="3209000" />
-      <workItem from="1687184680462" duration="2167000" />
-      <workItem from="1687186968923" duration="397000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1668897371120</created>
@@ -296,63 +311,7 @@
       <option name="project" value="LOCAL" />
       <updated>1686939867409</updated>
     </task>
-    <task id="LOCAL-00021" summary="Update Conf">
-      <created>1687083448023</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1687083448024</updated>
-    </task>
-    <task id="LOCAL-00022" summary="better config">
-      <created>1687085650283</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1687085650283</updated>
-    </task>
-    <task id="LOCAL-00023" summary="better config">
-      <created>1687085979114</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1687085979114</updated>
-    </task>
-    <task id="LOCAL-00024" summary="better config">
-      <created>1687086039430</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1687086039430</updated>
-    </task>
-    <task id="LOCAL-00025" summary="fix">
-      <created>1687086304486</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1687086304486</updated>
-    </task>
-    <task id="LOCAL-00026" summary="fix">
-      <created>1687086462907</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1687086462907</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Updates">
-      <created>1687087174942</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1687087174942</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Home Shortcuts">
-      <created>1687186838228</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1687186838229</updated>
-    </task>
-    <option name="localTasksCounter" value="29" />
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,9 +330,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <ignored-roots>
-      <path value="$PROJECT_DIR$/content/cola-webpage" />
-    </ignored-roots>
     <MESSAGE value="Update" />
     <MESSAGE value="Upadtes" />
     <MESSAGE value="Skischullandheim" />
@@ -383,10 +339,6 @@
     <MESSAGE value="update" />
     <MESSAGE value="Update to New Domain" />
     <MESSAGE value="Update Conf" />
-    <MESSAGE value="better config" />
-    <MESSAGE value="fix" />
-    <MESSAGE value="Updates" />
-    <MESSAGE value="Home Shortcuts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Home Shortcuts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Conf" />
   </component>
 </project>
