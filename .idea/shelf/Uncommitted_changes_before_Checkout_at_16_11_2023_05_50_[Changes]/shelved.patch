@@ -1,0 +1,614 @@
+Index: index.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php ?>\r\n<!DOCTYPE html>\r\n<html lang=\"de\">\r\n\r\n<head>\r\n    <title>MCmoderSD.de</title>\r\n    <meta charset=\"utf-8\">\r\n    <link rel=\"shortcut icon\" type=\"image/x-icon\" href=\"favicon.ico\"/>\r\n    <link rel=\"stylesheet\" href=\"style/main.css\">\r\n    <link rel=\"stylesheet\" href=\"style/home.css\">\r\n</head>\r\n\r\n<body>\r\n<header>\r\n    <div class=\"headline\"><p class=\"headline\">MCmoderSD.de</p></div>\r\n\r\n    <nav class=\"nav\">\r\n        <ul>\r\n            <li><a href=\"index.php\">Home</a></li>\r\n            <li><a href=\"pages/about.php\">About</a></li>\r\n            <li><a href=\"pages/projects.php\">Projects</a></li>\r\n        </ul>\r\n    </nav>\r\n\r\n    <article class=\"shortcuts\">\r\n\r\n        <form action=\"https://www.google.com/search\" method=\"get\" target=\"\">\r\n            <label>\r\n                <input type=\"text\" name=\"q\" placeholder=\"\">\r\n            </label>\r\n        </form>\r\n\r\n        <ul>\r\n            <li><a href=\"https://github.com/\" target=\"_blank\">GitHub</a></li>\r\n            <li><a href=\"https://chat.openai.com/\" target=\"_blank\">ChatGPT</a></li>\r\n            <li><a href=\"https://phind.com/\" target=\"_blank\">Phind</a></li>\r\n            <li><a href=\"https://www.youtube.com/\" target=\"_blank\">YouTube</a></li>\r\n        </ul>\r\n    </article>\r\n</header>\r\n\r\n</body>\r\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/index.php b/index.php
+--- a/index.php	
++++ b/index.php	
+@@ -21,23 +21,33 @@
+             <li><a href="pages/projects.php">Projects</a></li>
+         </ul>
+     </nav>
++</header>
+ 
+-    <article class="shortcuts">
++<article class="shortcuts">
+ 
+-        <form action="https://www.google.com/search" method="get" target="">
+-            <label>
+-                <input type="text" name="q" placeholder="">
+-            </label>
+-        </form>
++    <form action="https://www.google.com/search" method="get" target="">
++        <label>
++            <input type="text" name="q" placeholder="">
++        </label>
++    </form>
+ 
+-        <ul>
+-            <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+-            <li><a href="https://chat.openai.com/" target="_blank">ChatGPT</a></li>
+-            <li><a href="https://phind.com/" target="_blank">Phind</a></li>
+-            <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+-        </ul>
+-    </article>
+-</header>
++    <ul>
++        <li><a href="https://github.com/" target="_blank">GitHub</a></li>
++        <li><a href="https://chat.openai.com/" target="_blank">ChatGPT</a></li>
++        <li><a href="https://phind.com/" target="_blank">Phind</a></li>
++        <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
++    </ul>
++</article>
++
++<footer>
++    <ul>
++        <li><a href="pages/info/contact.php" target="_blank">Contact</a></li>
++        <li><a href="pages/info/datenschutz.php" target="_blank">Data Protection</a></li>
++        <li><a href="pages/info/disclaimer.php" target="_blank">Disclaimer</a></li>
++        <li><a href="pages/info/imprint.php" target="_blank">Imprint</a></li>
++    </ul>
++</footer>
++
+ 
+ </body>
+ </html>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AnalysisUIOptions\">\r\n    <option name=\"ANALYZE_INJECTED_CODE\" value=\"false\" />\r\n    <option name=\"SCOPE_TYPE\" value=\"8\" />\r\n    <option name=\"CUSTOM_SCOPE_NAME\" value=\"All Places\" />\r\n  </component>\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"0c7503d1-2760-4a68-9461-46036e08e1f8\" name=\"Changes\" comment=\"Search Bar\">\r\n      <change afterPath=\"$PROJECT_DIR$/pages/info/datenschutz.php\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/pages/info/disclaimer.php\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/pages/info/imprint.php\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/pages/info/kontakt.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/scripts/TypeScript/FlappyBirdLeaderboard.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/style/info.css\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ComposerSettings\">\r\n    <execution />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"HTML File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"PUSH_AUTO_UPDATE\" value=\"true\" />\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"MCmoderSD.live\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n    <option name=\"ROOT_SYNC\" value=\"DONT_SYNC\" />\r\n    <option name=\"UPDATE_TYPE\" value=\"REBASE\" />\r\n  </component>\r\n  <component name=\"GitToolBoxStore\">\r\n    <option name=\"projectConfigVersion\" value=\"5\" />\r\n    <option name=\"recentBranches\">\r\n      <RecentBranches>\r\n        <option name=\"branchesForRepo\">\r\n          <list>\r\n            <RecentBranchesForRepo>\r\n              <option name=\"branches\">\r\n                <list>\r\n                  <RecentBranch>\r\n                    <option name=\"branchName\" value=\"MCmoderSD.de\" />\r\n                    <option name=\"lastUsedInstant\" value=\"1687283375\" />\r\n                  </RecentBranch>\r\n                  <RecentBranch>\r\n                    <option name=\"branchName\" value=\"MCmoderSD.live\" />\r\n                    <option name=\"lastUsedInstant\" value=\"1687283374\" />\r\n                  </RecentBranch>\r\n                </list>\r\n              </option>\r\n              <option name=\"repositoryRootUrl\" value=\"file://$PROJECT_DIR$\" />\r\n            </RecentBranchesForRepo>\r\n          </list>\r\n        </option>\r\n      </RecentBranches>\r\n    </option>\r\n  </component>\r\n  <component name=\"HighlightingSettingsPerFile\">\r\n    <setting file=\"file://$PROJECT_DIR$/content/games/games.php\" root0=\"FORCE_HIGHLIGHTING\" root1=\"SKIP_INSPECTION\" />\r\n    <setting file=\"file://$PROJECT_DIR$/content/minecraft/minecraft.php\" root0=\"FORCE_HIGHLIGHTING\" root1=\"FORCE_HIGHLIGHTING\" />\r\n    <setting file=\"file://$PROJECT_DIR$/index.php\" root0=\"FORCE_HIGHLIGHTING\" root1=\"FORCE_HIGHLIGHTING\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"PhpWorkspaceProjectConfiguration\" interpreter_name=\"PHP\" />\r\n  <component name=\"ProblemsViewState\">\r\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2HmjcAEok1bhqG6kA9hCFAvV9bP\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,\r\n    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,\r\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,\r\n    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;MCmoderSD.de&quot;,\r\n    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/php-8.2.4/php.exe&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,\r\n    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  },\r\n  &quot;keyToStringList&quot;: {\r\n    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [\r\n      &quot;PHP&quot;\r\n    ]\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\MCmoderSD\\PhpstormProjects\\MCmoderSD.live\\content\" />\r\n      <recent name=\"C:\\Users\\MCmoderSD\\PhpstormProjects\\MCmoderSD.live\\style\" />\r\n      <recent name=\"C:\\Users\\MCmoderSD\\PhpstormProjects\\MCmoderSD.live\\pages\" />\r\n      <recent name=\"C:\\Users\\MCmoderSD\\PhpstormProjects\\MCmoderSD.live\\images\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"0c7503d1-2760-4a68-9461-46036e08e1f8\" name=\"Changes\" comment=\"\" />\r\n      <created>1668897233024</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1668897233024</updated>\r\n      <workItem from=\"1668897236538\" duration=\"520000\" />\r\n      <workItem from=\"1669054486783\" duration=\"1757000\" />\r\n      <workItem from=\"1669062220997\" duration=\"364000\" />\r\n      <workItem from=\"1670781668762\" duration=\"561000\" />\r\n      <workItem from=\"1670782248741\" duration=\"473000\" />\r\n      <workItem from=\"1670782738789\" duration=\"93000\" />\r\n      <workItem from=\"1670782857431\" duration=\"83000\" />\r\n      <workItem from=\"1671462026431\" duration=\"1170000\" />\r\n      <workItem from=\"1672165803506\" duration=\"22000\" />\r\n      <workItem from=\"1672165836226\" duration=\"34000\" />\r\n      <workItem from=\"1672288749027\" duration=\"172000\" />\r\n      <workItem from=\"1672408488130\" duration=\"1556000\" />\r\n      <workItem from=\"1672410506242\" duration=\"46000\" />\r\n      <workItem from=\"1672467470605\" duration=\"294000\" />\r\n      <workItem from=\"1672467782435\" duration=\"43000\" />\r\n      <workItem from=\"1672468026605\" duration=\"58000\" />\r\n      <workItem from=\"1672468458017\" duration=\"979000\" />\r\n      <workItem from=\"1673109262022\" duration=\"69000\" />\r\n      <workItem from=\"1673363349849\" duration=\"38000\" />\r\n      <workItem from=\"1673363398451\" duration=\"324000\" />\r\n      <workItem from=\"1673645938076\" duration=\"275000\" />\r\n      <workItem from=\"1673715576630\" duration=\"216000\" />\r\n      <workItem from=\"1674738288584\" duration=\"1039000\" />\r\n      <workItem from=\"1675436371369\" duration=\"42000\" />\r\n      <workItem from=\"1675436424821\" duration=\"1000\" />\r\n      <workItem from=\"1675684318574\" duration=\"43000\" />\r\n      <workItem from=\"1675684372145\" duration=\"1043000\" />\r\n      <workItem from=\"1680408457447\" duration=\"17000\" />\r\n      <workItem from=\"1680621891496\" duration=\"35000\" />\r\n      <workItem from=\"1681325645614\" duration=\"13000\" />\r\n      <workItem from=\"1681328355534\" duration=\"37000\" />\r\n      <workItem from=\"1681433263284\" duration=\"5636000\" />\r\n      <workItem from=\"1681438947708\" duration=\"306000\" />\r\n      <workItem from=\"1681440348634\" duration=\"20000\" />\r\n      <workItem from=\"1681627002950\" duration=\"34000\" />\r\n      <workItem from=\"1681627047273\" duration=\"523000\" />\r\n      <workItem from=\"1681724583540\" duration=\"1119000\" />\r\n      <workItem from=\"1681726262316\" duration=\"3000\" />\r\n      <workItem from=\"1681831744138\" duration=\"861000\" />\r\n      <workItem from=\"1681832626479\" duration=\"649000\" />\r\n      <workItem from=\"1682003505044\" duration=\"41000\" />\r\n      <workItem from=\"1683655146717\" duration=\"701000\" />\r\n      <workItem from=\"1684381810942\" duration=\"112000\" />\r\n      <workItem from=\"1684381939903\" duration=\"1275000\" />\r\n      <workItem from=\"1686932933741\" duration=\"826000\" />\r\n      <workItem from=\"1686938858607\" duration=\"18000\" />\r\n      <workItem from=\"1686939150264\" duration=\"754000\" />\r\n      <workItem from=\"1687296816664\" duration=\"175000\" />\r\n      <workItem from=\"1687300094807\" duration=\"318000\" />\r\n      <workItem from=\"1687378593093\" duration=\"34000\" />\r\n      <workItem from=\"1687378647190\" duration=\"1276000\" />\r\n      <workItem from=\"1687439367180\" duration=\"602000\" />\r\n      <workItem from=\"1687458878329\" duration=\"664000\" />\r\n      <workItem from=\"1687473583224\" duration=\"27000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Update\">\r\n      <created>1668897371120</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668897371120</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Update\">\r\n      <created>1668897634428</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1668897634428</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Upadtes\">\r\n      <created>1669062554355</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1669062554355</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Skischullandheim\">\r\n      <created>1670782868412</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1670782868412</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"High on Life\">\r\n      <created>1672288898500</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672288898500</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"WebConsole2.0\">\r\n      <created>1672467816124</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1672467816124</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Choo Choo Charles\">\r\n      <created>1673646144344</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673646144344</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"update\">\r\n      <created>1681439244648</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681439244648</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"update\">\r\n      <created>1681725498920</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681725498920</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"update\">\r\n      <created>1681725599061</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681725599061</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"update\">\r\n      <created>1681725693645</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681725693645</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"update\">\r\n      <created>1681831895338</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681831895338</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"update\">\r\n      <created>1681832077921</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681832077921</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"update\">\r\n      <created>1681832088943</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1681832088943</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"update\">\r\n      <created>1683655443662</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683655443662</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"update\">\r\n      <created>1683655474730</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683655474730</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"update\">\r\n      <created>1683655844184</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1683655844184</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00018\" summary=\"Update to New Domain\">\r\n      <created>1686933465112</created>\r\n      <option name=\"number\" value=\"00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1686933465112</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00019\" summary=\"Update to New Domain\">\r\n      <created>1686933759858</created>\r\n      <option name=\"number\" value=\"00019\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1686933759858</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00020\" summary=\"Update Conf\">\r\n      <created>1686939867408</created>\r\n      <option name=\"number\" value=\"00020\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00020\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1686939867409</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00021\" summary=\"Search Bar\">\r\n      <created>1687284303865</created>\r\n      <option name=\"number\" value=\"00021\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00021\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1687284303865</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00022\" summary=\"Search Bar\">\r\n      <created>1687284311643</created>\r\n      <option name=\"number\" value=\"00022\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1687284311643</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"23\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"Update\" />\r\n    <MESSAGE value=\"Upadtes\" />\r\n    <MESSAGE value=\"Skischullandheim\" />\r\n    <MESSAGE value=\"High on Life\" />\r\n    <MESSAGE value=\"WebConsole2.0\" />\r\n    <MESSAGE value=\"Choo Choo Charles\" />\r\n    <MESSAGE value=\"update\" />\r\n    <MESSAGE value=\"Update to New Domain\" />\r\n    <MESSAGE value=\"Update Conf\" />\r\n    <MESSAGE value=\"Search Bar\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Search Bar\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	
++++ b/.idea/workspace.xml	
+@@ -10,12 +10,24 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="Search Bar">
+-      <change afterPath="$PROJECT_DIR$/pages/info/datenschutz.php" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/pages/info/disclaimer.php" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/pages/info/imprint.php" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/pages/info/kontakt.php" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/pages/cracks.php" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/TypeScript/cracksButtons.ts" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/style/cracks.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/dataSources/519a1a9c-d07a-4d40-9704-9a8073d8ce38.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/519a1a9c-d07a-4d40-9704-9a8073d8ce38.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_06_2023_19_49_[Changes]/shelved.patch" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_06_2023_19_49__Changes_.xml" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/scripts/TypeScript/FlappyBirdLeaderboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/style/info.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/pages/info/datenschutz.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/info/datenschutz.php" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/pages/info/disclaimer.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/info/disclaimer.php" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/pages/info/imprint.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/info/imprint.php" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/pages/info/kontakt.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/info/contact.php" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/style/info.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/info.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/style/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/main.css" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -29,8 +41,12 @@
+     <option name="RECENT_TEMPLATES">
+       <list>
+         <option value="HTML File" />
++        <option value="TypeScript File" />
+       </list>
+     </option>
++  </component>
++  <component name="FormatOnSaveOptions">
++    <option name="myRunOnSave" value="true" />
+   </component>
+   <component name="Git.Settings">
+     <option name="PUSH_AUTO_UPDATE" value="true" />
+@@ -70,17 +86,29 @@
+     </option>
+   </component>
+   <component name="HighlightingSettingsPerFile">
+-    <setting file="file://$PROJECT_DIR$/content/games/games.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
+-    <setting file="file://$PROJECT_DIR$/content/minecraft/minecraft.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+     <setting file="file://$PROJECT_DIR$/index.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/style/main.css" root0="SKIP_INSPECTION" />
++  </component>
++  <component name="MacroExpansionManager">
++    <option name="directoryName" value="vbzr6dv8" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
+-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
++  <component name="OptimizeOnSaveOptions">
++    <option name="myRunOnSave" value="true" />
++  </component>
++  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
++    <include_path>
++      <path value="" />
++    </include_path>
++  </component>
+   <component name="ProblemsViewState">
+     <option name="selectedTabId" value="CurrentFile" />
+   </component>
++  <component name="ProjectColorInfo">{
++  &quot;associatedIndex&quot;: 7
++}</component>
+   <component name="ProjectId" id="2HmjcAEok1bhqG6kA9hCFAvV9bP" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+     <ConfirmationsSetting value="2" id="Add" />
+@@ -97,6 +125,7 @@
+     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+     &quot;git-widget-placeholder&quot;: &quot;MCmoderSD.de&quot;,
+     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+@@ -106,8 +135,10 @@
+     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
+     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
++    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\MCmoderSD\\AppData\\Local\\JetBrains\\Toolbox\\apps\\PhpStorm\\ch-0\\231.9225.18\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   },
+   &quot;keyToStringList&quot;: {
+@@ -186,6 +217,19 @@
+       <workItem from="1687439367180" duration="602000" />
+       <workItem from="1687458878329" duration="664000" />
+       <workItem from="1687473583224" duration="27000" />
++      <workItem from="1688567099656" duration="19000" />
++      <workItem from="1688914501173" duration="372000" />
++      <workItem from="1689360573072" duration="2379000" />
++      <workItem from="1689427180926" duration="64000" />
++      <workItem from="1690803563136" duration="604000" />
++      <workItem from="1690804203599" duration="10000" />
++      <workItem from="1690804225306" duration="35000" />
++      <workItem from="1690846493331" duration="172000" />
++      <workItem from="1690846686991" duration="176000" />
++      <workItem from="1690959323890" duration="1641000" />
++      <workItem from="1691488189776" duration="5000" />
++      <workItem from="1691661502411" duration="3409000" />
++      <workItem from="1696536416958" duration="32000" />
+     </task>
+     <task id="LOCAL-00001" summary="Update">
+       <created>1668897371120</created>
+Index: style/cracks.css
+===================================================================
+diff --git a/style/cracks.css b/style/cracks.css
+new file mode 100644
+--- /dev/null	
++++ b/style/cracks.css	
+@@ -0,0 +1,32 @@
++article {
++    text-align: center;
++}
++
++article button {
++    margin: 10px;
++    padding: 10px;
++    color: #75b0f1;
++    border: 1px #75b0f1;
++    border-radius: 5px;
++    font-size: 28px;
++    background-color: #0a0c10;
++}
++
++article button:hover {
++    color: #0a0c10;
++    background-color: #75b0f1;
++}
++
++#links span {
++    display: flex;
++    margin-top: 20px;
++    margin-bottom: 20px;
++}
++
++
++#links span a {
++    color: #75b0f1;
++    text-decoration: none;
++    font-size: 28px;
++}
++
+Index: .idea/php.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"MessDetectorOptionsConfiguration\">\r\n    <option name=\"transferred\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PHPCSFixerOptionsConfiguration\">\r\n    <option name=\"transferred\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PHPCodeSnifferOptionsConfiguration\">\r\n    <option name=\"transferred\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PhpProjectSharedConfiguration\" php_language_level=\"8.2\" />\r\n  <component name=\"PhpRuntimeConfiguration\">\r\n    <extensions>\r\n      <extension name=\"FFI\" enabled=\"true\" />\r\n      <extension name=\"LuaSandbox\" enabled=\"true\" />\r\n      <extension name=\"Parle\" enabled=\"true\" />\r\n      <extension name=\"SaxonC\" enabled=\"true\" />\r\n      <extension name=\"ZendCache\" enabled=\"true\" />\r\n      <extension name=\"aerospike\" enabled=\"true\" />\r\n      <extension name=\"ast\" enabled=\"true\" />\r\n      <extension name=\"blackfire\" enabled=\"true\" />\r\n      <extension name=\"com_dotnet\" enabled=\"true\" />\r\n      <extension name=\"couchbase_v2\" enabled=\"true\" />\r\n      <extension name=\"crypto\" enabled=\"true\" />\r\n      <extension name=\"ds\" enabled=\"true\" />\r\n      <extension name=\"eio\" enabled=\"true\" />\r\n      <extension name=\"event\" enabled=\"true\" />\r\n      <extension name=\"expect\" enabled=\"true\" />\r\n      <extension name=\"leveldb\" enabled=\"true\" />\r\n      <extension name=\"libvirt-php\" enabled=\"true\" />\r\n      <extension name=\"lua\" enabled=\"true\" />\r\n      <extension name=\"lzf\" enabled=\"true\" />\r\n      <extension name=\"mapscript\" enabled=\"true\" />\r\n      <extension name=\"meminfo\" enabled=\"true\" />\r\n      <extension name=\"msgpack\" enabled=\"true\" />\r\n      <extension name=\"parallel\" enabled=\"true\" />\r\n      <extension name=\"pcov\" enabled=\"true\" />\r\n      <extension name=\"phpdbg\" enabled=\"true\" />\r\n      <extension name=\"pq\" enabled=\"true\" />\r\n      <extension name=\"radius\" enabled=\"true\" />\r\n      <extension name=\"rdkafka\" enabled=\"true\" />\r\n      <extension name=\"rpminfo\" enabled=\"true\" />\r\n      <extension name=\"simple_kafka_client\" enabled=\"true\" />\r\n      <extension name=\"solr\" enabled=\"true\" />\r\n      <extension name=\"stats\" enabled=\"true\" />\r\n      <extension name=\"stomp\" enabled=\"true\" />\r\n      <extension name=\"svm\" enabled=\"true\" />\r\n      <extension name=\"swoole\" enabled=\"true\" />\r\n      <extension name=\"sync\" enabled=\"true\" />\r\n      <extension name=\"uopz\" enabled=\"true\" />\r\n      <extension name=\"uploadprogress\" enabled=\"true\" />\r\n      <extension name=\"uuid\" enabled=\"true\" />\r\n      <extension name=\"uv\" enabled=\"true\" />\r\n      <extension name=\"winbinder\" enabled=\"true\" />\r\n      <extension name=\"xcache\" enabled=\"true\" />\r\n      <extension name=\"xdiff\" enabled=\"true\" />\r\n      <extension name=\"xxtea\" enabled=\"true\" />\r\n      <extension name=\"yaf\" enabled=\"true\" />\r\n      <extension name=\"yar\" enabled=\"true\" />\r\n      <extension name=\"zookeeper\" enabled=\"true\" />\r\n      <extension name=\"zstd\" enabled=\"true\" />\r\n    </extensions>\r\n  </component>\r\n  <component name=\"PhpStanOptionsConfiguration\">\r\n    <option name=\"transferred\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PsalmOptionsConfiguration\">\r\n    <option name=\"transferred\" value=\"true\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/php.xml b/.idea/php.xml
+--- a/.idea/php.xml	
++++ b/.idea/php.xml	
+@@ -9,6 +9,11 @@
+   <component name="PHPCodeSnifferOptionsConfiguration">
+     <option name="transferred" value="true" />
+   </component>
++  <component name="PhpIncludePathManager">
++    <include_path>
++      <path value="" />
++    </include_path>
++  </component>
+   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
+   <component name="PhpRuntimeConfiguration">
+     <extensions>
+Index: src/TypeScript/cracksButtons.ts
+===================================================================
+diff --git a/src/TypeScript/cracksButtons.ts b/src/TypeScript/cracksButtons.ts
+new file mode 100644
+--- /dev/null	
++++ b/src/TypeScript/cracksButtons.ts	
+@@ -0,0 +1,11 @@
++function showContent(contentType: string) {
++    const allContent = document.querySelectorAll<HTMLElement>("#links span");
++    for (const content of Array.from(allContent)) {
++        content.style.display = "none"; // Verstecke alle Inhalte
++    }
++
++    const selectedContent = document.querySelector<HTMLElement>(`#${contentType}`);
++    if (selectedContent) {
++        selectedContent.style.display = "inline"; // Zeige ausgewählten Inhalt
++    }
++}
+Index: pages/cracks.php
+===================================================================
+diff --git a/pages/cracks.php b/pages/cracks.php
+new file mode 100644
+--- /dev/null	
++++ b/pages/cracks.php	
+@@ -0,0 +1,51 @@
++<!DOCTYPE html>
++<html lang="de">
++
++<head>
++    <title>Cracks</title>
++    <meta charset="utf-8">
++    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico"/>
++    <link rel="stylesheet" href="../style/main.css">
++    <link rel="stylesheet" href="../style/cracks.css">
++</head>
++
++<body>
++<header>
++    <div class="headline"><p class="headline">MCmoderSD.de</p></div>
++
++    <nav class="nav">
++        <ul>
++            <li><a href="../index.php">Home</a></li>
++            <li><a href="../pages/about.php">About</a></li>
++            <li><a href="../pages/projects.php">Projects</a></li>
++        </ul>
++    </nav>
++</header>
++<article class="main">
++
++    <button onclick="showContent('apk')">Android APK's</button>
++    <button onclick="showContent('adobe')">Adobe</button>
++    <button onclick="showContent('games')">Games</button>
++
++
++    <div id="links">
++        <span class="apk" style="display: none;">
++            <a href="google.com">APK</a>
++        </span>
++
++        <span class="adobe" style="display: none;">
++            <a>ADOBE</a>
++        </span>
++
++        <span class="games" style="display: none;"><a>
++                GAMES</a>
++        </span>
++        <span class="apk" style="display: none;">
++            <a href="https://www.mediafire.com/file/5q2q2q2q2q2q2q2/Among_Us_v2020.9.9s.apk/file">Among Us</a>
++        </span>
++    </div>
++</article>
++
++<script src="../src/TypeScript/cracksButtons.ts"></script>
++</body>
++</html>
+\ No newline at end of file
+Index: .idea/inspectionProfiles/Project_Default.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"InspectionProjectProfileManager\">\r\n  <profile version=\"1.0\">\r\n    <option name=\"myName\" value=\"Project Default\" />\r\n    <inspection_tool class=\"Annotator\" enabled=\"false\" level=\"ERROR\" enabled_by_default=\"false\" />\r\n    <inspection_tool class=\"CssInvalidPseudoSelector\" enabled=\"false\" level=\"ERROR\" enabled_by_default=\"false\" />\r\n  </profile>\r\n</component>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/inspectionProfiles/Project_Default.xml b/.idea/inspectionProfiles/Project_Default.xml
+--- a/.idea/inspectionProfiles/Project_Default.xml	
++++ b/.idea/inspectionProfiles/Project_Default.xml	
+@@ -3,5 +3,22 @@
+     <option name="myName" value="Project Default" />
+     <inspection_tool class="Annotator" enabled="false" level="ERROR" enabled_by_default="false" />
+     <inspection_tool class="CssInvalidPseudoSelector" enabled="false" level="ERROR" enabled_by_default="false" />
++    <inspection_tool class="HtmlUnknownTag" enabled="true" level="WARNING" enabled_by_default="true">
++      <option name="myValues">
++        <value>
++          <list size="8">
++            <item index="0" class="java.lang.String" itemvalue="nobr" />
++            <item index="1" class="java.lang.String" itemvalue="noembed" />
++            <item index="2" class="java.lang.String" itemvalue="comment" />
++            <item index="3" class="java.lang.String" itemvalue="noscript" />
++            <item index="4" class="java.lang.String" itemvalue="embed" />
++            <item index="5" class="java.lang.String" itemvalue="script" />
++            <item index="6" class="java.lang.String" itemvalue="p" />
++            <item index="7" class="java.lang.String" itemvalue="button" />
++          </list>
++        </value>
++      </option>
++      <option name="myCustomValuesEnabled" value="true" />
++    </inspection_tool>
+   </profile>
+ </component>
+\ No newline at end of file
+Index: style/main.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>::-webkit-scrollbar {\r\n    display: none;\r\n}\r\n\r\nbody {\r\n    background-color: #0a0c10;\r\n    font-family: sans-serif;\r\n}\r\n\r\n.headline {\r\n    color: #72b1f4;\r\n    font-size: 4rem;\r\n    font-weight: bold;\r\n    margin-top: 3rem;\r\n    text-align: center;\r\n}\r\n\r\nnav ul {\r\n    display: flex;\r\n    justify-content: center;\r\n    margin-top: 2rem;\r\n    color: #72b1f4;\r\n    font-size: 2rem;\r\n}\r\n\r\nnav ul li {\r\n    list-style: none;\r\n    margin: 0 1rem;\r\n}\r\n\r\nnav ul li a {\r\n    text-decoration: none;\r\n    color: #72b1f4;\r\n    font-size: 2rem;\r\n    transition: all 0.2s ease-in-out;\r\n}\r\n\r\nnav ul li a:hover {\r\n    font-weight: bold;\r\n}
+===================================================================
+diff --git a/style/main.css b/style/main.css
+--- a/style/main.css	
++++ b/style/main.css	
+@@ -5,6 +5,9 @@
+ body {
+     background-color: #0a0c10;
+     font-family: sans-serif;
++    min-height: 100%;
++    display: flex;
++    flex-direction: column;
+ }
+ 
+ .headline {
+@@ -37,4 +40,28 @@
+ 
+ nav ul li a:hover {
+     font-weight: bold;
++}
++
++footer {
++    flex-shrink: 0;
++}
++
++footer ul {
++    display: flex;
++    justify-content: center;
++    margin-top: 2rem;
++    color: #72b1f4;
++    font-size: 2rem;
++}
++
++footer ul li {
++    list-style: none;
++    margin: 0 1rem;
++}
++
++footer ul li a {
++    text-decoration: none;
++    color: #72b1f4;
++    font-size: 1.25rem;
++    transition: all 0.2s ease-in-out;
+ }
+\ No newline at end of file
+Index: pages/info/datenschutz.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"de\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <title>Datenschutz</title>\r\n    <link href=\"../style/info.css\" rel=\"stylesheet\" type=\"text/css\">\r\n</head>\r\n<body>\r\n<article class=\"mainArticle\">\r\n    <div class=\"datenschutz\">\r\n        <p>Deutsch:</p>\r\n        <p>Datenschutzerklärung für Website ohne Datenverarbeitung</p>\r\n        <p>Wir nehmen den Schutz Ihrer persönlichen Daten ernst und möchten Ihnen mitteilen, dass auf unserer Website keine personenbezogenen Daten verarbeitet werden. Die Website besteht lediglich aus HTML und CSS, wodurch keinerlei Daten gespeichert oder verarbeitet werden. Es werden keine Cookies, Tracking-Tools oder ähnliches eingesetzt.</p>\r\n        <p>Da keinerlei personenbezogene Daten von Ihnen erhoben oder gespeichert werden, bedarf es keiner weiteren Angaben oder Einwilligungen Ihrerseits. Wir verzichten bewusst auf die Erhebung von Nutzerdaten, um Ihre Privatsphäre bestmöglich zu schützen.</p>\r\n        <p>Sollten Sie Fragen zum Datenschutz haben, können Sie sich jederzeit an uns wenden.</p>\r\n        <br> <br>\r\n        <p>Englisch:</p>\r\n        <p>Privacy Policy for Website without Data Processing</p>\r\n        <p>We take the protection of your personal data seriously and would like to inform you that no personal data is processed on our website. The website consists only of HTML and CSS, which means that no data is stored or processed. No cookies, tracking tools, or similar are used.</p>\r\n        <p>Since no personal data is collected or stored, no further information or consent is required from you. We deliberately refrain from collecting user data to protect your privacy as much as possible.</p>\r\n        <p>If you have any questions about data protection, please feel free to contact us at any time.</p>\r\n    </div>\r\n</article>\r\n</body>\r\n</html>
+===================================================================
+diff --git a/pages/info/datenschutz.php b/pages/info/datenschutz.php
+--- a/pages/info/datenschutz.php	
++++ b/pages/info/datenschutz.php	
+@@ -3,7 +3,8 @@
+ <head>
+     <meta charset="UTF-8">
+     <title>Datenschutz</title>
+-    <link href="../style/info.css" rel="stylesheet" type="text/css">
++    <link href="../../style/info.css" rel="stylesheet" type="text/css">
++
+ </head>
+ <body>
+ <article class="mainArticle">
+Index: pages/info/imprint.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"de\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <title>Impressum</title>\r\n    <link href=\"../style/desktop/info.css\" rel=\"stylesheet\" type=\"text/css\">\r\n    <link href=\"../style/mobile/info.css\" rel=\"stylesheet\" type=\"text/css\">\r\n    <link href=\"../style/other/animation.css\" rel=\"stylesheet\" type=\"text/css\">\r\n    <link href=\"../favicon.ico\" rel=\"icon\" type=\"image/x-icon\">\r\n</head>\r\n<body>\r\n<article>\r\n    <div id=\"imprint\">\r\n        <span>\r\n            Deutsch:<br> <br>\r\n            Angaben gemäß § 5 TMG:<br>\r\n            [Name des Betreibers]<br>\r\n            [Anschrift des Betreibers]<br>\r\n            [Telefonnummer des Betreibers]<br>\r\n            [E-Mail-Adresse des Betreibers]<br> <br>\r\n            Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:<br>\r\n            [Name des Betreibers]<br>\r\n            [Anschrift des Betreibers]<br>\r\n            [E-Mail-Adresse des Betreibers]<br>\r\n        </span>\r\n        <span>\r\n            Englisch:<br> <br>\r\n            Information according to § 5 TMG:<br>\r\n            [Name of the operator]<br>\r\n            [Address of the operator]<br>\r\n            [Telephone number of the operator]<br>\r\n            [E-mail address of the operator]<br> <br>\r\n            Responsible for content according to § 55 Abs. 2 RStV:<br>\r\n            [Name of the operator]<br>\r\n            [Address of the operator]<br>\r\n            [E-mail address of the operator]<br>\r\n        </span>\r\n    </div>\r\n</article>\r\n</body>\r\n</html>
+===================================================================
+diff --git a/pages/info/imprint.php b/pages/info/imprint.php
+--- a/pages/info/imprint.php	
++++ b/pages/info/imprint.php	
+@@ -3,10 +3,8 @@
+ <head>
+     <meta charset="UTF-8">
+     <title>Impressum</title>
+-    <link href="../style/desktop/info.css" rel="stylesheet" type="text/css">
+-    <link href="../style/mobile/info.css" rel="stylesheet" type="text/css">
+-    <link href="../style/other/animation.css" rel="stylesheet" type="text/css">
+-    <link href="../favicon.ico" rel="icon" type="image/x-icon">
++    <link href="../../style/info.css" rel="stylesheet" type="text/css">
++
+ </head>
+ <body>
+ <article>
+Index: pages/info/disclaimer.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"de\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <title>Disclaimer</title>\r\n    <link href=\"../style/desktop/info.css\" rel=\"stylesheet\" type=\"text/css\">\r\n    <link href=\"../style/mobile/info.css\" rel=\"stylesheet\" type=\"text/css\">\r\n    <link href=\"../style/other/animation.css\" rel=\"stylesheet\" type=\"text/css\">\r\n    <link href=\"../favicon.ico\" rel=\"icon\" type=\"image/x-icon\">\r\n</head>\r\n<body>\r\n<article class=\"disclaimer\">\r\n    <span id=\"disclaimerGerman\">\r\n        <p>Deutsch:</p> <br>\r\n        <p>Haftung für Inhalte</p>\r\n        <p>Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p> <br>\r\n        <p>Haftung für Links</p>\r\n        <p>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten iststets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p> <br>\r\n        <p>Urheberrecht </p>\r\n        <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers</p>\r\n    </span>\r\n    <span id=\"disclaimerEnglish\">\r\n        <p>English:</p> <br>\r\n        <p>Liability for content</p>\r\n        <p>We have made every effort to ensure that the information on our website is correct, complete, and up to date. However, we do not guarantee the accuracy, completeness, or timeliness of the information provided. As a service provider, we are responsible for our own content on these pages in accordance with general laws pursuant to Section 7 (1) of the German Telemedia Act (TMG). However, according to Sections 8 to 10 TMG, we are not obligated to monitor third-party information that is transmitted or stored, or to investigate circumstances that indicate illegal activity. Obligations to remove or block the use of information in accordance with general laws remain unaffected by this. Any liability in this regard is only possible from the time we become aware of a specific legal violation. We will remove such content immediately upon becoming aware of any such violations.</p> <br>\r\n        <p>Liability for Links</p>\r\n        <p>Our website contains links to external websites of third parties, over whose contents we have no influence. Therefore, we cannot assume any liability for these external contents. The respective provider or operator of the linked pages is always responsible for the contents of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not recognizable at the time of linking. However, permanent monitoring of the content of the linked pages is not reasonable without concrete evidence of a violation of the law. Upon becoming aware of any legal violations, we will remove such links immediately.</p> <br>\r\n        <p>Copyright</p>\r\n        <p>The content and works created by the site operators on these pages are subject to German copyright law. The reproduction, editing, distribution, and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator.</p>\r\n    </span>\r\n</article>\r\n</body>\r\n</html>
+===================================================================
+diff --git a/pages/info/disclaimer.php b/pages/info/disclaimer.php
+--- a/pages/info/disclaimer.php	
++++ b/pages/info/disclaimer.php	
+@@ -3,10 +3,8 @@
+ <head>
+     <meta charset="UTF-8">
+     <title>Disclaimer</title>
+-    <link href="../style/desktop/info.css" rel="stylesheet" type="text/css">
+-    <link href="../style/mobile/info.css" rel="stylesheet" type="text/css">
+-    <link href="../style/other/animation.css" rel="stylesheet" type="text/css">
+-    <link href="../favicon.ico" rel="icon" type="image/x-icon">
++    <link href="../../style/info.css" rel="stylesheet" type="text/css">
++
+ </head>
+ <body>
+ <article class="disclaimer">
+Index: pages/info/kontakt.php
+===================================================================
+diff --git a/pages/info/kontakt.php b/pages/info/contact.php
+rename from pages/info/kontakt.php
+rename to pages/info/contact.php
+--- a/pages/info/kontakt.php	
++++ b/pages/info/contact.php	
+@@ -3,15 +3,13 @@
+ <head>
+     <meta charset="UTF-8">
+     <title>Kontakt</title>
+-    <link href="../style/desktop/info.css" rel="stylesheet" type="text/css">
+-    <link href="../style/mobile/info.css" rel="stylesheet" type="text/css">
+-    <link href="../style/other/animation.css" rel="stylesheet" type="text/css">
+-    <link href="../favicon.ico" rel="icon" type="image/x-icon">
++    <link href="../../style/info.css" rel="stylesheet" type="text/css">
++
+ </head>
+ <body>
+ <article class="mainArticle">
+-    <div id="kontakt">
+-    <span id="kontaktGerman">
++    <div id="contact">
++    <span id="contactGerman">
+         <p>Kontaktinformationen</p>
+         <br>
+         <p>Telefonnummer: [Telefonnummer]</p>
+@@ -27,7 +25,7 @@
+         <p>Bitte zögern Sie nicht, uns zu kontaktieren, wenn Sie Fragen haben oder weitere Informationen benötigen. Wir freuen uns darauf, von Ihnen zu hören!</p>
+     </span>
+ 
+-    <span id="kontaktEnglish">
++        <span id="contactEnglish">
+         <p>Contact Information</p>
+         <br>
+         <p>Phone Number: [Phone Number]</p>
+Index: style/info.css
+===================================================================
+diff --git a/style/info.css b/style/info.css
+--- a/style/info.css	
++++ b/style/info.css	
+@@ -1,0 +1,62 @@
++::-webkit-scrollbar {
++    display: none;
++}
++
++body {
++    background-color: #0a0c10;
++    font-family: sans-serif;
++}
++
++article {
++    margin-left: 20rem;
++    margin-right: 20rem;
++}
++
++.datenschutz {
++    color: #72b1f4;
++    font-size: 1.5rem;
++    margin-top: 5rem;
++}
++
++#disclaimerGerman {
++    color: #72b1f4;
++    font-size: 1.5rem;
++    margin-left: 20rem;
++    margin-right: 20rem;
++    margin-top: 5rem;
++}
++
++#disclaimerEnglish {
++    color: #72b1f4;
++    font-size: 1.5rem;
++    margin-left: 20rem;
++    margin-right: 20rem;
++    margin-top: 5rem;
++}
++
++#imprint {
++    display: flex;
++    flex-direction: column;
++    color: #72b1f4;
++    font-size: 1.5rem;
++    align-content: center;
++}
++
++#imprint span {
++    margin-top: 5rem;
++}
++
++#contact {
++    display: flex;
++    color: #72b1f4;
++    font-size: 1.5rem;
++    align-content: center;
++    margin-left: 2rem;
++    margin-right: 2rem;
++}
++
++#contact span {
++    margin-top: 3rem;
++    margin-left: 2rem;
++    margin-right: 2rem;
++}
+\ No newline at end of file
+Index: .idea/dataSources.local.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"dataSourceStorageLocal\" created-in=\"PS-231.9011.38\">\r\n    <data-source name=\"FlappyBirdLeaderboard@MCmoderSD.de\" uuid=\"519a1a9c-d07a-4d40-9704-9a8073d8ce38\">\r\n      <database-info product=\"\" version=\"\" jdbc-version=\"\" driver-name=\"\" driver-version=\"\" dbms=\"MYSQL\" exact-version=\"0\" />\r\n      <secret-storage>forget</secret-storage>\r\n      <schema-mapping />\r\n    </data-source>\r\n  </component>\r\n</project>
+===================================================================
+diff --git a/.idea/dataSources.local.xml b/.idea/dataSources.local.xml
+--- a/.idea/dataSources.local.xml	
++++ b/.idea/dataSources.local.xml	
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="dataSourceStorageLocal" created-in="PS-231.9011.38">
++  <component name="dataSourceStorageLocal" created-in="PS-232.9921.55">
+     <data-source name="FlappyBirdLeaderboard@MCmoderSD.de" uuid="519a1a9c-d07a-4d40-9704-9a8073d8ce38">
+       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+       <secret-storage>forget</secret-storage>
+Index: .idea/dataSources/519a1a9c-d07a-4d40-9704-9a8073d8ce38.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<dataSource name=\"FlappyBirdLeaderboard@MCmoderSD.de\">\r\n  <database-model serializer=\"dbm\" dbms=\"MYSQL\" family-id=\"MYSQL\" format-version=\"4.48\">\r\n    <root id=\"1\">\r\n      <DefaultCasing>exact</DefaultCasing>\r\n      <DefaultEngine>InnoDB</DefaultEngine>\r\n      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>\r\n      <Grants>FlappyBirdLeaderboard|schema||FlappyRead||SELECT|G</Grants>\r\n      <ServerVersion>8.0.33</ServerVersion>\r\n    </root>\r\n    <collation id=\"2\" parent=\"1\" name=\"armscii8_general_ci\">\r\n      <Charset>armscii8</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"3\" parent=\"1\" name=\"armscii8_bin\">\r\n      <Charset>armscii8</Charset>\r\n    </collation>\r\n    <collation id=\"4\" parent=\"1\" name=\"ascii_general_ci\">\r\n      <Charset>ascii</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"5\" parent=\"1\" name=\"ascii_bin\">\r\n      <Charset>ascii</Charset>\r\n    </collation>\r\n    <collation id=\"6\" parent=\"1\" name=\"big5_chinese_ci\">\r\n      <Charset>big5</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"7\" parent=\"1\" name=\"big5_bin\">\r\n      <Charset>big5</Charset>\r\n    </collation>\r\n    <collation id=\"8\" parent=\"1\" name=\"binary\">\r\n      <Charset>binary</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"9\" parent=\"1\" name=\"cp1250_general_ci\">\r\n      <Charset>cp1250</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"10\" parent=\"1\" name=\"cp1250_czech_cs\">\r\n      <Charset>cp1250</Charset>\r\n    </collation>\r\n    <collation id=\"11\" parent=\"1\" name=\"cp1250_croatian_ci\">\r\n      <Charset>cp1250</Charset>\r\n    </collation>\r\n    <collation id=\"12\" parent=\"1\" name=\"cp1250_bin\">\r\n      <Charset>cp1250</Charset>\r\n    </collation>\r\n    <collation id=\"13\" parent=\"1\" name=\"cp1250_polish_ci\">\r\n      <Charset>cp1250</Charset>\r\n    </collation>\r\n    <collation id=\"14\" parent=\"1\" name=\"cp1251_bulgarian_ci\">\r\n      <Charset>cp1251</Charset>\r\n    </collation>\r\n    <collation id=\"15\" parent=\"1\" name=\"cp1251_ukrainian_ci\">\r\n      <Charset>cp1251</Charset>\r\n    </collation>\r\n    <collation id=\"16\" parent=\"1\" name=\"cp1251_bin\">\r\n      <Charset>cp1251</Charset>\r\n    </collation>\r\n    <collation id=\"17\" parent=\"1\" name=\"cp1251_general_ci\">\r\n      <Charset>cp1251</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"18\" parent=\"1\" name=\"cp1251_general_cs\">\r\n      <Charset>cp1251</Charset>\r\n    </collation>\r\n    <collation id=\"19\" parent=\"1\" name=\"cp1256_general_ci\">\r\n      <Charset>cp1256</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"20\" parent=\"1\" name=\"cp1256_bin\">\r\n      <Charset>cp1256</Charset>\r\n    </collation>\r\n    <collation id=\"21\" parent=\"1\" name=\"cp1257_lithuanian_ci\">\r\n      <Charset>cp1257</Charset>\r\n    </collation>\r\n    <collation id=\"22\" parent=\"1\" name=\"cp1257_bin\">\r\n      <Charset>cp1257</Charset>\r\n    </collation>\r\n    <collation id=\"23\" parent=\"1\" name=\"cp1257_general_ci\">\r\n      <Charset>cp1257</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"24\" parent=\"1\" name=\"cp850_general_ci\">\r\n      <Charset>cp850</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"25\" parent=\"1\" name=\"cp850_bin\">\r\n      <Charset>cp850</Charset>\r\n    </collation>\r\n    <collation id=\"26\" parent=\"1\" name=\"cp852_general_ci\">\r\n      <Charset>cp852</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"27\" parent=\"1\" name=\"cp852_bin\">\r\n      <Charset>cp852</Charset>\r\n    </collation>\r\n    <collation id=\"28\" parent=\"1\" name=\"cp866_general_ci\">\r\n      <Charset>cp866</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"29\" parent=\"1\" name=\"cp866_bin\">\r\n      <Charset>cp866</Charset>\r\n    </collation>\r\n    <collation id=\"30\" parent=\"1\" name=\"cp932_japanese_ci\">\r\n      <Charset>cp932</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"31\" parent=\"1\" name=\"cp932_bin\">\r\n      <Charset>cp932</Charset>\r\n    </collation>\r\n    <collation id=\"32\" parent=\"1\" name=\"dec8_swedish_ci\">\r\n      <Charset>dec8</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"33\" parent=\"1\" name=\"dec8_bin\">\r\n      <Charset>dec8</Charset>\r\n    </collation>\r\n    <collation id=\"34\" parent=\"1\" name=\"eucjpms_japanese_ci\">\r\n      <Charset>eucjpms</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"35\" parent=\"1\" name=\"eucjpms_bin\">\r\n      <Charset>eucjpms</Charset>\r\n    </collation>\r\n    <collation id=\"36\" parent=\"1\" name=\"euckr_korean_ci\">\r\n      <Charset>euckr</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"37\" parent=\"1\" name=\"euckr_bin\">\r\n      <Charset>euckr</Charset>\r\n    </collation>\r\n    <collation id=\"38\" parent=\"1\" name=\"gb18030_chinese_ci\">\r\n      <Charset>gb18030</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"39\" parent=\"1\" name=\"gb18030_bin\">\r\n      <Charset>gb18030</Charset>\r\n    </collation>\r\n    <collation id=\"40\" parent=\"1\" name=\"gb18030_unicode_520_ci\">\r\n      <Charset>gb18030</Charset>\r\n    </collation>\r\n    <collation id=\"41\" parent=\"1\" name=\"gb2312_chinese_ci\">\r\n      <Charset>gb2312</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"42\" parent=\"1\" name=\"gb2312_bin\">\r\n      <Charset>gb2312</Charset>\r\n    </collation>\r\n    <collation id=\"43\" parent=\"1\" name=\"gbk_chinese_ci\">\r\n      <Charset>gbk</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"44\" parent=\"1\" name=\"gbk_bin\">\r\n      <Charset>gbk</Charset>\r\n    </collation>\r\n    <collation id=\"45\" parent=\"1\" name=\"geostd8_general_ci\">\r\n      <Charset>geostd8</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"46\" parent=\"1\" name=\"geostd8_bin\">\r\n      <Charset>geostd8</Charset>\r\n    </collation>\r\n    <collation id=\"47\" parent=\"1\" name=\"greek_general_ci\">\r\n      <Charset>greek</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"48\" parent=\"1\" name=\"greek_bin\">\r\n      <Charset>greek</Charset>\r\n    </collation>\r\n    <collation id=\"49\" parent=\"1\" name=\"hebrew_general_ci\">\r\n      <Charset>hebrew</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"50\" parent=\"1\" name=\"hebrew_bin\">\r\n      <Charset>hebrew</Charset>\r\n    </collation>\r\n    <collation id=\"51\" parent=\"1\" name=\"hp8_english_ci\">\r\n      <Charset>hp8</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"52\" parent=\"1\" name=\"hp8_bin\">\r\n      <Charset>hp8</Charset>\r\n    </collation>\r\n    <collation id=\"53\" parent=\"1\" name=\"keybcs2_general_ci\">\r\n      <Charset>keybcs2</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"54\" parent=\"1\" name=\"keybcs2_bin\">\r\n      <Charset>keybcs2</Charset>\r\n    </collation>\r\n    <collation id=\"55\" parent=\"1\" name=\"koi8r_general_ci\">\r\n      <Charset>koi8r</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"56\" parent=\"1\" name=\"koi8r_bin\">\r\n      <Charset>koi8r</Charset>\r\n    </collation>\r\n    <collation id=\"57\" parent=\"1\" name=\"koi8u_general_ci\">\r\n      <Charset>koi8u</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"58\" parent=\"1\" name=\"koi8u_bin\">\r\n      <Charset>koi8u</Charset>\r\n    </collation>\r\n    <collation id=\"59\" parent=\"1\" name=\"latin1_german1_ci\">\r\n      <Charset>latin1</Charset>\r\n    </collation>\r\n    <collation id=\"60\" parent=\"1\" name=\"latin1_swedish_ci\">\r\n      <Charset>latin1</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"61\" parent=\"1\" name=\"latin1_danish_ci\">\r\n      <Charset>latin1</Charset>\r\n    </collation>\r\n    <collation id=\"62\" parent=\"1\" name=\"latin1_german2_ci\">\r\n      <Charset>latin1</Charset>\r\n    </collation>\r\n    <collation id=\"63\" parent=\"1\" name=\"latin1_bin\">\r\n      <Charset>latin1</Charset>\r\n    </collation>\r\n    <collation id=\"64\" parent=\"1\" name=\"latin1_general_ci\">\r\n      <Charset>latin1</Charset>\r\n    </collation>\r\n    <collation id=\"65\" parent=\"1\" name=\"latin1_general_cs\">\r\n      <Charset>latin1</Charset>\r\n    </collation>\r\n    <collation id=\"66\" parent=\"1\" name=\"latin1_spanish_ci\">\r\n      <Charset>latin1</Charset>\r\n    </collation>\r\n    <collation id=\"67\" parent=\"1\" name=\"latin2_czech_cs\">\r\n      <Charset>latin2</Charset>\r\n    </collation>\r\n    <collation id=\"68\" parent=\"1\" name=\"latin2_general_ci\">\r\n      <Charset>latin2</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"69\" parent=\"1\" name=\"latin2_hungarian_ci\">\r\n      <Charset>latin2</Charset>\r\n    </collation>\r\n    <collation id=\"70\" parent=\"1\" name=\"latin2_croatian_ci\">\r\n      <Charset>latin2</Charset>\r\n    </collation>\r\n    <collation id=\"71\" parent=\"1\" name=\"latin2_bin\">\r\n      <Charset>latin2</Charset>\r\n    </collation>\r\n    <collation id=\"72\" parent=\"1\" name=\"latin5_turkish_ci\">\r\n      <Charset>latin5</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"73\" parent=\"1\" name=\"latin5_bin\">\r\n      <Charset>latin5</Charset>\r\n    </collation>\r\n    <collation id=\"74\" parent=\"1\" name=\"latin7_estonian_cs\">\r\n      <Charset>latin7</Charset>\r\n    </collation>\r\n    <collation id=\"75\" parent=\"1\" name=\"latin7_general_ci\">\r\n      <Charset>latin7</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"76\" parent=\"1\" name=\"latin7_general_cs\">\r\n      <Charset>latin7</Charset>\r\n    </collation>\r\n    <collation id=\"77\" parent=\"1\" name=\"latin7_bin\">\r\n      <Charset>latin7</Charset>\r\n    </collation>\r\n    <collation id=\"78\" parent=\"1\" name=\"macce_general_ci\">\r\n      <Charset>macce</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"79\" parent=\"1\" name=\"macce_bin\">\r\n      <Charset>macce</Charset>\r\n    </collation>\r\n    <collation id=\"80\" parent=\"1\" name=\"macroman_general_ci\">\r\n      <Charset>macroman</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"81\" parent=\"1\" name=\"macroman_bin\">\r\n      <Charset>macroman</Charset>\r\n    </collation>\r\n    <collation id=\"82\" parent=\"1\" name=\"sjis_japanese_ci\">\r\n      <Charset>sjis</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"83\" parent=\"1\" name=\"sjis_bin\">\r\n      <Charset>sjis</Charset>\r\n    </collation>\r\n    <collation id=\"84\" parent=\"1\" name=\"swe7_swedish_ci\">\r\n      <Charset>swe7</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"85\" parent=\"1\" name=\"swe7_bin\">\r\n      <Charset>swe7</Charset>\r\n    </collation>\r\n    <collation id=\"86\" parent=\"1\" name=\"tis620_thai_ci\">\r\n      <Charset>tis620</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"87\" parent=\"1\" name=\"tis620_bin\">\r\n      <Charset>tis620</Charset>\r\n    </collation>\r\n    <collation id=\"88\" parent=\"1\" name=\"ucs2_general_ci\">\r\n      <Charset>ucs2</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"89\" parent=\"1\" name=\"ucs2_bin\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"90\" parent=\"1\" name=\"ucs2_unicode_ci\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"91\" parent=\"1\" name=\"ucs2_icelandic_ci\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"92\" parent=\"1\" name=\"ucs2_latvian_ci\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"93\" parent=\"1\" name=\"ucs2_romanian_ci\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"94\" parent=\"1\" name=\"ucs2_slovenian_ci\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"95\" parent=\"1\" name=\"ucs2_polish_ci\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"96\" parent=\"1\" name=\"ucs2_estonian_ci\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"97\" parent=\"1\" name=\"ucs2_spanish_ci\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"98\" parent=\"1\" name=\"ucs2_swedish_ci\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"99\" parent=\"1\" name=\"ucs2_turkish_ci\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"100\" parent=\"1\" name=\"ucs2_czech_ci\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"101\" parent=\"1\" name=\"ucs2_danish_ci\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"102\" parent=\"1\" name=\"ucs2_lithuanian_ci\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"103\" parent=\"1\" name=\"ucs2_slovak_ci\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"104\" parent=\"1\" name=\"ucs2_spanish2_ci\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"105\" parent=\"1\" name=\"ucs2_roman_ci\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"106\" parent=\"1\" name=\"ucs2_persian_ci\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"107\" parent=\"1\" name=\"ucs2_esperanto_ci\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"108\" parent=\"1\" name=\"ucs2_hungarian_ci\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"109\" parent=\"1\" name=\"ucs2_sinhala_ci\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"110\" parent=\"1\" name=\"ucs2_german2_ci\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"111\" parent=\"1\" name=\"ucs2_croatian_ci\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"112\" parent=\"1\" name=\"ucs2_unicode_520_ci\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"113\" parent=\"1\" name=\"ucs2_vietnamese_ci\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"114\" parent=\"1\" name=\"ucs2_general_mysql500_ci\">\r\n      <Charset>ucs2</Charset>\r\n    </collation>\r\n    <collation id=\"115\" parent=\"1\" name=\"ujis_japanese_ci\">\r\n      <Charset>ujis</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"116\" parent=\"1\" name=\"ujis_bin\">\r\n      <Charset>ujis</Charset>\r\n    </collation>\r\n    <collation id=\"117\" parent=\"1\" name=\"utf16_general_ci\">\r\n      <Charset>utf16</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"118\" parent=\"1\" name=\"utf16_bin\">\r\n      <Charset>utf16</Charset>\r\n    </collation>\r\n    <collation id=\"119\" parent=\"1\" name=\"utf16_unicode_ci\">\r\n      <Charset>utf16</Charset>\r\n    </collation>\r\n    <collation id=\"120\" parent=\"1\" name=\"utf16_icelandic_ci\">\r\n      <Charset>utf16</Charset>\r\n    </collation>\r\n    <collation id=\"121\" parent=\"1\" name=\"utf16_latvian_ci\">\r\n      <Charset>utf16</Charset>\r\n    </collation>\r\n    <collation id=\"122\" parent=\"1\" name=\"utf16_romanian_ci\">\r\n      <Charset>utf16</Charset>\r\n    </collation>\r\n    <collation id=\"123\" parent=\"1\" name=\"utf16_slovenian_ci\">\r\n      <Charset>utf16</Charset>\r\n    </collation>\r\n    <collation id=\"124\" parent=\"1\" name=\"utf16_polish_ci\">\r\n      <Charset>utf16</Charset>\r\n    </collation>\r\n    <collation id=\"125\" parent=\"1\" name=\"utf16_estonian_ci\">\r\n      <Charset>utf16</Charset>\r\n    </collation>\r\n    <collation id=\"126\" parent=\"1\" name=\"utf16_spanish_ci\">\r\n      <Charset>utf16</Charset>\r\n    </collation>\r\n    <collation id=\"127\" parent=\"1\" name=\"utf16_swedish_ci\">\r\n      <Charset>utf16</Charset>\r\n    </collation>\r\n    <collation id=\"128\" parent=\"1\" name=\"utf16_turkish_ci\">\r\n      <Charset>utf16</Charset>\r\n    </collation>\r\n    <collation id=\"129\" parent=\"1\" name=\"utf16_czech_ci\">\r\n      <Charset>utf16</Charset>\r\n    </collation>\r\n    <collation id=\"130\" parent=\"1\" name=\"utf16_danish_ci\">\r\n      <Charset>utf16</Charset>\r\n    </collation>\r\n    <collation id=\"131\" parent=\"1\" name=\"utf16_lithuanian_ci\">\r\n      <Charset>utf16</Charset>\r\n    </collation>\r\n    <collation id=\"132\" parent=\"1\" name=\"utf16_slovak_ci\">\r\n      <Charset>utf16</Charset>\r\n    </collation>\r\n    <collation id=\"133\" parent=\"1\" name=\"utf16_spanish2_ci\">\r\n      <Charset>utf16</Charset>\r\n    </collation>\r\n    <collation id=\"134\" parent=\"1\" name=\"utf16_roman_ci\">\r\n      <Charset>utf16</Charset>\r\n    </collation>\r\n    <collation id=\"135\" parent=\"1\" name=\"utf16_persian_ci\">\r\n      <Charset>utf16</Charset>\r\n    </collation>\r\n    <collation id=\"136\" parent=\"1\" name=\"utf16_esperanto_ci\">\r\n      <Charset>utf16</Charset>\r\n    </collation>\r\n    <collation id=\"137\" parent=\"1\" name=\"utf16_hungarian_ci\">\r\n      <Charset>utf16</Charset>\r\n    </collation>\r\n    <collation id=\"138\" parent=\"1\" name=\"utf16_sinhala_ci\">\r\n      <Charset>utf16</Charset>\r\n    </collation>\r\n    <collation id=\"139\" parent=\"1\" name=\"utf16_german2_ci\">\r\n      <Charset>utf16</Charset>\r\n    </collation>\r\n    <collation id=\"140\" parent=\"1\" name=\"utf16_croatian_ci\">\r\n      <Charset>utf16</Charset>\r\n    </collation>\r\n    <collation id=\"141\" parent=\"1\" name=\"utf16_unicode_520_ci\">\r\n      <Charset>utf16</Charset>\r\n    </collation>\r\n    <collation id=\"142\" parent=\"1\" name=\"utf16_vietnamese_ci\">\r\n      <Charset>utf16</Charset>\r\n    </collation>\r\n    <collation id=\"143\" parent=\"1\" name=\"utf16le_general_ci\">\r\n      <Charset>utf16le</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"144\" parent=\"1\" name=\"utf16le_bin\">\r\n      <Charset>utf16le</Charset>\r\n    </collation>\r\n    <collation id=\"145\" parent=\"1\" name=\"utf32_general_ci\">\r\n      <Charset>utf32</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"146\" parent=\"1\" name=\"utf32_bin\">\r\n      <Charset>utf32</Charset>\r\n    </collation>\r\n    <collation id=\"147\" parent=\"1\" name=\"utf32_unicode_ci\">\r\n      <Charset>utf32</Charset>\r\n    </collation>\r\n    <collation id=\"148\" parent=\"1\" name=\"utf32_icelandic_ci\">\r\n      <Charset>utf32</Charset>\r\n    </collation>\r\n    <collation id=\"149\" parent=\"1\" name=\"utf32_latvian_ci\">\r\n      <Charset>utf32</Charset>\r\n    </collation>\r\n    <collation id=\"150\" parent=\"1\" name=\"utf32_romanian_ci\">\r\n      <Charset>utf32</Charset>\r\n    </collation>\r\n    <collation id=\"151\" parent=\"1\" name=\"utf32_slovenian_ci\">\r\n      <Charset>utf32</Charset>\r\n    </collation>\r\n    <collation id=\"152\" parent=\"1\" name=\"utf32_polish_ci\">\r\n      <Charset>utf32</Charset>\r\n    </collation>\r\n    <collation id=\"153\" parent=\"1\" name=\"utf32_estonian_ci\">\r\n      <Charset>utf32</Charset>\r\n    </collation>\r\n    <collation id=\"154\" parent=\"1\" name=\"utf32_spanish_ci\">\r\n      <Charset>utf32</Charset>\r\n    </collation>\r\n    <collation id=\"155\" parent=\"1\" name=\"utf32_swedish_ci\">\r\n      <Charset>utf32</Charset>\r\n    </collation>\r\n    <collation id=\"156\" parent=\"1\" name=\"utf32_turkish_ci\">\r\n      <Charset>utf32</Charset>\r\n    </collation>\r\n    <collation id=\"157\" parent=\"1\" name=\"utf32_czech_ci\">\r\n      <Charset>utf32</Charset>\r\n    </collation>\r\n    <collation id=\"158\" parent=\"1\" name=\"utf32_danish_ci\">\r\n      <Charset>utf32</Charset>\r\n    </collation>\r\n    <collation id=\"159\" parent=\"1\" name=\"utf32_lithuanian_ci\">\r\n      <Charset>utf32</Charset>\r\n    </collation>\r\n    <collation id=\"160\" parent=\"1\" name=\"utf32_slovak_ci\">\r\n      <Charset>utf32</Charset>\r\n    </collation>\r\n    <collation id=\"161\" parent=\"1\" name=\"utf32_spanish2_ci\">\r\n      <Charset>utf32</Charset>\r\n    </collation>\r\n    <collation id=\"162\" parent=\"1\" name=\"utf32_roman_ci\">\r\n      <Charset>utf32</Charset>\r\n    </collation>\r\n    <collation id=\"163\" parent=\"1\" name=\"utf32_persian_ci\">\r\n      <Charset>utf32</Charset>\r\n    </collation>\r\n    <collation id=\"164\" parent=\"1\" name=\"utf32_esperanto_ci\">\r\n      <Charset>utf32</Charset>\r\n    </collation>\r\n    <collation id=\"165\" parent=\"1\" name=\"utf32_hungarian_ci\">\r\n      <Charset>utf32</Charset>\r\n    </collation>\r\n    <collation id=\"166\" parent=\"1\" name=\"utf32_sinhala_ci\">\r\n      <Charset>utf32</Charset>\r\n    </collation>\r\n    <collation id=\"167\" parent=\"1\" name=\"utf32_german2_ci\">\r\n      <Charset>utf32</Charset>\r\n    </collation>\r\n    <collation id=\"168\" parent=\"1\" name=\"utf32_croatian_ci\">\r\n      <Charset>utf32</Charset>\r\n    </collation>\r\n    <collation id=\"169\" parent=\"1\" name=\"utf32_unicode_520_ci\">\r\n      <Charset>utf32</Charset>\r\n    </collation>\r\n    <collation id=\"170\" parent=\"1\" name=\"utf32_vietnamese_ci\">\r\n      <Charset>utf32</Charset>\r\n    </collation>\r\n    <collation id=\"171\" parent=\"1\" name=\"utf8mb3_general_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"172\" parent=\"1\" name=\"utf8mb3_tolower_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"173\" parent=\"1\" name=\"utf8mb3_bin\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"174\" parent=\"1\" name=\"utf8mb3_unicode_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"175\" parent=\"1\" name=\"utf8mb3_icelandic_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"176\" parent=\"1\" name=\"utf8mb3_latvian_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"177\" parent=\"1\" name=\"utf8mb3_romanian_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"178\" parent=\"1\" name=\"utf8mb3_slovenian_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"179\" parent=\"1\" name=\"utf8mb3_polish_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"180\" parent=\"1\" name=\"utf8mb3_estonian_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"181\" parent=\"1\" name=\"utf8mb3_spanish_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"182\" parent=\"1\" name=\"utf8mb3_swedish_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"183\" parent=\"1\" name=\"utf8mb3_turkish_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"184\" parent=\"1\" name=\"utf8mb3_czech_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"185\" parent=\"1\" name=\"utf8mb3_danish_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"186\" parent=\"1\" name=\"utf8mb3_lithuanian_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"187\" parent=\"1\" name=\"utf8mb3_slovak_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"188\" parent=\"1\" name=\"utf8mb3_spanish2_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"189\" parent=\"1\" name=\"utf8mb3_roman_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"190\" parent=\"1\" name=\"utf8mb3_persian_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"191\" parent=\"1\" name=\"utf8mb3_esperanto_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"192\" parent=\"1\" name=\"utf8mb3_hungarian_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"193\" parent=\"1\" name=\"utf8mb3_sinhala_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"194\" parent=\"1\" name=\"utf8mb3_german2_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"195\" parent=\"1\" name=\"utf8mb3_croatian_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"196\" parent=\"1\" name=\"utf8mb3_unicode_520_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"197\" parent=\"1\" name=\"utf8mb3_vietnamese_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"198\" parent=\"1\" name=\"utf8mb3_general_mysql500_ci\">\r\n      <Charset>utf8mb3</Charset>\r\n    </collation>\r\n    <collation id=\"199\" parent=\"1\" name=\"utf8mb4_general_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"200\" parent=\"1\" name=\"utf8mb4_bin\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"201\" parent=\"1\" name=\"utf8mb4_unicode_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"202\" parent=\"1\" name=\"utf8mb4_icelandic_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"203\" parent=\"1\" name=\"utf8mb4_latvian_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"204\" parent=\"1\" name=\"utf8mb4_romanian_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"205\" parent=\"1\" name=\"utf8mb4_slovenian_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"206\" parent=\"1\" name=\"utf8mb4_polish_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"207\" parent=\"1\" name=\"utf8mb4_estonian_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"208\" parent=\"1\" name=\"utf8mb4_spanish_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"209\" parent=\"1\" name=\"utf8mb4_swedish_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"210\" parent=\"1\" name=\"utf8mb4_turkish_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"211\" parent=\"1\" name=\"utf8mb4_czech_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"212\" parent=\"1\" name=\"utf8mb4_danish_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"213\" parent=\"1\" name=\"utf8mb4_lithuanian_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"214\" parent=\"1\" name=\"utf8mb4_slovak_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"215\" parent=\"1\" name=\"utf8mb4_spanish2_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"216\" parent=\"1\" name=\"utf8mb4_roman_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"217\" parent=\"1\" name=\"utf8mb4_persian_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"218\" parent=\"1\" name=\"utf8mb4_esperanto_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"219\" parent=\"1\" name=\"utf8mb4_hungarian_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"220\" parent=\"1\" name=\"utf8mb4_sinhala_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"221\" parent=\"1\" name=\"utf8mb4_german2_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"222\" parent=\"1\" name=\"utf8mb4_croatian_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"223\" parent=\"1\" name=\"utf8mb4_unicode_520_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"224\" parent=\"1\" name=\"utf8mb4_vietnamese_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"225\" parent=\"1\" name=\"utf8mb4_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n      <DefaultForCharset>1</DefaultForCharset>\r\n    </collation>\r\n    <collation id=\"226\" parent=\"1\" name=\"utf8mb4_de_pb_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"227\" parent=\"1\" name=\"utf8mb4_is_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"228\" parent=\"1\" name=\"utf8mb4_lv_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"229\" parent=\"1\" name=\"utf8mb4_ro_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"230\" parent=\"1\" name=\"utf8mb4_sl_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"231\" parent=\"1\" name=\"utf8mb4_pl_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"232\" parent=\"1\" name=\"utf8mb4_et_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"233\" parent=\"1\" name=\"utf8mb4_es_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"234\" parent=\"1\" name=\"utf8mb4_sv_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"235\" parent=\"1\" name=\"utf8mb4_tr_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"236\" parent=\"1\" name=\"utf8mb4_cs_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"237\" parent=\"1\" name=\"utf8mb4_da_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"238\" parent=\"1\" name=\"utf8mb4_lt_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"239\" parent=\"1\" name=\"utf8mb4_sk_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"240\" parent=\"1\" name=\"utf8mb4_es_trad_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"241\" parent=\"1\" name=\"utf8mb4_la_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"242\" parent=\"1\" name=\"utf8mb4_eo_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"243\" parent=\"1\" name=\"utf8mb4_hu_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"244\" parent=\"1\" name=\"utf8mb4_hr_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"245\" parent=\"1\" name=\"utf8mb4_vi_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"246\" parent=\"1\" name=\"utf8mb4_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"247\" parent=\"1\" name=\"utf8mb4_de_pb_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"248\" parent=\"1\" name=\"utf8mb4_is_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"249\" parent=\"1\" name=\"utf8mb4_lv_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"250\" parent=\"1\" name=\"utf8mb4_ro_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"251\" parent=\"1\" name=\"utf8mb4_sl_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"252\" parent=\"1\" name=\"utf8mb4_pl_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"253\" parent=\"1\" name=\"utf8mb4_et_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"254\" parent=\"1\" name=\"utf8mb4_es_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"255\" parent=\"1\" name=\"utf8mb4_sv_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"256\" parent=\"1\" name=\"utf8mb4_tr_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"257\" parent=\"1\" name=\"utf8mb4_cs_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"258\" parent=\"1\" name=\"utf8mb4_da_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"259\" parent=\"1\" name=\"utf8mb4_lt_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"260\" parent=\"1\" name=\"utf8mb4_sk_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"261\" parent=\"1\" name=\"utf8mb4_es_trad_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"262\" parent=\"1\" name=\"utf8mb4_la_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"263\" parent=\"1\" name=\"utf8mb4_eo_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"264\" parent=\"1\" name=\"utf8mb4_hu_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"265\" parent=\"1\" name=\"utf8mb4_hr_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"266\" parent=\"1\" name=\"utf8mb4_vi_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"267\" parent=\"1\" name=\"utf8mb4_ja_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"268\" parent=\"1\" name=\"utf8mb4_ja_0900_as_cs_ks\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"269\" parent=\"1\" name=\"utf8mb4_0900_as_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"270\" parent=\"1\" name=\"utf8mb4_ru_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"271\" parent=\"1\" name=\"utf8mb4_ru_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"272\" parent=\"1\" name=\"utf8mb4_zh_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"273\" parent=\"1\" name=\"utf8mb4_0900_bin\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"274\" parent=\"1\" name=\"utf8mb4_nb_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"275\" parent=\"1\" name=\"utf8mb4_nb_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"276\" parent=\"1\" name=\"utf8mb4_nn_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"277\" parent=\"1\" name=\"utf8mb4_nn_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"278\" parent=\"1\" name=\"utf8mb4_sr_latn_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"279\" parent=\"1\" name=\"utf8mb4_sr_latn_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"280\" parent=\"1\" name=\"utf8mb4_bs_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"281\" parent=\"1\" name=\"utf8mb4_bs_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"282\" parent=\"1\" name=\"utf8mb4_bg_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"283\" parent=\"1\" name=\"utf8mb4_bg_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"284\" parent=\"1\" name=\"utf8mb4_gl_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"285\" parent=\"1\" name=\"utf8mb4_gl_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"286\" parent=\"1\" name=\"utf8mb4_mn_cyrl_0900_ai_ci\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <collation id=\"287\" parent=\"1\" name=\"utf8mb4_mn_cyrl_0900_as_cs\">\r\n      <Charset>utf8mb4</Charset>\r\n    </collation>\r\n    <schema id=\"288\" parent=\"1\" name=\"information_schema\">\r\n      <CollationName>utf8mb3_general_ci</CollationName>\r\n    </schema>\r\n    <schema id=\"289\" parent=\"1\" name=\"performance_schema\">\r\n      <CollationName>utf8mb4_0900_ai_ci</CollationName>\r\n    </schema>\r\n    <schema id=\"290\" parent=\"1\" name=\"FlappyBirdLeaderboard\">\r\n      <Current>1</Current>\r\n      <CollationName>utf8mb4_0900_ai_ci</CollationName>\r\n    </schema>\r\n    <user id=\"291\" parent=\"1\" name=\"FlappyRead\"/>\r\n  </database-model>\r\n</dataSource>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/dataSources/519a1a9c-d07a-4d40-9704-9a8073d8ce38.xml b/.idea/dataSources/519a1a9c-d07a-4d40-9704-9a8073d8ce38.xml
+--- a/.idea/dataSources/519a1a9c-d07a-4d40-9704-9a8073d8ce38.xml	
++++ b/.idea/dataSources/519a1a9c-d07a-4d40-9704-9a8073d8ce38.xml	
+@@ -1,13 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <dataSource name="FlappyBirdLeaderboard@MCmoderSD.de">
+-  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.48">
+-    <root id="1">
+-      <DefaultCasing>exact</DefaultCasing>
+-      <DefaultEngine>InnoDB</DefaultEngine>
+-      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
+-      <Grants>FlappyBirdLeaderboard|schema||FlappyRead||SELECT|G</Grants>
+-      <ServerVersion>8.0.33</ServerVersion>
+-    </root>
++  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.49">
++    <root id="1"/>
+     <collation id="2" parent="1" name="armscii8_general_ci">
+       <Charset>armscii8</Charset>
+       <DefaultForCharset>1</DefaultForCharset>
+diff --git a/.gitignore b/.gitignore
+new file mode 100644

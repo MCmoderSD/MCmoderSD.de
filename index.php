@@ -19,6 +19,7 @@
             <li><a href="index.php">Home</a></li>
             <li><a href="pages/about.php">About</a></li>
             <li><a href="pages/projects.php">Projects</a></li>
+            <li><a href="pages/downloads.php">Downloads</a></li>
         </ul>
     </nav>
 

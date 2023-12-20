@@ -1,3 +1,43 @@
+Index: .idea/php.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"MessDetectorOptionsConfiguration\">\r\n    <option name=\"transferred\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PHPCSFixerOptionsConfiguration\">\r\n    <option name=\"transferred\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PHPCodeSnifferOptionsConfiguration\">\r\n    <option name=\"transferred\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PhpProjectSharedConfiguration\" php_language_level=\"8.2\" />\r\n  <component name=\"PhpRuntimeConfiguration\">\r\n    <extensions>\r\n      <extension name=\"FFI\" enabled=\"true\" />\r\n      <extension name=\"LuaSandbox\" enabled=\"true\" />\r\n      <extension name=\"Parle\" enabled=\"true\" />\r\n      <extension name=\"SaxonC\" enabled=\"true\" />\r\n      <extension name=\"ZendCache\" enabled=\"true\" />\r\n      <extension name=\"aerospike\" enabled=\"true\" />\r\n      <extension name=\"ast\" enabled=\"true\" />\r\n      <extension name=\"blackfire\" enabled=\"true\" />\r\n      <extension name=\"com_dotnet\" enabled=\"true\" />\r\n      <extension name=\"couchbase_v2\" enabled=\"true\" />\r\n      <extension name=\"crypto\" enabled=\"true\" />\r\n      <extension name=\"ds\" enabled=\"true\" />\r\n      <extension name=\"eio\" enabled=\"true\" />\r\n      <extension name=\"event\" enabled=\"true\" />\r\n      <extension name=\"expect\" enabled=\"true\" />\r\n      <extension name=\"leveldb\" enabled=\"true\" />\r\n      <extension name=\"libvirt-php\" enabled=\"true\" />\r\n      <extension name=\"lua\" enabled=\"true\" />\r\n      <extension name=\"lzf\" enabled=\"true\" />\r\n      <extension name=\"mapscript\" enabled=\"true\" />\r\n      <extension name=\"meminfo\" enabled=\"true\" />\r\n      <extension name=\"msgpack\" enabled=\"true\" />\r\n      <extension name=\"parallel\" enabled=\"true\" />\r\n      <extension name=\"pcov\" enabled=\"true\" />\r\n      <extension name=\"phpdbg\" enabled=\"true\" />\r\n      <extension name=\"pq\" enabled=\"true\" />\r\n      <extension name=\"radius\" enabled=\"true\" />\r\n      <extension name=\"rdkafka\" enabled=\"true\" />\r\n      <extension name=\"rpminfo\" enabled=\"true\" />\r\n      <extension name=\"simple_kafka_client\" enabled=\"true\" />\r\n      <extension name=\"solr\" enabled=\"true\" />\r\n      <extension name=\"stats\" enabled=\"true\" />\r\n      <extension name=\"stomp\" enabled=\"true\" />\r\n      <extension name=\"svm\" enabled=\"true\" />\r\n      <extension name=\"swoole\" enabled=\"true\" />\r\n      <extension name=\"sync\" enabled=\"true\" />\r\n      <extension name=\"uopz\" enabled=\"true\" />\r\n      <extension name=\"uploadprogress\" enabled=\"true\" />\r\n      <extension name=\"uuid\" enabled=\"true\" />\r\n      <extension name=\"uv\" enabled=\"true\" />\r\n      <extension name=\"winbinder\" enabled=\"true\" />\r\n      <extension name=\"xcache\" enabled=\"true\" />\r\n      <extension name=\"xdiff\" enabled=\"true\" />\r\n      <extension name=\"xxtea\" enabled=\"true\" />\r\n      <extension name=\"yaf\" enabled=\"true\" />\r\n      <extension name=\"yar\" enabled=\"true\" />\r\n      <extension name=\"zookeeper\" enabled=\"true\" />\r\n      <extension name=\"zstd\" enabled=\"true\" />\r\n    </extensions>\r\n  </component>\r\n  <component name=\"PhpStanOptionsConfiguration\">\r\n    <option name=\"transferred\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PsalmOptionsConfiguration\">\r\n    <option name=\"transferred\" value=\"true\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/php.xml b/.idea/php.xml
+--- a/.idea/php.xml	(revision 7a2f6c9c585313c1f1bcadd3fbc719ed8e86837f)
++++ b/.idea/php.xml	(date 1700110278725)
+@@ -9,6 +9,11 @@
+   <component name="PHPCodeSnifferOptionsConfiguration">
+     <option name="transferred" value="true" />
+   </component>
++  <component name="PhpIncludePathManager">
++    <include_path>
++      <path value="" />
++    </include_path>
++  </component>
+   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
+   <component name="PhpRuntimeConfiguration">
+     <extensions>
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"VcsDirectoryMappings\">\r\n    <mapping directory=\"$PROJECT_DIR$\" vcs=\"Git\" />\r\n    <mapping directory=\"$PROJECT_DIR$/content/cola-webpage\" vcs=\"Git\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+--- a/.idea/vcs.xml	(revision 7a2f6c9c585313c1f1bcadd3fbc719ed8e86837f)
++++ b/.idea/vcs.xml	(date 1703029995730)
+@@ -2,6 +2,5 @@
+ <project version="4">
+   <component name="VcsDirectoryMappings">
+     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+-    <mapping directory="$PROJECT_DIR$/content/cola-webpage" vcs="Git" />
+   </component>
+ </project>
+\ No newline at end of file
 Index: .idea/workspace.xml
 IDEA additional info:
 Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
@@ -7,19 +47,20 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
 ===================================================================
 diff --git a/.idea/workspace.xml b/.idea/workspace.xml
 --- a/.idea/workspace.xml	(revision 7a2f6c9c585313c1f1bcadd3fbc719ed8e86837f)
-+++ b/.idea/workspace.xml	(date 1687283174452)
-@@ -4,7 +4,9 @@
++++ b/.idea/workspace.xml	(date 1703029995725)
+@@ -4,7 +4,10 @@
      <option name="autoReloadType" value="SELECTIVE" />
    </component>
    <component name="ChangeListManager">
 -    <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="Update Conf" />
-+    <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="Update Conf">
++    <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="Search Bar">
++      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
 +      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 +    </list>
      <option name="SHOW_DIALOG" value="false" />
      <option name="HIGHLIGHT_CONFLICTS" value="true" />
      <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
-@@ -22,12 +24,40 @@
+@@ -22,22 +25,60 @@
    </component>
    <component name="Git.Settings">
      <option name="PUSH_AUTO_UPDATE" value="true" />
@@ -43,11 +84,11 @@ diff --git a/.idea/workspace.xml b/.idea/workspace.xml
 +                <list>
 +                  <RecentBranch>
 +                    <option name="branchName" value="MCmoderSD.live" />
-+                    <option name="lastUsedInstant" value="1687192898" />
++                    <option name="lastUsedInstant" value="1700110246" />
 +                  </RecentBranch>
 +                  <RecentBranch>
 +                    <option name="branchName" value="MCmoderSD.de" />
-+                    <option name="lastUsedInstant" value="1687192897" />
++                    <option name="lastUsedInstant" value="1700110245" />
 +                  </RecentBranch>
 +                </list>
 +              </option>
@@ -60,20 +101,117 @@ diff --git a/.idea/workspace.xml b/.idea/workspace.xml
    </component>
    <component name="HighlightingSettingsPerFile">
      <setting file="file://$PROJECT_DIR$/content/games/games.php" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
-@@ -55,7 +85,7 @@
-     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+     <setting file="file://$PROJECT_DIR$/content/minecraft/minecraft.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+     <setting file="file://$PROJECT_DIR$/index.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
++  </component>
++  <component name="MacroExpansionManager">
++    <option name="directoryName" value="ocnjx4n5" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
+-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
++  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
++    <include_path>
++      <path value="" />
++    </include_path>
++  </component>
++  <component name="ProjectColorInfo">{
++  &quot;associatedIndex&quot;: 5
++}</component>
+   <component name="ProjectId" id="2HmjcAEok1bhqG6kA9hCFAvV9bP" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+     <ConfirmationsSetting value="2" id="Add" />
+@@ -46,33 +87,34 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
 -    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-+    &quot;git-widget-placeholder&quot;: &quot;MCmoderSD.live&quot;,
-     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-     &quot;last_opened_file_path&quot;: &quot;C:/php-8.2.4/php.exe&quot;,
-     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-@@ -136,6 +166,7 @@
+-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;C:/php-8.2.4/php.exe&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "ASKED_ADD_EXTERNAL_FILES": "true",
++    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "DefaultHtmlFileTemplate": "HTML File",
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "dart.analysis.tool.window.visible": "false",
++    "git-widget-placeholder": "MCmoderSD.live",
++    "ignore.virus.scanning.warn.message": "true",
++    "ignore_missing_gitignore": "true",
++    "last_opened_file_path": "C:/Users/MCmoderSD/PhpstormProjects/MCmoderSD.de",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "run.code.analysis.last.selected.profile": "pProject Default",
++    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
++    "vue.rearranger.settings.migration": "true"
+   },
+-  &quot;keyToStringList&quot;: {
+-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+-      &quot;PHP&quot;
++  "keyToStringList": {
++    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
++      "PHP"
+     ]
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="C:\Users\MCmoderSD\PhpstormProjects\MCmoderSD.live\content" />
+@@ -81,6 +123,13 @@
+       <recent name="C:\Users\MCmoderSD\PhpstormProjects\MCmoderSD.live\images" />
+     </key>
+   </component>
++  <component name="SharedIndexes">
++    <attachedChunks>
++      <set>
++        <option value="bundled-php-predefined-ba97393d7c68-74080bdb84d3-com.jetbrains.php.sharedIndexes-PS-233.11799.297" />
++      </set>
++    </attachedChunks>
++  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -136,6 +185,9 @@
        <workItem from="1686932933741" duration="826000" />
        <workItem from="1686938858607" duration="18000" />
        <workItem from="1686939150264" duration="754000" />
-+      <workItem from="1687282022053" duration="1112000" />
++      <workItem from="1701356882724" duration="30000" />
++      <workItem from="1703029946168" duration="3000" />
++      <workItem from="1703029984413" duration="12000" />
      </task>
      <task id="LOCAL-00001" summary="Update">
        <created>1668897371120</created>
+@@ -296,6 +348,9 @@
+   </component>
+   <component name="VcsManagerConfiguration">
+     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
++    <ignored-roots>
++      <path value="$PROJECT_DIR$/content/cola-webpage" />
++    </ignored-roots>
+     <MESSAGE value="Update" />
+     <MESSAGE value="Upadtes" />
+     <MESSAGE value="Skischullandheim" />
