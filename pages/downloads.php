@@ -3,7 +3,7 @@
 <html lang="de">
 
 <head>
-    <title>About</title>
+    <title>Downloads</title>
     <meta charset="utf-8">
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico"/>
     <link rel="stylesheet" href="../style/main.css">
