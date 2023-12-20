@@ -33,6 +33,16 @@
         <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/nZQeNrLA" target="_blank">APK's</a></li>
     </ul>
 
+
+    <p class="downloadHeadline">Switch Emulation</p>
+
+    <ul>
+        <li><a href="https://yuzu-emu.org/" target="_blank">Yuzu</a></li>
+        <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/ZKmzOEET" target="_blank">Games</a></li>
+        <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/xDWoOUVT" target="_blank">Updates</a></li>
+        <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/mNSavEah" target="_blank">Firmware</a></li>
+    </ul>
+
 </article>
 </body>
 </html>
