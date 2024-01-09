@@ -7,15 +7,18 @@
 
 .downloads ul {
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
     margin-top: 3rem;
-    color: #72b1f4;
-    font-size: 2rem;
+    padding: 0;
+    flex-wrap: wrap;
 }
 
 .downloads ul li {
     list-style: none;
     margin: 1rem;
+    text-align: center;
 }
 
 .downloads ul li a {

@@ -7,15 +7,18 @@
 
 .projects ul {
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
     margin-top: 3rem;
-    color: #72b1f4;
-    font-size: 2rem;
+    padding: 0;
+    flex-wrap: wrap;
 }
 
 .projects ul li {
     list-style: none;
     margin: 1rem;
+    text-align: center;
 }
 
 .projects ul li a {
@@ -35,9 +38,8 @@
     margin: 0 auto;
 }
 
-.projects table tbody{
+.projects table tbody {
     margin: 0 auto;
-
 }
 
 .projects table tbody tr {

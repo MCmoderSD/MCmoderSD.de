@@ -1,28 +1,34 @@
 <?php ?>
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
     <title>About</title>
     <meta charset="utf-8">
+    <meta name="author" content="MCmoderSD">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico"/>
     <link rel="stylesheet" href="../style/main.css">
     <link rel="stylesheet" href="../style/about.css">
 </head>
 
 <body>
-<header>
-    <div class="headline"><p class="headline">MCmoderSD.de</p></div>
+    <header>
 
-    <nav class="nav">
-        <ul>
-            <li><a href="../index.php">Home</a></li>
-            <li><a href="../pages/about.php">About</a></li>
-            <li><a href="../pages/projects.php">Projects</a></li>
-            <li><a href="../pages/downloads.php">Downloads</a></li>
-        </ul>
-    </nav>
-</header>
+        <div class="headline">
+            <p class="headline">MCmoderSD.de</p>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="../pages/about.php">About</a></li>
+                <li><a href="../pages/projects.php">Projects</a></li>
+                <li><a href="../pages/downloads.php">Downloads</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <article class="links">
         <ul>
             <li><a href="https://www.MCmoderSD.de/yt" target="_blank">YouTube</a></li>
@@ -31,7 +37,9 @@
             <li><a href="https://www.MCmoderSD.de/insta" target="_blank">Instagram</a></li>
             <li><a href="https://www.MCmoderSD.de/spotify" target="_blank">Spotify</a></li>
         </ul>
+
         <br>
+
         <ul>
             <li><a href="https://www.MCmoderSD.de/steam" target="_blank">Steam</a></li>
             <li><a href="https://www.MCmoderSD.de/dc" target="_blank">Discord</a></li>
@@ -40,7 +48,5 @@
             <li><a href="https://www.MCmoderSD.de/stackoverflow" target="_blank">Stackoverflow</a></li>
         </ul>
     </article>
-
-
 </body>
 </html>
