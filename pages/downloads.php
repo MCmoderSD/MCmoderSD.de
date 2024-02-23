@@ -33,9 +33,9 @@
         <p class="downloadHeadline">Cracks</p>
 
         <ul>
-            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/5_qUsjDD" target="_blank">Adobe</a></li>
+            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/0T0PLdvg" target="_blank">Adobe</a></li>
             <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/JEIBDIfg" target="_blank">Games</a></li>
-            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/RlFXsob8" target="_blank">APK's</a></li>
+            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/jW814th6" target="_blank">APK's</a></li>
         </ul>
 
 
@@ -43,9 +43,18 @@
 
         <ul>
             <li><a href="https://yuzu-emu.org/" target="_blank">Yuzu</a></li>
-            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/AkdPpiIS" target="_blank">Games</a></li>
-            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/ZkO0UWt0" target="_blank">Updates</a></li>
-            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/dcAQj2h2" target="_blank">Firmware</a></li>
+            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/naPGq4Hg" target="_blank">Games</a></li>
+            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/Oe9-WOl2" target="_blank">Updates</a></li>
+            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/-5sKSx90" target="_blank">Firmware</a></li>
+        </ul>
+
+
+        <p class="downloadHeadline">Operation Throwback</p>
+
+        <ul>
+            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/jLnacnaw" target="_blank">Operations</a></li>
+            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/73MqPgd8" target="_blank">Tools</a></li>
+            <li><a href="https://discord.com/invite/JGA9WPF4K8" target="_blank">Discord</a></li>
         </ul>
 
     </article>
