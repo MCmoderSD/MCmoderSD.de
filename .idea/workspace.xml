@@ -9,11 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="tiktok">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="Download update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCmoderSD.de.conf" beforeDir="false" afterPath="$PROJECT_DIR$/MCmoderSD.de.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/downloads.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/downloads.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,6 +223,8 @@
       <workItem from="1707940874645" duration="375000" />
       <workItem from="1708114764207" duration="2248000" />
       <workItem from="1708690908542" duration="618000" />
+      <workItem from="1708691541138" duration="369000" />
+      <workItem from="1708811945892" duration="322000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1668897371120</created>
@@ -493,7 +492,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707941112112</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Download update">
+      <option name="closed" value="true" />
+      <created>1708691754312</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1708691754312</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -535,6 +542,7 @@
     <MESSAGE value="www fix" />
     <MESSAGE value="downloads update" />
     <MESSAGE value="tiktok" />
-    <option name="LAST_COMMIT_MESSAGE" value="tiktok" />
+    <MESSAGE value="Download update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Download update" />
   </component>
 </project>
