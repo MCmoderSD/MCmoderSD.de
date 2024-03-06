@@ -9,8 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="Download update">
+    <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="update fix">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_02_2024_13_24_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_02_2024_13_24__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCmoderSD.de.conf" beforeDir="false" afterPath="$PROJECT_DIR$/MCmoderSD.de.conf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +227,9 @@
       <workItem from="1708114764207" duration="2248000" />
       <workItem from="1708690908542" duration="618000" />
       <workItem from="1708691541138" duration="369000" />
-      <workItem from="1708811945892" duration="322000" />
+      <workItem from="1708811945892" duration="1070000" />
+      <workItem from="1709734644998" duration="20000" />
+      <workItem from="1709734673264" duration="161000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1668897371120</created>
@@ -500,7 +505,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708691754312</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="update fix">
+      <option name="closed" value="true" />
+      <created>1708813639544</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1708813639544</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -543,6 +556,7 @@
     <MESSAGE value="downloads update" />
     <MESSAGE value="tiktok" />
     <MESSAGE value="Download update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Download update" />
+    <MESSAGE value="update fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="update fix" />
   </component>
 </project>
