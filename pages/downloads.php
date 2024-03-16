@@ -33,27 +33,27 @@
         <p class="downloadHeadline">Cracks</p>
 
         <ul>
-            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/0T0PLdvg" target="_blank">Adobe</a></li>
-            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/JEIBDIfg" target="_blank">Games</a></li>
-            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/jW814th6" target="_blank">APK's</a></li>
+            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/qra1KFM4" target="_blank">Adobe</a></li>
+            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/N_9OiTSQ" target="_blank">Games</a></li>
+            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/BluSfiYd" target="_blank">APK's</a></li>
         </ul>
 
 
         <p class="downloadHeadline">Switch Emulation</p>
 
         <ul>
-            <li><a href="https://yuzu-emu.org/" target="_blank">Yuzu</a></li>
-            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/naPGq4Hg" target="_blank">Games</a></li>
-            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/Oe9-WOl2" target="_blank">Updates</a></li>
-            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/-5sKSx90" target="_blank">Firmware</a></li>
+            <li><a href="https://web.archive.org/web/20240301024956if_/https://objects.githubusercontent.com/github-production-release-asset-2e65be/151023255/2a98476e-2064-474c-ad90-97ad7b0ba18f?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240301%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240301T024956Z&X-Amz-Expires=300&X-Amz-Signature=8d5c7d93d6869006326ff8113d1fb18faceadba13a8dd723d3f0f5bef41eddb1&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=151023255&response-content-disposition=attachment%3B%20filename%3Dyuzu_install.exe&response-content-type=application%2Foctet-stream" target="_blank">Yuzu</a></li>
+            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/0DeIxBJa" target="_blank">Games</a></li>
+            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/8nB_7aGY" target="_blank">Updates</a></li>
+            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/-fyWOf4_C" target="_blank">Firmware</a></li>
         </ul>
 
 
         <p class="downloadHeadline">Operation Throwback</p>
 
         <ul>
-            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/jLnacnaw" target="_blank">Operations</a></li>
-            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/73MqPgd8" target="_blank">Tools</a></li>
+            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/CFc5Oz4k" target="_blank">Operations</a></li>
+            <li><a href="http://z9iswj91nn31eabm.myfritz.net:30044/share/ueQ61bOZ" target="_blank">Tools</a></li>
             <li><a href="https://discord.com/invite/JGA9WPF4K8" target="_blank">Discord</a></li>
         </ul>
 
