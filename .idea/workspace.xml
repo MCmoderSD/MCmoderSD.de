@@ -9,21 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="Yuzu fix">
-      <change afterPath="$PROJECT_DIR$/pages/links.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/blobs/version" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/519a1a9c-d07a-4d40-9704-9a8073d8ce38.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/519a1a9c-d07a-4d40-9704-9a8073d8ce38.xml" afterDir="false" />
+    <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MCmoderSD.de.conf" beforeDir="false" afterPath="$PROJECT_DIR$/MCmoderSD.de.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Update.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/socials.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/downloads.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/downloads.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/projects.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/projects.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/socials.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -265,7 +252,7 @@
       <workItem from="1721828294793" duration="63000" />
       <workItem from="1721828366239" duration="18000" />
       <workItem from="1721828390670" duration="51000" />
-      <workItem from="1721828451077" duration="4760000" />
+      <workItem from="1721828451077" duration="5139000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1668897371120</created>
@@ -573,7 +560,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710587762703</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="update">
+      <option name="closed" value="true" />
+      <created>1721834309882</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1721834309882</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -595,7 +590,6 @@
     <MESSAGE value="High on Life" />
     <MESSAGE value="WebConsole2.0" />
     <MESSAGE value="Choo Choo Charles" />
-    <MESSAGE value="update" />
     <MESSAGE value="Update to New Domain" />
     <MESSAGE value="Update Conf" />
     <MESSAGE value="Search Bar" />
@@ -617,6 +611,7 @@
     <MESSAGE value="updated conf" />
     <MESSAGE value="fixed err" />
     <MESSAGE value="Yuzu fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Yuzu fix" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>
