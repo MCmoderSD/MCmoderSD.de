@@ -9,9 +9,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="fixed err">
+    <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="Yuzu fix">
+      <change afterPath="$PROJECT_DIR$/pages/links.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/blobs/version" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/519a1a9c-d07a-4d40-9704-9a8073d8ce38.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/519a1a9c-d07a-4d40-9704-9a8073d8ce38.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MCmoderSD.de.conf" beforeDir="false" afterPath="$PROJECT_DIR$/MCmoderSD.de.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Update.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/about.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/socials.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/downloads.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/downloads.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/projects.php" beforeDir="false" afterPath="$PROJECT_DIR$/pages/projects.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style/about.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/socials.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +51,12 @@
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MCmoderSD&quot;
+  }
+}</component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
     <option name="recentBranches">
@@ -65,10 +83,16 @@
       </RecentBranches>
     </option>
   </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MCmoderSD/MCmoderSD.de.git&quot;,
+    &quot;accountId&quot;: &quot;5c1b0161-5d87-49cb-a67e-dd73ef3c23ca&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/MCmoderSD.de.conf" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MCmoderSD.de.conf" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/README.md" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Update.sh" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Update.sh" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/index.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/style/about.css" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/style/downloads.css" root0="FORCE_HIGHLIGHTING" />
@@ -110,7 +134,7 @@
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;MCmoderSD.de&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/MCmoderSD/PhpstormProjects/MCmoderSD.de&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/php-8.3.8/php.ini-development&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -141,7 +165,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.14808.18" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PS-241.18034.69" />
+        <option value="bundled-php-predefined-ba97393d7c68-48a1a656d44e-com.jetbrains.php.sharedIndexes-PS-241.18034.69" />
       </set>
     </attachedChunks>
   </component>
@@ -229,7 +254,18 @@
       <workItem from="1709734644998" duration="20000" />
       <workItem from="1709734673264" duration="292000" />
       <workItem from="1709735204505" duration="289000" />
-      <workItem from="1710582066501" duration="3358000" />
+      <workItem from="1710582066501" duration="3927000" />
+      <workItem from="1711218864888" duration="55000" />
+      <workItem from="1718714296209" duration="415000" />
+      <workItem from="1718724457397" duration="64000" />
+      <workItem from="1718729288712" duration="41000" />
+      <workItem from="1718729485985" duration="6000" />
+      <workItem from="1718843409420" duration="8000" />
+      <workItem from="1719047330641" duration="67000" />
+      <workItem from="1721828294793" duration="63000" />
+      <workItem from="1721828366239" duration="18000" />
+      <workItem from="1721828390670" duration="51000" />
+      <workItem from="1721828451077" duration="4760000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1668897371120</created>
@@ -529,7 +565,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710583058957</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Yuzu fix">
+      <option name="closed" value="true" />
+      <created>1710587762703</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1710587762703</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,7 +592,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Skischullandheim" />
     <MESSAGE value="High on Life" />
     <MESSAGE value="WebConsole2.0" />
     <MESSAGE value="Choo Choo Charles" />
@@ -573,6 +616,7 @@
     <MESSAGE value="update fix" />
     <MESSAGE value="updated conf" />
     <MESSAGE value="fixed err" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed err" />
+    <MESSAGE value="Yuzu fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Yuzu fix" />
   </component>
 </project>

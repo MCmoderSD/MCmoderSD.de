@@ -21,9 +21,10 @@
         <nav class="nav">
             <ul>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="pages/about.php">About</a></li>
+                <li><a href="pages/socials.php">Socials</a></li>
                 <li><a href="pages/projects.php">Projects</a></li>
-                <li><a href="pages/downloads.php">Downloads</a></li>
+                <li><a href="pages/links.php">Links</a></li>
+                <!--<li><a href="pages/downloads.php">Downloads</a></li>-->
             </ul>
         </nav>
 
@@ -37,7 +38,7 @@
             <ul>
                 <li><a href="https://www.github.com/" target="_blank">GitHub</a></li>
                 <li><a href="https://www.chat.openai.com/" target="_blank">ChatGPT</a></li>
-                <li><a href="https://www.phind.com/" target="_blank">Phind</a></li>
+                <li><a href="https://z9iswj91nn31eabm.myfritz.net/" target="_blank">TrueNAS</a></li>
                 <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
             </ul>
         </article>

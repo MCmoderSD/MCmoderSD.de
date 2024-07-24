@@ -3,13 +3,13 @@
 <html lang="en">
 
 <head>
-    <title>About</title>
+    <title>Socials</title>
     <meta charset="utf-8">
     <meta name="author" content="MCmoderSD">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico"/>
     <link rel="stylesheet" href="../style/main.css">
-    <link rel="stylesheet" href="../style/about.css">
+    <link rel="stylesheet" href="../style/socials.css">
 </head>
 
 <body>
@@ -22,9 +22,10 @@
         <nav class="nav">
             <ul>
                 <li><a href="../index.php">Home</a></li>
-                <li><a href="../pages/about.php">About</a></li>
+                <li><a href="../pages/socials.php">Socials</a></li>
                 <li><a href="../pages/projects.php">Projects</a></li>
-                <li><a href="../pages/downloads.php">Downloads</a></li>
+                <li><a href="../pages/links.php">Links</a></li>
+                <!--<li><a href="../pages/downloads.php">Downloads</a></li>-->
             </ul>
         </nav>
     </header>

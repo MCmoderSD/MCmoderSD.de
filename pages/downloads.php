@@ -21,9 +21,10 @@
         <nav class="nav">
             <ul>
                 <li><a href="../index.php">Home</a></li>
-                <li><a href="../pages/about.php">About</a></li>
+                <li><a href="../pages/socials.php">Socials</a></li>
                 <li><a href="../pages/projects.php">Projects</a></li>
-                <li><a href="../pages/downloads.php">Downloads</a></li>
+                <li><a href="../pages/links.php">Links</a></li>
+                <!--<li><a href="../pages/downloads.php">Downloads</a></li>-->
             </ul>
         </nav>
     </header>

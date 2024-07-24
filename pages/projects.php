@@ -21,14 +21,24 @@
         <nav class="nav">
             <ul>
                 <li><a href="../index.php">Home</a></li>
-                <li><a href="../pages/about.php">About</a></li>
+                <li><a href="../pages/socials.php">Socials</a></li>
                 <li><a href="../pages/projects.php">Projects</a></li>
-                <li><a href="../pages/downloads.php">Downloads</a></li>
+                <li><a href="../pages/links.php">Links</a></li>
+                <!--<li><a href="../pages/downloads.php">Downloads</a></li>-->
             </ul>
         </nav>
     </header>
 
     <article class="projects">
+
+        <p class="projectHeadline">YEPPBot</p>
+
+        <ul>
+            <li><a href="https://www.github.com/mcmodersd/YEPPBot" target="_blank">Repository</a></li>
+            <li><a href="https://www.twitch.tv/YEPPPBot/" target="_blank">Channel</a></li>
+        </ul>
+
+
         <p class="projectHeadline">Flappy Bird in Java</p>
 
         <ul>
