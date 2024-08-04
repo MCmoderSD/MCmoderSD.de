@@ -9,7 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="index fix" />
+    <list default="true" id="0c7503d1-2760-4a68-9461-46036e08e1f8" name="Changes" comment="chatgpt fix">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,10 +78,8 @@
 }</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/MCmoderSD.de.conf" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/README.md" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Update.sh" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/README.md" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/index.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/style/about.css" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/style/downloads.css" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/style/home.css" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/style/info.css" root0="FORCE_HIGHLIGHTING" />
@@ -252,6 +252,8 @@
       <workItem from="1721828390670" duration="51000" />
       <workItem from="1721828451077" duration="5139000" />
       <workItem from="1721834709853" duration="23000" />
+      <workItem from="1722175878648" duration="57000" />
+      <workItem from="1722770092516" duration="162000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1668897371120</created>
@@ -575,7 +577,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721834727260</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="chatgpt fix">
+      <option name="closed" value="true" />
+      <created>1722175926320</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1722175926320</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -594,7 +604,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="WebConsole2.0" />
     <MESSAGE value="Choo Choo Charles" />
     <MESSAGE value="Update to New Domain" />
     <MESSAGE value="Update Conf" />
@@ -619,6 +628,7 @@
     <MESSAGE value="Yuzu fix" />
     <MESSAGE value="update" />
     <MESSAGE value="index fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="index fix" />
+    <MESSAGE value="chatgpt fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="chatgpt fix" />
   </component>
 </project>

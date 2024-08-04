@@ -38,7 +38,7 @@
             <ul>
                 <li><a href="https://www.github.com/" target="_blank">GitHub</a></li>
                 <li><a href="https://www.chatgpt.com/" target="_blank">ChatGPT</a></li>
-                <li><a href="https://z9iswj91nn31eabm.myfritz.net/" target="_blank">TrueNAS</a></li>
+                <li><a href="https://www.Home.MCmoderSD.de/" target="_blank">TrueNAS</a></li>
                 <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
             </ul>
         </article>
