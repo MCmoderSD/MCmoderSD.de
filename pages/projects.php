@@ -34,46 +34,46 @@
         <p class="projectHeadline">YEPPBot</p>
 
         <ul>
-            <li><a href="https://www.github.com/mcmodersd/YEPPBot" target="_blank">Repository</a></li>
-            <li><a href="https://www.twitch.tv/YEPPPBot/" target="_blank">Channel</a></li>
+            <li><a href="https://GitHub.com/mcmodersd/YEPPBot" target="_blank">Repository</a></li>
+            <li><a href="https://Twitch.tv/YEPPPBot/" target="_blank">Channel</a></li>
         </ul>
 
 
         <p class="projectHeadline">Flappy Bird in Java</p>
 
         <ul>
-            <li><a href="https://www.github.com/mcmodersd/flappybird" target="_blank">Repository</a></li>
-            <li><a href="https://www.github.com/MCmoderSD/FlappyBird/releases/latest" target="_blank">Download</a></li>
+            <li><a href="https://GitHub.com/mcmodersd/flappybird" target="_blank">Repository</a></li>
+            <li><a href="https://GitHub.com/MCmoderSD/FlappyBird/releases/latest" target="_blank">Download</a></li>
         </ul>
 
 
         <p class="projectHeadline">Snake in Java</p>
 
         <ul>
-            <li><a href="https://www.github.com/MCmoderSD/Snake/" target="_blank">Repository</a></li>
-            <li><a href="https://www.github.com/MCmoderSD/Snake/releases/latest" target="_blank">Download</a></li>
+            <li><a href="https://GitHub.com/MCmoderSD/Snake/" target="_blank">Repository</a></li>
+            <li><a href="https://GitHub.com/MCmoderSD/Snake/releases/latest" target="_blank">Download</a></li>
         </ul>
 
 
         <p class="projectHeadline">Catch The Cat</p>
 
         <ul>
-            <li><a href="https://www.github.com/MCmoderSD/CatchTheCat/" target="_blank">Repository</a></li>
-            <li><a href="https://www.github.com/MCmoderSD/CatchTheCat/releases/latest" target="_blank">Download</a></li>
+            <li><a href="https://GitHub.com/MCmoderSD/CatchTheCat/" target="_blank">Repository</a></li>
+            <li><a href="https://GitHub.com/MCmoderSD/CatchTheCat/releases/latest" target="_blank">Download</a></li>
         </ul>
 
         <p class="projectHeadline">Webpage Projects</p>
 
         <table>
             <tr>
-                <td><a href="https://www.mcmodersd.de" target="_blank">MCmoderSD.de</a></td>
-                <td><a href="https://www.mcmodersd.de/cola" target="_blank">Cola-Webpage</a></td>
-                <td><a href="https://www.minekampf.de" target="_blank">MineKampf.de</a></td>
+                <td><a href="https://MCmoderSD.de" target="_blank">MCmoderSD.de</a></td>
+                <td><a href="https://MCmoderSD.de/cola" target="_blank">Cola-Webpage</a></td>
+                <td><a href="https://minekampf.de" target="_blank">MineKampf.de</a></td>
             </tr>
             <tr>
-                <td><a href="https://www.github.com/MCmoderSD/MCmoderSD.de" target="_blank">Repository</a></td>
-                <td><a href="https://www.github.com/MCmoderSD/Cola-Webpage" target="_blank">Repository</a></td>
-                <td><a href="https://www.github.com/MCmoderSD/MineKampf.de" target="_blank">Repository</a></td>
+                <td><a href="https://GitHub.com/MCmoderSD/MCmoderSD.de" target="_blank">Repository</a></td>
+                <td><a href="https://GitHub.com/MCmoderSD/Cola-Webpage" target="_blank">Repository</a></td>
+                <td><a href="https://GitHub.com/MCmoderSD/MineKampf.de" target="_blank">Repository</a></td>
             </tr>
         </table>
     </article>

@@ -29,17 +29,17 @@
         </nav>
 
         <article class="shortcuts">
-            <form action="https://www.google.com/search" method="get" target="">
+            <form action="https://Google.com/search" method="get" target="">
                 <label>
                     <input type="text" name="q" placeholder="">
                 </label>
             </form>
 
             <ul>
-                <li><a href="https://www.github.com/" target="_blank">GitHub</a></li>
-                <li><a href="https://www.chatgpt.com/" target="_blank">ChatGPT</a></li>
-                <li><a href="https://www.Home.MCmoderSD.de/" target="_blank">TrueNAS</a></li>
-                <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
+                <li><a href="https://GitHub.com/" target="_blank">GitHub</a></li>
+                <li><a href="https://ChatGPT.com/" target="_blank">ChatGPT</a></li>
+                <li><a href="https://Home.MCmoderSD.de/" target="_blank">TrueNAS</a></li>
+                <li><a href="https://YouTube.com/" target="_blank">YouTube</a></li>
             </ul>
         </article>
     </header>

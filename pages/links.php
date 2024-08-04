@@ -32,10 +32,10 @@
 
 <article class="shortcuts">
     <ul>
-        <li><a href="https://www.MCmoderSD.de/truenas" target="_blank">TrueNAS</a></li>
-        <li><a href="https://www.MCmoderSD.de/jellyfin" target="_blank">Jellyfin</a></li>
-        <li><a href="https://www.MCmoderSD.de/pihole" target="_blank">PiHole</a></li>
-        <li><a href="https://www.MCmoderSD.de/filebrowser" target="_blank">FileBrowser</a></li>
+        <li><a href="https://MCmoderSD.de/truenas" target="_blank">TrueNAS</a></li>
+        <li><a href="https://MCmoderSD.de/jellyfin" target="_blank">Jellyfin</a></li>
+        <li><a href="https://MCmoderSD.de/pihole" target="_blank">PiHole</a></li>
+        <li><a href="https://MCmoderSD.de/filebrowser" target="_blank">FileBrowser</a></li>
     </ul>
 </article>
 </body>
