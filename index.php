@@ -24,7 +24,7 @@
         </nav>
     </header>
 
-    <article class="shortcuts">
+    <article>
         <form action="https://Google.com/search" method="get" target="">
             <label>
                 <input type="text">

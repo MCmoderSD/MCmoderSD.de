@@ -45,27 +45,6 @@
             <li><a href="https://GitHub.com/MCmoderSD/Snake/" target="_blank">Repository</a></li>
             <li><a href="https://GitHub.com/MCmoderSD/Snake/releases/latest" target="_blank">Download</a></li>
         </ul>
-
-
-        <p class="projectHeadline">Catch The Cat</p>
-        <ul>
-            <li><a href="https://GitHub.com/MCmoderSD/CatchTheCat/" target="_blank">Repository</a></li>
-            <li><a href="https://GitHub.com/MCmoderSD/CatchTheCat/releases/latest" target="_blank">Download</a></li>
-        </ul>
-
-        <p class="projectHeadline">Webpage Projects</p>
-        <table>
-            <tr>
-                <td><a href="https://MCmoderSD.de" target="_blank">MCmoderSD.de</a></td>
-                <td><a href="https://MCmoderSD.de/cola" target="_blank">Cola-Webpage</a></td>
-                <td><a href="https://minekampf.de" target="_blank">MineKampf.de</a></td>
-            </tr>
-            <tr>
-                <td><a href="https://GitHub.com/MCmoderSD/MCmoderSD.de" target="_blank">Repository</a></td>
-                <td><a href="https://GitHub.com/MCmoderSD/Cola-Webpage" target="_blank">Repository</a></td>
-                <td><a href="https://GitHub.com/MCmoderSD/MineKampf.de" target="_blank">Repository</a></td>
-            </tr>
-        </table>
     </article>
 
     <footer>
