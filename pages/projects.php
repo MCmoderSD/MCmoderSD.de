@@ -1,4 +1,3 @@
-<?php ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,24 +6,20 @@
     <meta charset="utf-8">
     <meta name="author" content="MCmoderSD">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico"/>
-    <link rel="stylesheet" href="../style/main.css">
-    <link rel="stylesheet" href="../style/projects.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/projects.css">
 </head>
 
 <body>
     <header>
-        <div class="headline">
-            <p class="headline">MCmoderSD.de</p>
-        </div>
-
-        <nav class="nav">
+        <h1>MCmoderSD.de</h1>
+        <nav>
             <ul>
-                <li><a href="../index.php">Home</a></li>
-                <li><a href="../pages/socials.php">Socials</a></li>
-                <li><a href="../pages/projects.php">Projects</a></li>
-                <li><a href="../pages/links.php">Links</a></li>
-                <!--<li><a href="../pages/downloads.php">Downloads</a></li>-->
+                <li><a href="/index.php">Home</a></li>
+                <li><a href="/pages/socials.php">Socials</a></li>
+                <li><a href="/pages/projects.php">Projects</a></li>
+                <li><a href="/pages/links.php">Links</a></li>
             </ul>
         </nav>
     </header>
@@ -32,7 +27,6 @@
     <article class="projects">
 
         <p class="projectHeadline">YEPPBot</p>
-
         <ul>
             <li><a href="https://GitHub.com/mcmodersd/YEPPBot" target="_blank">Repository</a></li>
             <li><a href="https://Twitch.tv/YEPPPBot/" target="_blank">Channel</a></li>
@@ -40,7 +34,6 @@
 
 
         <p class="projectHeadline">Flappy Bird in Java</p>
-
         <ul>
             <li><a href="https://GitHub.com/mcmodersd/flappybird" target="_blank">Repository</a></li>
             <li><a href="https://GitHub.com/MCmoderSD/FlappyBird/releases/latest" target="_blank">Download</a></li>
@@ -48,7 +41,6 @@
 
 
         <p class="projectHeadline">Snake in Java</p>
-
         <ul>
             <li><a href="https://GitHub.com/MCmoderSD/Snake/" target="_blank">Repository</a></li>
             <li><a href="https://GitHub.com/MCmoderSD/Snake/releases/latest" target="_blank">Download</a></li>
@@ -56,14 +48,12 @@
 
 
         <p class="projectHeadline">Catch The Cat</p>
-
         <ul>
             <li><a href="https://GitHub.com/MCmoderSD/CatchTheCat/" target="_blank">Repository</a></li>
             <li><a href="https://GitHub.com/MCmoderSD/CatchTheCat/releases/latest" target="_blank">Download</a></li>
         </ul>
 
         <p class="projectHeadline">Webpage Projects</p>
-
         <table>
             <tr>
                 <td><a href="https://MCmoderSD.de" target="_blank">MCmoderSD.de</a></td>
@@ -77,5 +67,13 @@
             </tr>
         </table>
     </article>
+
+    <footer>
+        <ul>
+            <li><a href="/pages/info/disclaimer.php" target="_blank">Disclaimer</a></li>
+            <li>&copy; 2024 MCmoderSD.de</li>
+            <li><a href="/pages/info/privacy.php" target="_blank">Privacy Policy</a></li>
+        </ul>
+    </footer>
 </body>
 </html>

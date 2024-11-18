@@ -1,4 +1,3 @@
-<?php ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,25 +6,20 @@
     <meta charset="utf-8">
     <meta name="author" content="MCmoderSD">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico"/>
-    <link rel="stylesheet" href="../style/main.css">
-    <link rel="stylesheet" href="../style/socials.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/socials.css">
 </head>
 
 <body>
     <header>
-
-        <div class="headline">
-            <p class="headline">MCmoderSD.de</p>
-        </div>
-
-        <nav class="nav">
+        <h1>MCmoderSD.de</h1>
+        <nav>
             <ul>
-                <li><a href="../index.php">Home</a></li>
-                <li><a href="../pages/socials.php">Socials</a></li>
-                <li><a href="../pages/projects.php">Projects</a></li>
-                <li><a href="../pages/links.php">Links</a></li>
-                <!--<li><a href="../pages/downloads.php">Downloads</a></li>-->
+                <li><a href="/index.php">Home</a></li>
+                <li><a href="/pages/socials.php">Socials</a></li>
+                <li><a href="/pages/projects.php">Projects</a></li>
+                <li><a href="/pages/links.php">Links</a></li>
             </ul>
         </nav>
     </header>
@@ -49,5 +43,13 @@
             <li><a href="https://MCmoderSD.de/stackoverflow" target="_blank">Stackoverflow</a></li>
         </ul>
     </article>
+
+    <footer>
+        <ul>
+            <li><a href="/pages/info/disclaimer.php" target="_blank">Disclaimer</a></li>
+            <li>&copy; 2024 MCmoderSD.de</li>
+            <li><a href="/pages/info/privacy.php" target="_blank">Privacy Policy</a></li>
+        </ul>
+    </footer>
 </body>
 </html>
