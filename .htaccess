@@ -1,0 +1,31 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Force HTTPS - Redirect all HTTP traffic to HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Remove www from URLs
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+# Clean URLs: remove .php or .html extensions
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([a-zA-Z0-9_-]+)$ $1.php [L]
+
+# Case-Insensitive URL Matching (Lowercase URLs)
+RewriteCond %{REQUEST_URI} [A-Z]
+RewriteRule (.*) ${tolower:$1} [R=301,L]
+
+# Caching headers for better performance
+<IfModule mod_headers.c>
+    <FilesMatch "\.(jpg|jpeg|png|gif|css|js|ico)$">
+        Header set Cache-Control "max-age=2592000, public"
+    </FilesMatch>
+</IfModule>
+
+# Enable compression for text files
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css application/javascript
+</IfModule>
