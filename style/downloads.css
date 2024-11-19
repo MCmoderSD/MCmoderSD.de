@@ -1,11 +1,11 @@
-.downloadHeadline {
+article h2 {
     font-size: 2.5rem;
     margin-top: 7rem;
     color: white;
     text-align: center;
 }
 
-.downloads ul {
+article ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -15,20 +15,20 @@
     flex-wrap: wrap;
 }
 
-.downloads ul li {
+article ul li {
     list-style: none;
     margin: 1rem;
     text-align: center;
 }
 
-.downloads ul li a {
+article ul li a {
     text-decoration: none;
     color: #72b1f4;
     font-size: 2rem;
     transition: all 0.2s ease-in-out;
 }
 
-.downloads ul li a:hover {
+article ul li a:hover {
     text-decoration: underline;
     font-size: 2.5rem;
     font-weight: bold;

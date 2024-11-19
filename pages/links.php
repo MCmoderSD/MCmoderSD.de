@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Links</title>
     <meta charset="utf-8">
@@ -10,7 +9,6 @@
     <link rel="stylesheet" href="/style/main.css">
     <link rel="stylesheet" href="/style/home.css">
 </head>
-
 <body>
     <header>
         <h1>MCmoderSD.de</h1>
@@ -24,7 +22,7 @@
         </nav>
     </header>
     
-    <article class="shortcuts">
+    <article>
         <ul>
             <li><a href="https://MCmoderSD.de/truenas" target="_blank">TrueNAS</a></li>
             <li><a href="https://MCmoderSD.de/jellyfin" target="_blank">Jellyfin</a></li>
@@ -37,7 +35,7 @@
         <ul>
             <li><a href="/pages/info/disclaimer.php" target="_blank">Disclaimer</a></li>
             <li>&copy; 2024 MCmoderSD.de</li>
-            <li><a href="/pages/info/privacy.php" target="_blank">Privacy Policy</a></li>
+            <li><a href="/pages/info/privacy.php" target="_blank">Privacy</a></li>
         </ul>
     </footer>
 </body>

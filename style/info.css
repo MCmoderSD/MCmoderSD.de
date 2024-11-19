@@ -1,4 +1,4 @@
-.policy {
+article {
     justify-content: center;
     padding: 4rem 25rem;
     color: #72b1f4;
@@ -6,6 +6,6 @@
     text-decoration: none;
 }
 
-.policy a {
+article a {
     color: #72b1f4;
 }

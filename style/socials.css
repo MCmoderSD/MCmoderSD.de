@@ -1,4 +1,4 @@
-.links {
+article {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,7 +6,13 @@
     margin-top: 5rem;
 }
 
-.links ul {
+article p {
+    color: white;
+    font-size: 2rem;
+    text-align: end;
+}
+
+article ul {
     display: flex;
     justify-content: center;
     margin-top: 3rem;
@@ -15,26 +21,20 @@
     font-size: 2rem;
 }
 
-.links ul li {
+article ul li {
     list-style: none;
     margin: 0 1rem;
 }
 
-.links ul li a {
+article ul li a {
     text-decoration: none;
     color: #72b1f4;
     font-size: 2rem;
     transition: all 0.2s ease-in-out;
 }
 
-.links ul li a:hover {
+article ul li a:hover {
     text-decoration: underline;
     font-size: 2.5rem;
     font-weight: bold;
-}
-
-.links p {
-    color: white;
-    font-size: 2rem;
-    text-align: end;
 }

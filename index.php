@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>MCmoderSD.de</title>
     <meta charset="utf-8">
@@ -10,7 +9,6 @@
     <link rel="stylesheet" href="/style/main.css">
     <link rel="stylesheet" href="/style/home.css">
 </head>
-
 <body>
     <header>
         <h1>MCmoderSD.de</h1>
@@ -43,7 +41,7 @@
         <ul>
             <li><a href="/pages/info/disclaimer.php" target="_blank">Disclaimer</a></li>
             <li>&copy; 2024 MCmoderSD.de</li>
-            <li><a href="/pages/info/privacy.php" target="_blank">Privacy Policy</a></li>
+            <li><a href="/pages/info/privacy.php" target="_blank">Privacy</a></li>
         </ul>
     </footer>
 </body>

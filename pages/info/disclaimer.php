@@ -9,9 +9,8 @@
     <link rel="stylesheet" href="/style/main.css">
     <link rel="stylesheet" href="/style/info.css">
 </head>
-
 <body>
-<article class="policy">
+<article>
     <h1>Disclaimer</h1>
     <p>The information provided on <strong><a href="/index.php">MCmoderSD.de</a></strong> is for general informational purposes only. While we strive to keep the content up to date and accurate, we make no guarantees of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the website or the information contained on the website for any purpose. Any reliance you place on such information is strictly at your own risk.</p>
     <br>

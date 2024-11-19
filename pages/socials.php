@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Socials</title>
     <meta charset="utf-8">
@@ -10,7 +9,6 @@
     <link rel="stylesheet" href="/style/main.css">
     <link rel="stylesheet" href="/style/socials.css">
 </head>
-
 <body>
     <header>
         <h1>MCmoderSD.de</h1>
@@ -24,7 +22,7 @@
         </nav>
     </header>
 
-    <article class="links">
+    <article>
         <ul>
             <li><a href="https://MCmoderSD.de/yt" target="_blank">YouTube</a></li>
             <li><a href="https://MCmoderSD.de/ttv" target="_blank">Twitch</a></li>
@@ -32,9 +30,7 @@
             <li><a href="https://MCmoderSD.de/insta" target="_blank">Instagram</a></li>
             <li><a href="https://MCmoderSD.de/spotify" target="_blank">Spotify</a></li>
         </ul>
-
         <br>
-
         <ul>
             <li><a href="https://MCmoderSD.de/steam" target="_blank">Steam</a></li>
             <li><a href="https://MCmoderSD.de/dc" target="_blank">Discord</a></li>
@@ -48,7 +44,7 @@
         <ul>
             <li><a href="/pages/info/disclaimer.php" target="_blank">Disclaimer</a></li>
             <li>&copy; 2024 MCmoderSD.de</li>
-            <li><a href="/pages/info/privacy.php" target="_blank">Privacy Policy</a></li>
+            <li><a href="/pages/info/privacy.php" target="_blank">Privacy</a></li>
         </ul>
     </footer>
 </body>

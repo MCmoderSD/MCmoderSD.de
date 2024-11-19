@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title>Projects</title>
     <meta charset="utf-8">
@@ -10,7 +9,6 @@
     <link rel="stylesheet" href="/style/main.css">
     <link rel="stylesheet" href="/style/projects.css">
 </head>
-
 <body>
     <header>
         <h1>MCmoderSD.de</h1>
@@ -24,23 +22,20 @@
         </nav>
     </header>
 
-    <article class="projects">
-
-        <p class="projectHeadline">YEPPBot</p>
+    <article>
+        <h2>YEPPBot - Twitch-Bot</h2>
         <ul>
             <li><a href="https://GitHub.com/mcmodersd/YEPPBot" target="_blank">Repository</a></li>
             <li><a href="https://Twitch.tv/YEPPPBot/" target="_blank">Channel</a></li>
         </ul>
 
-
-        <p class="projectHeadline">Flappy Bird in Java</p>
+        <h2>Flappy Bird in Java</h2>
         <ul>
             <li><a href="https://GitHub.com/mcmodersd/flappybird" target="_blank">Repository</a></li>
             <li><a href="https://GitHub.com/MCmoderSD/FlappyBird/releases/latest" target="_blank">Download</a></li>
         </ul>
 
-
-        <p class="projectHeadline">Snake in Java</p>
+        <h2>Snake in Java</h2>
         <ul>
             <li><a href="https://GitHub.com/MCmoderSD/Snake/" target="_blank">Repository</a></li>
             <li><a href="https://GitHub.com/MCmoderSD/Snake/releases/latest" target="_blank">Download</a></li>
@@ -51,7 +46,7 @@
         <ul>
             <li><a href="/pages/info/disclaimer.php" target="_blank">Disclaimer</a></li>
             <li>&copy; 2024 MCmoderSD.de</li>
-            <li><a href="/pages/info/privacy.php" target="_blank">Privacy Policy</a></li>
+            <li><a href="/pages/info/privacy.php" target="_blank">Privacy</a></li>
         </ul>
     </footer>
 </body>

@@ -9,9 +9,8 @@
     <link rel="stylesheet" href="/style/main.css">
     <link rel="stylesheet" href="/style/info.css">
 </head>
-
 <body>
-    <article class="policy">
+    <article>
         <h1>Privacy</h1>
         <p><strong><a href="/index.php">MCmoderSD.de</a></strong> respects your privacy and is committed to protecting it. This Privacy Policy explains our practices regarding the collection, use, and disclosure of information when you use our website.</p>
         <br>
