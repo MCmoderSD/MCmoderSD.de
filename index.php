@@ -23,9 +23,9 @@
     </header>
 
     <article>
-        <form action="https://Google.com/search" method="get" target="">
+        <form action="https://Google.com/search" method="get" target="_blank">
             <label>
-                <input type="text">
+                <input type="text" name="q">
             </label>
         </form>
 
