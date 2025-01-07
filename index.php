@@ -40,7 +40,7 @@
     <footer>
         <ul>
             <li><a href="/pages/info/disclaimer.php" target="_blank">Disclaimer</a></li>
-            <li>&copy; 2024 MCmoderSD.de</li>
+            <li>&copy; 2025 MCmoderSD.de</li>
             <li><a href="/pages/info/privacy.php" target="_blank">Privacy</a></li>
         </ul>
     </footer>
