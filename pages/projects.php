@@ -25,13 +25,13 @@
     <article>
         <h2>YEPPBot - Twitch-Bot</h2>
         <ul>
-            <li><a href="https://GitHub.com/mcmodersd/YEPPBot" target="_blank">Repository</a></li>
-            <li><a href="https://Twitch.tv/YEPPPBot/" target="_blank">Channel</a></li>
+            <li><a href="https://GitHub.com/MCmoderSD/YEPPBot" target="_blank">Repository</a></li>
+            <li><a href="https://Twitch.tv/YEPPBotV2/" target="_blank">Channel</a></li>
         </ul>
 
         <h2>Flappy Bird in Java</h2>
         <ul>
-            <li><a href="https://GitHub.com/mcmodersd/flappybird" target="_blank">Repository</a></li>
+            <li><a href="https://GitHub.com/MCmoderSD/FlappyBird" target="_blank">Repository</a></li>
             <li><a href="https://GitHub.com/MCmoderSD/FlappyBird/releases/latest" target="_blank">Download</a></li>
         </ul>
 
