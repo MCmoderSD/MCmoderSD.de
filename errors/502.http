@@ -1,0 +1,22 @@
+HTTP/1.1 502 Bad Gateway
+Content-Type: text/html
+
+<html lang="en">
+<head>
+    <title>502 Bad Gateway</title>
+</head>
+<body
+        style=
+                "
+                color: #72b1f4;
+                background-color: #0a0c10;
+                margin-top: 12.5%;
+                font-size: 4rem;
+                font-family: sans-serif;
+                text-align: center;">
+
+<h1>502 Bad Gateway</h1>
+<p>The server received an invalid response from the upstream server.</p>
+
+</body>
+</html>

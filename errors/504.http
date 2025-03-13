@@ -1,0 +1,22 @@
+HTTP/1.1 504 Gateway Timeout
+Content-Type: text/html
+
+<html lang="en">
+<head>
+    <title>504 Gateway Timeout</title>
+</head>
+<body
+        style=
+                "
+                color: #72b1f4;
+                background-color: #0a0c10;
+                margin-top: 12.5%;
+                font-size: 4rem;
+                font-family: sans-serif;
+                text-align: center;">
+
+<h1>504 Gateway Timeout</h1>
+<p>The upstream server failed to respond in time.</p>
+
+</body>
+</html>

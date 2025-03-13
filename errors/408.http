@@ -1,0 +1,22 @@
+HTTP/1.1 408 Request Timeout
+Content-Type: text/html
+
+<html lang="en">
+<head>
+    <title>408 Request Timeout</title>
+</head>
+<body
+        style=
+                "
+                color: #72b1f4;
+                background-color: #0a0c10;
+                margin-top: 12.5%;
+                font-size: 4rem;
+                font-family: sans-serif;
+                text-align: center;">
+
+<h1>408 Request Timeout</h1>
+<p>The server timed out waiting for the request.</p>
+
+</body>
+</html>
