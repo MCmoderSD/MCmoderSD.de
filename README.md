@@ -6,7 +6,7 @@ The website is an all-in-one [docker image](https://hub.docker.com/repository/do
 
 You can run it with the following command:
 ```bash
-docker run -d -p 80:80 -p 443:443 mcmodersd/mcmodersd.de:latest
+docker run -d --name Webserver --restart unless-stopped -p 80:80 -p 443:443 mcmodersd/mcmodersd.de 
 ```
 
 You have to expose the ports 80 and 443 to the host system. <br>

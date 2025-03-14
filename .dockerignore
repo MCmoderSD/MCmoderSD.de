@@ -1,6 +1,11 @@
+### Git ###
 .git
-.idea
 .gitignore
 .github
+
+### PhpStorm ###
+.idea/
+
+### Repository ###
 LICENSE
 README.md
