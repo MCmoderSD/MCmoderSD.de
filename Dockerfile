@@ -1,44 +1,32 @@
-# Stage 1: Set up the build stage
-FROM php:8.4.4-fpm-alpine as build-stage
+# Stage 1: Set up the SSL certificates
+FROM php:8.4.4-fpm-alpine AS ssl-stage
 
-# Install necessary packages
-RUN apk add --no-cache nginx openssl
-
-# Remove unnecessary files to reduce image size
-RUN rm -rf /var/cache/apk/*
-
-# Generate a self-signed SSL certificate and key
-RUN mkdir -p /etc/ssl && \
+# Create SSL certificates
+RUN apk add --no-cache nginx openssl && \
+    mkdir -p /etc/ssl && \
     openssl req -x509 -nodes -days 365 -subj "/CN=localhost" -newkey rsa:2048 -keyout /etc/ssl/key.pem -out /etc/ssl/cert.pem
 
 # Stage 2: Create the final image
 FROM php:8.4.4-fpm-alpine
 
-# Install necessary packages
-RUN apk add --no-cache nginx
+# Install Nginx
+RUN apk add --no-cache nginx && \
+    mkdir -p /var/www/html/
 
-# Remove unnecessary files to reduce image size
-RUN rm -rf /var/cache/apk/*
-
-# Copy SSL certificates from the build stage
-COPY --from=build-stage /etc/ssl /etc/ssl
-
-# Create necessary directories
-RUN mkdir -p /var/www/html/
+# Copy SSL certificates from the ssl-stage
+COPY --from=ssl-stage /etc/ssl /etc/ssl
 
 # Copy website files into container
 COPY errors /var/www/html/errors
 COPY pages /var/www/html/pages
 COPY style /var/www/html/style
-COPY favicon.ico /var/www/html/favicon.ico
-COPY index.php /var/www/html/index.php
+COPY favicon.ico index.php /var/www/html/
 
-# Convert .http files to .php and modify the content
+# Set permissions and remove .http files
 RUN rm /var/www/html/errors/template.http && \
-    find /var/www/html/errors -name "*.http" -exec sh -c 'mv "$0" "${0%.http}.php" && sed -i "1,3c <!DOCTYPE html>" "${0%.http}.php"' {} \;
-
-# Set proper permissions
-RUN chown -R www-data:www-data /var/www/html
+    find /var/www/html/errors -name "*.http" -exec sh -c 'mv "$0" "${0%.http}.php" && sed -i "1,3c <!DOCTYPE html>" "${0%.http}.php"' {} \; && \
+    chown -R www-data:www-data /var/www/html && \
+    rm -rf /var/cache/apk/*
 
 # Copy Nginx and PHP-FPM configurations
 COPY config/nginx.conf /etc/nginx/nginx.conf
