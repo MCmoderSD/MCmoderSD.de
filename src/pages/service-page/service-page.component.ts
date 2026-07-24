@@ -18,16 +18,30 @@ export class ServicePageComponent {
       link: 'https://mcmodersd.de/jellyfin/',
     },
     {
+      name: 'OpenSpeedTest',
+      description: 'Mein eigener Speedtest-Server. Eine selbst gehostete, quelloffene Alternative zu Speedtest.net, mit der ich die Verbindung zu meinem Server ganz ohne Drittanbieter messen kann.',
+      icon: ServiceIcon.speedtest,
+      link: 'https://mcmodersd.de/speedtest/',
+    },
+    {
       name: 'Sonatype Nexus',
       description: 'Mein eigenes Artefakt-Repository. Darüber hoste und verwalte ich meine Java-Packages selbst, anstatt sie auf Maven Central zu veröffentlichen.',
       icon: ServiceIcon.nexus,
       link: 'https://mcmodersd.de/nexus/',
     },
     {
-      name: 'OpenSpeedTest',
-      description: 'Mein eigener Speedtest-Server. Eine selbst gehostete, quelloffene Alternative zu Speedtest.net, mit der ich die Verbindung zu meinem Server ganz ohne Drittanbieter messen kann.',
-      icon: ServiceIcon.speedtest,
-      link: 'https://mcmodersd.de/speedtest/',
+      name: 'Portainer',
+      description: 'Meine Container-Verwaltung. Mit Portainer behalte ich den Überblick über alle Docker-Container und -Stacks auf meinen Servern.',
+      icon: ServiceIcon.portainer,
+      link: 'https://mcmodersd.de/portainer/',
     },
+    /*
+    {
+        name: 'TrueNAS Scale',
+        description: 'Mein eigenes NAS. TrueNAS Scale verwaltet meinen Netzwerkspeicher und die Docker-/App-Workloads, auf denen unter anderem diese Website und die anderen Dienste laufen.',
+        icon: ServiceIcon.truenas,
+        link: 'https://home.mcmodersd.de/',
+    },
+    */
   ];
 }

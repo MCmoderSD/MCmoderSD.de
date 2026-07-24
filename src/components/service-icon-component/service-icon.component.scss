@@ -1,0 +1,23 @@
+:host {
+  display: inline-flex;
+  line-height: 0;
+}
+
+.service-icon {
+  --service-icon-color: #9ca3af;
+
+  width: 2.75rem;
+  height: 2.75rem;
+  fill: var(--service-icon-color);
+  flex: none;
+}
+
+.service-icon--sm {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.service-icon--lg {
+  width: 4.5rem;
+  height: 4.5rem;
+}

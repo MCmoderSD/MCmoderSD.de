@@ -10,7 +10,10 @@ import { join } from 'node:path';
 const browserDistFolder = join(import.meta.dirname, '../browser');
 
 const app = express();
-const angularApp = new AngularNodeAppEngine();
+const angularApp = new AngularNodeAppEngine({
+  // Behind the HAProxy reverse proxy on mcmodersd.de / www.mcmodersd.de.
+  trustProxyHeaders: ['x-forwarded-for', 'x-forwarded-proto', 'x-forwarded-host'],
+});
 
 /**
  * Resolves a GitHub repository's latest release tag via the redirect from

@@ -1,0 +1,12 @@
+<svg
+  class="service-icon"
+  [class.service-icon--sm]="size() === ServiceIconSize.Small"
+  [class.service-icon--lg]="size() === ServiceIconSize.Large"
+  [attr.viewBox]="preset().viewBox"
+  [style.--service-icon-color]="preset().color"
+  role="img"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <title>{{ preset().name }}</title>
+  <path [attr.d]="preset().path" />
+</svg>

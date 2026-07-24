@@ -1,4 +1,10 @@
 :host {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
   padding-top: 5.5rem;
+}
+
+.app-main {
+  flex: 1 0 auto;
 }

@@ -1,0 +1,14 @@
+<a
+  class="service-preview"
+  [href]="data().link"
+  target="_blank"
+  rel="noopener"
+  [attr.aria-label]="data().name + ' in neuem Tab öffnen'"
+>
+  <div class="service-preview__content">
+    <h3 class="service-preview__name">{{ data().name }}</h3>
+    <p class="service-preview__description">{{ data().description }}</p>
+  </div>
+
+  <app-service-icon class="service-preview__icon" [icon]="data().icon" [size]="size.Large" />
+</a>
