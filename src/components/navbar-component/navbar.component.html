@@ -1,0 +1,27 @@
+<nav class="navbar" aria-label="Hauptnavigation">
+  <a class="navbar__brand" routerLink="/">MCmoderSD.de</a>
+
+  <span class="navbar__divider" aria-hidden="true"></span>
+
+  <div class="navbar__links">
+    <a
+      class="navbar__link"
+      routerLink="/"
+      routerLinkActive="navbar__link--active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      #home="routerLinkActive"
+      [attr.aria-current]="home.isActive ? 'page' : null"
+    >
+      Startpage
+    </a>
+    <a
+      class="navbar__link"
+      routerLink="/dependencies"
+      routerLinkActive="navbar__link--active"
+      #dependencies="routerLinkActive"
+      [attr.aria-current]="dependencies.isActive ? 'page' : null"
+    >
+      Dependencies
+    </a>
+  </div>
+</nav>

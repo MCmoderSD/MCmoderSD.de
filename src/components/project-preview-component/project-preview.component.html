@@ -1,0 +1,13 @@
+<article class="project-preview">
+  <header class="project-preview__header">
+    <h3 class="project-preview__name">{{ data().name }}</h3>
+  </header>
+
+  <p class="project-preview__description">{{ data().description }}</p>
+
+  <div class="project-preview__tools">
+    @for (tool of data().tools; track tool) {
+      <app-tool-icon [tool]="tool" [size]="size.Small" />
+    }
+  </div>
+</article>

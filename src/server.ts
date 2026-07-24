@@ -13,16 +13,30 @@ const app = express();
 const angularApp = new AngularNodeAppEngine();
 
 /**
- * Example Express Rest API endpoints can be defined here.
- * Uncomment and define endpoints as necessary.
- *
- * Example:
- * ```ts
- * app.get('/api/{*splat}', (req, res) => {
- *   // Handle API request
- * });
- * ```
+ * Resolves a GitHub repository's latest release tag via the redirect from
+ * /releases/latest to /releases/tag/<version> instead of the REST API,
+ * used as a fallback once the client hits the API's rate limit.
  */
+app.get('/api/latest-tag/:owner/:repo', async (req, res) => {
+  const { owner, repo } = req.params;
+  if (!/^[\w.-]+$/.test(owner) || !/^[\w.-]+$/.test(repo)) {
+    res.status(400).json({ error: 'Invalid owner or repo' });
+    return;
+  }
+
+  try {
+    const response = await fetch(`https://github.com/${owner}/${repo}/releases/latest`, { redirect: 'follow' });
+    const tag = response.url.match(/\/releases\/tag\/([^/]+)$/)?.[1];
+    if (!tag) {
+      res.status(502).json({ error: 'Could not determine latest tag' });
+      return;
+    }
+
+    res.json({ tag });
+  } catch {
+    res.status(502).json({ error: 'Request to GitHub failed' });
+  }
+});
 
 /**
  * Serve static files from /browser

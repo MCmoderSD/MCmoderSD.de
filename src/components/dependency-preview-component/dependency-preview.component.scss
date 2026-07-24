@@ -1,0 +1,86 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.dependency-preview {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--color-surface) 88%, transparent);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(6px);
+
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dependency-preview:hover {
+  border-color: color-mix(in srgb, var(--color-primary) 45%, transparent);
+  box-shadow: 0 12px 30px -12px color-mix(in srgb, var(--color-primary) 30%, transparent);
+  transform: translateY(-3px);
+}
+
+.dependency-preview__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.dependency-preview__name {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+.dependency-preview__github {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  flex: none;
+  border-radius: 50%;
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.dependency-preview__github:hover,
+.dependency-preview__github:focus-visible {
+  color: var(--color-text);
+  background: color-mix(in srgb, var(--color-primary) 14%, transparent);
+}
+
+.dependency-preview__description {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+
+.dependency-preview__snippet-area {
+  margin-top: auto;
+}
+
+.dependency-preview__status {
+  margin: 0;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  border: 1px solid var(--color-border);
+  background: color-mix(in srgb, var(--color-bg) 70%, black);
+  color: var(--color-text-muted);
+  font-size: 0.8125rem;
+}
+
+.dependency-preview__status--error {
+  color: #f87171;
+}

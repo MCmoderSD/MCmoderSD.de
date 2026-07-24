@@ -1,0 +1,7 @@
+<h1 style="text-align: center; font-size: 5rem; margin-bottom: 2rem;">Big Work in Progress</h1>
+
+<section class="project-preview-demo">
+  @for (project of projects; track project.name) {
+    <app-project-preview [data]="project" />
+  }
+</section>

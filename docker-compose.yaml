@@ -1,13 +1,25 @@
 services:
   webserver:
     container_name: Webserver
-    image: mcmodersd/mcmodersd.de:latest
+    image: mcmodersd/mcmodersd.de:angular-latest
     restart: unless-stopped
     pull_policy: always
+    init: true
     ports:
       - "443:4000/tcp"
     environment:
       - PORT=4000
+      # Angular SSR rejects requests whose Host header isn't in this list (SSRF
+      # protection). 127.0.0.1 is needed for the container's own healthcheck.
+      - NG_ALLOWED_HOSTS=mcmodersd.de,www.mcmodersd.de,127.0.0.1
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:4000').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      start_period: 10s
+      retries: 3
+    security_opt:
+      - no-new-privileges:true
 
 networks:
   default:
