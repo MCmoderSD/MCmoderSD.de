@@ -1,0 +1,14 @@
+services:
+  webserver:
+    container_name: Webserver
+    image: mcmodersd/mcmodersd.de:latest
+    restart: unless-stopped
+    pull_policy: always
+    ports:
+      - "443:4000/tcp"
+    environment:
+      - PORT=4000
+
+networks:
+  default:
+    name: Webserver-Network

@@ -1,0 +1,15 @@
+<span
+  class="tool-icon"
+  [class.tool-icon--sm]="size() === ToolIconSize.Small"
+  [class.tool-icon--lg]="size() === ToolIconSize.Large"
+  [class.tool-icon--dot]="variant() === ToolIconVariant.Dot"
+  [style.--tool-icon-color]="preset().color"
+  [attr.title]="preset().name"
+>
+  @if (variant() === ToolIconVariant.Icon) {
+    <i class="tool-icon__icon" [class]="preset().icon" aria-hidden="true"></i>
+  } @else {
+    <span class="tool-icon__dot" aria-hidden="true"></span>
+  }
+  <span class="tool-icon__name">{{ preset().name }}</span>
+</span>

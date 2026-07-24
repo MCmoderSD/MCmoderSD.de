@@ -1,0 +1,80 @@
+// Include theming for Angular Material with `mat.theme()`.
+// This Sass mixin will define CSS variables that are used for styling Angular Material
+// components according to the Material 3 design spec.
+// Learn more about theming and how to use it for your application's
+// custom components at https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+
+:root {
+  --color-bg: #05080f;
+  --color-surface: #0b1220;
+  --color-border: rgb(120 190 230 / 14%);
+
+  --color-primary: #22d3ee;
+  --color-primary-strong: #67e8f9;
+  --color-secondary: #3b82f6;
+
+  --color-text: #e7f2f8;
+  --color-text-muted: #93a8bd;
+
+  --glow-primary: rgb(34 211 238 / 24%);
+  --glow-secondary: rgb(59 130 246 / 22%);
+  --glow-cursor: rgb(103 232 249 / 12%);
+
+  --cursor-x: 50vw;
+  --cursor-y: 35vh;
+}
+
+html {
+  height: 100%;
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$cyan-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
+}
+
+body {
+  color-scheme: dark;
+
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font: var(--mat-sys-body-medium);
+
+  position: relative;
+  isolation: isolate;
+  overflow-x: hidden;
+
+  // Reset the user agent margin.
+  margin: 0;
+  height: 100%;
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+// Ambient glow blobs, fixed to the viewport.
+body::before {
+  z-index: -2;
+  background:
+    radial-gradient(680px circle at 12% 15%, var(--glow-primary), transparent 60%),
+    radial-gradient(760px circle at 88% 80%, var(--glow-secondary), transparent 60%);
+}
+
+// Cursor-follow spotlight; position driven by --cursor-x/--cursor-y, set in app.ts.
+body::after {
+  z-index: -1;
+  background: radial-gradient(500px circle at var(--cursor-x) var(--cursor-y), var(--glow-cursor), transparent 70%);
+  transition: background 0.15s ease-out;
+}
+/* You can add global styles to this file, and also import other style files */

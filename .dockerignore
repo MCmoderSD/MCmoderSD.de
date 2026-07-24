@@ -1,11 +1,21 @@
-### Git ###
-.git
-.gitignore
-.github
+# Version control
+/.git
 
-### PhpStorm ###
-.idea/
+# Angular build/cache
+/.angular
 
-### Repository ###
-LICENSE
-README.md
+# Claude
+/.claude
+
+# WebStorm
+/.idea
+
+# Node
+/node_modules
+
+# Build output
+/dist
+
+# Docker
+/docker-compose.yaml
+/Dockerfile
