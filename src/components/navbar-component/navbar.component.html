@@ -23,5 +23,14 @@
     >
       Dependencies
     </a>
+    <a
+      class="navbar__link"
+      routerLink="/services"
+      routerLinkActive="navbar__link--active"
+      #services="routerLinkActive"
+      [attr.aria-current]="services.isActive ? 'page' : null"
+    >
+      Services
+    </a>
   </div>
 </nav>
