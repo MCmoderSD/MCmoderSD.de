@@ -13,7 +13,7 @@ describe('ProjectPreviewComponent', () => {
 
     fixture = TestBed.createComponent(ProjectPreviewComponent);
     component = fixture.componentInstance;
-    fixture.componentRef.setInput('data', { name: 'Test', description: 'Test description', tools: [] });
+    fixture.componentRef.setInput('data', { name: 'Test', description: 'Test description', tools: [], github: 'https://github.com/test/test' });
     await fixture.whenStable();
   });
 

@@ -13,32 +13,32 @@ export class ServicePageComponent {
   protected readonly services: ServicePreviewData[] = [
     {
       name: 'Jellyfin',
-      description: 'Mein eigener Media-Server. Jellyfin ist eine freie, selbst gehostete Open-Source-Alternative zu Plex und Netflix, mit der ich Filme, Serien und Musik ohne Abo oder Tracking über das eigene Netzwerk streamen kann.',
+      description: 'My own media server. Jellyfin is a free, self-hosted, open-source alternative to Plex and Netflix that lets me stream movies, shows, and music over my own network without a subscription or tracking.',
       icon: ServiceIcon.jellyfin,
       link: 'https://mcmodersd.de/jellyfin/',
     },
     {
       name: 'OpenSpeedTest',
-      description: 'Mein eigener Speedtest-Server. Eine selbst gehostete, quelloffene Alternative zu Speedtest.net, mit der ich die Verbindung zu meinem Server ganz ohne Drittanbieter messen kann.',
+      description: 'My own speed test server. A self-hosted, open-source alternative to Speedtest.net that lets me measure the connection to my server without relying on any third party.',
       icon: ServiceIcon.speedtest,
       link: 'https://mcmodersd.de/speedtest/',
     },
     {
       name: 'Sonatype Nexus',
-      description: 'Mein eigenes Artefakt-Repository. Darüber hoste und verwalte ich meine Java-Packages selbst, anstatt sie auf Maven Central zu veröffentlichen.',
+      description: 'My own artifact repository. I host and manage my Java packages through it myself instead of publishing them to Maven Central.',
       icon: ServiceIcon.nexus,
       link: 'https://mcmodersd.de/nexus/',
     },
     {
       name: 'Portainer',
-      description: 'Meine Container-Verwaltung. Mit Portainer behalte ich den Überblick über alle Docker-Container und -Stacks auf meinen Servern.',
+      description: 'My container management. Portainer gives me an overview of all Docker containers and stacks running on my servers.',
       icon: ServiceIcon.portainer,
       link: 'https://mcmodersd.de/portainer/',
     },
     /*
     {
         name: 'TrueNAS Scale',
-        description: 'Mein eigenes NAS. TrueNAS Scale verwaltet meinen Netzwerkspeicher und die Docker-/App-Workloads, auf denen unter anderem diese Website und die anderen Dienste laufen.',
+        description: 'My own NAS. TrueNAS Scale manages my network storage and the Docker/app workloads that run this website and the other services, among other things.',
         icon: ServiceIcon.truenas,
         link: 'https://home.mcmodersd.de/',
     },

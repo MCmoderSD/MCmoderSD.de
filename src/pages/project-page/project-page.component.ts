@@ -3,12 +3,12 @@ import { ToolIcon } from '../../lib/tool-icon-types';
 import { ProjectPreviewData } from '../../components/project-preview-component/project-preview.component';
 
 @Component({
-  selector: 'app-startpage',
-  templateUrl: './startpage.component.html',
-  styleUrl: './startpage.component.scss',
+  selector: 'app-project-page',
+  templateUrl: './project-page.component.html',
+  styleUrl: './project-page.component.scss',
   standalone: false,
 })
-export class StartpageComponent {
+export class ProjectPageComponent {
 
   protected readonly projects: ProjectPreviewData[] = [
     {

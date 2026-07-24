@@ -6,7 +6,7 @@
       [href]="data().github"
       target="_blank"
       rel="noopener"
-      aria-label="{{ data().name }} auf GitHub ansehen"
+      aria-label="View {{ data().name }} on GitHub"
     >
       <i class="devicon-github-plain" aria-hidden="true"></i>
     </a>
@@ -18,9 +18,9 @@
     @if (snippet(); as code) {
       <app-code-snippet [code]="code" language="pom.xml" />
     } @else if (error()) {
-      <p class="dependency-preview__status dependency-preview__status--error">Version konnte nicht geladen werden.</p>
+      <p class="dependency-preview__status dependency-preview__status--error">Failed to load version.</p>
     } @else {
-      <p class="dependency-preview__status">Lade neueste Version…</p>
+      <p class="dependency-preview__status">Loading latest version…</p>
     }
   </div>
 </article>

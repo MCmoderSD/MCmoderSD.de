@@ -1,0 +1,12 @@
+<section class="project-page">
+  <div class="project-page__intro">
+    <h1>Projects</h1>
+    <p>A selection of things I've built, from Twitch bots to browser extensions.</p>
+  </div>
+
+  <div class="project-page__grid">
+    @for (project of projects; track project.name) {
+      <app-project-preview [data]="project" />
+    }
+  </div>
+</section>

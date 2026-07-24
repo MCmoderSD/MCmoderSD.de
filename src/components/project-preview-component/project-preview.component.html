@@ -1,6 +1,15 @@
 <article class="project-preview">
   <header class="project-preview__header">
     <h3 class="project-preview__name">{{ data().name }}</h3>
+    <a
+      class="project-preview__github"
+      [href]="data().github"
+      target="_blank"
+      rel="noopener"
+      aria-label="View {{ data().name }} on GitHub"
+    >
+      <i class="devicon-github-plain" aria-hidden="true"></i>
+    </a>
   </header>
 
   <p class="project-preview__description">{{ data().description }}</p>
