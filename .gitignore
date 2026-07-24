@@ -1,2 +1,14 @@
-### PhpStorm ###
-.idea/
+# Angular cache
+/.angular
+
+# Claude
+/.claude
+
+# WebStorm
+/.idea
+
+# Node
+/node_modules
+
+# Build output
+/dist
