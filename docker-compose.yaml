@@ -4,11 +4,8 @@ services:
     image: mcmodersd/mcmodersd.de:angular-latest
     restart: unless-stopped
     pull_policy: always
-    init: true
     ports:
-      - "4000:4000/tcp"
-    security_opt:
-      - no-new-privileges:true
+      - "80:4000/tcp"
 
 networks:
   default:

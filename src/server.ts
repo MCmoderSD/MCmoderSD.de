@@ -53,6 +53,7 @@ app.use(
  * Handle all other requests by rendering the Angular application.
  */
 app.use((req, res, next) => {
+  res.set('Cache-Control', 'no-cache');
   angularApp
     .handle(req)
     .then((response) =>
