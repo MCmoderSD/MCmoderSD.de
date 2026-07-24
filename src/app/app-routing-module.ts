@@ -5,9 +5,16 @@ import { DependenciesPageComponent } from '../pages/dependencies-page/dependenci
 import { ServicePageComponent } from '../pages/service-page/service-page.component';
 import { ImprintPageComponent } from '../pages/imprint-page/imprint-page.component';
 import { PrivacyPolicyPageComponent } from '../pages/privacy-policy-page/privacy-policy-page.component';
+import { AboutPageComponent } from '../pages/about-page/about-page.component';
+import { ProjectPageComponent } from '../pages/project-page/project-page.component';
 
 const routes: Routes = [
-  { path: '', component: StartpageComponent },
+  // Startpage is temporarily disabled ("Big Work in Progress"); About is the default landing
+  // page for now. Restore this route to bring the startpage back as the default.
+  // { path: '', component: StartpageComponent },
+  { path: '', component: AboutPageComponent },
+  //{ path: 'about', component: AboutPageComponent },
+  { path: 'projects', component: ProjectPageComponent },
   { path: 'dependencies', component: DependenciesPageComponent },
   { path: 'services', component: ServicePageComponent },
   { path: 'imprint', component: ImprintPageComponent },
@@ -15,7 +22,13 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      // Lets fragment links such as /about#experience scroll to the matching id.
+      anchorScrolling: 'enabled',
+      scrollPositionRestoration: 'enabled',
+    }),
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,0 +1,32 @@
+<article class="cv-entry">
+  <div class="cv-entry__period">{{ period() }}</div>
+
+  <div class="cv-entry__body">
+    <h3 class="cv-entry__org">{{ data().company }}</h3>
+
+    <div class="cv-entry__headline">
+      <p class="cv-entry__role">{{ data().position }}</p>
+
+      @if (data().location) {
+        <span class="cv-entry__sep" aria-hidden="true">·</span>
+        <span class="cv-entry__meta">{{ data().location }}</span>
+      }
+
+      @if (data().grade) {
+        <span class="cv-entry__grade">Final grade {{ data().grade }}</span>
+      }
+    </div>
+
+    @if (data().description) {
+      <p class="cv-entry__description">{{ data().description }}</p>
+    }
+
+    @if (tools().length > 0) {
+      <div class="cv-entry__tools">
+        @for (tool of tools(); track tool) {
+          <app-tool-icon [tool]="tool" [size]="size.Small" />
+        }
+      </div>
+    }
+  </div>
+</article>

@@ -9,6 +9,8 @@ import {ServiceIconComponent} from "./service-icon-component/service-icon.compon
 import {ServicePreviewComponent} from "./service-preview-component/service-preview.component";
 import {ShortcutOverlayComponent} from "./shortcut-overlay-component/shortcut-overlay.component";
 import {FooterComponent} from "./footer-component/footer.component";
+import {EducationComponent} from "./education-component/education.component";
+import {WorkExperienceComponent} from "./work-experience-component/work-experience.component";
 
 
 const components: any[] = [
@@ -20,7 +22,9 @@ const components: any[] = [
   ServiceIconComponent,
   ServicePreviewComponent,
   ShortcutOverlayComponent,
-  FooterComponent
+  FooterComponent,
+  EducationComponent,
+  WorkExperienceComponent
 ];
 
 @NgModule({

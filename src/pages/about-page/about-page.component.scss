@@ -1,0 +1,178 @@
+:host {
+  display: block;
+}
+
+.about-page {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Hero */
+
+.about-page__name {
+  margin: 0 0 0.5rem;
+  color: var(--color-text);
+  font-size: clamp(2.25rem, 6vw, 3.5rem);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.about-page__role {
+  margin: 0 0 1.25rem;
+  color: var(--color-primary-strong);
+  font-size: 1.0625rem;
+  font-weight: 500;
+}
+
+.about-page__lead {
+  margin: 0 0 1.25rem;
+  max-width: 40rem;
+  color: var(--color-text-muted);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+.about-page__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+.about-page__meta-sep {
+  color: color-mix(in srgb, var(--color-text-muted) 55%, transparent);
+}
+
+.about-page__bio {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  max-width: 46rem;
+}
+
+.about-page__bio p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.9375rem;
+  line-height: 1.7;
+}
+
+/* Socials */
+
+.about-page__socials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 0.75rem;
+}
+
+.about-page__social {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-border);
+  background: color-mix(in srgb, var(--color-surface) 88%, transparent);
+  text-decoration: none;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.about-page__social:hover,
+.about-page__social:focus-visible {
+  border-color: color-mix(in srgb, var(--color-primary) 45%, transparent);
+  box-shadow: 0 12px 30px -12px color-mix(in srgb, var(--color-primary) 30%, transparent);
+  transform: translateY(-2px);
+}
+
+.about-page__social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--color-primary) 12%, transparent);
+  color: var(--color-text);
+  font-size: 1.15rem;
+}
+
+.about-page__social-icon svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: currentColor;
+}
+
+.about-page__social-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.about-page__social-label {
+  color: var(--color-text);
+  font-size: 0.9375rem;
+  font-weight: 500;
+}
+
+.about-page__social-handle {
+  color: var(--color-text-muted);
+  font-size: 0.8125rem;
+  overflow-wrap: anywhere;
+}
+
+/* Sections */
+
+// Extra breathing room between the CV sections, on top of the page-level gap,
+// so Experience and Education read as clearly separate blocks.
+.about-page__section + .about-page__section {
+  margin-top: 2.5rem;
+}
+
+// Clears the fixed navbar (5.5rem) when jumping to #experience / #education.
+.about-page__section {
+  scroll-margin-top: 6.5rem;
+}
+
+.about-page__section-header {
+  margin-bottom: 0.5rem;
+}
+
+.about-page__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0 0.6rem;
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.about-page__eyebrow-line {
+  width: 2rem;
+  height: 1px;
+  flex: none;
+  background: color-mix(in srgb, var(--color-primary) 55%, transparent);
+}
+
+.about-page__section-title {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}

@@ -5,6 +5,7 @@ export interface ProjectPreviewData {
   name: string;
   description: string;
   tools: ToolIcon[];
+  github: string;
 }
 
 @Component({

@@ -1,0 +1,89 @@
+<div class="about-page">
+  <header class="about-page__hero">
+    <h1 class="about-page__name">Seraphin Berger</h1>
+    <p class="about-page__role">Software Engineering Student &amp; Full-Stack Developer</p>
+
+    <p class="about-page__lead">
+      I build things I want to use myself, and I run the infrastructure they live on.
+    </p>
+
+    <p class="about-page__meta">
+      <span>Stuttgart, Germany</span>
+      @if (localTime(); as time) {
+        <span class="about-page__meta-sep" aria-hidden="true">/</span>
+        <span>{{ time }} local</span>
+      }
+    </p>
+  </header>
+
+  <div class="about-page__bio">
+    <p>
+      I study software engineering at Esslingen University of Applied Sciences and work as a
+      working student full-stack developer at ODDO BHF SE in Frankfurt.
+    </p>
+    <p>
+      Outside of university and work I write Java tooling, Twitch bots and small Chrome
+      extensions. I also run my own infrastructure: the services listed on this site are
+      self-hosted on hardware I maintain myself, from the reverse proxy down to the storage.
+    </p>
+  </div>
+
+  <nav class="about-page__socials" aria-label="Social links and contact">
+    @for (social of socials; track social.label) {
+      <a
+        class="about-page__social"
+        [href]="social.href"
+        target="_blank"
+        rel="noopener"
+        [attr.aria-label]="social.label + ': ' + social.handle"
+      >
+        <span class="about-page__social-icon" aria-hidden="true">
+          @if (social.iconClass) {
+            <i [class]="social.iconClass"></i>
+          } @else {
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path [attr.d]="social.iconPath" />
+            </svg>
+          }
+        </span>
+
+        <span class="about-page__social-text">
+          <span class="about-page__social-label">{{ social.label }}</span>
+          <span class="about-page__social-handle">{{ social.handle }}</span>
+        </span>
+      </a>
+    }
+  </nav>
+
+  <section class="about-page__section" id="experience" aria-labelledby="experience-title">
+    <header class="about-page__section-header">
+      <p class="about-page__eyebrow">
+        <span class="about-page__eyebrow-line" aria-hidden="true"></span>
+        01 — Experience
+      </p>
+      <h2 class="about-page__section-title" id="experience-title">Where I've worked</h2>
+    </header>
+
+    <div class="about-page__entries">
+      @for (entry of experience; track entry.company) {
+        <app-work-experience [data]="entry" />
+      }
+    </div>
+  </section>
+
+  <section class="about-page__section" id="education" aria-labelledby="education-title">
+    <header class="about-page__section-header">
+      <p class="about-page__eyebrow">
+        <span class="about-page__eyebrow-line" aria-hidden="true"></span>
+        02 — Education
+      </p>
+      <h2 class="about-page__section-title" id="education-title">Where I studied</h2>
+    </header>
+
+    <div class="about-page__entries">
+      @for (entry of education; track entry.institution) {
+        <app-education [data]="entry" />
+      }
+    </div>
+  </section>
+</div>

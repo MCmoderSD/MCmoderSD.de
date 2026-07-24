@@ -1,11 +1,11 @@
-<nav class="shortcut-overlay" aria-label="Schnellzugriffe">
+<nav class="shortcut-overlay" aria-label="Quick links">
   @for (shortcut of shortcuts; track shortcut.name) {
     <a
       class="shortcut-overlay__link"
       [href]="shortcut.link"
       target="_blank"
       rel="noopener"
-      [attr.aria-label]="shortcut.name + ' in neuem Tab öffnen'"
+      [attr.aria-label]="'Open ' + shortcut.name + ' in a new tab'"
       [attr.title]="shortcut.name"
     >
       <app-service-icon [icon]="shortcut.icon" [size]="size.Small" />
