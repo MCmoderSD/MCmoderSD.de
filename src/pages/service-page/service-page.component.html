@@ -1,0 +1,12 @@
+<section class="service-page">
+  <div class="service-page__intro">
+    <h1>Services</h1>
+    <p>Das hier sind Dienste, die ich selbst hoste und öffentlich erreichbar mache.</p>
+  </div>
+
+  <div class="service-page__list">
+    @for (service of services; track service.name) {
+      <app-service-preview [data]="service" />
+    }
+  </div>
+</section>
