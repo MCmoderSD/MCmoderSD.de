@@ -13,6 +13,19 @@ const app = express();
 const angularApp = new AngularNodeAppEngine({
   // Behind the HAProxy reverse proxy on mcmodersd.de / www.mcmodersd.de.
   trustProxyHeaders: ['x-forwarded-for', 'x-forwarded-proto', 'x-forwarded-host'],
+  // Explicit allowlist so the app is only reachable via these hosts, regardless of any
+  // "NG_ALLOWED_HOSTS" set (or missing) on the deployment. Ports are ignored by Angular's
+  // host check, so no per-port entries are needed. 127.0.0.1 is required for the container's
+  // own Docker HEALTHCHECK.
+  allowedHosts: [
+    'localhost',
+    '127.0.0.1',
+    'dedi.mcmodersd.de',
+    'mcmodersd.de',
+    'www.mcmodersd.de',
+    'home.mcmodersd.de',
+    'dev.mcmodersd.de',
+  ],
 });
 
 /**
