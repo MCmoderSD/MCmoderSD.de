@@ -1,0 +1,26 @@
+<article class="dependency-preview">
+  <header class="dependency-preview__header">
+    <h3 class="dependency-preview__name">{{ data().name }}</h3>
+    <a
+      class="dependency-preview__github"
+      [href]="data().github"
+      target="_blank"
+      rel="noopener"
+      aria-label="{{ data().name }} auf GitHub ansehen"
+    >
+      <i class="devicon-github-plain" aria-hidden="true"></i>
+    </a>
+  </header>
+
+  <p class="dependency-preview__description">{{ data().description }}</p>
+
+  <div class="dependency-preview__snippet-area">
+    @if (snippet(); as code) {
+      <app-code-snippet [code]="code" language="pom.xml" />
+    } @else if (error()) {
+      <p class="dependency-preview__status dependency-preview__status--error">Version konnte nicht geladen werden.</p>
+    } @else {
+      <p class="dependency-preview__status">Lade neueste Version…</p>
+    }
+  </div>
+</article>

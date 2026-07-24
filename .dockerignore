@@ -19,3 +19,12 @@
 # Docker
 /docker-compose.yaml
 /Dockerfile
+
+# Misc
+*.md
+.env
+.vscode
+.github
+npm-debug.log
+.DS_Store
+Thumbs.db

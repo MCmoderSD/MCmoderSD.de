@@ -1,0 +1,21 @@
+<section class="dependencies-page">
+  <div class="dependencies-page__intro">
+    <div class="dependencies-page__text">
+      <h1>Dependencies</h1>
+      <p>
+        Das hier sind meine eigenen Java-Packages. Ich entwickle und pflege sie selbst und hoste sie
+        nicht auf Maven Central, sondern auf meinem eigenen Nexus Repository.
+      </p>
+    </div>
+
+    <div class="dependencies-page__repo">
+      <app-code-snippet [code]="repositorySnippet" language="pom.xml" />
+    </div>
+  </div>
+
+  <div class="dependencies-page__grid">
+    @for (dependency of dependencies; track dependency.data.name) {
+      <app-dependency-preview [data]="dependency.data" [coordinates]="dependency.coordinates" />
+    }
+  </div>
+</section>
