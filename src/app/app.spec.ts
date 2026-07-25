@@ -1,16 +1,12 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterModule } from '@angular/router';
 import { App } from './app';
-import { TemplateComponent } from '../components/template-component/template.component';
-import { ToolIconComponent } from '../components/tool-icon-component/tool-icon.component';
 
 describe('App', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        RouterModule.forRoot([]),
-        TemplateComponent,
-        ToolIconComponent
+        RouterModule.forRoot([])
       ],
       declarations: [
         App

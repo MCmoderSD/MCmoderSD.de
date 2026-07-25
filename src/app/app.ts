@@ -32,12 +32,10 @@ export class App {
     // so it ignores scroll-margin-top and needs the navbar height declared here.
     inject(ViewportScroller).setOffset([0, SCROLL_OFFSET]);
 
-    inject(Router)
-      .events.pipe(
+    inject(Router).events.pipe(
         filter((event) => event instanceof NavigationEnd),
         takeUntilDestroyed(),
-      )
-      .subscribe((event) => this.setCanonical(event.urlAfterRedirects));
+      ).subscribe((event) => this.setCanonical(event.urlAfterRedirects));
 
     // Guarded because a frame is only ever scheduled in the browser, and cancelAnimationFrame
     // is not part of the server platform's globals.
@@ -52,16 +50,12 @@ export class App {
     // Writing --cursor-x/y on :root invalidates style for the whole tree, so coalesce the
     // ~120 events/s a mouse produces down to one write per animation frame.
     this.pointer = { x: event.clientX, y: event.clientY };
-    if (this.frame) {
-      return;
-    }
+    if (this.frame) return;
 
     this.frame = requestAnimationFrame(() => {
       this.frame = 0;
       const pointer = this.pointer;
-      if (!pointer) {
-        return;
-      }
+      if (!pointer) return;
 
       const root = this.document.documentElement.style;
       root.setProperty('--cursor-x', `${pointer.x}px`);

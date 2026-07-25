@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import { DependencyPreviewData, MavenCoordinates } from '../../components/dependency-preview-component/dependency-preview.component';
 
+interface Dependency {
+  data: DependencyPreviewData;
+  coordinates: MavenCoordinates;
+}
+
 @Component({
   selector: 'app-dependencies-page',
   templateUrl: './dependencies-page.component.html',
@@ -9,14 +14,16 @@ import { DependencyPreviewData, MavenCoordinates } from '../../components/depend
 })
 export class DependenciesPageComponent {
 
-  protected readonly repositorySnippet =
-`<repository>
+  protected readonly repositorySnippet: string =
+`
+<repository>
     <id>Nexus</id>
     <name>Sonatype Nexus</name>
     <url>https://mcmodersd.de/nexus/repository/maven-releases/</url>
-</repository>`;
+</repository>
+`;
 
-  protected readonly dependencies: { data: DependencyPreviewData; coordinates: MavenCoordinates }[] = [
+  protected readonly dependencies: Dependency[] = [
     {
       data: {
         name: 'BDSM-Test-API',
