@@ -113,6 +113,7 @@ export class AboutPageComponent {
       qualification: 'Realschulabschluss',
       from: 'September 2016',
       to: 'July 2022',
+      location: 'Neustadt, Germany',
       grade: '1.7',
       description: 'Where I started programming, writing embedded C for Arduino.',
       tools: [ToolIcon.arduino, ToolIcon.c],
