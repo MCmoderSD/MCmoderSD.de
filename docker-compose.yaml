@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     pull_policy: always
     ports:
-      - "80:4000/tcp"
+      - "4000:4000/tcp"
 
 networks:
   default:

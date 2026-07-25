@@ -10,11 +10,31 @@
       content="MCmoderSD.de – Portfolio and projects of MCmoderSD, showcasing software development work, tools, and open-source contributions."
     />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!--
+      No preconnect for fonts.googleapis.com: the build inlines the Google Fonts CSS, so that
+      origin is never requested at runtime. gstatic still serves the woff2, jsdelivr the icons.
+    -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/devicon@latest/devicon.min.css" rel="stylesheet" />
+    <!-- Pinned: "@latest" caps the CDN cache at 7 days and lets upstream releases move class names. -->
+    <link href="https://cdn.jsdelivr.net/npm/devicon@2.17.0/devicon.min.css" rel="stylesheet" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Seraphin Berger",
+        "alternateName": "MCmoderSD",
+        "url": "https://mcmodersd.de/",
+        "jobTitle": "Software Engineering Student & Full-Stack Developer",
+        "email": "mailto:business@mcmodersd.de",
+        "sameAs": [
+          "https://github.com/MCmoderSD",
+          "https://www.linkedin.com/in/seraphin-berger/"
+        ]
+      }
+    </script>
   </head>
   <body>
     <app-root></app-root>
