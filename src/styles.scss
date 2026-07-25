@@ -149,11 +149,31 @@ html {
       density: 0,
     )
   );
+
+}
+
+// The native viewport scrollbar is removed outright, and app-scrollbar draws a replacement that
+// floats over the content instead of beside it.
+//
+// This is not a cosmetic preference. A native scrollbar occupies a gutter that is outside the area
+// any element or background image can paint into - only the flat canvas background reaches it. So
+// however the page background is built, a transparent track exposes the bare background colour
+// there: invisible against the light palette, an unmistakable black stripe against the dark one.
+// Removing the gutter is the only way the background is continuous by construction rather than by
+// coincidence.
+//
+// Scoped to html, so scrollable elements inside the page (the code blocks) keep theirs.
+html {
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 body {
-  // color-scheme now lives on :root with the rest of the theme, so the page scrollbar and any
-  // native control follow whichever tier is active.
+  // color-scheme lives on :root with the rest of the theme, so any native control follows
+  // whichever tier is active.
   background-color: var(--color-bg);
   color: var(--color-text);
   font: var(--mat-sys-body-medium);
@@ -180,7 +200,9 @@ body::after {
   pointer-events: none;
 }
 
-// Ambient glow blobs, fixed to the viewport.
+// Ambient glow blobs, fixed to the viewport. Deliberately a composited fixed layer rather than a
+// background-attachment: fixed on the root - that repaints on every scroll frame and misbehaves on
+// iOS Safari, and with no scrollbar gutter left there is nothing it would buy.
 body::before {
   z-index: -2;
   // Both tiers declare the same two gradients at the same positions, so only their colours differ

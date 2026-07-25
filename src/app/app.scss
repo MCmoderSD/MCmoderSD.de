@@ -12,10 +12,46 @@
 // Temporary placement for the new color scheme toggle - remove or relocate once it has a
 // permanent home. No pill of its own: the button already carries its own background/border, so
 // wrapping it in another decorated shape just doubled it up as a circle around a rectangle.
+//
+// Visible on load, then it fades itself out. An animation rather than a transition because the
+// "wait, then fade" shape comes for free from a delay plus a duration; a transition would need a
+// timer in TypeScript to change something for it to transition to.
 .theme-toggle-overlay {
   position: fixed;
   top: 1.25rem;
   right: 1.25rem;
   z-index: 30;
   display: flex;
+  animation: theme-toggle-idle 0.35s ease 4s forwards;
+}
+
+// Three ways back: the pointer entering the right-hand band (TOGGLE_REVEAL_ZONE in app.ts), the
+// pointer resting on the control itself, or keyboard focus landing inside it. The last is not
+// optional - the control stays focusable while faded, and a focus ring on an invisible button is
+// exactly the trap this pattern is prone to.
+//
+// Removing the animation outright, rather than setting opacity, returns the element to its
+// un-animated state and lets the whole thing restart cleanly the next time the pointer leaves.
+//
+// :host-context and not a plain ".toggle-visible ..." descendant selector: the class sits on
+// <html>, and view encapsulation rewrites an ancestor compound into "[_ngcontent-x]:root...",
+// which asks <html> for a content attribute it will never carry. The rule silently never matches.
+:host-context(.toggle-visible) .theme-toggle-overlay,
+.theme-toggle-overlay:hover,
+.theme-toggle-overlay:focus-within {
+  animation: none;
+}
+
+@keyframes theme-toggle-idle {
+  to {
+    opacity: 0;
+  }
+}
+
+// Touch fires no mousemove and has no hover, so there would be no way to bring the control back
+// once it faded - it would be gone for the rest of the visit. Same reasoning as the scrollbar.
+@media (pointer: coarse), (hover: none) {
+  .theme-toggle-overlay {
+    animation: none;
+  }
 }
