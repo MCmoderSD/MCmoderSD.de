@@ -1,30 +1,11 @@
-import { afterNextRender, Component, computed, inject, signal } from '@angular/core';
+import { afterNextRender, Component, computed, inject, Signal, signal, WritableSignal } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
-type ColorScheme = 'light' | 'dark';
+import { readStored, writeStored } from '../../helper/storage-helper';
 
-/** Shared with the bootstrap script in index.html, which reads it before the first paint. */
-const STORAGE_KEY = 'color-scheme';
-
-/**
- * Storage is treated as a nicety rather than a dependency: reading or writing it throws outright in
- * a partitioned third-party context and in some private modes, and the object is missing entirely
- * outside a browser. Losing the preference is survivable, taking the switch down with it is not.
- */
-function readStored(): string | null {
-  try {
-    return localStorage.getItem(STORAGE_KEY);
-  } catch {
-    return null;
-  }
-}
-
-function writeStored(value: string): void {
-  try {
-    localStorage.setItem(STORAGE_KEY, value);
-  } catch {
-    // Nothing to recover: the switch still works for this page view, it just will not be remembered.
-  }
+export enum ColorScheme {
+  Light = 'light',
+  Dark = 'dark',
 }
 
 @Component({
@@ -35,38 +16,34 @@ function writeStored(value: string): void {
 })
 export class ColorSchemeSwitchComponent {
 
-  private readonly document = inject(DOCUMENT);
+  private readonly document: Document = inject(DOCUMENT);
 
-  /** Dark is the default absent any stored preference - matches :root, which defines the dark palette. */
-  protected readonly scheme = signal<ColorScheme>('dark');
-  protected readonly isLight = computed(() => this.scheme() === 'light');
+  protected readonly scheme: WritableSignal<ColorScheme> = signal<ColorScheme>(ColorScheme.Dark);
+  protected readonly isLight: Signal<boolean> = computed(() => this.scheme() === ColorScheme.Light);
 
   constructor() {
-    // Guarded to the browser: the server has no localStorage, and a prerendered attribute would
-    // never match a client whose stored preference differs, causing a hydration mismatch.
     afterNextRender(() => {
-      if (readStored() === 'light') {
-        this.apply('light', false);
+      if (readStored('color-scheme') === ColorScheme.Light) {
+        this.apply(ColorScheme.Light, false);
       }
     });
   }
 
   protected toggle(): void {
-    this.apply(this.scheme() === 'dark' ? 'light' : 'dark', true);
+    this.apply(this.scheme() === ColorScheme.Dark ? ColorScheme.Light : ColorScheme.Dark, true);
   }
 
   private apply(scheme: ColorScheme, persist: boolean): void {
     this.scheme.set(scheme);
 
-    // No attribute at all means dark, so the default markup needs no theme selector of its own.
-    if (scheme === 'light') {
-      this.document.documentElement.setAttribute('data-theme', 'light');
+    if (scheme === ColorScheme.Light) {
+      this.document.documentElement.setAttribute('data-theme', ColorScheme.Light);
     } else {
       this.document.documentElement.removeAttribute('data-theme');
     }
 
     if (persist) {
-      writeStored(scheme);
+      writeStored('color-scheme', scheme);
     }
   }
 }

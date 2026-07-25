@@ -2,7 +2,7 @@
 
 import { ToolIcon } from '../../lib/tool-icon-types';
 
-interface ToolIconPreset {
+export interface ToolIconPreset {
   name: string;
   icon: string;
   color: string;

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ColorSchemeSwitchComponent } from './color-scheme-switch.component';
+import { ColorScheme, ColorSchemeSwitchComponent } from './color-scheme-switch.component';
 
 /**
  * The test environment has no Storage implementation, so persistence is asserted against a stub.
@@ -60,8 +60,8 @@ describe('ColorSchemeSwitchComponent', () => {
     fixture.detectChanges();
 
     expect(button().getAttribute('aria-checked')).toBe('true');
-    expect(document.documentElement.getAttribute('data-theme')).toBe('light');
-    expect(stored.get('color-scheme')).toBe('light');
+    expect(document.documentElement.getAttribute('data-theme')).toBe(ColorScheme.Light);
+    expect(stored.get('color-scheme')).toBe(ColorScheme.Light);
   });
 
   it('switches back to dark, dropping the attribute rather than setting it to dark', () => {
@@ -72,17 +72,17 @@ describe('ColorSchemeSwitchComponent', () => {
 
     expect(button().getAttribute('aria-checked')).toBe('false');
     expect(document.documentElement.hasAttribute('data-theme')).toBe(false);
-    expect(stored.get('color-scheme')).toBe('dark');
+    expect(stored.get('color-scheme')).toBe(ColorScheme.Dark);
   });
 
   it('restores a stored light preference on load', async () => {
-    stored.set('color-scheme', 'light');
+    stored.set('color-scheme', ColorScheme.Light);
 
     const restored = TestBed.createComponent(ColorSchemeSwitchComponent);
     await restored.whenStable();
     restored.detectChanges();
 
-    expect(document.documentElement.getAttribute('data-theme')).toBe('light');
+    expect(document.documentElement.getAttribute('data-theme')).toBe(ColorScheme.Light);
     expect(restored.nativeElement.querySelector('button').getAttribute('aria-checked')).toBe('true');
   });
 
@@ -96,6 +96,6 @@ describe('ColorSchemeSwitchComponent', () => {
 
     expect(() => button().click()).not.toThrow();
     fixture.detectChanges();
-    expect(document.documentElement.getAttribute('data-theme')).toBe('light');
+    expect(document.documentElement.getAttribute('data-theme')).toBe(ColorScheme.Light);
   });
 });

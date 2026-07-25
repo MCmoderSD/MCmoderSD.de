@@ -1,4 +1,4 @@
-import { Component, input, signal } from '@angular/core';
+import { Component, input, InputSignal, signal, WritableSignal } from '@angular/core';
 
 @Component({
   selector: 'app-code-snippet',
@@ -8,10 +8,10 @@ import { Component, input, signal } from '@angular/core';
 })
 export class CodeSnippetComponent {
 
-  readonly code = input.required<string>();
-  readonly language = input.required<string>();
+  readonly code:InputSignal<string> = input.required<string>();
+  readonly language:InputSignal<string> = input.required<string>();
 
-  protected readonly copied = signal(false);
+  protected readonly copied:WritableSignal<boolean> = signal(false);
 
   protected async copy(): Promise<void> {
     await navigator.clipboard.writeText(this.code());

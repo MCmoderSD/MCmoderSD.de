@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import {Component, input, InputSignal} from '@angular/core';
 import { ToolIcon, ToolIconSize } from '../../lib/tool-icon-types';
 
 export interface ProjectPreviewData {
@@ -16,7 +16,7 @@ export interface ProjectPreviewData {
 })
 export class ProjectPreviewComponent {
 
-  readonly data = input.required<ProjectPreviewData>();
+  readonly data: InputSignal<ProjectPreviewData> = input.required<ProjectPreviewData>();
 
   protected readonly size = ToolIconSize;
 }

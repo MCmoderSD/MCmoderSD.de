@@ -1,5 +1,6 @@
-import { Component, computed, inject, input, PLATFORM_ID, resource } from '@angular/core';
+import { Component, computed, inject, input, InputSignal, PLATFORM_ID, resource, ResourceRef, Signal } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+
 import { fetchLatestGithubTag } from '../../helper/github-helper';
 
 export interface DependencyPreviewData {
@@ -21,23 +22,29 @@ export interface MavenCoordinates {
 })
 export class DependencyPreviewComponent {
 
-  private readonly platformId = inject(PLATFORM_ID);
+  private readonly platformId: Object = inject(PLATFORM_ID);
 
-  readonly data = input.required<DependencyPreviewData>();
-  readonly coordinates = input.required<MavenCoordinates>();
+  readonly data:InputSignal<DependencyPreviewData> = input.required<DependencyPreviewData>();
+  readonly coordinates:InputSignal<MavenCoordinates> = input.required<MavenCoordinates>();
 
-  private readonly versionResource = resource({
-    params: () => (isPlatformBrowser(this.platformId) ? this.data().github : undefined),
-    loader: ({ params }) => fetchLatestGithubTag(params),
+  private readonly versionResource: ResourceRef<string> = resource({
+    params: (): string | undefined => (isPlatformBrowser(this.platformId) ? this.data().github : undefined),
+    loader: ({ params }: { params: string | undefined }): Promise<string> => fetchLatestGithubTag(params),
   });
 
-  protected readonly error = this.versionResource.error;
+  protected readonly error:Signal<Error> = this.versionResource.error;
 
   protected readonly snippet = computed(() => {
     if (this.versionResource.status() !== 'resolved') return null;
 
     const version = this.versionResource.value();
     const { groupId, artifactId } = this.coordinates();
-    return `<dependency>\n    <groupId>${groupId}</groupId>\n    <artifactId>${artifactId}</artifactId>\n    <version>${version}</version>\n</dependency>`;
+    return `
+<dependency>
+    <groupId>${groupId}</groupId>
+    <artifactId>${artifactId}</artifactId>
+    <version>${version}</version>
+</dependency>
+`;
   });
 }

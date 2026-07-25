@@ -1,14 +1,4 @@
-import {
-  afterNextRender,
-  Component,
-  computed,
-  DestroyRef,
-  ElementRef,
-  inject,
-  signal,
-  viewChild,
-  viewChildren,
-} from '@angular/core';
+import { afterNextRender, Component, computed, DestroyRef, ElementRef, inject, signal, viewChild, viewChildren } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';

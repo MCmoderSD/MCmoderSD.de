@@ -1,6 +1,6 @@
 import { ServiceIcon } from '../../lib/service-icon-types';
 
-interface ServiceIconPreset {
+export interface ServiceIconPreset {
   name: string;
   viewBox: string;
   path: string;
