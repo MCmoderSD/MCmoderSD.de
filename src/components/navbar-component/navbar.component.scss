@@ -1,17 +1,26 @@
 :host {
+  // Shared so the pill and the link colours travel on exactly the same clock - a mismatch there
+  // is what makes a sliding indicator feel jittery. The curve leaves promptly and still settles
+  // softly: a slow start is what reads as sluggish, not the duration on its own.
+  --nav-slide: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
   display: block;
   position: fixed;
   top: 1.25rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 30;
+  // Fixed positioning resolves percentages against the viewport, so this is a hard guarantee
+  // that the bar can never reach past the screen edges no matter what it contains.
+  max-width: calc(100% - 1rem);
 }
 
 .navbar {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 0.5rem 0.6rem 0.5rem 1.1rem;
+  // Everything below scales continuously with the viewport instead of stepping at breakpoints.
+  gap: clamp(0.5rem, 0.25rem + 1vw, 1rem);
+  padding: 0.5rem clamp(0.4rem, 0.2rem + 0.6vw, 0.6rem) 0.5rem clamp(0.4rem, -0.05rem + 1.4vw, 1.1rem);
   border-radius: 999px;
   background: color-mix(in srgb, var(--color-surface) 70%, transparent);
   border: 1px solid var(--color-border);
@@ -35,20 +44,40 @@
 }
 
 .navbar__links {
+  // Containing block for the pill, whose offsets are measured against this element.
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: clamp(0.1rem, -0.05rem + 0.6vw, 0.3rem);
+}
+
+// The highlight behind the active link. It is a single element that slides between the links
+// instead of a background on each one, so the change of page is a movement rather than a cut.
+.navbar__pill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-primary) 16%, transparent);
+  pointer-events: none;
+  transition:
+    transform var(--nav-slide),
+    width var(--nav-slide);
 }
 
 .navbar__link {
-  padding: 0.4rem 0.85rem;
+  // Keeps the labels above the pill, which is a sibling earlier in the DOM.
+  position: relative;
+  padding: 0.4rem clamp(0.45rem, 0.1rem + 1.4vw, 0.85rem);
   border-radius: 999px;
   color: var(--color-text-muted);
-  font-size: 0.875rem;
+  font-size: clamp(0.8125rem, 0.775rem + 0.15vw, 0.875rem);
   font-weight: 500;
   white-space: nowrap;
   text-decoration: none;
-  transition: color 0.2s ease, background-color 0.2s ease;
+  // Colour rides along with the pill; hover keeps its own quicker response.
+  transition: color var(--nav-slide), background-color 0.2s ease;
 }
 
 .navbar__link:hover,
@@ -58,6 +87,27 @@
 }
 
 .navbar__link--active {
+  // No background of its own - that is the pill's job now.
   color: var(--color-primary-strong);
-  background: color-mix(in srgb, var(--color-primary) 16%, transparent);
+}
+
+// The one thing clamp() cannot express: dropping content. Brand plus four links need ~445px even
+// at the smallest readable type, so below this the wordmark goes and the links get the room. No
+// great loss - it only links to "/", which "Home" already does.
+@media (max-width: 34rem) {
+  .navbar__brand,
+  .navbar__divider {
+    display: none;
+  }
+
+  .navbar {
+    padding-left: clamp(0.4rem, 0.2rem + 0.6vw, 0.6rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :host {
+    // Switches off the pill and the colour crossfade in one place.
+    --nav-slide: 0s;
+  }
 }

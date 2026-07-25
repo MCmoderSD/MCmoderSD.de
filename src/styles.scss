@@ -25,6 +25,38 @@
   --cursor-y: 35vh;
 }
 
+// Wide-gamut tier. Only the accents are listed because only they have room to grow: the signature
+// cyan already sits at 97% of the most chromatic colour sRGB can encode at its hue, so on an sRGB
+// screen it is as vivid as the format allows. The greys and the near-black backgrounds use a
+// quarter to two thirds of their gamut by design, and a wider one gives them nothing.
+//
+// Every value keeps the original lightness and hue to four decimals and raises only chroma, to the
+// same position inside P3 that the colour already held inside sRGB. So this is the same palette
+// rendered wider, not a new one - and since OKLCh lightness is preserved, the WCAG contrast against
+// both backgrounds is unchanged (11.09:1 -> 11.23:1 for the primary, still AA).
+//
+// oklch() rather than color(display-p3 ...) is the deliberate part: an oklch colour is mapped to
+// whatever gamut the display reports, so a Rec.2020 screen renders these accurately rather than
+// being pinned to P3 forever. The query means "P3 or better", which a Rec.2020 display satisfies.
+//
+// @supports is load-bearing, not decoration. Custom properties accept any token, so a browser
+// without oklch would happily store an unparseable value and every var() reading it would fail at
+// computed-value time - the hex above would never be reached.
+@supports (color: oklch(0 0 0)) {
+  @media (color-gamut: p3) {
+    :root {
+      --color-primary: oklch(0.7971 0.1783 211.5);
+      --color-primary-strong: oklch(0.8651 0.1244 207.1);
+      --color-secondary: oklch(0.6231 0.2024 259.8);
+
+      // The same three colours at the alpha the sRGB versions used.
+      --glow-primary: oklch(0.7971 0.1783 211.5 / 24%);
+      --glow-secondary: oklch(0.6231 0.2024 259.8 / 22%);
+      --glow-cursor: oklch(0.8651 0.1244 207.1 / 12%);
+    }
+  }
+}
+
 html {
   height: 100%;
   @include mat.theme(
@@ -76,5 +108,27 @@ body::after {
   z-index: -1;
   background: radial-gradient(500px circle at var(--cursor-x) var(--cursor-y), var(--glow-cursor), transparent 70%);
   transition: background 0.15s ease-out;
+}
+
+// Page transition. The routed component is a sibling the router inserts next to <router-outlet>,
+// so it carries no component style attribute and has to be styled from here rather than app.scss.
+// A plain CSS animation on insert, deliberately not the router's view transitions: those snapshot
+// the whole document for the duration, which would freeze the navbar pill exactly while it slides.
+// Same curve and clock as the navbar pill, so the page and the indicator settle together.
+.app-main > :not(router-outlet) {
+  animation: page-enter 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) backwards;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-main > :not(router-outlet) {
+    animation: none;
+  }
 }
 /* You can add global styles to this file, and also import other style files */

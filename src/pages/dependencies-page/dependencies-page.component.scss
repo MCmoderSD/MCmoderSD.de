@@ -11,9 +11,22 @@
   gap: 2.5rem;
 }
 
+// Flex items refuse to shrink past their min-content by default, which the code snippets below
+// make very wide. Without this they push the whole page wider than the screen.
+.dependencies-page > * {
+  min-width: 0;
+}
+
 .dependencies-page__intro {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  // Not two equal columns: the prose reflows to any width, the snippet does not - it has one
+  // unbreakable 68-character URL. Splitting evenly left it ~96px short and gave it a scrollbar.
+  // max-content lets the snippet ask for exactly the width its longest line needs, so this stays
+  // correct on a machine whose monospace font is wider than the one measured here, instead of
+  // being tuned to a pixel count. The prose takes whatever is left, down to a 15rem floor.
+  // Both capped with minmax(0, …): a bare max-content track cannot shrink below its content and
+  // would push the whole page wider than the screen rather than scrolling inside the snippet.
+  grid-template-columns: minmax(15rem, 1fr) minmax(0, max-content);
   gap: 2rem;
   align-items: start;
 }
@@ -28,6 +41,8 @@
 
 .dependencies-page__text p {
   margin: 0;
+  // Only bites once the intro stacks and the text would otherwise run the full page width.
+  max-width: 40rem;
   color: var(--color-text-muted);
   font-size: 0.9375rem;
   line-height: 1.6;
@@ -35,16 +50,21 @@
 
 .dependencies-page__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.25rem;
 }
 
-@media (max-width: 720px) {
+// The two columns above only add up while the page is at its full 60rem measure. Once the viewport
+// starts eating into that, the snippet column shrinks below its content and the scrollbar is back,
+// so the intro stacks well before the cards do - full width is far more than the snippet needs.
+@media (max-width: 65rem) {
   .dependencies-page__intro {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
+}
 
+@media (max-width: 720px) {
   .dependencies-page__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
