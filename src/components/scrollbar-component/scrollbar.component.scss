@@ -1,0 +1,62 @@
+// Floats over the content at the right edge. Because it is an overlay rather than a gutter, the
+// page background runs unbroken underneath it - that is the whole point of replacing the native bar.
+:host {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 0.75rem;
+  z-index: 40;
+
+  // The strip itself is never a target; only the thumb takes the pointer back. Otherwise this would
+  // swallow clicks on anything sitting under the right edge of the page.
+  pointer-events: none;
+
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+// Revealed by the same right-edge signal that reveals the theme switch, set on <html> in app.ts.
+// :host-context and not a descendant selector: the class is on <html>, which view encapsulation
+// would demand a content attribute from.
+//
+// The drag case is not redundant with it. Dragging the thumb regularly takes the pointer outside
+// the reveal zone, and a scrollbar that fades out mid-drag is unusable.
+:host-context(.scrollbar-visible),
+:host(.scrollbar--dragging) {
+  opacity: 1;
+}
+
+.scrollbar__thumb {
+  position: absolute;
+  top: 0;
+  right: 0.125rem;
+  width: 0.375rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-text-muted) 45%, transparent);
+  pointer-events: auto;
+  // Without this the browser claims vertical drags for its own scrolling gesture before the
+  // pointermove handler ever sees them.
+  touch-action: none;
+  transition: background-color 0.2s ease;
+}
+
+.scrollbar__thumb:hover,
+:host(.scrollbar--dragging) .scrollbar__thumb {
+  background: color-mix(in srgb, var(--color-primary) 55%, transparent);
+}
+
+// Touch scrolls by dragging the content itself and has no pointer that could reach the edge to
+// reveal this, so it would be dead weight floating over the page.
+@media (pointer: coarse), (hover: none) {
+  :host {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :host,
+  .scrollbar__thumb {
+    transition: none;
+  }
+}

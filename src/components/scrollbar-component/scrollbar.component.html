@@ -1,0 +1,14 @@
+<!--
+  aria-hidden because this duplicates scrolling the page, which every assistive technology and the
+  keyboard already do natively. Exposing it as a control would add a second, worse way to do the
+  same thing rather than an affordance anyone gains from.
+-->
+@if (scrollable()) {
+  <div
+    class="scrollbar__thumb"
+    aria-hidden="true"
+    [style.height.px]="thumbHeight()"
+    [style.transform]="'translateY(' + thumbOffset() + 'px)'"
+    (pointerdown)="onThumbPointerDown($event)"
+  ></div>
+}

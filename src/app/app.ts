@@ -7,6 +7,22 @@ import { filter } from 'rxjs';
 /** Height of the fixed navbar, so fragment jumps land below it. Matches app.scss padding-top. */
 const SCROLL_OFFSET = 104;
 
+/**
+ * How close to the right edge the pointer has to be before the scrollbar reveals itself. Wider
+ * than the scrollbar's own hit area (see styles.scss) so it can be found without pixel-perfect
+ * aim, narrow enough that it still reads as "went all the way to the edge" rather than "hovered
+ * the page".
+ */
+const SCROLLBAR_REVEAL_ZONE = 48;
+
+/**
+ * The same idea for the colour scheme switch, but a wider band: the control sits about 54px in
+ * from the right edge, so a 48px zone would stop matching exactly as the pointer arrives on it and
+ * the button would fade out from under the cursor. This has to comfortably contain the control
+ * plus the approach to it.
+ */
+const TOGGLE_REVEAL_ZONE = 140;
+
 /** The site answers on mcmodersd.de and www.mcmodersd.de, so pick one for search engines. */
 const CANONICAL_ORIGIN = 'https://mcmodersd.de';
 
@@ -17,6 +33,10 @@ const CANONICAL_ORIGIN = 'https://mcmodersd.de';
   styleUrl: './app.scss',
   host: {
     '(document:mousemove)': 'onMouseMove($event)',
+    // Otherwise the last pointer position (possibly inside the reveal zone) lingers forever once
+    // the mouse leaves the viewport - e.g. onto the OS taskbar - since no further mousemove fires
+    // to correct it.
+    '(document:mouseleave)': 'onMouseLeave()',
   },
 })
 export class App {
@@ -57,10 +77,25 @@ export class App {
       const pointer = this.pointer;
       if (!pointer) return;
 
-      const root = this.document.documentElement.style;
+      const html = this.document.documentElement;
+      const root = html.style;
       root.setProperty('--cursor-x', `${pointer.x}px`);
       root.setProperty('--cursor-y', `${pointer.y}px`);
+
+      // innerWidth rather than the html element's width: the scrollbar itself sits in that gap,
+      // so measuring against the element it lives on would shrink the reveal zone by its own width.
+      const view = this.document.defaultView;
+      if (view === null) return;
+
+      const fromRight = view.innerWidth - pointer.x;
+      html.classList.toggle('scrollbar-visible', fromRight <= SCROLLBAR_REVEAL_ZONE);
+      html.classList.toggle('toggle-visible', fromRight <= TOGGLE_REVEAL_ZONE);
     });
+  }
+
+  protected onMouseLeave(): void {
+    this.pointer = null;
+    this.document.documentElement.classList.remove('scrollbar-visible', 'toggle-visible');
   }
 
   private setCanonical(url: string): void {
