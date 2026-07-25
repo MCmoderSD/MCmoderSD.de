@@ -5,10 +5,8 @@ export interface EducationData {
   institution: string;
   qualification: string;
   from: string;
-  /** Omit for an ongoing education, which renders as "Present". */
   to?: string;
   location?: string;
-  /** Final grade on the German scale, e.g. "1.7". */
   grade?: string;
   description?: string;
   tools?: ToolIcon[];

@@ -11,23 +11,63 @@ import { constants } from 'node:zlib';
 
 const browserDistFolder = join(import.meta.dirname, '../browser');
 
+/**
+ * Hosts this app answers on. Ports are ignored, so no per-port entries are needed.
+ * 127.0.0.1 is required for the container's own Docker HEALTHCHECK.
+ */
+const ALLOWED_HOSTS = [
+  'localhost',
+  '127.0.0.1',
+  'dedi.mcmodersd.de',
+  'mcmodersd.de',
+  'www.mcmodersd.de',
+  'home.mcmodersd.de',
+  'dev.mcmodersd.de',
+];
+
 const app = express();
 const angularApp = new AngularNodeAppEngine({
   // Behind the HAProxy reverse proxy on mcmodersd.de / www.mcmodersd.de.
   trustProxyHeaders: ['x-forwarded-for', 'x-forwarded-proto', 'x-forwarded-host'],
   // Explicit allowlist so the app is only reachable via these hosts, regardless of any
-  // "NG_ALLOWED_HOSTS" set (or missing) on the deployment. Ports are ignored by Angular's
-  // host check, so no per-port entries are needed. 127.0.0.1 is required for the container's
-  // own Docker HEALTHCHECK.
-  allowedHosts: [
-    'localhost',
-    '127.0.0.1',
-    'dedi.mcmodersd.de',
-    'mcmodersd.de',
-    'www.mcmodersd.de',
-    'home.mcmodersd.de',
-    'dev.mcmodersd.de',
-  ],
+  // "NG_ALLOWED_HOSTS" set (or missing) on the deployment. Kept as a second line of defence
+  // behind the middleware below, which normally rejects a bad host long before this runs.
+  allowedHosts: ALLOWED_HOSTS,
+});
+
+/**
+ * Splits a host header into bare host names, dropping ports. Handles the comma-separated form
+ * a chain of proxies produces, and the bracketed "[::1]:4000" form of an IPv6 literal.
+ */
+function hostnames(value: string | string[] | undefined): string[] {
+  return (Array.isArray(value) ? value : value ? [value] : [])
+    .flatMap((entry) => entry.split(','))
+    .map((entry) => {
+      const host = entry.trim().toLowerCase();
+      return host.match(/^\[(.+)]/)?.[1] ?? host.replace(/:\d+$/, '');
+    });
+}
+
+/**
+ * The container publishes 4000 on every interface, so anything scanning the public IP reaches
+ * this app directly as "142.132.219.168:4000". Angular's own host check does reject those, but
+ * console.errors a paragraph per request and drowns "docker logs" in it. Reject them here first,
+ * quietly.
+ */
+app.use((req, res, next) => {
+  // Every host name on the request has to be known, not just one of them: Angular validates the
+  // Host header, and an x-forwarded-host that disagrees with it means the proxy in front is not
+  // ours. Being stricter than Angular here is the point - anything it would reject is already
+  // gone by now, so it never gets to log.
+  const hosts = [...hostnames(req.headers.host), ...hostnames(req.headers['x-forwarded-host'])];
+
+  if (req.headers.host && hosts.every((host) => ALLOWED_HOSTS.includes(host))) {
+    next();
+    return;
+  }
+
+  // 421 rather than 400: the request is well formed, this server just does not serve that host.
+  res.status(421).end();
 });
 
 /**
