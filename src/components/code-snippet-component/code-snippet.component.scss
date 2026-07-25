@@ -7,7 +7,9 @@
   display: block;
   width: 100%;
   margin: 0;
-  padding: 1.75rem 3.5rem 1rem 1rem;
+  // The right inset only has to clear the copy button (1.75rem wide, 0.6rem from the edge); any
+  // more is width taken away from every line of code for the sake of one corner.
+  padding: 1.75rem 2.75rem 1rem 1rem;
   border-radius: 0.6rem;
   background: color-mix(in srgb, var(--color-bg) 70%, black);
   border: 1px solid var(--color-border);

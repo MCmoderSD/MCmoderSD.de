@@ -3,53 +3,24 @@
 
   <span class="navbar__divider" aria-hidden="true"></span>
 
-  <div class="navbar__links">
-    <a
-      class="navbar__link"
-      routerLink="/"
-      routerLinkActive="navbar__link--active"
-      [routerLinkActiveOptions]="{ exact: true }"
-      #home="routerLinkActive"
-      [attr.aria-current]="home.isActive ? 'page' : null"
-    >
-      Home
-    </a>
-<!--    <a
-      class="navbar__link"
-      routerLink="/about"
-      routerLinkActive="navbar__link--active"
-      #about="routerLinkActive"
-      [attr.aria-current]="about.isActive ? 'page' : null"
-    >
-      About
-    </a>
--->
-    <a
-      class="navbar__link"
-      routerLink="/projects"
-      routerLinkActive="navbar__link--active"
-      #projects="routerLinkActive"
-      [attr.aria-current]="projects.isActive ? 'page' : null"
-    >
-      Projects
-    </a>
-    <a
-      class="navbar__link"
-      routerLink="/dependencies"
-      routerLinkActive="navbar__link--active"
-      #dependencies="routerLinkActive"
-      [attr.aria-current]="dependencies.isActive ? 'page' : null"
-    >
-      Dependencies
-    </a>
-    <a
-      class="navbar__link"
-      routerLink="/services"
-      routerLinkActive="navbar__link--active"
-      #services="routerLinkActive"
-      [attr.aria-current]="services.isActive ? 'page' : null"
-    >
-      Services
-    </a>
+  <div class="navbar__links" #list>
+    @if (pill(); as bounds) {
+      <span
+        class="navbar__pill"
+        [style.transform]="'translateX(' + bounds.left + 'px)'"
+        [style.width.px]="bounds.width"
+        aria-hidden="true"
+      ></span>
+    }
+
+    @for (link of links; track link.path; let index = $index) {
+      <a
+        #linkElement
+        class="navbar__link"
+        [class.navbar__link--active]="index === activeIndex()"
+        [routerLink]="link.path"
+        [attr.aria-current]="index === activeIndex() ? 'page' : null"
+      >{{ link.label }}</a>
+    }
   </div>
 </nav>
