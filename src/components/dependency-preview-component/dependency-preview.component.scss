@@ -76,11 +76,11 @@
   padding: 1rem;
   border-radius: 0.6rem;
   border: 1px solid var(--color-border);
-  background: color-mix(in srgb, var(--color-bg) 70%, black);
+  background: var(--color-inset);
   color: var(--color-text-muted);
   font-size: 0.8125rem;
 }
 
 .dependency-preview__status--error {
-  color: #f87171;
+  color: var(--color-error);
 }

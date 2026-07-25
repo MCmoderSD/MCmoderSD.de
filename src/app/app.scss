@@ -8,3 +8,14 @@
 .app-main {
   flex: 1 0 auto;
 }
+
+// Temporary placement for the new color scheme toggle - remove or relocate once it has a
+// permanent home. No pill of its own: the button already carries its own background/border, so
+// wrapping it in another decorated shape just doubled it up as a circle around a rectangle.
+.theme-toggle-overlay {
+  position: fixed;
+  top: 1.25rem;
+  right: 1.25rem;
+  z-index: 30;
+  display: flex;
+}

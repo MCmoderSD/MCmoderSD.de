@@ -6,6 +6,11 @@
 .tool-icon {
   --tool-icon-color: #9ca3af;
 
+  // The preset writes --tool-icon-color inline, and no stylesheet rule can outrank an inline
+  // declaration, so a theme cannot retint it in place. Everything below therefore paints with
+  // --tool-icon-ink instead: the same colour, after the active theme has had a say.
+  --tool-icon-ink: var(--tool-icon-color);
+
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -20,9 +25,9 @@
   cursor: default;
   overflow: hidden;
 
-  color: var(--tool-icon-color);
-  background: color-mix(in srgb, var(--tool-icon-color) 12%, transparent);
-  border: 1px solid color-mix(in srgb, var(--tool-icon-color) 32%, transparent);
+  color: var(--tool-icon-ink);
+  background: color-mix(in srgb, var(--tool-icon-ink) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--tool-icon-ink) 32%, transparent);
 
   transition:
     background-color 0.2s ease,
@@ -39,7 +44,7 @@
     background: linear-gradient(
       115deg,
       transparent,
-      color-mix(in srgb, var(--tool-icon-color) 70%, white) 50%,
+      color-mix(in srgb, var(--tool-icon-ink) 70%, white) 50%,
       transparent
     );
     opacity: 0;
@@ -48,11 +53,11 @@
   }
 
   &:hover {
-    background: color-mix(in srgb, var(--tool-icon-color) 26%, transparent);
-    border-color: color-mix(in srgb, var(--tool-icon-color) 60%, transparent);
+    background: color-mix(in srgb, var(--tool-icon-ink) 26%, transparent);
+    border-color: color-mix(in srgb, var(--tool-icon-ink) 60%, transparent);
     box-shadow:
-      0 4px 14px -2px color-mix(in srgb, var(--tool-icon-color) 35%, transparent),
-      0 0 0 3px color-mix(in srgb, var(--tool-icon-color) 16%, transparent);
+      0 4px 14px -2px color-mix(in srgb, var(--tool-icon-ink) 35%, transparent),
+      0 0 0 3px color-mix(in srgb, var(--tool-icon-ink) 16%, transparent);
     transform: translateY(-2px) scale(1.06);
 
     &::after {
@@ -63,10 +68,20 @@
   }
 }
 
+// One rule covers every preset because relative colour syntax reads the origin's own hue and
+// chroma back out and lowers nothing but its lightness - a per-theme colour list for hundreds of
+// brands would rot the moment one is added. Dark mode's ceiling is 1, so this is an identity there.
+// Without support the ink stays the raw brand colour, i.e. exactly the pre-light-mode behaviour.
+@supports (color: oklch(from white l c h)) {
+  .tool-icon {
+    --tool-icon-ink: oklch(from var(--tool-icon-color) min(l, var(--brand-lightness-cap)) c h);
+  }
+}
+
 .tool-icon__icon {
   display: inline-flex;
   font-size: 1.15em;
-  color: var(--tool-icon-color);
+  color: var(--tool-icon-ink);
 }
 
 .tool-icon__dot {
@@ -74,8 +89,8 @@
   height: 0.55em;
   border-radius: 50%;
   flex: none;
-  background: var(--tool-icon-color);
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--tool-icon-color) 25%, transparent);
+  background: var(--tool-icon-ink);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--tool-icon-ink) 25%, transparent);
 }
 
 .tool-icon__name {

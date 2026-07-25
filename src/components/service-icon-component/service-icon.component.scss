@@ -6,10 +6,20 @@
 .service-icon {
   --service-icon-color: #9ca3af;
 
+  // Same split as the tool chips: the preset sets the raw colour inline, out of reach of any
+  // stylesheet, so the fill reads the themed derivative instead. See tool-icon.component.scss.
+  --service-icon-ink: var(--service-icon-color);
+
   width: 2.75rem;
   height: 2.75rem;
-  fill: var(--service-icon-color);
+  fill: var(--service-icon-ink);
   flex: none;
+}
+
+@supports (color: oklch(from white l c h)) {
+  .service-icon {
+    --service-icon-ink: oklch(from var(--service-icon-color) min(l, var(--brand-lightness-cap)) c h);
+  }
 }
 
 .service-icon--sm {

@@ -9,6 +9,23 @@
       name="description"
       content="MCmoderSD.de – Portfolio and projects of MCmoderSD, showcasing software development work, tools, and open-source contributions."
     />
+    <!--
+      Runs before the first paint, which is the whole point of it being inline and in <head>.
+      The prerendered HTML is always the dark tier, so a visitor who chose light would otherwise
+      watch the dark palette flash by until Angular hydrates and the switch reapplies it.
+      Key and value are shared with color-scheme-switch.component.ts.
+    -->
+    <script>
+      try {
+        if (localStorage.getItem('color-scheme') === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      } catch (e) {
+        // Storage can be blocked outright (privacy modes, third-party contexts). Dark is the
+        // default anyway, so there is nothing to recover from here.
+      }
+    </script>
+
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <!--
       No preconnect for fonts.googleapis.com: the build inlines the Google Fonts CSS, so that
