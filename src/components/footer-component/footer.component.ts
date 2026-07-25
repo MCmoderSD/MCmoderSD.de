@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, computed, Signal} from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class FooterComponent {
-  protected readonly year = new Date().getFullYear();
+  protected readonly year: Signal<number> = computed((): number => new Date().getFullYear());
 }

@@ -16,7 +16,7 @@
 
   <div class="dependency-preview__snippet-area">
     @if (snippet(); as code) {
-      <app-code-snippet [code]="code" language="pom.xml" />
+      <app-code-snippet [code]="code.trim()" language="pom.xml" />
     } @else if (error()) {
       <p class="dependency-preview__status dependency-preview__status--error">Failed to load version.</p>
     } @else {

@@ -1,14 +1,12 @@
-import { Component, computed, input } from '@angular/core';
+import {Component, computed, input, InputSignal, Signal } from '@angular/core';
 import { ToolIcon, ToolIconSize } from '../../lib/tool-icon-types';
 
 export interface WorkExperienceData {
   company: string;
   position: string;
   from: string;
-  /** Omit for a current position, which renders as "Present". */
   to?: string;
   location?: string;
-  /** Final grade on the German scale, e.g. "1.7". */
   grade?: string;
   description?: string;
   tools?: ToolIcon[];
@@ -22,10 +20,10 @@ export interface WorkExperienceData {
 })
 export class WorkExperienceComponent {
 
-  readonly data = input.required<WorkExperienceData>();
+  readonly data: InputSignal<WorkExperienceData> = input.required<WorkExperienceData>();
 
-  protected readonly period = computed(() => `${this.data().from} — ${this.data().to ?? 'Present'}`);
-  protected readonly tools = computed(() => this.data().tools ?? []);
+  protected readonly period: Signal<string> = computed((): string => `${this.data().from} — ${this.data().to ?? 'Present'}`);
+  protected readonly tools: Signal<ToolIcon[]> = computed((): ToolIcon[] => this.data().tools ?? []);
 
   protected readonly size = ToolIconSize;
 }

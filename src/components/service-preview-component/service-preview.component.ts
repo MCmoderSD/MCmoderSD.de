@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import {Component, input, InputSignal} from '@angular/core';
 import { ServiceIcon, ServiceIconSize } from '../../lib/service-icon-types';
 
 export interface ServicePreviewData {
@@ -16,7 +16,7 @@ export interface ServicePreviewData {
 })
 export class ServicePreviewComponent {
 
-  readonly data = input.required<ServicePreviewData>();
+  readonly data: InputSignal<ServicePreviewData> = input.required<ServicePreviewData>();
 
   protected readonly size = ServiceIconSize;
 }
