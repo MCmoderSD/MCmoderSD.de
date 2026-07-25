@@ -22,7 +22,21 @@
   right: 1.25rem;
   z-index: 30;
   display: flex;
-  animation: theme-toggle-idle 0.35s ease 4s forwards;
+  animation: theme-toggle-idle 0.35s ease 2s forwards;
+}
+
+// Mobile has no hover and fires no mousemove (see the touch media query further down, which turns
+// the fade off outright there), so top-right is only ever a fixed resting spot on those devices,
+// never a faded-out one. Bottom-right is the better resting spot for that case: closer to a thumb,
+// and clear of any address-bar UI the browser overlays at the top of a portrait viewport.
+//
+// "orientation: portrait" is included on its own, not just "pointer: coarse", so a narrow desktop
+// window gets the same placement - the reachability argument is about screen shape, not input type.
+@media (pointer: coarse), (orientation: portrait) {
+  .theme-toggle-overlay {
+    top: auto;
+    bottom: 1.25rem;
+  }
 }
 
 // Three ways back: the pointer entering the right-hand band (TOGGLE_REVEAL_ZONE in app.ts), the
