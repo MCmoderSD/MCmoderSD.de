@@ -4,8 +4,10 @@ import {
   isMainModule,
   writeResponseToNodeResponse,
 } from '@angular/ssr/node';
+import compression from 'compression';
 import express from 'express';
 import { join } from 'node:path';
+import { constants } from 'node:zlib';
 
 const browserDistFolder = join(import.meta.dirname, '../browser');
 
@@ -26,6 +28,32 @@ const angularApp = new AngularNodeAppEngine({
     'home.mcmodersd.de',
     'dev.mcmodersd.de',
   ],
+});
+
+/**
+ * Nothing in front of this app compresses, so the SSR HTML, the JS bundle and the CSS all went
+ * out uncompressed (Lighthouse: "usesCompression: false", ~448 KB of raw text per cold load).
+ */
+app.use(
+  compression({
+    // Default brotli quality is 4. The hashed bundles are immutable and cached for a year,
+    // and the HTML is prerendered, so a little more CPU per response is cheap here.
+    brotli: { params: { [constants.BROTLI_PARAM_QUALITY]: 6 } },
+  }),
+);
+
+/**
+ * Security headers. Kept to the ones that are safe to set blindly - a real CSP needs the
+ * Angular inline styles worked out first, so it is deliberately not set here.
+ */
+app.use((_req, res, next) => {
+  // Only meaningful over HTTPS, which HAProxy terminates in front of us.
+  res.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
+  res.set('X-Content-Type-Options', 'nosniff');
+  res.set('X-Frame-Options', 'DENY');
+  res.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  res.set('Cross-Origin-Opener-Policy', 'same-origin');
+  next();
 });
 
 /**
@@ -54,14 +82,24 @@ app.get('/api/latest-tag/:owner/:repo', async (req, res) => {
   }
 });
 
+/** Angular puts a content hash in the filename of everything it emits, e.g. main-4347P3KX.js. */
+const HASHED_ASSET = /-[A-Z0-9]{8}\.[a-z0-9]+$/;
+
 /**
  * Serve static files from /browser
  */
 app.use(
   express.static(browserDistFolder, {
-    maxAge: '1y',
     index: false,
     redirect: false,
+    setHeaders: (res, path) => {
+      // A year is only safe for hashed filenames. Files copied verbatim out of /public
+      // (favicon.ico, robots.txt, sitemap.xml) keep their name when their content changes.
+      res.set(
+        'Cache-Control',
+        HASHED_ASSET.test(path) ? 'public, max-age=31536000, immutable' : 'public, max-age=3600',
+      );
+    },
   }),
 );
 
