@@ -28,10 +28,10 @@ export class AboutPageComponent {
 
   constructor() {
     afterNextRender(() => {
-      const formatter = new Intl.DateTimeFormat('en-GB', {
-        hour: '2-digit',
+      const formatter = new Intl.DateTimeFormat('en-US', {
+        hour: 'numeric',
         minute: '2-digit',
-        hour12: false,
+        hour12: true,
         timeZone: TIME_ZONE,
       });
 
