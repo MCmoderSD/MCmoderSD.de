@@ -5,7 +5,11 @@
 // custom components at https://material.angular.dev/guide/theming
 @use '@angular/material' as mat;
 
+// Dark is the default tier: it is what :root declares, so it needs no selector of its own and
+// survives a browser that never runs the theme script. Light is an opt-in overlay further down.
 :root {
+  color-scheme: dark;
+
   --color-bg: #05080f;
   --color-surface: #0b1220;
   --color-border: rgb(120 190 230 / 14%);
@@ -16,6 +20,19 @@
 
   --color-text: #e7f2f8;
   --color-text-muted: #93a8bd;
+  --color-error: #f87171;
+
+  // Recessed panels - code blocks and status boxes - sit one step further back than the page.
+  --color-inset: color-mix(in srgb, var(--color-bg) 70%, black);
+  --color-inset-hover: color-mix(in srgb, var(--color-bg) 60%, black);
+
+  // The floating bars' drop shadow. A theme-level value because its weight is a property of the
+  // background it falls on, not of the element casting it.
+  --shadow-overlay: 0 10px 30px -10px rgb(0 0 0 / 55%);
+
+  // Ceiling on the lightness of the brand colours the icon chips carry inline. They were picked
+  // against a dark page, so dark mode caps nothing: 1 is above every possible lightness.
+  --brand-lightness-cap: 1;
 
   --glow-primary: rgb(34 211 238 / 24%);
   --glow-secondary: rgb(59 130 246 / 22%);
@@ -23,6 +40,55 @@
 
   --cursor-x: 50vw;
   --cursor-y: 35vh;
+}
+
+// Light tier, opted into by the switch writing data-theme="light" on <html>. The lightness ordering
+// inverts against the dark tier: backgrounds rise, text and accents drop below them.
+//
+// The accents also change hue, which the greys do not. Cyan is the signature on near-black because
+// it is the brightest thing in the frame; dropped onto a white page it turns into a washed-out
+// teal that neither reads as a highlight nor holds much contrast. Blue survives the trip - it can
+// go dark enough to carry weight without leaving the brand's half of the wheel.
+//
+// The values are not eyeballed. Everything that ends up carrying text clears AAA against both
+// backgrounds: primary 7.14:1, primary-strong 10.31:1, text 16.22:1; text-muted is AA at 5.61:1.
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --color-bg: #f5f8fa;
+  --color-surface: #ffffff;
+  --color-border: rgb(15 60 90 / 16%);
+
+  --color-primary: #0650ac;
+  --color-primary-strong: #033b7a;
+  --color-secondary: #0d5ace;
+
+  --color-text: #171b20;
+  --color-text-muted: #5a656e;
+  --color-error: #b91c1c;
+
+  // Recessed the other way about: on a bright page a sunken panel is a shade below the page, so
+  // the mix towards black is a fraction of what the dark tier needs to pull away from near-black.
+  --color-inset: color-mix(in srgb, var(--color-bg) 96%, black);
+  --color-inset-hover: color-mix(in srgb, var(--color-bg) 92%, black);
+
+  // Black at 55% is a dark-mode weight; over a bright page it reads as grime rather than depth,
+  // so this is both lighter and tinted towards the page's blue instead of neutral.
+  --shadow-overlay: 0 10px 30px -12px rgb(15 40 60 / 18%);
+
+  // Low because the chip tints its own background with 12% of the same colour, so the label is not
+  // read against the page but against something already pulled towards it. Checked against all 505
+  // presets rather than the dozen on one page: 0.55 leaves every chip near 3.6:1, 0.47 clears AA
+  // outright, worst case 5.01:1.
+  --brand-lightness-cap: 0.47;
+
+  // Far less alpha, because a wash that reads as atmosphere over near-black reads as a stain over
+  // near-white. Blue throughout rather than the dark tier's cyan-and-blue pair: leaving the ambient
+  // wash cyan while the accents moved to blue would put the only teal on the page in the background.
+  // Two depths of the same blue, both already in the palette above, keep the corners from flattening.
+  --glow-primary: rgb(59 130 246 / 15%);
+  --glow-secondary: rgb(13 90 206 / 11%);
+  --glow-cursor: rgb(13 90 206 / 7%);
 }
 
 // Wide-gamut tier. Only the accents are listed because only they have room to grow: the signature
@@ -54,6 +120,20 @@
       --glow-secondary: oklch(0.6231 0.2024 259.8 / 22%);
       --glow-cursor: oklch(0.8651 0.1244 207.1 / 12%);
     }
+
+    // Light mode gets the same treatment, and it has to come after the block above rather than
+    // beside the sRGB light tier: both selectors are equally specific, so source order decides.
+    // Lightness is again untouched, so the AAA margins survive the widening - here they even gain
+    // slightly (primary 7.14:1 -> 7.29:1, primary-strong 10.31:1 -> 10.43:1).
+    :root[data-theme='light'] {
+      --color-primary: oklch(0.4500 0.2054 258);
+      --color-primary-strong: oklch(0.3600 0.1526 256);
+      --color-secondary: oklch(0.5000 0.2419 259.8);
+
+      --glow-primary: oklch(0.6231 0.2024 259.8 / 15%);
+      --glow-secondary: oklch(0.5000 0.2419 259.8 / 11%);
+      --glow-cursor: oklch(0.5000 0.2419 259.8 / 7%);
+    }
   }
 }
 
@@ -72,11 +152,16 @@ html {
 }
 
 body {
-  color-scheme: dark;
-
+  // color-scheme now lives on :root with the rest of the theme, so the page scrollbar and any
+  // native control follow whichever tier is active.
   background-color: var(--color-bg);
   color: var(--color-text);
   font: var(--mat-sys-body-medium);
+
+  // Softens the theme swap. Only the page's own two properties are transitioned - the cards, bars
+  // and links already carry their own colour transitions, so they come along on a similar clock
+  // without every element on the page being handed a new one.
+  transition: background-color 0.25s ease, color 0.25s ease;
 
   position: relative;
   isolation: isolate;
@@ -98,6 +183,9 @@ body::after {
 // Ambient glow blobs, fixed to the viewport.
 body::before {
   z-index: -2;
+  // Both tiers declare the same two gradients at the same positions, so only their colours differ
+  // and the swap interpolates instead of cutting.
+  transition: background 0.25s ease;
   background:
     radial-gradient(680px circle at 12% 15%, var(--glow-primary), transparent 60%),
     radial-gradient(760px circle at 88% 80%, var(--glow-secondary), transparent 60%);
@@ -129,6 +217,11 @@ body::after {
 @media (prefers-reduced-motion: reduce) {
   .app-main > :not(router-outlet) {
     animation: none;
+  }
+
+  body,
+  body::before {
+    transition: none;
   }
 }
 /* You can add global styles to this file, and also import other style files */

@@ -12,6 +12,7 @@ import { ShortcutOverlayComponent } from "./shortcut-overlay-component/shortcut-
 import { FooterComponent } from "./footer-component/footer.component";
 import { EducationComponent } from "./education-component/education.component";
 import { WorkExperienceComponent } from "./work-experience-component/work-experience.component";
+import { ColorSchemeSwitchComponent } from "./color-scheme-switch-component/color-scheme-switch.component";
 
 
 const components: any[] = [
@@ -25,7 +26,8 @@ const components: any[] = [
   ShortcutOverlayComponent,
   FooterComponent,
   EducationComponent,
-  WorkExperienceComponent
+  WorkExperienceComponent,
+  ColorSchemeSwitchComponent
 ];
 
 @NgModule({

@@ -11,7 +11,7 @@
   // more is width taken away from every line of code for the sake of one corner.
   padding: 1.75rem 2.75rem 1rem 1rem;
   border-radius: 0.6rem;
-  background: color-mix(in srgb, var(--color-bg) 70%, black);
+  background: var(--color-inset);
   border: 1px solid var(--color-border);
   font: inherit;
   text-align: left;
@@ -23,7 +23,7 @@
 .code-snippet:hover,
 .code-snippet:focus-visible {
   border-color: color-mix(in srgb, var(--color-primary) 45%, transparent);
-  background: color-mix(in srgb, var(--color-bg) 60%, black);
+  background: var(--color-inset-hover);
 }
 
 .code-snippet pre {
