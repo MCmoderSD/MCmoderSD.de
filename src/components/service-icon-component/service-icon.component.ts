@@ -1,4 +1,4 @@
-import {Component, computed, input, type InputSignal, type Signal} from '@angular/core';
+import { Component, computed, input, type InputSignal, type Signal } from '@angular/core';
 import { type ServiceIcon, ServiceIconSize } from '../../lib/service-icon-types';
 import { SERVICE_ICON_PRESETS, type ServiceIconPreset } from './service-icon-presets';
 

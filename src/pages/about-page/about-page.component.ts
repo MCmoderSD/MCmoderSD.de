@@ -1,4 +1,4 @@
-import {afterNextRender, Component, DestroyRef, inject, signal, type WritableSignal} from '@angular/core';
+import { afterNextRender, Component, DestroyRef, inject, signal, type WritableSignal } from '@angular/core';
 import { ToolIcon } from '../../lib/tool-icon-types';
 import { type EducationData } from '../../components/education-component/education.component';
 import { type WorkExperienceData } from '../../components/work-experience-component/work-experience.component';

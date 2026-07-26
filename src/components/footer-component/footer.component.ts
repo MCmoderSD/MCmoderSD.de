@@ -1,4 +1,4 @@
-import {Component, computed, type Signal} from '@angular/core';
+import { Component, computed, type Signal } from '@angular/core';
 
 @Component({
   selector: 'app-footer',

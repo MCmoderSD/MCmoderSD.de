@@ -1,8 +1,13 @@
-import { afterNextRender, Component, computed, DestroyRef, inject, type Signal, signal, type WritableSignal,} from '@angular/core';
+import { afterNextRender, Component, computed, DestroyRef, inject, type Signal, signal, type WritableSignal } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
 const MIN_THUMB_HEIGHT: number = 32;
 const HIDDEN_QUERY: string = '(pointer: coarse), (hover: none)';
+
+interface DragOrigin {
+  pointerY: number;
+  scrollTop: number;
+}
 
 @Component({
   selector: 'app-scrollbar',
@@ -50,12 +55,12 @@ export class ScrollbarComponent {
     return ((this.viewportHeight() - this.thumbHeight()) * this.scrollTop()) / travel;
   });
 
-  private dragOrigin = { pointerY: 0, scrollTop: 0 };
+  private dragOrigin: DragOrigin = { pointerY: 0, scrollTop: 0 };
 
   constructor() {
-    afterNextRender(() => {
-      const view = this.document.defaultView;
-      const query = view === null ? null : view.matchMedia(HIDDEN_QUERY);
+    afterNextRender((): void => {
+      const view: Window | null = this.document.defaultView;
+      const query: MediaQueryList | null = view === null ? null : view.matchMedia(HIDDEN_QUERY);
 
       const sync: () => void = (): void => {
         this.hidden.set(query !== null && query.matches);
@@ -69,9 +74,7 @@ export class ScrollbarComponent {
         this.destroyRef.onDestroy((): void => query.removeEventListener('change', sync));
       }
 
-      // Route changes and image loads change the document height without a scroll or a resize, and
-      // a thumb sized against a stale height is worse than no thumb at all.
-      const observer = new ResizeObserver(() => this.measure());
+      const observer: ResizeObserver = new ResizeObserver((): void => this.measure());
       observer.observe(this.document.body);
       this.destroyRef.onDestroy((): void => observer.disconnect());
     });
@@ -87,22 +90,17 @@ export class ScrollbarComponent {
   }
 
   protected onThumbPointerDown(event: PointerEvent): void {
-    // Stops the drag from turning into a text selection of whatever is behind the bar.
     event.preventDefault();
 
     this.dragging.set(true);
     this.dragOrigin = { pointerY: event.clientY, scrollTop: this.scrollTop() };
 
-    // Capture keeps the moves coming even when the pointer slides off the thumb mid-drag, which is
-    // exactly what happens on a bar this narrow.
     (event.target as Element).setPointerCapture(event.pointerId);
   }
 
   protected onPointerMove(event: PointerEvent): void {
     if (!this.dragging()) return;
 
-    // The thumb travels the track, the page travels the overflow, so a pixel of pointer movement is
-    // worth the ratio between the two.
     const track: number = this.viewportHeight() - this.thumbHeight();
     if (track <= 0) return;
 

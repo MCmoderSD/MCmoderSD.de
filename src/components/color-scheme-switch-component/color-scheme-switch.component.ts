@@ -1,6 +1,5 @@
 import { afterNextRender, Component, computed, inject, type Signal, signal, type WritableSignal } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
-
 import { readStored, writeStored } from '../../helper/storage-helper';
 
 export enum ColorScheme {

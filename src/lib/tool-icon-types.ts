@@ -1,5 +1,3 @@
-// noinspection SpellCheckingInspection
-
 export enum ToolIcon {
   aarch64 = 'aarch64',
   adonisjs = 'adonisjs',
