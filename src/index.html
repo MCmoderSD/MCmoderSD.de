@@ -11,7 +11,7 @@
     />
     <!--
       Runs before the first paint, which is the whole point of it being inline and in <head>.
-      The prerendered HTML is always the dark tier, so a visitor who chose light would otherwise
+      The pre rendered HTML is always the dark tier, so a visitor who chose light would otherwise
       watch the dark palette flash by until Angular hydrates and the switch reapplies it.
       Key and value are shared with color-scheme-switch.component.ts.
     -->
@@ -26,6 +26,7 @@
       }
     </script>
 
+    <!--suppress HtmlUnknownTarget -->
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <!--
       No preconnect for fonts.googleapis.com: the build inlines the Google Fonts CSS, so that

@@ -1,7 +1,11 @@
 :host {
   display: block;
   flex-shrink: 0;
-  margin-top: 4rem;
+  // Most of the gap above the footer lives on .app-body's own padding-bottom instead (see
+  // app.scss) - that keeps it inside the box the mobile toggle's sticky positioning is bounded by,
+  // so the toggle can ride up close to this border rather than stopping a full margin short of it.
+  // This remainder is what keeps it from stopping flush against the line.
+  margin-top: 1rem;
 }
 
 .footer {

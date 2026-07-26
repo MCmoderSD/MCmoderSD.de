@@ -18,13 +18,6 @@ services (Jellyfin, Nexus, a speed test, ...) to anyone who wants to use them.
   OKLCh colors, wide-gamut/P3 support, and a dark/light color scheme switch)
 - **TypeScript**, **SCSS**, and **Vitest** for unit tests
 
-## Goal
-
-Keep a fast, accessible, good-looking personal site that stays cheap to run and easy to extend: new
-projects, dependencies, or services are just new entries in a preset list, not new pages to build.
-Accessibility (WCAG AA, full AXE compliance) and a polished dark/light experience are treated as
-requirements, not afterthoughts.
-
 ## Deployment
 
 Every push to the `angular` branch triggers the
@@ -49,7 +42,7 @@ docker compose up -d
 ```
 
 The container restarts automatically, always pulls the latest tag, and exposes port `4000`, which
-sits behind a reverse proxy (HAProxy) terminating TLS for `mcmodersd.de` and `www.mcmodersd.de`.
+sits behind a reverse proxy terminating TLS for `mcmodersd.de` and `www.mcmodersd.de`.
 
 ## Development
 
@@ -57,7 +50,7 @@ sits behind a reverse proxy (HAProxy) terminating TLS for `mcmodersd.de` and `ww
 npm install
 npm start        # ng serve, http://localhost:4200
 npm test         # unit tests (Vitest)
-npm run build    # production build (SSR + prerendering) into dist/Webpage
+npm run build    # production build (SSR + pre-rendering) into dist/Webpage
 ```
 
 ## License

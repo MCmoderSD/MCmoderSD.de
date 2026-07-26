@@ -1,3 +1,17 @@
+// noinspection JSUnusedGlobalSymbols
+export enum ToolIconVariant {
+  Icon = 'icon',
+  Dot = 'dot',
+}
+
+// noinspection JSUnusedGlobalSymbols
+export enum ToolIconSize {
+  Small = 'sm',
+  Medium = 'md',
+  Large = 'lg',
+}
+
+// noinspection SpellCheckingInspection
 export enum ToolIcon {
   aarch64 = 'aarch64',
   adonisjs = 'adonisjs',
@@ -577,15 +591,4 @@ export enum ToolIcon {
   zig = 'zig',
   zsh = 'zsh',
   zustand = 'zustand',
-}
-
-export enum ToolIconVariant {
-  Icon = 'icon',
-  Dot = 'dot',
-}
-
-export enum ToolIconSize {
-  Small = 'sm',
-  Medium = 'md',
-  Large = 'lg',
 }

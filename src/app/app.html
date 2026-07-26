@@ -1,12 +1,16 @@
 <app-navbar/>
 
-<div class="theme-toggle-overlay">
-  <app-color-scheme-switch/>
-</div>
+<div class="app-body">
+  <main class="app-main">
+    <router-outlet></router-outlet>
+  </main>
 
-<main class="app-main">
-  <router-outlet></router-outlet>
-</main>
+  <div class="app-body__spacer"></div>
+
+  <div class="theme-toggle-overlay">
+    <app-color-scheme-switch/>
+  </div>
+</div>
 
 <app-footer/>
 
