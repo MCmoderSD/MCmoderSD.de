@@ -4,6 +4,7 @@
 }
 
 .project-preview {
+  position: relative;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -20,13 +21,41 @@
     transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.project-preview:hover {
+.project-preview:hover,
+.project-preview:has(.project-preview__trigger:focus-visible) {
   border-color: color-mix(in srgb, var(--color-primary) 45%, transparent);
   box-shadow: 0 12px 30px -12px color-mix(in srgb, var(--color-primary) 30%, transparent);
   transform: translateY(-3px);
 }
 
+// The card's own click target: an invisible button stretched over the whole card so the card
+// reads as clickable, while the GitHub icon-link stays a sibling rather than a descendant of it -
+// nesting a link inside an interactive control fails AXE's nested-interactive check and is
+// invalid HTML besides. z-index puts this above the plain-flow content but below the icon-link,
+// so the stretch doesn't swallow clicks meant for it.
+.project-preview__trigger {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  appearance: none;
+  cursor: pointer;
+}
+
+.project-preview__trigger:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
 .project-preview__header {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
