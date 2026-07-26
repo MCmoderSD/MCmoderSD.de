@@ -1,4 +1,4 @@
-import { afterNextRender, Component, computed, DestroyRef, ElementRef, inject, signal, viewChild, viewChildren } from '@angular/core';
+import {afterNextRender, Component, computed, DestroyRef, ElementRef, inject, type Signal, signal, viewChild, viewChildren, type WritableSignal} from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
@@ -24,9 +24,9 @@ interface LinkBounds {
 })
 export class NavbarComponent {
 
-  private readonly destroyRef = inject(DestroyRef);
-  private readonly list = viewChild.required<ElementRef<HTMLElement>>('list');
-  private readonly linkElements = viewChildren<ElementRef<HTMLAnchorElement>>('linkElement');
+  private readonly destroyRef: DestroyRef = inject(DestroyRef);
+  private readonly list: Signal<ElementRef<HTMLElement>> = viewChild.required<ElementRef<HTMLElement>>('list');
+  private readonly linkElements: Signal<readonly ElementRef<HTMLAnchorElement>[]> = viewChildren<ElementRef<HTMLAnchorElement>>('linkElement');
 
   protected readonly links: NavLink[] = [
     { path: '/', label: 'Home', exact: true },
@@ -37,7 +37,7 @@ export class NavbarComponent {
   ];
 
   /** -1 on pages that have no navbar entry, e.g. /imprint - the pill is hidden there. */
-  protected readonly activeIndex = signal(-1);
+  protected readonly activeIndex: WritableSignal<number> = signal(-1);
 
   /**
    * Empty until the first browser-side measurement; the server has no layout to measure. The pill
@@ -45,17 +45,17 @@ export class NavbarComponent {
    * bound - a freshly inserted element has no previous value to transition from, so it appears in
    * place instead of sliding in from the left.
    */
-  private readonly bounds = signal<LinkBounds[]>([]);
+  private readonly bounds: WritableSignal<LinkBounds[]> = signal<LinkBounds[]>([]);
 
-  protected readonly pill = computed(() => this.bounds()[this.activeIndex()] ?? null);
+  protected readonly pill: Signal<LinkBounds | null> = computed((): LinkBounds | null => this.bounds()[this.activeIndex()] ?? null);
 
   /** Guards the layout reads in measure(), which the server's DOM emulation cannot answer. */
-  private rendered = false;
+  private rendered: boolean = false;
 
   constructor() {
     // The active link is derived from the URL rather than read back from routerLinkActive's
     // class, so the pill's target never depends on when that directive updates the DOM.
-    const router = inject(Router);
+    const router: Router = inject(Router);
     this.setActive(router.url);
 
     router.events
@@ -63,7 +63,7 @@ export class NavbarComponent {
         filter((event) => event instanceof NavigationEnd),
         takeUntilDestroyed(),
       )
-      .subscribe((event) => {
+      .subscribe((event: NavigationEnd): void => {
         this.setActive(event.urlAfterRedirects);
         // Navigating does not move the links, so this is not what keeps the pill in sync - it is
         // a second, independent chance to pick up a layout change, since the link widths now
@@ -71,26 +71,26 @@ export class NavbarComponent {
         this.measure();
       });
 
-    afterNextRender(() => {
+    afterNextRender((): void => {
       this.rendered = true;
       this.measure();
 
       // Navigating never moves the links themselves, only the pill, so re-measuring is only
       // needed when layout actually changes: a window resize, or the webfont swapping in.
       // Deliberately not relied on for the first measurement above.
-      const observer = new ResizeObserver(() => this.measure());
+      const observer = new ResizeObserver((): void => this.measure());
       observer.observe(this.list().nativeElement);
-      this.destroyRef.onDestroy(() => observer.disconnect());
+      this.destroyRef.onDestroy((): void => observer.disconnect());
     });
   }
 
   private setActive(url: string): void {
     // Query strings and fragments do not select a different nav entry. Split on a non-empty
     // string always yields at least one element; the fallback only satisfies the type.
-    const path = url.split(/[?#]/)[0] ?? '';
+    const path: string = url.split(/[?#]/)[0] ?? '';
 
     this.activeIndex.set(
-      this.links.findIndex((link) => (link.exact ? path === link.path : path.startsWith(link.path))),
+      this.links.findIndex((link: NavLink): boolean => (link.exact ? path === link.path : path.startsWith(link.path))),
     );
   }
 

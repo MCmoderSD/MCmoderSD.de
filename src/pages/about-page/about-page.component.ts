@@ -1,4 +1,4 @@
-import { afterNextRender, Component, DestroyRef, inject, signal } from '@angular/core';
+import {afterNextRender, Component, DestroyRef, inject, signal, type WritableSignal} from '@angular/core';
 import { ToolIcon } from '../../lib/tool-icon-types';
 import { type EducationData } from '../../components/education-component/education.component';
 import { type WorkExperienceData } from '../../components/work-experience-component/work-experience.component';
@@ -22,12 +22,12 @@ const MAIL_ICON_PATH = 'M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0
 })
 export class AboutPageComponent {
 
-  private readonly destroyRef = inject(DestroyRef);
+  private readonly destroyRef: DestroyRef = inject(DestroyRef);
 
-  protected readonly localTime = signal<string | null>(null);
+  protected readonly localTime:WritableSignal<string | null> = signal<string | null>(null);
 
   constructor() {
-    afterNextRender(() => {
+    afterNextRender((): void => {
       const formatter = new Intl.DateTimeFormat('en-US', {
         hour: 'numeric',
         minute: '2-digit',

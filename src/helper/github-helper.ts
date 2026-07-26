@@ -15,7 +15,7 @@ export async function fetchLatestGithubTag(githubUrl: string): Promise<string> {
 }
 
 function parseGithubUrl(githubUrl: string): GitHubRepository {
-  const match = githubUrl.match(/github\.com\/([^/]+)\/([^/]+)\/?$/);
+  const match: RegExpMatchArray | null = githubUrl.match(/github\.com\/([^/]+)\/([^/]+)\/?$/);
 
   if (!match) {
     throw new Error(`Invalid GitHub repository URL: ${githubUrl}`);
