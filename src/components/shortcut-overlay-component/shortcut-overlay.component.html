@@ -5,8 +5,8 @@
       [href]="shortcut.link"
       target="_blank"
       rel="noopener"
-      [attr.aria-label]="'Open ' + shortcut.name + ' in a new tab'"
-      [attr.title]="shortcut.name"
+      aria-label="Open {{ shortcut.name }} in a new tab"
+      title="{{ shortcut.name }}"
     >
       <app-service-icon [icon]="shortcut.icon" [size]="size.Small" />
     </a>
