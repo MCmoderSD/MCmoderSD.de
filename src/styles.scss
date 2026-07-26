@@ -139,6 +139,7 @@
 
 html {
   height: 100%;
+  //noinspection SassScssUnresolvedMixin
   @include mat.theme(
     (
       color: (
@@ -156,6 +157,7 @@ html {
 // card on the page - surface tint, hairline border, blur and drop shadow - so the popped-open
 // detail view reads as part of this page rather than a bolted-on Material sheet. The two custom
 // properties are the exact ones .mat-mdc-dialog-surface itself reads for background and radius.
+//noinspection CssUnusedSymbol
 .project-dialog-panel .mat-mdc-dialog-surface {
   --mat-dialog-container-color: color-mix(in srgb, var(--color-surface) 92%, transparent);
   --mat-dialog-container-shape: 1.25rem;
@@ -254,7 +256,7 @@ body::after {
 }
 
 // The spotlight follows a cursor, and a touchscreen has none - the only thing that ever moves it
-// there is the emulated mouse event a tap synthesises, which parks it wherever you last touched.
+// there is the emulated mouse event a tap syntheses, which parks it wherever you last touched.
 // Removing it is not just tidiness: it is one fewer full-viewport gradient the phone has to keep
 // composited while scrolling. Same query as the one that hides the scrollbar, for the same reason.
 @media (pointer: coarse), (hover: none) {

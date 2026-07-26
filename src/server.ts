@@ -1,11 +1,8 @@
-import {
-  AngularNodeAppEngine,
-  createNodeRequestHandler,
-  isMainModule,
-  writeResponseToNodeResponse,
-} from '@angular/ssr/node';
+// noinspection JSUnusedGlobalSymbols
+
+import { AngularNodeAppEngine, createNodeRequestHandler, isMainModule, writeResponseToNodeResponse } from '@angular/ssr/node';
 import compression from 'compression';
-import express from 'express';
+import express, {type Express, type NextFunction} from 'express';
 import { join } from 'node:path';
 import { constants } from 'node:zlib';
 
@@ -13,16 +10,16 @@ const browserDistFolder = join(import.meta.dirname, '../browser');
 
 /**
  * Hosts this app answers on. Ports are ignored, so no per-port entries are needed.
- * 127.0.0.1 is required for the container's own Docker HEALTHCHECK.
+ * 127.0.0.1 is required for the container's own Docker HEALTH CHECK.
  */
 const ALLOWED_HOSTS = [
   'localhost',
   '127.0.0.1',
-  'dedi.mcmodersd.de',
   'mcmodersd.de',
   'www.mcmodersd.de',
-  'home.mcmodersd.de',
   'dev.mcmodersd.de',
+  'home.mcmodersd.de',
+  'dedi.mcmodersd.de',
 ];
 
 /**
@@ -41,12 +38,12 @@ const isProdServer = isMainModule(import.meta.url) || !!process.env['pm_id'];
  */
 const lanTestingEnabled = !isProdServer && process.argv.includes('--host');
 
-const app = express();
+const app: Express = express();
 const angularApp = new AngularNodeAppEngine({
   // Behind the HAProxy reverse proxy on mcmodersd.de / www.mcmodersd.de.
   trustProxyHeaders: ['x-forwarded-for', 'x-forwarded-proto', 'x-forwarded-host'],
   // Explicit allowlist so the app is only reachable via these hosts, regardless of any
-  // "NG_ALLOWED_HOSTS" set (or missing) on the deployment. Kept as a second line of defence
+  // "NG_ALLOWED_HOSTS" set (or missing) on the deployment. Kept as a second line of defense
   // behind the middleware below, which normally rejects a bad host long before this runs.
   allowedHosts: lanTestingEnabled ? ['*'] : ALLOWED_HOSTS,
 });
@@ -57,9 +54,9 @@ const angularApp = new AngularNodeAppEngine({
  */
 function hostnames(value: string | string[] | undefined): string[] {
   return (Array.isArray(value) ? value : value ? [value] : [])
-    .flatMap((entry) => entry.split(','))
-    .map((entry) => {
-      const host = entry.trim().toLowerCase();
+    .flatMap((entry: string): string[] => entry.split(','))
+    .map((entry: string): string => {
+      const host: string = entry.trim().toLowerCase();
       return host.match(/^\[(.+)]/)?.[1] ?? host.replace(/:\d+$/, '');
     });
 }
@@ -67,10 +64,10 @@ function hostnames(value: string | string[] | undefined): string[] {
 /**
  * The container publishes 4000 on every interface, so anything scanning the public IP reaches
  * this app directly as "142.132.219.168:4000". Angular's own host check does reject those, but
- * console.error a paragraph per request and drowns "docker logs" in it. Reject them here first,
+ * console. Error a paragraph per request and drowns "docker logs" in it. Reject them here first,
  * quietly.
  */
-app.use((req, res, next) => {
+app.use((req, res, next: NextFunction): void => {
   if (lanTestingEnabled) {
     next();
     return;
@@ -87,7 +84,7 @@ app.use((req, res, next) => {
     return;
   }
 
-  // 421 rather than 400: the request is well formed, this server just does not serve that host.
+  // 421 rather than 400: the request is well-formed, this server just does not serve that host.
   res.status(421).end();
 });
 
@@ -98,7 +95,7 @@ app.use((req, res, next) => {
 app.use(
   compression({
     // Default brotli quality is 4. The hashed bundles are immutable and cached for a year,
-    // and the HTML is prerendered, so a little more CPU per response is cheap here.
+    // and the HTML is pre rendered, so a little more CPU per response is cheap here.
     brotli: { params: { [constants.BROTLI_PARAM_QUALITY]: 6 } },
   }),
 );
@@ -107,7 +104,7 @@ app.use(
  * Security headers. Kept to the ones that are safe to set blindly - a real CSP needs the
  * Angular inline styles worked out first, so it is deliberately not set here.
  */
-app.use((_req, res, next) => {
+app.use((_req, res, next: NextFunction): void => {
   // Only meaningful over HTTPS, which HAProxy terminates in front of us.
   res.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains');
   res.set('X-Content-Type-Options', 'nosniff');
@@ -122,7 +119,7 @@ app.use((_req, res, next) => {
  * /releases/latest to /releases/tag/<version> instead of the REST API,
  * used as a fallback once the client hits the API's rate limit.
  */
-app.get('/api/latest-tag/:owner/:repo', async (req, res) => {
+app.get('/api/latest-tag/:owner/:repo', async (req, res): Promise<void> => {
   const { owner, repo } = req.params;
   if (!/^[\w.-]+$/.test(owner) || !/^[\w.-]+$/.test(repo)) {
     res.status(400).json({ error: 'Invalid owner or repo' });
@@ -130,8 +127,8 @@ app.get('/api/latest-tag/:owner/:repo', async (req, res) => {
   }
 
   try {
-    const response = await fetch(`https://github.com/${owner}/${repo}/releases/latest`, { redirect: 'follow' });
-    const tag = response.url.match(/\/releases\/tag\/([^/]+)$/)?.[1];
+    const response: Response = await fetch(`https://github.com/${owner}/${repo}/releases/latest`, { redirect: 'follow' });
+    const tag: string | undefined = response.url.match(/\/releases\/tag\/([^/]+)$/)?.[1];
     if (!tag) {
       res.status(502).json({ error: 'Could not determine latest tag' });
       return;
@@ -144,7 +141,7 @@ app.get('/api/latest-tag/:owner/:repo', async (req, res) => {
 });
 
 /** Angular puts a content hash in the filename of everything it emits, e.g. main-4347P3KX.js. */
-const HASHED_ASSET = /-[A-Z0-9]{8}\.[a-z0-9]+$/;
+const HASHED_ASSET: RegExp = /-[A-Z0-9]{8}\.[a-z0-9]+$/;
 
 /**
  * Serve static files from /browser
@@ -167,27 +164,23 @@ app.use(
 /**
  * Handle all other requests by rendering the Angular application.
  */
-app.use((req, res, next) => {
+app.use((req, res, next: NextFunction): void => {
   res.set('Cache-Control', 'no-cache');
   angularApp
     .handle(req)
-    .then((response) =>
+    .then((response: Response | null): void | Promise<void> =>
       response ? writeResponseToNodeResponse(response, res) : next(),
-    )
-    .catch(next);
+    ).catch(next);
 });
 
 /**
- * Start the server if this module is the main entry point, or it is ran via PM2.
+ * Start the server if this module is the main entry point, or it is run via PM2.
  * The server listens on the port defined by the `PORT` environment variable, or defaults to 4000.
  */
 if (isProdServer) {
-  const port = process.env['PORT'] || 4000;
-  app.listen(port, (error) => {
-    if (error) {
-      throw error;
-    }
-
+  const port: string | 4000 = process.env['PORT'] || 4000;
+  app.listen(port, (error: Error | undefined): void => {
+    if (error) throw error;
     console.log(`Node Express server listening on http://localhost:${port}`);
   });
 }
@@ -195,4 +188,4 @@ if (isProdServer) {
 /**
  * Request handler used by the Angular CLI (for dev-server and during build) or Firebase Cloud Functions.
  */
-export const reqHandler = createNodeRequestHandler(app);
+export const reqHandler: Express = createNodeRequestHandler(app);

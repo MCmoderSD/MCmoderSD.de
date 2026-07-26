@@ -5,8 +5,25 @@
   padding-top: 5.5rem;
 }
 
+.app-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+}
+
 .app-main {
   flex: 1 0 auto;
+}
+
+// A zero-height, bottom-anchored sticky element (the toggle, below) always settles back to its
+// own static flow position once scrolled far enough - never to its container's edge, regardless
+// of what a trailing sibling's height is. So this has to sit BEFORE the toggle, not after it: it
+// is what moves the toggle's static position down near the footer, which is what "riding up" is
+// measured from. See footer.component.scss for the small remainder of the gap, kept as the
+// footer's own margin so the toggle stops just short of the border rather than flush against it.
+.app-body__spacer {
+  flex-shrink: 0;
+  height: 3rem;
 }
 
 // Temporary placement for the new color scheme toggle - remove or relocate once it has a
@@ -32,10 +49,27 @@
 //
 // "orientation: portrait" is included on its own, not just "pointer: coarse", so a narrow desktop
 // window gets the same placement - the reachability argument is about screen shape, not input type.
+//
+// Sticky rather than fixed here: fixed stays pinned to the viewport bottom even once the footer
+// scrolls into view, sitting on top of it. Sticky instead holds the toggle at bottom: 1.25rem only
+// until scrolling would carry it past its own static position in the flow - from then on it rides
+// up with the page like a normal element. .app-body__spacer above is what puts that static
+// position close to the footer, so this stops just above it instead of overlapping. height: 0
+// keeps the toggle from adding to .app-body's own height, since the spacer already accounts for
+// its share of the gap; the content still renders at its natural size since nothing here clips
+// overflow. align-items and justify-content replace top/right for positioning the button within
+// that zero-height box, since insets on a sticky element only shift it within its normal flow
+// position, and a flex item this wide already spans the full row.
 @media (pointer: coarse), (orientation: portrait) {
   .theme-toggle-overlay {
+    position: sticky;
     top: auto;
+    right: auto;
     bottom: 1.25rem;
+    height: 0;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-right: 1.25rem;
   }
 }
 
