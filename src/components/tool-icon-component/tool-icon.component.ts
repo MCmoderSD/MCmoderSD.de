@@ -1,6 +1,6 @@
-import {Component, computed, input, InputSignal, Signal} from '@angular/core';
-import { ToolIcon, ToolIconSize, ToolIconVariant } from '../../lib/tool-icon-types';
-import {TOOL_ICON_PRESETS, ToolIconPreset} from './tool-icon-presets';
+import {Component, computed, input, type InputSignal, type Signal} from '@angular/core';
+import { type ToolIcon, ToolIconSize, ToolIconVariant } from '../../lib/tool-icon-types';
+import {TOOL_ICON_PRESETS, type ToolIconPreset} from './tool-icon-presets';
 
 @Component({
   selector: 'app-tool-icon',

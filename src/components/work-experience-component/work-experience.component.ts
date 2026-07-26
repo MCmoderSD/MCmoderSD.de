@@ -1,5 +1,5 @@
-import {Component, computed, input, InputSignal, Signal } from '@angular/core';
-import { ToolIcon, ToolIconSize } from '../../lib/tool-icon-types';
+import {Component, computed, input, type InputSignal, type Signal } from '@angular/core';
+import { type ToolIcon, ToolIconSize } from '../../lib/tool-icon-types';
 
 export interface WorkExperienceData {
   company: string;

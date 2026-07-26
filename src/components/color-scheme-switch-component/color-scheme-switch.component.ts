@@ -1,4 +1,4 @@
-import { afterNextRender, Component, computed, inject, Signal, signal, WritableSignal } from '@angular/core';
+import { afterNextRender, Component, computed, inject, type Signal, signal, type WritableSignal } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
 import { readStored, writeStored } from '../../helper/storage-helper';
@@ -19,10 +19,10 @@ export class ColorSchemeSwitchComponent {
   private readonly document: Document = inject(DOCUMENT);
 
   protected readonly scheme: WritableSignal<ColorScheme> = signal<ColorScheme>(ColorScheme.Dark);
-  protected readonly isLight: Signal<boolean> = computed(() => this.scheme() === ColorScheme.Light);
+  protected readonly isLight: Signal<boolean> = computed((): boolean => this.scheme() === ColorScheme.Light);
 
   constructor() {
-    afterNextRender(() => {
+    afterNextRender((): void => {
       if (readStored('color-scheme') === ColorScheme.Light) {
         this.apply(ColorScheme.Light, false);
       }

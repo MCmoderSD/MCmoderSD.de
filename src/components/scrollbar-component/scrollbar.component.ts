@@ -4,9 +4,9 @@ import {
   computed,
   DestroyRef,
   inject,
-  Signal,
+  type Signal,
   signal,
-  WritableSignal,
+  type WritableSignal,
 } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 

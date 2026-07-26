@@ -1,4 +1,4 @@
-import { Component, computed, inject, input, InputSignal, PLATFORM_ID, resource, ResourceRef, Signal } from '@angular/core';
+import { Component, computed, inject, input, type InputSignal, PLATFORM_ID, resource, type ResourceRef, type Signal } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 import { fetchLatestGithubTag } from '../../helper/github-helper';
@@ -27,23 +27,22 @@ export class DependencyPreviewComponent {
   readonly data:InputSignal<DependencyPreviewData> = input.required<DependencyPreviewData>();
   readonly coordinates:InputSignal<MavenCoordinates> = input.required<MavenCoordinates>();
 
-  private readonly versionResource: ResourceRef<string> = resource({
+  private readonly versionResource: ResourceRef<string | undefined> = resource({
     params: (): string | undefined => (isPlatformBrowser(this.platformId) ? this.data().github : undefined),
-    loader: ({ params }: { params: string | undefined }): Promise<string> => fetchLatestGithubTag(params),
+    loader: ({ params }): Promise<string> => fetchLatestGithubTag(params),
   });
 
-  protected readonly error:Signal<Error> = this.versionResource.error;
+  protected readonly error: Signal<Error | undefined> = this.versionResource.error;
 
-  protected readonly snippet = computed(() => {
-    if (this.versionResource.status() !== 'resolved') return null;
+  protected readonly snippet: Signal<string | null> = computed((): string | null => {
+    if (!this.versionResource.hasValue()) return null;
 
-    const version = this.versionResource.value();
     const { groupId, artifactId } = this.coordinates();
     return `
 <dependency>
     <groupId>${groupId}</groupId>
     <artifactId>${artifactId}</artifactId>
-    <version>${version}</version>
+    <version>${this.versionResource.value()}</version>
 </dependency>
 `;
   });

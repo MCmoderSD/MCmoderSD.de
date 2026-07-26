@@ -1,5 +1,5 @@
-import {Component, input, InputSignal} from '@angular/core';
-import { ToolIcon, ToolIconSize } from '../../lib/tool-icon-types';
+import {Component, input, type InputSignal} from '@angular/core';
+import { type ToolIcon, ToolIconSize } from '../../lib/tool-icon-types';
 
 export interface ProjectPreviewData {
   name: string;

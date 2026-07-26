@@ -85,8 +85,9 @@ export class NavbarComponent {
   }
 
   private setActive(url: string): void {
-    // Query strings and fragments do not select a different nav entry.
-    const path = url.split(/[?#]/)[0];
+    // Query strings and fragments do not select a different nav entry. Split on a non-empty
+    // string always yields at least one element; the fallback only satisfies the type.
+    const path = url.split(/[?#]/)[0] ?? '';
 
     this.activeIndex.set(
       this.links.findIndex((link) => (link.exact ? path === link.path : path.startsWith(link.path))),

@@ -1,4 +1,4 @@
-import { Component, input, InputSignal, signal, WritableSignal } from '@angular/core';
+import { Component, input, type InputSignal, signal, type WritableSignal } from '@angular/core';
 
 @Component({
   selector: 'app-code-snippet',
@@ -16,6 +16,6 @@ export class CodeSnippetComponent {
   protected async copy(): Promise<void> {
     await navigator.clipboard.writeText(this.code());
     this.copied.set(true);
-    setTimeout(() => this.copied.set(false), 1500);
+    setTimeout((): void => this.copied.set(false), 1500);
   }
 }
