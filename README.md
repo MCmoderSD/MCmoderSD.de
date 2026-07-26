@@ -13,7 +13,7 @@ services (Jellyfin, Nexus, a speed test, ...) to anyone who wants to use them.
 ## Tech stack
 
 - **[Angular](https://angular.dev)** (v22) with standalone-first, signal-based components
-- **Server-side rendering & prerendering** via `@angular/ssr`, served through an **Express** server
+- **Server-side rendering & pre-rendering** via `@angular/ssr`, served through an **Express** server
 - **Angular Material** for base theming, layered with a custom design system (CSS custom properties,
   OKLCh colors, wide-gamut/P3 support, and a dark/light color scheme switch)
 - **TypeScript**, **SCSS**, and **Vitest** for unit tests
@@ -28,14 +28,14 @@ requirements, not afterthoughts.
 ## Deployment
 
 Every push to the `angular` branch triggers the
-[`Build and Push`](.github/workflows/publish.yaml.yml) GitHub Actions workflow, which:
+[`Build and Push`](.github/workflows/publish.yaml) GitHub Actions workflow, which:
 
 1. Checks out the repository.
 2. Builds a multi-stage, multi-architecture (`linux/amd64` + `linux/arm64/v8`) Docker image via
    Buildx (see the [`Dockerfile`](Dockerfile)).
 3. Pushes the image to Docker Hub as `mcmodersd/mcmodersd.de:angular-latest`.
 
-The image itself builds the Angular app (SSR + prerendering), then discards all dev dependencies and
+The image itself builds the Angular app (SSR + pre-rendering), then discards all dev dependencies and
 source for a minimal, non-root production runtime that serves the app with Node/Express on port
 `4000`.
 

@@ -1,5 +1,3 @@
-// noinspection SpellCheckingInspection
-
 import { ToolIcon } from '../../lib/tool-icon-types';
 
 export interface ToolIconPreset {
