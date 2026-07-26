@@ -25,6 +25,22 @@ const ALLOWED_HOSTS = [
   'dev.mcmodersd.de',
 ];
 
+/**
+ * True only for the compiled bundle run standalone (`node server.mjs`, directly or under PM2) -
+ * the container actually exposed behind Caddy. `ng serve` loads this same file as a module for its
+ * own SSR middleware, where isMainModule is false.
+ */
+const isProdServer = isMainModule(import.meta.url) || !!process.env['pm_id'];
+
+/**
+ * Opt-in switch for testing the dev server from another device on the LAN (a phone, say): run
+ * `npm run start:lan` instead of `npm start`. That passes --host through to `ng serve`, which is
+ * otherwise never on the command line, so its mere presence is enough to detect - no separate flag
+ * to remember. Left off, the host allowlist below stays exactly as strict as it always was, and
+ * plain `npm start` prints none of Angular's or Vite's "any host is allowed" warnings.
+ */
+const lanTestingEnabled = !isProdServer && process.argv.includes('--host');
+
 const app = express();
 const angularApp = new AngularNodeAppEngine({
   // Behind the HAProxy reverse proxy on mcmodersd.de / www.mcmodersd.de.
@@ -32,7 +48,7 @@ const angularApp = new AngularNodeAppEngine({
   // Explicit allowlist so the app is only reachable via these hosts, regardless of any
   // "NG_ALLOWED_HOSTS" set (or missing) on the deployment. Kept as a second line of defence
   // behind the middleware below, which normally rejects a bad host long before this runs.
-  allowedHosts: ALLOWED_HOSTS,
+  allowedHosts: lanTestingEnabled ? ['*'] : ALLOWED_HOSTS,
 });
 
 /**
@@ -55,6 +71,11 @@ function hostnames(value: string | string[] | undefined): string[] {
  * quietly.
  */
 app.use((req, res, next) => {
+  if (lanTestingEnabled) {
+    next();
+    return;
+  }
+
   // Every host name on the request has to be known, not just one of them: Angular validates the
   // Host header, and an x-forwarded-host that disagrees with it means the proxy in front is not
   // ours. Being stricter than Angular here is the point - anything it would reject is already
@@ -160,7 +181,7 @@ app.use((req, res, next) => {
  * Start the server if this module is the main entry point, or it is ran via PM2.
  * The server listens on the port defined by the `PORT` environment variable, or defaults to 4000.
  */
-if (isMainModule(import.meta.url) || process.env['pm_id']) {
+if (isProdServer) {
   const port = process.env['PORT'] || 4000;
   app.listen(port, (error) => {
     if (error) {
