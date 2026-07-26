@@ -1,6 +1,5 @@
 import { Component, computed, inject, input, type InputSignal, PLATFORM_ID, resource, type ResourceRef, type Signal } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
-
 import { fetchLatestGithubTag } from '../../helper/github-helper';
 
 export interface DependencyPreviewData {

@@ -67,7 +67,7 @@ function hostnames(value: string | string[] | undefined): string[] {
 /**
  * The container publishes 4000 on every interface, so anything scanning the public IP reaches
  * this app directly as "142.132.219.168:4000". Angular's own host check does reject those, but
- * console.errors a paragraph per request and drowns "docker logs" in it. Reject them here first,
+ * console.error a paragraph per request and drowns "docker logs" in it. Reject them here first,
  * quietly.
  */
 app.use((req, res, next) => {
