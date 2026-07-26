@@ -4,7 +4,7 @@
   [class.tool-icon--lg]="size() === ToolIconSize.Large"
   [class.tool-icon--dot]="variant() === ToolIconVariant.Dot"
   [style.--tool-icon-color]="preset().color"
-  [attr.title]="preset().name"
+  title="{{ preset().name }}"
 >
   @if (variant() === ToolIconVariant.Icon) {
     <i class="tool-icon__icon" [class]="preset().icon" aria-hidden="true"></i>

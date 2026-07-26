@@ -33,7 +33,7 @@ const components: any[] = [
 ];
 
 @NgModule({
-  declarations: components,
+  declarations: [components],
   imports: [RouterModule],
   exports: [components]
 })

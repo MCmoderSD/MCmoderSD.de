@@ -20,7 +20,7 @@ const components: any[] = [
 ];
 
 @NgModule({
-  declarations: components,
+  declarations: [components],
   imports: [ComponentsModule],
   exports: [components]
 })

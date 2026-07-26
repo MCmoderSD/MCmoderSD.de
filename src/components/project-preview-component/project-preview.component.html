@@ -2,7 +2,7 @@
   <button
     type="button"
     class="project-preview__trigger"
-    [attr.aria-label]="'View details for ' + data().name"
+    aria-label="View details for {{ data().name }}"
     (click)="openDetails()"
   ></button>
 
