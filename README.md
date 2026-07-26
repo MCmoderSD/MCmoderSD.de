@@ -25,7 +25,7 @@ Every push to the `angular` branch triggers the
 1. Checks out the repository.
 2. Builds a multi-stage, multi-architecture (`linux/amd64` + `linux/arm64/v8`) Docker image via
    Buildx (see the [`Dockerfile`](Dockerfile)).
-3. Pushes the image to Docker Hub as `mcmodersd/mcmodersd.de:latest`.
+3. Pushes the image to Docker Hub as [`mcmodersd/mcmodersd.de:latest`](https://hub.docker.com/repository/docker/mcmodersd/mcmodersd.de/).
 
 The image itself builds the Angular app (SSR + pre-rendering), then discards all dev dependencies and
 source for a minimal, non-root production runtime that serves the app with Node/Express on port
@@ -41,7 +41,7 @@ docker compose up -d
 ```
 
 The container restarts automatically, always pulls the latest tag, and exposes port `4000`, which
-sits behind a reverse proxy terminating TLS for `mcmodersd.de` and `www.mcmodersd.de`.
+sits behind a reverse proxy terminating TLS for [`mcmodersd.de`](https://mcmodersd.de) and [`www.mcmodersd.de`](https://www.mcmodersd.de).
 
 ## Development
 

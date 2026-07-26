@@ -50,11 +50,27 @@ export class DependenciesPageComponent {
     },
     {
       data: {
+        name: 'Helix-API',
+        github: 'https://github.com/MCmoderSD/Helix-API',
+        description: 'A Java Helix-API wrapper for communicating with the Twitch Helix API.',
+      },
+      coordinates: { groupId: 'de.MCmoderSD', artifactId: 'Helix-API' },
+    },
+    {
+      data: {
         name: 'HTTPS-Server',
         github: 'https://github.com/MCmoderSD/HTTPS-Server',
         description: 'A simple Java HTTPS server built on top of Undertow.',
       },
       coordinates: { groupId: 'de.MCmoderSD', artifactId: 'HTTPS-Server' },
+    },
+    {
+      data: {
+        name: 'ImageLoader',
+        github: 'https://github.com/MCmoderSD/ImageLoader',
+        description: "A simple ImageLoader that can load images from the resources folder, absolute paths or URLs.",
+      },
+      coordinates: { groupId: 'de.MCmoderSD', artifactId: 'ImageLoader' },
     },
     {
       data: {
