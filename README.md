@@ -14,8 +14,7 @@ services (Jellyfin, Nexus, a speed test, ...) to anyone who wants to use them.
 
 - **[Angular](https://angular.dev)** (v22) with standalone-first, signal-based components
 - **Server-side rendering & pre-rendering** via `@angular/ssr`, served through an **Express** server
-- **Angular Material** for base theming, layered with a custom design system (CSS custom properties,
-  OKLCh colors, wide-gamut/P3 support, and a dark/light color scheme switch)
+- **Angular Material** for base theming, layered with a custom design system (CSS custom properties, OKLCh colors, wide-gamut/P3 support, and a dark/light color scheme switch)
 - **TypeScript**, **SCSS**, and **Vitest** for unit tests
 
 ## Deployment
@@ -26,7 +25,7 @@ Every push to the `angular` branch triggers the
 1. Checks out the repository.
 2. Builds a multi-stage, multi-architecture (`linux/amd64` + `linux/arm64/v8`) Docker image via
    Buildx (see the [`Dockerfile`](Dockerfile)).
-3. Pushes the image to Docker Hub as `mcmodersd/mcmodersd.de:angular-latest`.
+3. Pushes the image to Docker Hub as `mcmodersd/mcmodersd.de:latest`.
 
 The image itself builds the Angular app (SSR + pre-rendering), then discards all dev dependencies and
 source for a minimal, non-root production runtime that serves the app with Node/Express on port
