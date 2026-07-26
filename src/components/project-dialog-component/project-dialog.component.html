@@ -1,0 +1,26 @@
+<div class="project-dialog__header">
+  <div class="project-dialog__heading">
+    <div class="project-dialog__eyebrow">
+      <span class="project-dialog__eyebrow-line" aria-hidden="true"></span>
+      Project
+    </div>
+
+    <h2 mat-dialog-title class="project-dialog__title">{{ data.name }}</h2>
+  </div>
+
+  <a
+    class="project-dialog__github"
+    [href]="data.github"
+    target="_blank"
+    rel="noopener"
+    [attr.aria-label]="'View ' + data.name + ' on GitHub'"
+  >
+    <i class="devicon-github-plain" aria-hidden="true"></i>
+  </a>
+</div>
+
+<mat-dialog-content class="project-dialog__content">
+  @for (paragraph of data.details; track paragraph) {
+    <p class="project-dialog__paragraph">{{ paragraph }}</p>
+  }
+</mat-dialog-content>

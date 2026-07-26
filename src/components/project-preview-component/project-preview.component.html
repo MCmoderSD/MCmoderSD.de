@@ -1,4 +1,11 @@
 <article class="project-preview">
+  <button
+    type="button"
+    class="project-preview__trigger"
+    [attr.aria-label]="'View details for ' + data().name"
+    (click)="openDetails()"
+  ></button>
+
   <header class="project-preview__header">
     <h3 class="project-preview__name">{{ data().name }}</h3>
     <a

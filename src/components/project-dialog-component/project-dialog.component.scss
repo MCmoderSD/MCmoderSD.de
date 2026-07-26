@@ -1,0 +1,76 @@
+// Overrides the MDC dialog's own custom properties rather than fighting its padding/background
+// with specificity - mat-dialog-title/-content read these on the elements this component renders,
+// so setting them on :host cascades down to each in one place. Actions are gone entirely: closing
+// happens via the backdrop, so there is nothing left to pad for at the bottom.
+:host {
+  display: block;
+
+  --mat-dialog-headline-padding: 0;
+  --mat-dialog-content-padding: 0 1.75rem 1.75rem;
+}
+
+.project-dialog__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.75rem 1.75rem 0.5rem;
+}
+
+.project-dialog__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0 0 0.6rem;
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.project-dialog__eyebrow-line {
+  width: 2rem;
+  height: 1px;
+  flex: none;
+  background: color-mix(in srgb, var(--color-primary) 55%, transparent);
+}
+
+.project-dialog__title {
+  color: var(--color-text);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.project-dialog__github {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  flex: none;
+  border-radius: 50%;
+  color: var(--color-text-muted);
+  font-size: 1.25rem;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.project-dialog__github:hover,
+.project-dialog__github:focus-visible {
+  color: var(--color-text);
+  background: color-mix(in srgb, var(--color-primary) 14%, transparent);
+}
+
+.project-dialog__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.project-dialog__paragraph {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
