@@ -14,6 +14,13 @@ import { DOCUMENT } from '@angular/common';
 const MIN_THUMB_HEIGHT = 32;
 
 /**
+ * Mirrors the query in the stylesheet that hides this component outright. Kept in step with it by
+ * hand because the alternative - measuring the host's own computed display - is a layout read on
+ * exactly the code path that must not do layout reads.
+ */
+const HIDDEN_QUERY = '(pointer: coarse), (hover: none)';
+
+/**
  * Replacement for the native viewport scrollbar, which styles.scss removes. It floats over the
  * content rather than reserving a gutter beside it, which is what keeps the page background
  * unbroken all the way to the right edge - see the comment there for why the native one could not.
@@ -48,6 +55,9 @@ export class ScrollbarComponent {
 
   protected readonly dragging: WritableSignal<boolean> = signal(false);
 
+  /** True while the stylesheet has the bar hidden, i.e. on touch. Resolved once the DOM exists. */
+  private readonly hidden: WritableSignal<boolean> = signal(false);
+
   /** A thumb that fills the whole track is just a decoration, so nothing is drawn in that case. */
   protected readonly scrollable: Signal<boolean> = computed(
     () => this.scrollHeight() - this.viewportHeight() > 1,
@@ -73,7 +83,20 @@ export class ScrollbarComponent {
 
   constructor() {
     afterNextRender(() => {
-      this.measure();
+      const view = this.document.defaultView;
+      const query = view === null ? null : view.matchMedia(HIDDEN_QUERY);
+
+      const sync = (): void => {
+        this.hidden.set(query !== null && query.matches);
+        this.measure();
+      };
+
+      sync();
+
+      if (query !== null) {
+        query.addEventListener('change', sync);
+        this.destroyRef.onDestroy(() => query.removeEventListener('change', sync));
+      }
 
       // Route changes and image loads change the document height without a scroll or a resize, and
       // a thumb sized against a stale height is worse than no thumb at all.
@@ -87,8 +110,14 @@ export class ScrollbarComponent {
    * Reading three layout properties per scroll event is deliberate: they are all already computed
    * for the scroll itself, so this forces no extra layout, and the signals below only notify when
    * a value actually changed.
+   *
+   * On touch it does not run at all. The bar is display: none there, but the scroll listener would
+   * still fire on every frame of a fling and, through the signals, tick change detection - work on
+   * the main thread competing with the compositor for a thumb nobody can see.
    */
   protected measure(): void {
+    if (this.hidden()) return;
+
     const root = this.document.documentElement;
     this.scrollTop.set(root.scrollTop);
     this.scrollHeight.set(root.scrollHeight);
