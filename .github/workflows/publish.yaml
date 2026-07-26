@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - angular
+      - MCmoderSD.de
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -86,7 +86,7 @@ jobs:
 
       - name: Create manifest list and push
         working-directory: /tmp/digests
-        run: docker buildx imagetools create -t ${{ env.IMAGE }}:angular-latest $(printf '${{ env.IMAGE }}@sha256:%s ' *)
+        run: docker buildx imagetools create -t ${{ env.IMAGE }}:latest $(printf '${{ env.IMAGE }}@sha256:%s ' *)
 
       - name: Inspect image
-        run: docker buildx imagetools inspect ${{ env.IMAGE }}:angular-latest
+        run: docker buildx imagetools inspect ${{ env.IMAGE }}:latest
