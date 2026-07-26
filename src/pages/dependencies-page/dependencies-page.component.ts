@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DependencyPreviewData, MavenCoordinates } from '../../components/dependency-preview-component/dependency-preview.component';
+import { type DependencyPreviewData, type MavenCoordinates } from '../../components/dependency-preview-component/dependency-preview.component';
 
 interface Dependency {
   data: DependencyPreviewData;

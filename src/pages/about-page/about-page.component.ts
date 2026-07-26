@@ -1,7 +1,7 @@
 import { afterNextRender, Component, DestroyRef, inject, signal } from '@angular/core';
 import { ToolIcon } from '../../lib/tool-icon-types';
-import { EducationData } from '../../components/education-component/education.component';
-import { WorkExperienceData } from '../../components/work-experience-component/work-experience.component';
+import { type EducationData } from '../../components/education-component/education.component';
+import { type WorkExperienceData } from '../../components/work-experience-component/work-experience.component';
 
 interface SocialLink {
   label: string;
@@ -35,11 +35,11 @@ export class AboutPageComponent {
         timeZone: TIME_ZONE,
       });
 
-      const tick = () => this.localTime.set(formatter.format(new Date()));
+      const tick: () => void = (): void => this.localTime.set(formatter.format(new Date()));
 
       tick();
       const handle = setInterval(tick, 30_000);
-      this.destroyRef.onDestroy(() => clearInterval(handle));
+      this.destroyRef.onDestroy((): void => clearInterval(handle));
     });
   }
 

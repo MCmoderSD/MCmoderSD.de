@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { StartpageComponent } from '../pages/startpage/startpage.component';
+import { RouterModule, type Routes } from '@angular/router';
 import { DependenciesPageComponent } from '../pages/dependencies-page/dependencies-page.component';
 import { ServicePageComponent } from '../pages/service-page/service-page.component';
 import { ImprintPageComponent } from '../pages/imprint-page/imprint-page.component';

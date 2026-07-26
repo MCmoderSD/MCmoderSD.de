@@ -1,5 +1,5 @@
-import { Component, computed, input, InputSignal, Signal } from '@angular/core';
-import { ToolIcon, ToolIconSize } from '../../lib/tool-icon-types';
+import { Component, computed, input, type InputSignal, type Signal } from '@angular/core';
+import { type ToolIcon, ToolIconSize } from '../../lib/tool-icon-types';
 
 export interface EducationData {
   institution: string;
@@ -22,8 +22,8 @@ export class EducationComponent {
 
   readonly data:InputSignal<EducationData> = input.required<EducationData>();
 
-  protected readonly period:Signal<string> = computed(() => `${this.data().from} — ${this.data().to ?? 'Present'}`);
-  protected readonly tools:Signal<ToolIcon[]> = computed(() => this.data().tools ?? []);
+  protected readonly period:Signal<string> = computed((): string => `${this.data().from} — ${this.data().to ?? 'Present'}`);
+  protected readonly tools:Signal<ToolIcon[]> = computed((): ToolIcon[] => this.data().tools ?? []);
 
   protected readonly size = ToolIconSize;
 }

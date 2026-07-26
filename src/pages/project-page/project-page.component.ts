@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ToolIcon } from '../../lib/tool-icon-types';
-import { ProjectPreviewData } from '../../components/project-preview-component/project-preview.component';
+import { type ProjectPreviewData } from '../../components/project-preview-component/project-preview.component';
 
 @Component({
   selector: 'app-project-page',

@@ -1,5 +1,5 @@
-import {Component, input, InputSignal} from '@angular/core';
-import { ServiceIcon, ServiceIconSize } from '../../lib/service-icon-types';
+import {Component, input, type InputSignal} from '@angular/core';
+import { type ServiceIcon, ServiceIconSize } from '../../lib/service-icon-types';
 
 export interface ServicePreviewData {
   name: string;

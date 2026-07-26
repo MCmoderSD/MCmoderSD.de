@@ -3,9 +3,9 @@ interface GitHubRepository {
   repo: string;
 }
 
-export async function fetchLatestGithubTag(githubUrl: string) {
-  const repository = parseGithubUrl(githubUrl);
-  const tag: string = await fetchViaApi(repository) || await fetchViaRedirect(repository);
+export async function fetchLatestGithubTag(githubUrl: string): Promise<string> {
+  const repository: GitHubRepository = parseGithubUrl(githubUrl);
+  const tag: string | null = await fetchViaApi(repository) || await fetchViaRedirect(repository);
 
   if (!tag) {
     throw new Error(`Could not fetch latest tag for ${githubUrl}`);
@@ -14,14 +14,14 @@ export async function fetchLatestGithubTag(githubUrl: string) {
   return tag;
 }
 
-function parseGithubUrl(githubUrl: string): GitHubRepository | null {
+function parseGithubUrl(githubUrl: string): GitHubRepository {
   const match = githubUrl.match(/github\.com\/([^/]+)\/([^/]+)\/?$/);
 
   if (!match) {
     throw new Error(`Invalid GitHub repository URL: ${githubUrl}`);
   }
 
-  return { owner: match[1], repo: match[2] };
+  return { owner: match[1]!, repo: match[2]! };
 }
 
 async function fetchViaApi(repository: GitHubRepository): Promise<string | null> {
