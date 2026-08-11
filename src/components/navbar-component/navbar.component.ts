@@ -35,9 +35,16 @@ export class NavbarComponent {
 
   protected readonly activeIndex: WritableSignal<number> = signal(-1);
 
+  protected readonly hoveredIndex: WritableSignal<number> = signal(-1);
+
+  protected readonly highlightIndex: Signal<number> = computed((): number => {
+    const hovered: number = this.hoveredIndex();
+    return hovered === -1 ? this.activeIndex() : hovered;
+  });
+
   private readonly bounds: WritableSignal<LinkBounds[]> = signal<LinkBounds[]>([]);
 
-  protected readonly pill: Signal<LinkBounds | null> = computed((): LinkBounds | null => this.bounds()[this.activeIndex()] ?? null);
+  protected readonly pill: Signal<LinkBounds | null> = computed((): LinkBounds | null => this.bounds()[this.highlightIndex()] ?? null);
 
   private rendered: boolean = false;
 
@@ -62,6 +69,13 @@ export class NavbarComponent {
 
       this.destroyRef.onDestroy((): void => observer.disconnect());
     });
+  }
+
+  protected clearHoverOnLeave(event: FocusEvent): void {
+    const next: EventTarget | null = event.relatedTarget;
+    if (next instanceof Node && this.list().nativeElement.contains(next)) return;
+
+    this.hoveredIndex.set(-1);
   }
 
   private setActive(url: string): void {

@@ -3,7 +3,12 @@
 
   <span class="navbar__divider" aria-hidden="true"></span>
 
-  <div class="navbar__links" #list>
+  <div
+    class="navbar__links"
+    #list
+    (mouseleave)="hoveredIndex.set(-1)"
+    (focusout)="clearHoverOnLeave($event)"
+  >
     @if (pill(); as bounds) {
       <span
         class="navbar__pill"
@@ -17,9 +22,11 @@
       <a
         #linkElement
         class="navbar__link"
-        [class.navbar__link--active]="index === activeIndex()"
+        [class.navbar__link--highlight]="index === highlightIndex()"
         [routerLink]="link.path"
         [attr.aria-current]="index === activeIndex() ? 'page' : null"
+        (mouseenter)="hoveredIndex.set(index)"
+        (focusin)="hoveredIndex.set(index)"
       >{{ link.label }}</a>
     }
   </div>

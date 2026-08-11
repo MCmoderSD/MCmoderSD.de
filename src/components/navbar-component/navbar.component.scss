@@ -53,6 +53,8 @@
 
 // The highlight behind the active link. It is a single element that slides between the links
 // instead of a background on each one, so the change of page is a movement rather than a cut.
+// It also follows the pointer: hovering another link lends it the pill, and letting go without
+// clicking sends it home to the active route on the same curve.
 .navbar__pill {
   position: absolute;
   top: 0;
@@ -76,18 +78,18 @@
   font-weight: 500;
   white-space: nowrap;
   text-decoration: none;
-  // Colour rides along with the pill; hover keeps its own quicker response.
-  transition: color var(--nav-slide), background-color 0.2s ease;
+  // Colour rides along with the pill, on the same clock, so the label lights up as it arrives.
+  transition: color var(--nav-slide);
 }
 
-.navbar__link:hover,
 .navbar__link:focus-visible {
-  color: var(--color-text);
-  background: color-mix(in srgb, var(--color-primary) 12%, transparent);
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
-.navbar__link--active {
-  // No background of its own - that is the pill's job now.
+// Whichever link the pill is under: the hovered one while the pointer is in the bar, the active
+// route otherwise. No background of its own - that is the pill's job.
+.navbar__link--highlight {
   color: var(--color-primary-strong);
 }
 
