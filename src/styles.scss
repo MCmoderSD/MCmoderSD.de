@@ -50,45 +50,82 @@
 // teal that neither reads as a highlight nor holds much contrast. Blue survives the trip - it can
 // go dark enough to carry weight without leaving the brand's half of the wheel.
 //
-// The values are not eyeballed. Everything that ends up carrying text clears AAA against both
-// backgrounds: primary 7.14:1, primary-strong 10.31:1, text 16.22:1; text-muted is AA at 5.61:1.
+// The values are not eyeballed. Ratios are quoted against --color-bg first and --color-surface
+// second, since every one of these colours is read on both: primary 6.60:1 / 7.63:1, primary-strong
+// 9.51:1 / 10.99:1, text 14.96:1 / 17.30:1, text-muted 6.27:1 / 7.25:1. Every one clears AAA on the
+// surface; on the page the two lightest, primary and the muted grey, are AA.
 :root[data-theme='light'] {
   color-scheme: light;
 
-  --color-bg: #f5f8fa;
+  // Not near-white. The cards are #ffffff at 88% alpha, so whatever the page is, the card is a step
+  // towards white from it - and that step is the only thing separating a card from its surroundings
+  // besides the hairline below. Against a near-white page the step is 1.06:1, i.e. nothing, and the
+  // layout flattens into one sheet. Dropping the page to #eaeff5 widens it to 1.14:1, which is the
+  // ordinary light-mode idiom: grey page, white card. It costs every foreground about 8% of its
+  // ratio, which is why the muted grey, the red and the brand ceiling below all move with it.
+  --color-bg: #eaeff5;
   --color-surface: #ffffff;
-  --color-border: rgb(15 60 90 / 16%);
+
+  // The hairline is load-bearing here in a way it is not on the dark tier: it is what draws the edge
+  // of a white card, a white navbar and a white dialog, none of which the fill alone delineates.
+  // At 16% it sat at 1.34:1 against the surface it borders; 28% brings it to 1.70:1 - still a
+  // hairline rather than an outline, but one that survives a bright screen and a shallow viewing
+  // angle. (WCAG 1.4.11 wants 3:1 for a boundary that is the sole indicator; a filled card that also
+  // casts a shadow is not that case, so this is a legibility floor, not the 3:1 rule.)
+  --color-border: rgb(15 60 90 / 28%);
 
   --color-primary: #0650ac;
   --color-primary-strong: #033b7a;
   --color-secondary: #0d5ace;
 
   --color-text: #171b20;
-  --color-text-muted: #5a656e;
-  --color-error: #b91c1c;
+
+  // Secondary text is the one place where the two tiers were not equally comfortable: the dark tier
+  // reads its muted grey at about 8.4:1, the light tier was at 5.61:1 - technically AA, visibly
+  // thinner. Darkening it to #4e5862 lands at 6.27:1 on the page and still leaves a clear step down
+  // from --color-text, which is 2.4x further from the page than this is.
+  --color-text-muted: #4e5862;
+
+  // Dependency status lines put this on --color-inset, not on the page, and the old red only made
+  // 4.58:1 there once the panel was sunk far enough to be visible. This clears the recess and the
+  // page both.
+  --color-error: #a8161a;
 
   // Recessed the other way about: on a bright page a sunken panel is a shade below the page, so
   // the mix towards black is a fraction of what the dark tier needs to pull away from near-black.
-  --color-inset: color-mix(in srgb, var(--color-bg) 96%, black);
-  --color-inset-hover: color-mix(in srgb, var(--color-bg) 92%, black);
+  // 96% put a code block 1.09:1 from its surroundings, which is to say invisible; 91% reads as a
+  // recess (1.22:1 against the page, 1.41:1 against the white card these sit inside) while leaving
+  // the muted grey on top of it at 5.13:1, and 4.67:1 on the hover step.
+  --color-inset: color-mix(in srgb, var(--color-bg) 91%, black);
+  --color-inset-hover: color-mix(in srgb, var(--color-bg) 87%, black);
 
   // Black at 55% is a dark-mode weight; over a bright page it reads as grime rather than depth,
-  // so this is both lighter and tinted towards the page's blue instead of neutral.
-  --shadow-overlay: 0 10px 30px -12px rgb(15 40 60 / 18%);
+  // so this is both lighter and tinted towards the page's blue instead of neutral. 26% rather than
+  // the original 18% because the shadow and the border are jointly what lift a white bar off a
+  // near-white page, and at 18% the floating navbar and dialog barely cast one.
+  --shadow-overlay: 0 10px 30px -12px rgb(15 40 60 / 26%);
 
   // Low because the chip tints its own background with 12% of the same colour, so the label is not
   // read against the page but against something already pulled towards it. Checked against all 505
-  // presets rather than the dozen on one page: 0.55 leaves every chip near 3.6:1, 0.47 clears AA
-  // outright, worst case 5.01:1.
-  --brand-lightness-cap: 0.47;
+  // presets rather than the dozen on one page, against the page background because it is the darker
+  // of the two surfaces a chip sits on: 0.55 leaves every chip near 3.6:1, and 0.47 - the ceiling
+  // this carried while the page was #f5f8fa - is down to 4.20:1 once the page drops to #eaeff5.
+  // 0.43 restores the margin and then some: worst case 4.94:1 on the page, 5.66:1 on a card.
+  --brand-lightness-cap: 0.43;
 
   // Far less alpha, because a wash that reads as atmosphere over near-black reads as a stain over
   // near-white. Blue throughout rather than the dark tier's cyan-and-blue pair: leaving the ambient
   // wash cyan while the accents moved to blue would put the only teal on the page in the background.
   // Two depths of the same blue, both already in the palette above, keep the corners from flattening.
-  --glow-primary: rgb(59 130 246 / 15%);
-  --glow-secondary: rgb(13 90 206 / 11%);
-  --glow-cursor: rgb(13 90 206 / 7%);
+  //
+  // Lower again than the light tier first carried, because these are not decoration behind the
+  // content - they are underneath it, and at 15% + 7% the centre of a blob plus the cursor spotlight
+  // pulled the page to rgb(201 220 249), which took the worst brand chip on it down to 3.52:1. That
+  // was the one place the light tier failed AA outright. At 10% + 5%, over the deeper page, the same
+  // worst case is 4.26:1, and the wash still reads.
+  --glow-primary: rgb(59 130 246 / 10%);
+  --glow-secondary: rgb(13 90 206 / 8%);
+  --glow-cursor: rgb(13 90 206 / 5%);
 }
 
 // Wide-gamut tier. Only the accents are listed because only they have room to grow: the signature
@@ -123,16 +160,18 @@
 
     // Light mode gets the same treatment, and it has to come after the block above rather than
     // beside the sRGB light tier: both selectors are equally specific, so source order decides.
-    // Lightness is again untouched, so the AAA margins survive the widening - here they even gain
-    // slightly (primary 7.14:1 -> 7.29:1, primary-strong 10.31:1 -> 10.43:1).
+    // Lightness is again untouched, so the margins survive the widening - the pair lands within a
+    // few hundredths of the hex versions it replaces (primary 6.60:1 -> 6.63:1 against the page,
+    // primary-strong 9.51:1 -> 9.49:1).
     :root[data-theme='light'] {
       --color-primary: oklch(0.4500 0.2054 258);
       --color-primary-strong: oklch(0.3600 0.1526 256);
       --color-secondary: oklch(0.5000 0.2419 259.8);
 
-      --glow-primary: oklch(0.6231 0.2024 259.8 / 15%);
-      --glow-secondary: oklch(0.5000 0.2419 259.8 / 11%);
-      --glow-cursor: oklch(0.5000 0.2419 259.8 / 7%);
+      // Same alphas as the sRGB light tier, for the reason given there.
+      --glow-primary: oklch(0.6231 0.2024 259.8 / 10%);
+      --glow-secondary: oklch(0.5000 0.2419 259.8 / 8%);
+      --glow-cursor: oklch(0.5000 0.2419 259.8 / 5%);
     }
   }
 }
