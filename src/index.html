@@ -1,20 +1,15 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>MCmoderSD.de</title>
-    <base href="/" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <base href="/"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta
       name="description"
       content="MCmoderSD.de – Portfolio and projects of MCmoderSD, showcasing software development work, tools, and open-source contributions."
     />
-    <!--
-      Runs before the first paint, which is the whole point of it being inline and in <head>.
-      The pre rendered HTML is always the dark tier, so a visitor who chose light would otherwise
-      watch the dark palette flash by until Angular hydrates and the switch reapplies it.
-      Key and value are shared with color-scheme-switch.component.ts.
-    -->
+
     <script>
       try {
         if (localStorage.getItem('color-scheme') === 'light') {
@@ -27,16 +22,11 @@
     </script>
 
     <!--suppress HtmlUnknownTarget -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <!--
-      No preconnect for fonts.googleapis.com: the build inlines the Google Fonts CSS, so that
-      origin is never requested at runtime. gstatic still serves the woff2, jsdelivr the icons.
-    -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
-    <!-- Pinned: "@latest" caps the CDN cache at 7 days and lets upstream releases move class names. -->
-    <link href="https://cdn.jsdelivr.net/npm/devicon@2.17.0/devicon.min.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin/>
+    <link href="https://cdn.jsdelivr.net/npm/devicon/devicon.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet"/>
 
     <script type="application/ld+json">
       {

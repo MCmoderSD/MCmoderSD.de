@@ -1,33 +1,47 @@
 :host {
   display: inline-flex;
   line-height: 0;
+
+  // Declared once on the host because a themed preset renders two images and they have to agree.
+  --service-icon-size: 2.75rem;
+}
+
+:host(.service-icon--sm) {
+  --service-icon-size: 1.35rem;
+}
+
+:host(.service-icon--lg) {
+  --service-icon-size: 4.5rem;
 }
 
 .service-icon {
-  --service-icon-color: #9ca3af;
-
-  // Same split as the tool chips: the preset sets the raw colour inline, out of reach of any
-  // stylesheet, so the fill reads the themed derivative instead. See tool-icon.component.scss.
-  --service-icon-ink: var(--service-icon-color);
-
-  width: 2.75rem;
-  height: 2.75rem;
-  fill: var(--service-icon-ink);
+  width: var(--service-icon-size);
+  height: var(--service-icon-size);
   flex: none;
 }
 
-@supports (color: oklch(from white l c h)) {
-  .service-icon {
-    --service-icon-ink: oklch(from var(--service-icon-color) min(l, var(--brand-lightness-cap)) c h);
-  }
+// These are full colour brand marks served as images, so nothing here recolours them - unlike the
+// tool chips, which tint a monochrome glyph and cap its lightness per theme. Where a logo would
+// disappear against one of the two backgrounds, upstream ships a second cut and the preset pairs
+// them; the swap is this, and it is deliberately CSS rather than a bound src.
+//
+// The reason is first paint. The prerendered HTML is always the dark tier and the inline script in
+// index.html flips data-theme before anything is painted, so a rule keyed off that attribute is
+// already correct in the first frame. A src bound to a theme signal could not be: it would have to
+// wait for hydration, and a visitor on the light tier would watch the wrong cut - in the nexus case
+// a near white wordmark on a white card - until it arrived.
+//
+// Both images therefore exist in the DOM and the browser fetches both. That is two extra requests
+// totalling under 1.5 kB across the whole site, and it buys an instant swap on toggle because the
+// other cut is already in cache.
+.service-icon--on-light {
+  display: none;
 }
 
-.service-icon--sm {
-  width: 1.35rem;
-  height: 1.35rem;
+:host-context([data-theme='light']) .service-icon--on-dark {
+  display: none;
 }
 
-.service-icon--lg {
-  width: 4.5rem;
-  height: 4.5rem;
+:host-context([data-theme='light']) .service-icon--on-light {
+  display: block;
 }
