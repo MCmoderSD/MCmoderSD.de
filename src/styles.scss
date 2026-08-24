@@ -204,7 +204,22 @@ body {
 
   // Reset the user agent margin.
   margin: 0;
-  height: 100%;
+}
+
+// While a dialog is open the CDK pins <html> to position: fixed to hold the page still. That takes
+// the viewport height away from <html>, and anything that made <body> viewport-height too - a
+// height: 100% used to live here - would then leave the page content overflowing <body> instead of
+// <html>. The scroll container silently moves down one element, and with it the native scrollbar:
+// the rule above only ever hid the one on <html>, so a full-height native bar appears at the right
+// edge for exactly as long as the dialog is open, next to a custom bar that no longer drives
+// anything. Worse, the page behind the dialog scrolls again, which is the one thing the block
+// strategy exists to prevent.
+//
+// Letting <body> size to its content is what keeps the overflow on <html> where it belongs. The
+// rule below is the belt to that braces: if any future style does give <body> a height, the block
+// is still a block rather than a second scrollbar.
+html.cdk-global-scrollblock > body {
+  overflow: hidden;
 }
 
 body::before,

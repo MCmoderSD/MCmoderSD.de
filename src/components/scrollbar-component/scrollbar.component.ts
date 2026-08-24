@@ -1,4 +1,17 @@
-import { afterNextRender, Component, computed, DestroyRef, inject, type Signal, signal, type WritableSignal } from '@angular/core';
+import {
+  afterNextRender,
+  Component,
+  computed,
+  DestroyRef,
+  effect,
+  type EffectCleanupRegisterFn,
+  inject,
+  input,
+  type InputSignal,
+  type Signal,
+  signal,
+  type WritableSignal,
+} from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
 const MIN_THUMB_HEIGHT: number = 32;
@@ -13,13 +26,13 @@ interface DragOrigin {
   selector: 'app-scrollbar',
   templateUrl: './scrollbar.component.html',
   styleUrl: './scrollbar.component.scss',
-  standalone: false,
   host: {
     '[class.scrollbar--dragging]': 'dragging()',
+    '[class.scrollbar--inline]': 'target() !== null',
+    '[class.scrollbar--revealed]': 'hovered()',
     '(document:pointermove)': 'onPointerMove($event)',
     '(document:pointerup)': 'onPointerUp()',
     '(document:pointercancel)': 'onPointerUp()',
-    '(window:scroll)': 'measure()',
     '(window:resize)': 'measure()',
   },
 })
@@ -28,13 +41,29 @@ export class ScrollbarComponent {
   private readonly document: Document = inject(DOCUMENT);
   private readonly destroyRef: DestroyRef = inject(DestroyRef);
 
+  /**
+   * The element whose overflow this bar drives. Left unset it drives the page itself, which is the
+   * single instance the app shell renders. Pass a scroll container - a dialog's content, say - and
+   * the same bar floats inside that container instead, so a scrollable region that is not the page
+   * gets this bar rather than the native one it would otherwise fall back to.
+   */
+  readonly target: InputSignal<HTMLElement | null> = input<HTMLElement | null>(null);
+
   private readonly scrollTop: WritableSignal<number> = signal(0);
   private readonly scrollHeight: WritableSignal<number> = signal(0);
   private readonly viewportHeight: WritableSignal<number> = signal(0);
 
   protected readonly dragging: WritableSignal<boolean> = signal(false);
 
+  /**
+   * Only ever set in target mode. The page instance is revealed by the right-edge proximity class
+   * instead (see the stylesheet), and a scroll container sitting in the middle of the page has no
+   * equivalent of that signal - so there, pointing at the content is what asks for the bar.
+   */
+  protected readonly hovered: WritableSignal<boolean> = signal(false);
+
   private readonly hidden: WritableSignal<boolean> = signal(false);
+  private readonly rendered: WritableSignal<boolean> = signal(false);
 
   protected readonly scrollable: Signal<boolean> = computed(
     (): boolean => this.scrollHeight() - this.viewportHeight() > 1,
@@ -74,19 +103,77 @@ export class ScrollbarComponent {
         this.destroyRef.onDestroy((): void => query.removeEventListener('change', sync));
       }
 
-      const observer: ResizeObserver = new ResizeObserver((): void => this.measure());
-      observer.observe(this.document.body);
-      this.destroyRef.onDestroy((): void => observer.disconnect());
+      this.rendered.set(true);
     });
+
+    // Everything the effect wires up touches the DOM, so it waits on the render flag rather than
+    // running on the server. Past that it re-runs whenever the target changes, which is what lets
+    // one component serve both the page and a container without either knowing about the other.
+    effect((onCleanup: EffectCleanupRegisterFn): void => {
+      if (!this.rendered()) return;
+      onCleanup(this.watch(this.target()));
+    });
+  }
+
+  /** The element being scrolled: the target when there is one, the page otherwise. */
+  private scroller(): HTMLElement {
+    return this.target() ?? this.document.documentElement;
+  }
+
+  /** Subscribes to everything that can move the thumb; returns the teardown for all of it. */
+  private watch(target: HTMLElement | null): () => void {
+    const measure: () => void = (): void => this.measure();
+
+    // Scrolling the page is reported at the document rather than at <html>, so the page case has to
+    // listen somewhere other than the element it measures.
+    const source: EventTarget | null = target ?? this.document.defaultView;
+    source?.addEventListener('scroll', measure, { passive: true });
+
+    // A scroll container's own box does not grow when its contents do - that is what makes it one -
+    // so the children are what has to be watched for the thumb to stay honest about the travel.
+    const resizes: ResizeObserver = new ResizeObserver(measure);
+    const observed: Element[] = target === null
+      ? [this.document.body]
+      : [target, ...Array.from(target.children)];
+    for (const element of observed) resizes.observe(element);
+
+    // A Material overlay pins <html> to position: fixed for as long as it is open, which takes the
+    // page's overflow away without firing a scroll or a resize. Nothing else would tell this bar
+    // that the travel it is drawing no longer exists, and it would sit there with a thumb that
+    // answers to nothing. The class the CDK sets alongside those styles is the notification.
+    //
+    // Attributes only, and only the class: the per-frame cursor variables app.ts writes to the same
+    // element land in its style attribute and are deliberately not woken up here, and
+    // classList.toggle mutates only on an actual change - crossing the reveal band, not every move.
+    const mutations: MutationObserver = new MutationObserver(measure);
+    if (target === null) {
+      mutations.observe(this.document.documentElement, { attributeFilter: ['class'] });
+    }
+
+    const enter: () => void = (): void => this.hovered.set(true);
+    const leave: () => void = (): void => this.hovered.set(false);
+    target?.addEventListener('pointerenter', enter);
+    target?.addEventListener('pointerleave', leave);
+
+    this.measure();
+
+    return (): void => {
+      source?.removeEventListener('scroll', measure);
+      target?.removeEventListener('pointerenter', enter);
+      target?.removeEventListener('pointerleave', leave);
+      resizes.disconnect();
+      mutations.disconnect();
+      this.hovered.set(false);
+    };
   }
 
   protected measure(): void {
     if (this.hidden()) return;
 
-    const root: HTMLElement = this.document.documentElement;
-    this.scrollTop.set(root.scrollTop);
-    this.scrollHeight.set(root.scrollHeight);
-    this.viewportHeight.set(root.clientHeight);
+    const element: HTMLElement = this.scroller();
+    this.scrollTop.set(element.scrollTop);
+    this.scrollHeight.set(element.scrollHeight);
+    this.viewportHeight.set(element.clientHeight);
   }
 
   protected onThumbPointerDown(event: PointerEvent): void {
@@ -107,7 +194,7 @@ export class ScrollbarComponent {
     const travel: number = this.scrollHeight() - this.viewportHeight();
     const moved: number = event.clientY - this.dragOrigin.pointerY;
 
-    this.document.documentElement.scrollTop = this.dragOrigin.scrollTop + (moved * travel) / track;
+    this.scroller().scrollTop = this.dragOrigin.scrollTop + (moved * travel) / track;
   }
 
   protected onPointerUp(): void {

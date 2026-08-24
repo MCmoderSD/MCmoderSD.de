@@ -16,14 +16,28 @@
   transition: opacity 0.2s ease;
 }
 
+// With a target it belongs to a scroll container rather than the viewport, so it is pinned to that
+// container instead - absolute against the positioned wrapper the container sits in. Everything
+// else about it is unchanged, which is the point: a dialog's overflow gets the same bar as the page.
+:host(.scrollbar--inline) {
+  position: absolute;
+  z-index: 1;
+}
+
 // Revealed by the same right-edge signal that reveals the theme switch, set on <html> in app.ts.
 // :host-context and not a descendant selector: the class is on <html>, which view encapsulation
 // would demand a content attribute from.
 //
 // The drag case is not redundant with it. Dragging the thumb regularly takes the pointer outside
 // the reveal zone, and a scrollbar that fades out mid-drag is unusable.
+//
+// scrollbar--revealed is the container equivalent, set while the pointer is over the target: a
+// region in the middle of the page has no "went all the way to the edge" gesture to detect, and
+// pointing at the thing you want to scroll is the closest equivalent that still stays out of the
+// way until asked for.
 :host-context(.scrollbar-visible),
-:host(.scrollbar--dragging) {
+:host(.scrollbar--dragging),
+:host(.scrollbar--revealed) {
   opacity: 1;
 }
 

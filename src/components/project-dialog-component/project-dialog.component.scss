@@ -63,11 +63,27 @@
   background: color-mix(in srgb, var(--color-primary) 14%, transparent);
 }
 
+// Positioned so the bar inside it can be, and min-height: 0 so mat-dialog-content keeps its own
+// max-height rather than this wrapper stretching to the content.
+.project-dialog__scroll {
+  position: relative;
+  min-height: 0;
+}
+
 .project-dialog__content {
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
   color: var(--color-text-muted);
+
+  // The long project descriptions do overflow the dialog's max-height on a short window, and the
+  // native bar that appeared there was the one place left on the site still showing one. app-
+  // scrollbar above draws the replacement; this hides what it replaces.
+  scrollbar-width: none;
+}
+
+.project-dialog__content::-webkit-scrollbar {
+  display: none;
 }
 
 .project-dialog__paragraph {

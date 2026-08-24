@@ -28,13 +28,15 @@ const components: any[] = [
   FooterComponent,
   EducationComponent,
   WorkExperienceComponent,
-  ColorSchemeSwitchComponent,
-  ScrollbarComponent
+  ColorSchemeSwitchComponent
 ];
 
+// Standalone, unlike everything above it, because the project dialog is standalone too and pulls it
+// in directly - the dialog cannot import this module without a cycle, since the module declares the
+// preview component that opens the dialog.
 @NgModule({
   declarations: [components],
-  imports: [RouterModule],
-  exports: [components]
+  imports: [RouterModule, ScrollbarComponent],
+  exports: [components, ScrollbarComponent]
 })
 export class ComponentsModule { }
