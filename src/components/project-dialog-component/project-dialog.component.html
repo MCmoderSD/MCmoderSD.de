@@ -19,8 +19,14 @@
   </a>
 </div>
 
-<mat-dialog-content class="project-dialog__content">
-  @for (paragraph of data.details; track paragraph) {
-    <p class="project-dialog__paragraph">{{ paragraph }}</p>
-  }
-</mat-dialog-content>
+<!-- The wrapper is only here to give the bar something to be absolute against: mat-dialog-content
+     is the element that overflows, and a child of it would scroll away with the text. -->
+<div class="project-dialog__scroll">
+  <mat-dialog-content #content class="project-dialog__content">
+    @for (paragraph of data.details; track paragraph) {
+      <p class="project-dialog__paragraph">{{ paragraph }}</p>
+    }
+  </mat-dialog-content>
+
+  <app-scrollbar [target]="content"/>
+</div>
