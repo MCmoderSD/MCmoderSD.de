@@ -19,11 +19,11 @@ export class ServiceIconComponent {
 
   protected readonly preset: Signal<ServiceIconPreset> = computed((): ServiceIconPreset => SERVICE_ICON_PRESETS[this.icon()]);
 
-  protected readonly src: Signal<string> = computed((): string => serviceIconUrl(this.preset().slug, this.preset().source));
+  protected readonly src: Signal<string> = computed((): string => serviceIconUrl(this.preset().slug));
 
   protected readonly lightSrc: Signal<string | null> = computed((): string | null => {
     const lightSlug: string | undefined = this.preset().lightSlug;
-    return lightSlug === undefined ? null : serviceIconUrl(lightSlug, this.preset().source);
+    return lightSlug === undefined ? null : serviceIconUrl(lightSlug);
   });
 
   protected readonly ServiceIconSize = ServiceIconSize;

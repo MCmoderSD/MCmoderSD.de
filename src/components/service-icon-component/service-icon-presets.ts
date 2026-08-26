@@ -1,27 +1,19 @@
 import { ServiceIcon } from '../../lib/service-icon-types';
 
-const CDN_BASE = {
-  dashboardIcons: 'https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons@main/svg',
-  selfhst: 'https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg',
-} as const;
-
-export type ServiceIconSource = keyof typeof CDN_BASE;
-
-export function serviceIconUrl(slug: string, source: ServiceIconSource): string {
-  return `${CDN_BASE[source]}/${slug}.svg`;
+export function serviceIconUrl(slug: string): string {
+  return `/svg/${slug}.svg`;
 }
 
 export interface ServiceIconPreset {
   name: string;
-  source: ServiceIconSource;
   slug: string;
   lightSlug?: string;
 }
 
 export const SERVICE_ICON_PRESETS = {
-  [ServiceIcon.jellyfin]: { name: 'Jellyfin', source: 'dashboardIcons', slug: 'jellyfin' },
-  [ServiceIcon.nexus]: { name: 'Sonatype Nexus', source: 'dashboardIcons', slug: 'nexus-dark', lightSlug: 'nexus' },
-  [ServiceIcon.speedtest]: { name: 'OpenSpeedTest', source: 'dashboardIcons', slug: 'openspeedtest' },
-  [ServiceIcon.truenas]: { name: 'TrueNAS', source: 'dashboardIcons', slug: 'truenas' },
-  [ServiceIcon.portainer]: { name: 'Portainer', source: 'selfhst', slug: 'portainer-light', lightSlug: 'portainer' },
+  [ServiceIcon.jellyfin]: { name: 'Jellyfin', slug: 'jellyfin' },
+  [ServiceIcon.nexus]: { name: 'Sonatype Nexus', slug: 'nexus-dark', lightSlug: 'nexus-light' },
+  [ServiceIcon.speedtest]: { name: 'OpenSpeedTest', slug: 'openspeedtest' },
+  [ServiceIcon.truenas]: { name: 'TrueNAS Scale', slug: 'truenas-scale' },
+  [ServiceIcon.portainer]: { name: 'Portainer', slug: 'portainer-dark', lightSlug: 'portainer-light' },
 } as const;
