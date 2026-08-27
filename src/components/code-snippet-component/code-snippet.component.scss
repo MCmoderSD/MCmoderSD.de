@@ -20,8 +20,9 @@
   transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
-.code-snippet:hover,
-.code-snippet:focus-visible {
+// Disabled buttons still match :hover in Chrome, so the placeholder has to opt out explicitly.
+.code-snippet:not(.code-snippet--loading):hover,
+.code-snippet:not(.code-snippet--loading):focus-visible {
   border-color: color-mix(in srgb, var(--color-primary) 45%, transparent);
   background: var(--color-inset-hover);
 }
@@ -37,6 +38,70 @@
   font-size: 0.8125rem;
   line-height: 1.6;
   white-space: pre;
+}
+
+// Placeholder state: same box, same line boxes, nothing to click yet.
+.code-snippet--loading {
+  --code-snippet-bar: color-mix(in srgb, var(--color-text-muted) 34%, transparent);
+  --code-snippet-bar-sheen: color-mix(in srgb, var(--color-text-muted) 52%, transparent);
+
+  cursor: default;
+}
+
+// The text under the bars is still laid out - that is what sizes them - but it is never read. The
+// bar carries the override itself: a rule matching the span beats the colour it would inherit from
+// `.code-snippet code`, which is the more specific selector of the two.
+.code-snippet code.code-snippet__placeholder {
+  user-select: none;
+}
+
+.code-snippet__bar {
+  // The transparent text is the measuring stick: it gives the run its width and keeps the line boxes
+  // exactly those of the finished code. The visible bar is drawn on top of it, out of flow, so its
+  // thickness is a free choice instead of whatever the font's content box happens to be.
+  position: relative;
+  color: transparent;
+}
+
+.code-snippet__bar::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 0.75rem;
+  transform: translateY(-50%);
+  border-radius: 999px;
+  background-image: linear-gradient(
+    100deg,
+    var(--code-snippet-bar) 40%,
+    var(--code-snippet-bar-sheen) 50%,
+    var(--code-snippet-bar) 60%
+  );
+  background-size: 250% 100%;
+  animation: code-snippet-sheen 2.4s ease-in-out infinite;
+  animation-delay: inherit;
+}
+
+@keyframes code-snippet-sheen {
+  from { background-position: 100% 0; }
+  to { background-position: -60% 0; }
+}
+
+// The finished code arrives into the space the bars were holding, so it only has to fade up.
+.code-snippet:not(.code-snippet--loading) code {
+  animation: code-snippet-fade-in 0.35s ease both;
+}
+
+@keyframes code-snippet-fade-in {
+  from { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .code-snippet__bar::after,
+  .code-snippet:not(.code-snippet--loading) code {
+    animation: none;
+  }
 }
 
 .code-snippet__lang {
