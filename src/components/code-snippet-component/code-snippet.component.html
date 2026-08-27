@@ -1,23 +1,28 @@
 <button
   type="button"
   class="code-snippet"
+  [class.code-snippet--loading]="loading()"
+  [disabled]="loading()"
+  [attr.aria-busy]="loading() ? 'true' : null"
   (click)="copy()"
-  [attr.aria-label]="copied() ? 'Copied to clipboard' : 'Copy code'"
+  [attr.aria-label]="loading() ? 'Loading ' + language() + ' snippet' : (copied() ? 'Copied to clipboard' : 'Copy code')"
 >
   <span class="code-snippet__lang">{{ language() }}</span>
 
-  <pre><code>{{ code() }}</code></pre>
+  <pre>@if (loading()) {<code class="code-snippet__placeholder" aria-hidden="true">@for (row of placeholderRows(); track $index) {<span class="code-snippet__bar" [style.margin-left.ch]="row.indent" [style.animation-delay.ms]="$index * 110">{{ row.text }}</span>@if (!$last) {<br>}}</code>} @else {<code>{{ code() }}</code>}</pre>
 
-  <span class="code-snippet__icon" [class.code-snippet__icon--copied]="copied()">
-    @if (copied()) {
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <polyline points="20 6 9 17 4 12" />
-      </svg>
-    } @else {
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <rect x="9" y="9" width="13" height="13" rx="2" />
-        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-      </svg>
-    }
-  </span>
+  @if (!loading()) {
+    <span class="code-snippet__icon" [class.code-snippet__icon--copied]="copied()">
+      @if (copied()) {
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="20 6 9 17 4 12" />
+        </svg>
+      } @else {
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="9" y="9" width="13" height="13" rx="2" />
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+        </svg>
+      }
+    </span>
+  }
 </button>

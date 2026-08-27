@@ -1,4 +1,4 @@
-import { Component, computed, inject, input, type InputSignal, PLATFORM_ID, resource, type ResourceRef, type Signal } from '@angular/core';
+import {Component, computed, inject, input, type InputSignal, PLATFORM_ID, resource, type ResourceLoaderParams, type ResourceRef, type Signal} from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { fetchLatestGithubTag } from '../../helper/github-helper';
 
@@ -12,6 +12,8 @@ export interface MavenCoordinates {
   groupId: string;
   artifactId: string;
 }
+
+const PLACEHOLDER_VERSION: string = '0.0.0';
 
 @Component({
   selector: 'app-dependency-preview',
@@ -28,21 +30,23 @@ export class DependencyPreviewComponent {
 
   private readonly versionResource: ResourceRef<string | undefined> = resource({
     params: (): string | undefined => (isPlatformBrowser(this.platformId) ? this.data().github : undefined),
-    loader: ({ params }): Promise<string> => fetchLatestGithubTag(params),
+    loader: ({ params }: ResourceLoaderParams<string | undefined>): Promise<string> => fetchLatestGithubTag(params)
   });
 
   protected readonly error: Signal<Error | undefined> = this.versionResource.error;
 
-  protected readonly snippet: Signal<string | null> = computed((): string | null => {
-    if (!this.versionResource.hasValue()) return null;
+  protected readonly loading: Signal<boolean> = computed((): boolean => !this.versionResource.hasValue());
 
+  protected readonly snippet: Signal<string> = computed((): string => {
     const { groupId, artifactId } = this.coordinates();
-    return `
-<dependency>
-    <groupId>${groupId}</groupId>
-    <artifactId>${artifactId}</artifactId>
-    <version>${this.versionResource.value()}</version>
-</dependency>
-`;
+    const version: string = this.versionResource.value() ?? PLACEHOLDER_VERSION;
+
+    return [
+      '<dependency>',
+      `    <groupId>${groupId}</groupId>`,
+      `    <artifactId>${artifactId}</artifactId>`,
+      `    <version>${version}</version>`,
+      '</dependency>',
+    ].join('\n');
   });
 }
