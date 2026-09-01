@@ -3,8 +3,20 @@
   flex-direction: column;
 }
 
+// The link is the whole card's hit area and is deliberately never transformed - the card inside it
+// is what lifts. Lifting the link itself moves both of its boxes: hovering it from the bottom edge
+// pulls it out from under the pointer, which un-hovers it, drops it back and starts over, and a
+// click aimed at the bottom of the resting card lands where the link no longer is.
 .service-preview {
   flex: 1;
+  display: flex;
+  border-radius: 1rem;
+  text-decoration: none;
+}
+
+.service-preview__card {
+  flex: 1;
+  min-width: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,7 +26,6 @@
   background: color-mix(in srgb, var(--color-surface) 88%, transparent);
   border: 1px solid var(--color-border);
   backdrop-filter: blur(6px);
-  text-decoration: none;
 
   transition:
     border-color 0.25s ease,
@@ -22,8 +33,8 @@
     transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.service-preview:hover,
-.service-preview:focus-visible {
+.service-preview:hover .service-preview__card,
+.service-preview:focus-visible .service-preview__card {
   border-color: color-mix(in srgb, var(--color-primary) 45%, transparent);
   box-shadow: 0 12px 30px -12px color-mix(in srgb, var(--color-primary) 30%, transparent);
   transform: translateY(-3px);

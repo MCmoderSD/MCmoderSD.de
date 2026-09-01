@@ -4,6 +4,9 @@
 }
 
 .project-preview {
+  // Named once because the trigger below cancels it out, and the two must not drift apart.
+  --project-preview-lift: 3px;
+
   position: relative;
   flex: 1;
   display: flex;
@@ -21,11 +24,14 @@
     transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.project-preview:hover,
+// Driven from the host: the card's transform would otherwise carry its own hit area upwards and
+// out from under a pointer resting on the bottom edge, which un-hovers the card, drops it back
+// under the pointer and repeats. The host is laid out and never transformed, so it holds still.
+:host(:hover) .project-preview,
 .project-preview:has(.project-preview__trigger:focus-visible) {
   border-color: color-mix(in srgb, var(--color-primary) 45%, transparent);
   box-shadow: 0 12px 30px -12px color-mix(in srgb, var(--color-primary) 30%, transparent);
-  transform: translateY(-3px);
+  transform: translateY(calc(-1 * var(--project-preview-lift)));
 }
 
 // The card's own click target: an invisible button stretched over the whole card so the card
@@ -46,6 +52,17 @@
   background: transparent;
   appearance: none;
   cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+// The trigger rides inside the card, so the lift would carry the click target up with it and
+// leave the bottom few pixels of the resting card - exactly where the pointer is standing when
+// the lift starts - clicking on nothing. An equal and opposite shift on the same clock pins the
+// target to where the card is laid out, at every frame of the transition rather than only at its
+// ends. Keyboard focus is deliberately left out: nothing is being aimed at the card then, and the
+// focus ring should stay wrapped around the card it belongs to.
+:host(:hover) .project-preview__trigger {
+  transform: translateY(var(--project-preview-lift));
 }
 
 .project-preview__trigger:focus-visible {

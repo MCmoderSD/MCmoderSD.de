@@ -52,7 +52,13 @@
     pointer-events: none;
   }
 
-  &:hover {
+  // Hovering is asked of the host, not of the chip itself. A transform drags the element's hit
+  // area along with it, so a pointer resting in the bottom pixels of the chip falls outside the
+  // instant the chip lifts; that un-hovers it, drops it back under the pointer, and starts the
+  // same cycle again - the chip flickers for as long as the pointer stays in that band. The host
+  // box is laid out rather than transformed and wraps the chip exactly, so it stays put while the
+  // chip moves, and the hovered state has nothing left to oscillate on.
+  :host(:hover) & {
     background: color-mix(in srgb, var(--tool-icon-ink) 26%, transparent);
     border-color: color-mix(in srgb, var(--tool-icon-ink) 60%, transparent);
     box-shadow:

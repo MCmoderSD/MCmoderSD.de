@@ -20,7 +20,10 @@
     transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.dependency-preview:hover {
+// Driven from the host: the card's transform would otherwise carry its own hit area upwards and
+// out from under a pointer resting on the bottom edge, which un-hovers the card, drops it back
+// under the pointer and repeats. The host is laid out and never transformed, so it holds still.
+:host(:hover) .dependency-preview {
   border-color: color-mix(in srgb, var(--color-primary) 45%, transparent);
   box-shadow: 0 12px 30px -12px color-mix(in srgb, var(--color-primary) 30%, transparent);
   transform: translateY(-3px);

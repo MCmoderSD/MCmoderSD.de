@@ -36,19 +36,21 @@
         target="_blank"
         rel="noopener"
       >
-        <span class="about-page__social-icon" aria-hidden="true">
-          @if (social.iconClass) {
-            <i [class]="social.iconClass"></i>
-          } @else {
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path [attr.d]="social.iconPath" />
-            </svg>
-          }
-        </span>
+        <span class="about-page__social-card">
+          <span class="about-page__social-icon" aria-hidden="true">
+            @if (social.iconClass) {
+              <i [class]="social.iconClass"></i>
+            } @else {
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path [attr.d]="social.iconPath" />
+              </svg>
+            }
+          </span>
 
-        <span class="about-page__social-text">
-          <span class="about-page__social-label">{{ social.label }}</span>
-          <span class="about-page__social-handle">{{ social.handle }}</span>
+          <span class="about-page__social-text">
+            <span class="about-page__social-label">{{ social.label }}</span>
+            <span class="about-page__social-handle">{{ social.handle }}</span>
+          </span>
         </span>
       </a>
     }

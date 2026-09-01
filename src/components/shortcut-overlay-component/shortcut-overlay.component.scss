@@ -18,19 +18,30 @@
   box-shadow: var(--shadow-overlay);
 }
 
+// The link is the hit area and nothing else: it is laid out and never transformed, so hovering it
+// is a stable answer. The lift lives on the span inside. Lifting the link itself would carry its
+// own hit area out from under a pointer resting on the bottom edge, which un-hovers it, drops it
+// back under the pointer and starts over - a flicker for as long as the pointer stays there.
 .shortcut-overlay__link {
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
   width: 2.25rem;
   height: 2.25rem;
   border-radius: 50%;
   color: var(--color-text-muted);
+}
+
+.shortcut-overlay__link-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.shortcut-overlay__link:hover,
-.shortcut-overlay__link:focus-visible {
+.shortcut-overlay__link:hover .shortcut-overlay__link-visual,
+.shortcut-overlay__link:focus-visible .shortcut-overlay__link-visual {
   background: color-mix(in srgb, var(--color-primary) 14%, transparent);
   transform: translateY(-2px);
 }

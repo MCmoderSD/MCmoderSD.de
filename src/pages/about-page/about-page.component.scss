@@ -74,7 +74,19 @@
   gap: 0.75rem;
 }
 
+// The link is the hit area and nothing else - laid out, never transformed - while the card inside
+// carries the paint and the lift. Lifting the link itself would drag its own hit area out from
+// under a pointer resting on the bottom edge, which un-hovers it, drops it back under the pointer
+// and starts over, so the card would flicker for as long as the pointer stayed in that band.
 .about-page__social {
+  display: flex;
+  border-radius: 0.75rem;
+  text-decoration: none;
+}
+
+.about-page__social-card {
+  flex: 1;
+  min-width: 0;
   display: flex;
   align-items: center;
   gap: 0.85rem;
@@ -82,15 +94,14 @@
   border-radius: 0.75rem;
   border: 1px solid var(--color-border);
   background: color-mix(in srgb, var(--color-surface) 88%, transparent);
-  text-decoration: none;
   transition:
     border-color 0.25s ease,
     box-shadow 0.25s ease,
     transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.about-page__social:hover,
-.about-page__social:focus-visible {
+.about-page__social:hover .about-page__social-card,
+.about-page__social:focus-visible .about-page__social-card {
   border-color: color-mix(in srgb, var(--color-primary) 45%, transparent);
   box-shadow: 0 12px 30px -12px color-mix(in srgb, var(--color-primary) 30%, transparent);
   transform: translateY(-2px);
