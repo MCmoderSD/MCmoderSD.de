@@ -8,7 +8,9 @@
       aria-label="Open {{ shortcut.name }} in a new tab"
       title="{{ shortcut.name }}"
     >
-      <app-service-icon [icon]="shortcut.icon" [size]="size.Small" />
+      <span class="shortcut-overlay__link-visual">
+        <app-service-icon [icon]="shortcut.icon" [size]="size.Small" />
+      </span>
     </a>
   }
 </nav>
