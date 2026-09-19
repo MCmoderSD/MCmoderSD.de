@@ -84,6 +84,7 @@
 // :host-context and not a plain ".toggle-visible ..." descendant selector: the class sits on
 // <html>, and view encapsulation rewrites an ancestor compound into "[_ngcontent-x]:root...",
 // which asks <html> for a content attribute it will never carry. The rule silently never matches.
+//noinspection CssUnusedSymbol
 :host-context(.toggle-visible) .theme-toggle-overlay,
 .theme-toggle-overlay:hover,
 .theme-toggle-overlay:focus-within {

@@ -89,6 +89,7 @@
 
 // Whichever link the pill is under: the hovered one while the pointer is in the bar, the active
 // route otherwise. No background of its own - that is the pill's job.
+//noinspection CssUnusedSymbol
 .navbar__link--highlight {
   color: var(--color-primary-strong);
 }
