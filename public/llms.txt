@@ -1,0 +1,28 @@
+# MCmoderSD.de
+
+> Personal portfolio of Seraphin Berger (MCmoderSD), a software engineering student and full-stack developer from Stuttgart, Germany. The site covers his work experience and education, open-source projects, self-hosted services, and the Java libraries he publishes on his own Maven repository.
+
+Seraphin studies software engineering (B. Eng.) at Esslingen University of Applied Sciences and works as a working student full-stack developer at ODDO BHF SE in Frankfurt. Outside of that he writes Java tooling, Twitch bots and small Chrome extensions, and runs his own infrastructure: the services listed on the site are self-hosted on hardware he maintains himself.
+
+Every page is server-side pre-rendered, so the URLs below return complete HTML without JavaScript. The site is in English. Contact: business@mcmodersd.de.
+
+## Pages
+
+- [About](https://mcmodersd.de/): Short bio, social links, work experience and education
+- [Projects](https://mcmodersd.de/projects): Open-source projects, including YEPPBot (a Java Twitch bot), YEPPDash (its ASP.NET Core and Angular dashboard), this website, TabScraper, AniLink-Downloader and AniLink-Skipper
+- [Dependencies](https://mcmodersd.de/dependencies): Java libraries published on a self-hosted Sonatype Nexus repository instead of Maven Central, with the Maven coordinates for each one
+- [Services](https://mcmodersd.de/services): Publicly reachable self-hosted services: Jellyfin, OpenSpeedTest, Sonatype Nexus and Portainer
+
+## Maven repository
+
+- [Nexus releases](https://mcmodersd.de/nexus/repository/maven-releases/): Repository URL to add to a pom.xml; the group ID of all libraries is `de.MCmoderSD`
+
+## Elsewhere
+
+- [GitHub](https://github.com/MCmoderSD): Source code of all projects and libraries
+- [LinkedIn](https://www.linkedin.com/in/seraphin-berger/): Professional profile
+
+## Optional
+
+- [Imprint](https://mcmodersd.de/imprint): Legal notice according to § 5 DDG
+- [Privacy Policy](https://mcmodersd.de/privacy): Data protection information
