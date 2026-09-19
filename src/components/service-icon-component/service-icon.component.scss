@@ -33,7 +33,9 @@
 //
 // Both images therefore exist in the DOM and the browser fetches both. That is two extra requests
 // totalling under 1.5 kB across the whole site, and it buys an instant swap on toggle because the
-// other cut is already in cache.
+// other cut is already in cache. That is also why the template sets loading="eager" over
+// NgOptimizedImage's lazy default: a lazy image hidden by display: none is never fetched, so the
+// swap would wait on the network again.
 .service-icon--on-light {
   display: none;
 }
