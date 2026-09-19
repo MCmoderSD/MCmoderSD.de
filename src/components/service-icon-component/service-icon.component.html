@@ -1,18 +1,22 @@
 <img
   class="service-icon"
   [class.service-icon--on-dark]="lightSrc() !== null"
-  [src]="src()"
+  [ngSrc]="src()"
+  [width]="pixels()"
+  [height]="pixels()"
   [title]="preset().name"
   alt=""
-  decoding="async"
+  loading="eager"
 />
 
 @if (lightSrc(); as lightSrc) {
   <img
     class="service-icon service-icon--on-light"
-    [src]="lightSrc"
+    [ngSrc]="lightSrc"
+    [width]="pixels()"
+    [height]="pixels()"
     [title]="preset().name"
     alt=""
-    decoding="async"
+    loading="eager"
   />
 }

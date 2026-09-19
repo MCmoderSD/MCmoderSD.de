@@ -1,30 +1,17 @@
-import { Component, DestroyRef, inject } from '@angular/core';
+import { Component, DestroyRef, inject, signal, type WritableSignal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { DOCUMENT, ViewportScroller } from '@angular/common';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs';
+import { NavbarComponent } from '../components/navbar-component/navbar.component';
+import { ColorSchemeSwitchComponent } from '../components/color-scheme-switch-component/color-scheme-switch.component';
+import { FooterComponent } from '../components/footer-component/footer.component';
+import { ScrollbarComponent } from '../components/scrollbar-component/scrollbar.component';
 
-/** Height of the fixed navbar, so fragment jumps land below it. Matches app.scss padding-top. */
-const SCROLL_OFFSET = 104;
-
-/**
- * How close to the right edge the pointer has to be before the scrollbar reveals itself. Wider
- * than the scrollbar's own hit area (see styles.scss) so it can be found without pixel-perfect
- * aim, narrow enough that it still reads as "went all the way to the edge" rather than "hovered
- * the page".
- */
-const SCROLLBAR_REVEAL_ZONE = 48;
-
-/**
- * The same idea for the color scheme switch, but a wider band: the control sits about 54px in
- * from the right edge, so a 48px zone would stop matching exactly as the pointer arrives on it and
- * the button would fade out from under the cursor. This has to comfortably contain the control
- * plus the approach to it.
- */
-const TOGGLE_REVEAL_ZONE = 140;
-
-/** The site answers on mcmodersd.de and www.mcmodersd.de, so pick one for search engines. */
-const CANONICAL_ORIGIN = 'https://mcmodersd.de';
+const SCROLL_OFFSET: number = 104;
+const SCROLLBAR_REVEAL_ZONE: number = 48;
+const TOGGLE_REVEAL_ZONE: number = 140;
+const CANONICAL_ORIGIN: string = 'https://mcmodersd.de';
 
 interface Pointer {
   x: number;
@@ -34,50 +21,41 @@ interface Pointer {
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
-  standalone: false,
   styleUrl: './app.scss',
+  imports: [RouterOutlet, NavbarComponent, ColorSchemeSwitchComponent, FooterComponent, ScrollbarComponent],
   host: {
     '(document:mousemove)': 'onMouseMove($event)',
-    // Otherwise the last pointer position (possibly inside the reveal zone) lingers forever once
-    // the mouse leaves the viewport - e.g. onto the OS taskbar - since no further mousemove fires
-    // to correct it.
-    '(document:mouseleave)': 'onMouseLeave()',
-  },
+    '(document:mouseleave)': 'onMouseLeave()'
+  }
 })
 export class App {
   private readonly document = inject(DOCUMENT);
   private readonly destroyRef = inject(DestroyRef);
 
-  /** Latest pointer position, flushed to CSS once per frame instead of once per event. */
-  private pointer: Pointer | null = null;
-  private frame = 0;
+  private readonly pointer: WritableSignal<Pointer | null> = signal<Pointer | null>(null);
+  private readonly frame: WritableSignal<number> = signal(0);
 
   constructor() {
-    // Angular scrolls to fragments with window.scrollTo() rather than scrollIntoView,
-    // so it ignores scroll-margin-top and needs the navbar height declared here.
     inject(ViewportScroller).setOffset([0, SCROLL_OFFSET]);
 
     inject(Router).events.pipe(
         filter((event) => event instanceof NavigationEnd),
-        takeUntilDestroyed(),
+        takeUntilDestroyed()
       ).subscribe((event: NavigationEnd): void => this.setCanonical(event.urlAfterRedirects));
 
-    // Guarded because a frame is only ever scheduled in the browser, and cancelAnimationFrame
-    // is not part of the server platform's globals.
     this.destroyRef.onDestroy((): void => {
-      if (this.frame) cancelAnimationFrame(this.frame);
+      const frame: number = this.frame();
+      if (frame) cancelAnimationFrame(frame);
     });
   }
 
   protected onMouseMove(event: MouseEvent): void {
-    // Writing --cursor-x/y on :root invalidates style for the whole tree, so coalesce the
-    // ~120 events/s a mouse produces down to one write per animation frame.
-    this.pointer = { x: event.clientX, y: event.clientY };
-    if (this.frame) return;
+    this.pointer.set({ x: event.clientX, y: event.clientY });
+    if (this.frame()) return;
 
-    this.frame = requestAnimationFrame((): void => {
-      this.frame = 0;
-      const pointer: Pointer | null = this.pointer;
+    this.frame.set(requestAnimationFrame((): void => {
+      this.frame.set(0);
+      const pointer: Pointer | null = this.pointer();
       if (!pointer) return;
 
       const html: HTMLElement = this.document.documentElement;
@@ -85,19 +63,17 @@ export class App {
       root.setProperty('--cursor-x', `${pointer.x}px`);
       root.setProperty('--cursor-y', `${pointer.y}px`);
 
-      // innerWidth rather than the HTML element's width: the scrollbar itself sits in that gap,
-      // so measuring against the element it lives on would shrink the reveal zone by its own width.
       const view: Window | null = this.document.defaultView;
       if (view === null) return;
 
       const fromRight: number = view.innerWidth - pointer.x;
       html.classList.toggle('scrollbar-visible', fromRight <= SCROLLBAR_REVEAL_ZONE);
       html.classList.toggle('toggle-visible', fromRight <= TOGGLE_REVEAL_ZONE);
-    });
+    }));
   }
 
   protected onMouseLeave(): void {
-    this.pointer = null;
+    this.pointer.set(null);
     this.document.documentElement.classList.remove('scrollbar-visible', 'toggle-visible');
   }
 
@@ -110,7 +86,6 @@ export class App {
       head.appendChild(link);
     }
 
-    // Fragments and query strings do not identify a separate document here.
     link.href = CANONICAL_ORIGIN + url.split(/[?#]/)[0];
   }
 }

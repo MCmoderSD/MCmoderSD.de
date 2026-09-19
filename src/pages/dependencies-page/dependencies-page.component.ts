@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { type DependencyPreviewData, type MavenCoordinates } from '../../components/dependency-preview-component/dependency-preview.component';
+import { DependencyPreviewComponent, type DependencyPreviewData, type MavenCoordinates } from '../../components/dependency-preview-component/dependency-preview.component';
+import { CodeSnippetComponent } from '../../components/code-snippet-component/code-snippet.component';
 
 interface Dependency {
   data: DependencyPreviewData;
@@ -10,7 +11,7 @@ interface Dependency {
   selector: 'app-dependencies-page',
   templateUrl: './dependencies-page.component.html',
   styleUrl: './dependencies-page.component.scss',
-  standalone: false,
+  imports: [CodeSnippetComponent, DependencyPreviewComponent],
 })
 export class DependenciesPageComponent {
 

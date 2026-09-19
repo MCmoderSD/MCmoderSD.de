@@ -9,7 +9,6 @@ interface PlaceholderRow {
   selector: 'app-code-snippet',
   templateUrl: './code-snippet.component.html',
   styleUrl: './code-snippet.component.scss',
-  standalone: false,
 })
 export class CodeSnippetComponent {
 

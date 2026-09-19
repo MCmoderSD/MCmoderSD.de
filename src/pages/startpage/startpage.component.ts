@@ -4,6 +4,5 @@ import { Component } from '@angular/core';
   selector: 'app-startpage',
   templateUrl: './startpage.component.html',
   styleUrl: './startpage.component.scss',
-  standalone: false,
 })
 export class StartpageComponent { }

@@ -1,6 +1,7 @@
 import {Component, computed, inject, input, type InputSignal, PLATFORM_ID, resource, type ResourceLoaderParams, type ResourceRef, type Signal} from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { fetchLatestGithubTag } from '../../helper/github-helper';
+import { CodeSnippetComponent } from '../code-snippet-component/code-snippet.component';
 
 export interface DependencyPreviewData {
   name: string;
@@ -19,7 +20,7 @@ const PLACEHOLDER_VERSION: string = '0.0.0';
   selector: 'app-dependency-preview',
   templateUrl: './dependency-preview.component.html',
   styleUrl: './dependency-preview.component.scss',
-  standalone: false,
+  imports: [CodeSnippetComponent],
 })
 export class DependencyPreviewComponent {
 

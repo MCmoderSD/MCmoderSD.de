@@ -11,7 +11,6 @@ export enum ColorScheme {
   selector: 'app-color-scheme-switch',
   templateUrl: './color-scheme-switch.component.html',
   styleUrl: './color-scheme-switch.component.scss',
-  standalone: false,
 })
 export class ColorSchemeSwitchComponent {
 

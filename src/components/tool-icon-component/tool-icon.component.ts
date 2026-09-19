@@ -6,7 +6,6 @@ import { TOOL_ICON_PRESETS, type ToolIconPreset } from './tool-icon-presets';
   selector: 'app-tool-icon',
   templateUrl: './tool-icon.component.html',
   styleUrl: './tool-icon.component.scss',
-  standalone: false
 })
 export class ToolIconComponent {
 

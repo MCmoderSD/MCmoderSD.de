@@ -35,6 +35,7 @@
 // region in the middle of the page has no "went all the way to the edge" gesture to detect, and
 // pointing at the thing you want to scroll is the closest equivalent that still stays out of the
 // way until asked for.
+//noinspection CssUnusedSymbol
 :host-context(.scrollbar-visible),
 :host(.scrollbar--dragging),
 :host(.scrollbar--revealed) {

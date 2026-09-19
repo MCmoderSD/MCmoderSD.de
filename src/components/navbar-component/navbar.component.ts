@@ -1,6 +1,6 @@
 import { afterNextRender, Component, computed, DestroyRef, ElementRef, inject, type Signal, signal, viewChild, viewChildren, type WritableSignal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { filter } from 'rxjs';
 
 interface NavLink {
@@ -18,7 +18,7 @@ interface LinkBounds {
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
-  standalone: false,
+  imports: [RouterLink],
 })
 export class NavbarComponent {
 
@@ -46,7 +46,7 @@ export class NavbarComponent {
 
   protected readonly pill: Signal<LinkBounds | null> = computed((): LinkBounds | null => this.bounds()[this.highlightIndex()] ?? null);
 
-  private rendered: boolean = false;
+  private readonly rendered: WritableSignal<boolean> = signal(false);
 
   constructor() {
     const router: Router = inject(Router);
@@ -61,7 +61,7 @@ export class NavbarComponent {
       });
 
     afterNextRender((): void => {
-      this.rendered = true;
+      this.rendered.set(true);
       this.measure();
 
       const observer = new ResizeObserver((): void => this.measure());
@@ -87,7 +87,7 @@ export class NavbarComponent {
   }
 
   private measure(): void {
-    if (!this.rendered) return;
+    if (!this.rendered()) return;
 
     this.bounds.set(
       this.linkElements().map(({ nativeElement }: ElementRef<HTMLAnchorElement>): LinkBounds => ({
