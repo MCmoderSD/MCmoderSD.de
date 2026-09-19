@@ -84,7 +84,7 @@ export class ScrollbarComponent {
     return ((this.viewportHeight() - this.thumbHeight()) * this.scrollTop()) / travel;
   });
 
-  private dragOrigin: DragOrigin = { pointerY: 0, scrollTop: 0 };
+  private readonly dragOrigin: WritableSignal<DragOrigin> = signal<DragOrigin>({ pointerY: 0, scrollTop: 0 });
 
   constructor() {
     afterNextRender((): void => {
@@ -180,7 +180,7 @@ export class ScrollbarComponent {
     event.preventDefault();
 
     this.dragging.set(true);
-    this.dragOrigin = { pointerY: event.clientY, scrollTop: this.scrollTop() };
+    this.dragOrigin.set({ pointerY: event.clientY, scrollTop: this.scrollTop() });
 
     (event.target as Element).setPointerCapture(event.pointerId);
   }
@@ -192,9 +192,10 @@ export class ScrollbarComponent {
     if (track <= 0) return;
 
     const travel: number = this.scrollHeight() - this.viewportHeight();
-    const moved: number = event.clientY - this.dragOrigin.pointerY;
+    const origin: DragOrigin = this.dragOrigin();
+    const moved: number = event.clientY - origin.pointerY;
 
-    this.scroller().scrollTop = this.dragOrigin.scrollTop + (moved * travel) / track;
+    this.scroller().scrollTop = origin.scrollTop + (moved * travel) / track;
   }
 
   protected onPointerUp(): void {

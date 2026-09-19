@@ -1,4 +1,4 @@
-import { Component, DestroyRef, inject } from '@angular/core';
+import { Component, DestroyRef, inject, signal, type WritableSignal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { DOCUMENT, ViewportScroller } from '@angular/common';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
@@ -53,8 +53,8 @@ export class App {
   private readonly destroyRef = inject(DestroyRef);
 
   /** Latest pointer position, flushed to CSS once per frame instead of once per event. */
-  private pointer: Pointer | null = null;
-  private frame = 0;
+  private readonly pointer: WritableSignal<Pointer | null> = signal<Pointer | null>(null);
+  private readonly frame: WritableSignal<number> = signal(0);
 
   constructor() {
     // Angular scrolls to fragments with window.scrollTo() rather than scrollIntoView,
@@ -69,19 +69,20 @@ export class App {
     // Guarded because a frame is only ever scheduled in the browser, and cancelAnimationFrame
     // is not part of the server platform's globals.
     this.destroyRef.onDestroy((): void => {
-      if (this.frame) cancelAnimationFrame(this.frame);
+      const frame: number = this.frame();
+      if (frame) cancelAnimationFrame(frame);
     });
   }
 
   protected onMouseMove(event: MouseEvent): void {
     // Writing --cursor-x/y on :root invalidates style for the whole tree, so coalesce the
     // ~120 events/s a mouse produces down to one write per animation frame.
-    this.pointer = { x: event.clientX, y: event.clientY };
-    if (this.frame) return;
+    this.pointer.set({ x: event.clientX, y: event.clientY });
+    if (this.frame()) return;
 
-    this.frame = requestAnimationFrame((): void => {
-      this.frame = 0;
-      const pointer: Pointer | null = this.pointer;
+    this.frame.set(requestAnimationFrame((): void => {
+      this.frame.set(0);
+      const pointer: Pointer | null = this.pointer();
       if (!pointer) return;
 
       const html: HTMLElement = this.document.documentElement;
@@ -97,11 +98,11 @@ export class App {
       const fromRight: number = view.innerWidth - pointer.x;
       html.classList.toggle('scrollbar-visible', fromRight <= SCROLLBAR_REVEAL_ZONE);
       html.classList.toggle('toggle-visible', fromRight <= TOGGLE_REVEAL_ZONE);
-    });
+    }));
   }
 
   protected onMouseLeave(): void {
-    this.pointer = null;
+    this.pointer.set(null);
     this.document.documentElement.classList.remove('scrollbar-visible', 'toggle-visible');
   }
 
