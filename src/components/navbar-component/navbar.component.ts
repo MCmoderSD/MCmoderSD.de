@@ -1,6 +1,6 @@
 import { afterNextRender, Component, computed, DestroyRef, ElementRef, inject, type Signal, signal, viewChild, viewChildren, type WritableSignal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { filter } from 'rxjs';
 
 interface NavLink {
@@ -18,7 +18,7 @@ interface LinkBounds {
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
-  standalone: false,
+  imports: [RouterLink],
 })
 export class NavbarComponent {
 

@@ -1,5 +1,6 @@
 import { Component, computed, input, type InputSignal, type Signal } from '@angular/core';
 import { type ToolIcon, ToolIconSize } from '../../lib/tool-icon-types';
+import { ToolIconComponent } from '../tool-icon-component/tool-icon.component';
 
 export interface WorkExperienceData {
   company: string;
@@ -16,7 +17,7 @@ export interface WorkExperienceData {
   selector: 'app-work-experience',
   templateUrl: './work-experience.component.html',
   styleUrl: './work-experience.component.scss',
-  standalone: false,
+  imports: [ToolIconComponent],
 })
 export class WorkExperienceComponent {
 

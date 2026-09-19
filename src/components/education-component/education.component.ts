@@ -1,5 +1,6 @@
 import { Component, computed, input, type InputSignal, type Signal } from '@angular/core';
 import { type ToolIcon, ToolIconSize } from '../../lib/tool-icon-types';
+import { ToolIconComponent } from '../tool-icon-component/tool-icon.component';
 
 export interface EducationData {
   institution: string;
@@ -16,7 +17,7 @@ export interface EducationData {
   selector: 'app-education',
   templateUrl: './education.component.html',
   styleUrl: './education.component.scss',
-  standalone: false,
+  imports: [ToolIconComponent],
 })
 export class EducationComponent {
 

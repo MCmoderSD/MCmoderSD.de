@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { ToolIcon } from '../../lib/tool-icon-types';
-import { type ProjectPreviewData } from '../../components/project-preview-component/project-preview.component';
+import { ProjectPreviewComponent, type ProjectPreviewData } from '../../components/project-preview-component/project-preview.component';
 
 @Component({
   selector: 'app-project-page',
   templateUrl: './project-page.component.html',
   styleUrl: './project-page.component.scss',
-  standalone: false,
+  imports: [ProjectPreviewComponent],
 })
 export class ProjectPageComponent {
 

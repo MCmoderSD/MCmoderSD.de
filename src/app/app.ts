@@ -1,8 +1,12 @@
 import { Component, DestroyRef, inject } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { DOCUMENT, ViewportScroller } from '@angular/common';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs';
+import { NavbarComponent } from '../components/navbar-component/navbar.component';
+import { ColorSchemeSwitchComponent } from '../components/color-scheme-switch-component/color-scheme-switch.component';
+import { FooterComponent } from '../components/footer-component/footer.component';
+import { ScrollbarComponent } from '../components/scrollbar-component/scrollbar.component';
 
 /** Height of the fixed navbar, so fragment jumps land below it. Matches app.scss padding-top. */
 const SCROLL_OFFSET = 104;
@@ -34,8 +38,8 @@ interface Pointer {
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
-  standalone: false,
   styleUrl: './app.scss',
+  imports: [RouterOutlet, NavbarComponent, ColorSchemeSwitchComponent, FooterComponent, ScrollbarComponent],
   host: {
     '(document:mousemove)': 'onMouseMove($event)',
     // Otherwise the last pointer position (possibly inside the reveal zone) lingers forever once

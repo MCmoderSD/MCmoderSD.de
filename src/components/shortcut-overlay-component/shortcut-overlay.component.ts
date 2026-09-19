@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ServiceIcon, ServiceIconSize } from '../../lib/service-icon-types';
+import { ServiceIconComponent } from '../service-icon-component/service-icon.component';
 
 export interface ShortcutData {
   name: string;
@@ -11,7 +12,7 @@ export interface ShortcutData {
   selector: 'app-shortcut-overlay',
   templateUrl: './shortcut-overlay.component.html',
   styleUrl: './shortcut-overlay.component.scss',
-  standalone: false,
+  imports: [ServiceIconComponent],
 })
 export class ShortcutOverlayComponent {
 

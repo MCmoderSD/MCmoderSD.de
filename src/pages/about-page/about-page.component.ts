@@ -1,7 +1,7 @@
 import { afterNextRender, Component, DestroyRef, inject, signal, type WritableSignal } from '@angular/core';
 import { ToolIcon } from '../../lib/tool-icon-types';
-import { type EducationData } from '../../components/education-component/education.component';
-import { type WorkExperienceData } from '../../components/work-experience-component/work-experience.component';
+import { EducationComponent, type EducationData } from '../../components/education-component/education.component';
+import { WorkExperienceComponent, type WorkExperienceData } from '../../components/work-experience-component/work-experience.component';
 
 interface SocialLink {
   label: string;
@@ -18,7 +18,7 @@ const MAIL_ICON_PATH = 'M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0
   selector: 'app-about-page',
   templateUrl: './about-page.component.html',
   styleUrl: './about-page.component.scss',
-  standalone: false,
+  imports: [EducationComponent, WorkExperienceComponent],
 })
 export class AboutPageComponent {
 

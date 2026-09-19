@@ -6,7 +6,6 @@ import { SERVICE_ICON_PRESETS, serviceIconUrl, type ServiceIconPreset } from './
   selector: 'app-service-icon',
   templateUrl: './service-icon.component.html',
   styleUrl: './service-icon.component.scss',
-  standalone: false,
   host: {
     '[class.service-icon--sm]': 'size() === ServiceIconSize.Small',
     '[class.service-icon--lg]': 'size() === ServiceIconSize.Large',

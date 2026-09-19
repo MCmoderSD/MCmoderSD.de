@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { ServiceIcon } from '../../lib/service-icon-types';
-import { type ServicePreviewData } from '../../components/service-preview-component/service-preview.component';
+import { ServicePreviewComponent, type ServicePreviewData } from '../../components/service-preview-component/service-preview.component';
 
 @Component({
   selector: 'app-service-page',
   templateUrl: './service-page.component.html',
   styleUrl: './service-page.component.scss',
-  standalone: false,
+  imports: [ServicePreviewComponent],
 })
 export class ServicePageComponent {
 
