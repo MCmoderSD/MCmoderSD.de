@@ -4,6 +4,7 @@ export enum ServiceIcon {
   speedtest = 'speedtest',
   truenas = 'truenas',
   portainer = 'portainer',
+  qbittorrent = 'qbittorrent',
 }
 
 export enum ServiceIconSize {
