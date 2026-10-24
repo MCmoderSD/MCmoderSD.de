@@ -11,7 +11,7 @@ Every page is server-side pre-rendered, so the URLs below return complete HTML w
 - [About](https://mcmodersd.de/): Short bio, social links, work experience and education
 - [Projects](https://mcmodersd.de/projects): Open-source projects, including YEPPBot (a Java Twitch bot), YEPPDash (its ASP.NET Core and Angular dashboard), this website, TabScraper, AniLink-Downloader and AniLink-Skipper
 - [Dependencies](https://mcmodersd.de/dependencies): Java libraries published on a self-hosted Sonatype Nexus repository instead of Maven Central, with the Maven coordinates for each one
-- [Services](https://mcmodersd.de/services): Publicly reachable self-hosted services: Jellyfin, OpenSpeedTest, Sonatype Nexus and Portainer
+- [Services](https://mcmodersd.de/services): Publicly reachable self-hosted services: Jellyfin, OpenSpeedTest, Sonatype Nexus, Portainer and qBittorrent
 
 ## Maven repository
 

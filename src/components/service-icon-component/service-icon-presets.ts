@@ -16,4 +16,5 @@ export const SERVICE_ICON_PRESETS = {
   [ServiceIcon.speedtest]: { name: 'OpenSpeedTest', slug: 'openspeedtest' },
   [ServiceIcon.truenas]: { name: 'TrueNAS Scale', slug: 'truenas-scale' },
   [ServiceIcon.portainer]: { name: 'Portainer', slug: 'portainer-dark', lightSlug: 'portainer-light' },
+  [ServiceIcon.qbittorrent]: { name: 'qBittorrent', slug: 'qbittorrent' },
 } as const;

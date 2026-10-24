@@ -35,6 +35,12 @@ export class ServicePageComponent {
       icon: ServiceIcon.portainer,
       link: 'https://mcmodersd.de/portainer/'
     },
+    {
+      name: 'qBittorrent',
+      description: 'My own download client. qBittorrent is a free, open-source BitTorrent client that I run on my server and manage through its web interface.',
+      icon: ServiceIcon.qbittorrent,
+      link: 'https://mcmodersd.de/torrent/'
+    },
     /*
     {
         name: 'TrueNAS Scale',
