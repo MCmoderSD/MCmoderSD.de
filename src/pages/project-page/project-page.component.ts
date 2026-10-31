@@ -57,13 +57,13 @@ export class ProjectPageComponent {
     },
     {
       name: 'AniLink-Downloader',
-      description: 'A download tool for Debrid-Link supported hosters. It sorts the given links automatically and extracts MKV files from single or multipart RAR archives, including password-protected ones.',
+      description: 'A self-hosted Docker web app that downloads and unpacks single or multipart, optionally password-protected RAR archives. Paste hoster links, get direct links from Debrid-Link and end up with a renamed video in a folder named after the show.',
       details: [
-        'A Java tool built around a specific chore: given a batch of Debrid-Link download links for the parts of one file, it downloads every part, puts them back in the right order automatically, and extracts the resulting single- or multipart RAR archive, password-protected or not.',
-        'It supports four modes - fully automatic, a batch import from a text file, a manual mode for entering links one by one, and a movie mode that walks a folder of subfolders and processes each one. Its own README is explicit that it is meant for legally obtained, self-created or copyright-free content, and recommends a VPN plus caution around hosters of unclear legality.',
-        'It pairs naturally with the two browser extensions listed here: AniLink-Skipper to get past redirect pages, and TabScraper to collect all the links open across a browser session before feeding them in.',
+        'It started as a Java command-line tool and was rewritten as a web app: an ASP.NET Core backend and an Angular frontend that ship together as one Docker container. Paste the hoster links of a season, an episode or a film, and it creates the direct links through Debrid-Link, downloads the archive parts, unpacks them with 7-Zip and moves the renamed video into place.',
+        'The page checks the links while you type and shows which episodes and parts it found before anything starts. Several parts download in parallel with live progress, and every download can be paused, resumed, retried or canceled, as a whole or per episode. An archive that none of the known passwords opens waits until you enter one.',
+        'Everything stays local: there is no account and no database, and 7-Zip is part of the image, so Docker is the only thing to install. The page has no authentication because it is meant for your own machine or network, and the README is explicit that it is for legally obtained, self-created or copyright-free content only. It pairs with the two browser extensions listed here: AniLink-Skipper to get past redirect pages, and TabScraper to collect the links open across a browser session.',
       ],
-      tools: [ToolIcon.java, ToolIcon.maven],
+      tools: [ToolIcon.csharp, ToolIcon.angular, ToolIcon.docker],
       github: 'https://github.com/MCmoderSD/AniLink-Downloader',
     },
     {
